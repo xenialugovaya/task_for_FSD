@@ -1,35 +1,19 @@
-// Font
-$mainFont                : 'Montserrat', Helvetica, Arial, sans-serif;
+//Colors
 
-// Size
-$mainFontColor           : #101010;
-$mainFontSize            : 18px;
-$mainFontWeight          : 400;
-$mainLineHeight          : 1.4;
+$dark_shade_100 : #1F2041;
+$dark_shade_75 : rgba(31, 32, 65, 0.75);
+$dark_shade_50 : rgba(31, 32, 65, 0.5);
+$dark_shade_25 : rgba(31, 32, 65, 0.25);
+$dark_shade_5 : rgba(31, 32, 65, 0.05);
+$purple : #BC9CFF;
+$green : #6FCF97;
 
-$desktopWidth            : 1280px;
-$smDesktopWidth          : 980px;
-$tableWidth              : 768px;
-$phoneWidth              : 480px;
-$smPhoneWidth            : 320px;
+//Body font
 
-// Main color
-$default-color           : #ffffff;
-$primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
-$purple-color            : #8854d0;
+$mainLineHeight : 24px;
+$mainFontSize : 14px;
+$mainFont : Montserrat;
 
-// Neutral Color
-$neutral-primary         : #303133;
-$neutral-regular         : #606266;
-$neutral-secondary       : #909399;
-$neutral-placeholder     : #C0C4CC;
+//Buttons
+$purpleButton : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 
-// Border Color
-$border-base             : #DCDFE6;
-$border-light            : #E4E7ED;
-$border-lighter          : #EBEEF5;
-$border-lightex          : #F2F6FC;

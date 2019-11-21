@@ -3,7 +3,21 @@
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
+@import "utils/reset";
+@import "../../pug/modules/button/_big-button/big-button";
 
+body{
+font-family: $mainFont;
+font-style: normal;
+font-weight: normal;
+font-size: $mainFontSize;
+line-height: $mainLineHeight;
+color:$dark_shade_75;
+}
+
+h1 {@include h1;}
+
+/*
 html {
   line-height: $mainLineHeight;
 	font-size: $mainFontSize;
@@ -85,6 +99,6 @@ section, .section {
     max-width: smPhoneWidth;
   }
 }
-
+*/
 // Modules
 // @import "modules/my-module.scss";
