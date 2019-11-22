@@ -4,7 +4,13 @@
 @import "utils/fonts";
 @import "utils/reset";
 @import "utils/reset";
-@import "../../pug/modules/button/_big-button/big-button";
+@import "../../project/modules/button/_big-button/big-button";
+@import "../../project/modules/button/_ghost-button/ghost-button";
+@import "../../project/modules/button/button";
+@import "../../project/modules/nav/nav";
+@import "../../project/modules/header/header";
+@import "../../project/modules/footer/footer";
+@import "../../project/modules/nav_link/nav_link";
 
 body{
 font-family: $mainFont;
@@ -14,7 +20,6 @@ font-size: $mainFontSize;
 line-height: $mainLineHeight;
 color:$dark_shade_75;
 }
-
 h1 {@include h1;}
 
 /*

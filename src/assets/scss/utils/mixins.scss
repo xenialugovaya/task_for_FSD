@@ -1,5 +1,6 @@
 @import "vars";
 
+//Headers
 
 @mixin h1{  
   font-family: Quicksand;
@@ -8,6 +9,7 @@
   font-size: 24px;
   line-height: 30px;
   color: $dark_shade_100;
+
   }
 
 @mixin h2{
@@ -27,6 +29,14 @@ line-height: 15px;
 color: $dark_shade_100;
 text-transform: uppercase;
 }
+
+//Button basic style
+
+@mixin button_basic{
+  height: 34px;
+  border-radius: 22px;
+}
+
   // px to rem
 
 /*

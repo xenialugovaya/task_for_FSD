@@ -1,0 +1,15 @@
+nav
+    .navbar
+        include ../button/button
+        +Button('button_ghost-button', 'войти')
+        include ../button/button
+        +Button('button_big-button', 'зарегистрироваться') 
+        .menu
+            include ../nav_link/nav_link
+            ul
+                each navLink in [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения'}]
+                    li   
+                        if navLink.val== 'Услуги' || navLink.val== 'Соглашения'
+                            +navLink(navLink.href, navLink.val, 'dropdown')      
+                        else
+                            +navLink(navLink.href, navLink.val, '')
