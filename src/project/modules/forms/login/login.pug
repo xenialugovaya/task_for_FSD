@@ -1,0 +1,10 @@
+include ../__input/form__input
+include ../__form-footer/form__form-footer
+include ../__radio-buttons/form__radio-buttons
+.wrap-form
+     form(class='login')
+        .form-header Подберем номер под ваши пожелния
+        +formInput('text', 'прибытие', 'ДД.ММ.ГГГГ', 'small-input')
+        +formInput('text', 'выезд', 'ДД.ММ.ГГГГ', 'small-input')
+        +formInput('text', 'гости', 'Сколько гостей', 'dropdown')
+        +form-footer('Подобрать номер')

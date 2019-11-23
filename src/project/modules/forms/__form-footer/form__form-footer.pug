@@ -1,0 +1,7 @@
+mixin form-footer(big_btn, small_btn, full)
+    .form-footer
+        include ../../button/button
+        +Button('btn-arrow', big_btn, true) 
+        if full
+            p Уже есть аккаунт на Toxin 
+            +Button('button_ghost-button', small_btn) 

@@ -1,0 +1,23 @@
+.input-header{
+    @include h3;
+}
+
+.form-input { 
+    width: 320px;
+    height: 44px;
+    background: $white;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: $mainFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: $mainFontSize;
+    line-height: 44px;
+    padding-left:15px;
+    margin-top:5px;
+}
+.default{
+    color: $dark_shade_25;
+    border: 1px solid $dark_shade_25;
+}
+
