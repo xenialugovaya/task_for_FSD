@@ -1,5 +1,5 @@
-mixin radio-button(mod, radioName)
-    div(class='radio-button' + ' ' + mod)
-        .circle
-            .inner-circle
-        span #{radioName}
+mixin radio-button(radioHead, radioValue, radioChecked)
+    div(class='radio-button')
+        label(class='fakeCheckbox') 
+            input(type='radio', name='sex', value=radioValue, checked=radioChecked)
+            span #{radioHead}

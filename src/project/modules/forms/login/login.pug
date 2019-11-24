@@ -6,5 +6,7 @@ include ../__radio-buttons/form__radio-buttons
         .form-header Подберем номер под ваши пожелния
         +formInput('text', 'прибытие', 'ДД.ММ.ГГГГ', 'small-input')
         +formInput('text', 'выезд', 'ДД.ММ.ГГГГ', 'small-input')
+        +radio-button('мужчина', 'male', 'checked')
+        +radio-button('женщина', 'female')
         +formInput('text', 'гости', 'Сколько гостей', 'dropdown')
         +form-footer('Подобрать номер')

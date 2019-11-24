@@ -1,5 +1,8 @@
 // JS
 import './js/'
+import 'jquery'
+import 'popper.js'
+
 
 // SCSS
 import './assets/scss/main.scss'
