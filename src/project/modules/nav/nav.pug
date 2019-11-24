@@ -13,7 +13,7 @@ nav
                 each navLink in [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения'}]
                     li   
                         if navLink.val== 'Услуги' || navLink.val== 'Соглашения'
-                            +navLink(navLink.href, navLink.val, 'dropdown')
+                            +navLink(navLink.href, navLink.val, 'dropdownLink')
                             include ../icons/drop-arrow/drop-arrow      
                         else
                             +navLink(navLink.href, navLink.val, '')

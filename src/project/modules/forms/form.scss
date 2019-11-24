@@ -1,4 +1,5 @@
 .wrap-form{
+    
     width: 380px;
     padding: 40px 30px 30px 30px;
     background: $white;
@@ -10,15 +11,12 @@
 }
 
 .form-header{
-    @include h1;
+@include h1;
+font-size: 26px;
+font-weight: 900;
+letter-spacing: 0.02em;
 }
 
-.wrap-form .drop-arrow{
-width: 44px;
-height: 44px;
-left: 416.74px;
-top: 331px;
-}
 
 
 .form-footer .button_ghost-button{
