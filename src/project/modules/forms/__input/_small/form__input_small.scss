@@ -1,6 +1,9 @@
 .small-input{
 width: 150px;
 border: 1px solid $dark_shade_25;
+&::placeholder{
+    color: $dark_shade_75;
+    }
 + .material-icons::before{
     @include drop-arrow;
 }

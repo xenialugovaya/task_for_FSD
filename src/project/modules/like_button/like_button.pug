@@ -1,0 +1,6 @@
+mixin like_button(defaultCounter, likeName, likeValue, likeChecked)
+    .like-button
+        input(type='checkbox', name=likeName, value=likeValue, checked=likeChecked)
+        label.like
+            .material-icons
+            span.like-counter #{defaultCounter}

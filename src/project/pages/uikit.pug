@@ -1,4 +1,9 @@
 include ../modules/icons/logo/logo
+include ../modules/forms/__input/form__input
+include ../modules/checkbox/checkbox
+include ../modules/toggle/toggle
+include ../modules/like_button/like_button
+include ../modules/forms/__radio-buttons/form__radio-buttons
 
 mixin color-column(colorClass, colorName, colorCode)
     .wrap-color
@@ -21,11 +26,52 @@ html(lang='ru')
         link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
 
     body
-        .content-uikit
-            +logo()
+        .content-colors_types
+            .logo_uikit
+                +logo()
             .color-column
                 each box in [{colorClass : 'dark_shade_100', colorName : 'Dark Shade 100%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_75', colorName : 'Dark Shade 75%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_50', colorName : 'Dark Shade 50%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_25', colorName : 'Dark Shade 25%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_5', colorName : 'Dark Shade 5%', colorCode: '#1F2041'}, {colorClass : 'purple', colorName : 'Purple', colorCode: '#BC9CFF'}, {colorClass : 'green', colorName : 'Green', colorCode: '#6FCF97'}]
                     +color-column(box.colorClass, box.colorName, box.colorCode)
             .text-column
                 each textType in [{textTag : 'h1', nameTage : 'H1', textSample :'This one is the sub-section or widget title'}, {textTag : 'h2', nameTage : 'H2', textSample :'Next one is the item title inside widgets'}, {textTag : 'h3', nameTage : 'H3', textSample :'This is a label or CTA text'}, {textTag : 'p', nameTage : 'Body', textSample :'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
                     +text-column(textType.textTag, textType.nameTage, textType.textSample)
+        .content-form_elements
+            .logo_uikit
+                +logo()
+            .column1
+                .input_uikit
+                    +formInput('text', 'text field', 'Email', 'default')
+                .input_uikit
+                    +formInput('text', 'text field', 'This is pretty awesome', 'focused')
+                .input_uikit
+                    +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown')
+                .input_uikit
+                    +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default')
+                .input_uikit
+                    +formInput('text', 'date dropdown', 'ДД.ММ.ГГГГ', 'small-input')    
+                    +formInput('text', 'date dropdown', '19.08.2019', 'small-input') 
+                .input_uikit
+                    +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-input')  
+                .input_uikit
+                    +formInput('text', 'subscription text field', 'Email', 'subscription')
+            .column2
+                .checkbox-block
+                    h3 Checkbox Buttons
+                    +checkbox-button('mycheckbox', 'check1', 'Можно курить')
+                    +checkbox-button('mycheckbox2', 'check2', 'Можно с питомцами', 'checked')
+                    +checkbox-button('mycheckbox2', 'check2', 'Можно пригласить гостей (до 10 человек)', 'checked')
+                .radio-block
+                    h3 Radio Buttons
+                    +radio-button('Мужчина', 'male', 'checked')
+                    +radio-button('Женщина', 'female')
+                .toggle-block
+                    h3 Toggle    
+                    +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
+                    +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
+                .like-block
+                    h3 like button
+                    +like_button('2', 'mylike1', 'like1')
+                    +like_button('12', 'mylike2', 'like2', 'checked')
+                .rate-block
+                    h3 rate button
+            .column3

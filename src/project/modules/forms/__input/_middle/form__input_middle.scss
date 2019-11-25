@@ -1,3 +1,7 @@
 .middle-input{
+    @include dropdown; 
     width:266px;
+    &::placeholder{
+        color: $dark_shade_75;
+        }
 }

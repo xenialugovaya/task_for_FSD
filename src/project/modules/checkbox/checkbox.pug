@@ -1,2 +1,5 @@
-mixin checkbox (checked)
-    .checkbox
+mixin checkbox-button(checkName, checkValue, checkHead, radioChecked)
+    .checkbox_elem
+        label(class='fakeCheckbox') 
+            input(class='checkbox-button', type='checkbox', name=checkName, value=checkValue, checked=radioChecked)
+            span #{checkHead}

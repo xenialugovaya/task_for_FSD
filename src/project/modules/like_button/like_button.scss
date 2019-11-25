@@ -1,0 +1,60 @@
+.like-button{
+    position: relative; 
+    width: 40px;
+    height: 20px;  
+}
+.like{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #FFFFFF;
+    border: 1px solid $dark_shade_25;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+    .material-icons:before{
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        content: "\e87e";
+        font-family: Material Icons;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        color: $dark_shade_25;
+    }
+    .like-counter{
+        position: absolute;
+        top:3px;
+        left: 20px;
+        color: $dark_shade_25;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        }
+
+
+}
+.like-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked{
+        + .like {
+            border: 1px solid $purple;
+        }
+        + .like .material-icons:before{
+            color: $purple;
+            content: "\e87d";
+        }
+        + .like .like-counter{
+            color: $purple;
+        }
+
+    }
+  }

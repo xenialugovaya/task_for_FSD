@@ -17,10 +17,15 @@
 @import "../../project/modules/forms/__input/_focused/form__input_focused";
 @import "../../project/modules/forms/__input/_dropdown/form__input_dropdown";
 @import "../../project/modules/forms/__input/_small/form__input_small";
+@import "../../project/modules/forms/__input/_middle/form__input_middle";
+@import "../../project/modules/forms/__input/_subscription/form__input_subscription";
 @import "../../project/modules/icons/arrow/arrow";
 @import "../../project/modules/forms/__form-footer/form__form-footer";
 @import "../../project/modules/forms/login/login";
 @import "../../project/modules/forms/__radio-buttons/form__radio-buttons";
+@import "../../project/modules/checkbox/checkbox";
+@import "../../project/modules/toggle/toggle";
+@import "../../project/modules/like_button/like_button";
 
 body{
 font-family: $mainFont;

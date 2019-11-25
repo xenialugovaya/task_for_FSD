@@ -1,0 +1,7 @@
+.subscription{
+  + .material-icons::before{
+    @include right-arrow;
+    color:$purple;
+  }
+  width:266px;
+  }

@@ -45,6 +45,29 @@ text-transform: uppercase;
     text-align: center;
     color: $dark_shade_50;
 }
+@mixin dropdown{
+  &::placeholder{
+      color: $dark_shade_75;
+      }
+border: 1px solid $dark_shade_25;
++ .material-icons::before{
+  @include drop-arrow;
+}
+}
+@mixin right-arrow{
+  content: "\e5c8";
+  right:10px;
+  top:30px;
+  position: absolute;
+  font-family: Material Icons;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+}
 
   // px to rem
 

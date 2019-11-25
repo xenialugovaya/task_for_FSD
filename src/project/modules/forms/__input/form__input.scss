@@ -19,9 +19,10 @@
     line-height: 44px;
     padding-left:15px;
     margin-top:5px;
-}
-.default{
-    color: $dark_shade_25;
     border: 1px solid $dark_shade_25;
+    &::placeholder{
+        color: $dark_shade_25;
+        }
 }
+
 
