@@ -29,12 +29,6 @@ color: $dark_shade_100;
 text-transform: uppercase;
 }
 
-//Button basic style
-
-@mixin button_basic{
-  height: 34px;
-  border-radius: 22px;
-}
 
 @mixin drop-arrow{
   content: "\e313";

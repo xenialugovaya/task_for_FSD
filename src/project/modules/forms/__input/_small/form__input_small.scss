@@ -2,18 +2,6 @@
 width: 150px;
 border: 1px solid $dark_shade_25;
 + .material-icons::before{
-    content: "\e313";
-    right:10px;
-    top:30px;
-    position: absolute;
-    font-family: Material Icons;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: $dark_shade_50;
+    @include drop-arrow;
 }
 }

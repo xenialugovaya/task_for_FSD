@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
+
 // Main const
 // see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
 const PATHS = {

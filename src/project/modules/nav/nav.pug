@@ -1,8 +1,7 @@
 nav
     .navbar
-       
         include ../icons/logo/logo
-            include ../icons/icon_gradients
+        +logo('url(#purple)', 'url(#green)')  
         include ../button/button
         +Button('button_ghost-button', 'войти')
         include ../button/button
@@ -14,6 +13,6 @@ nav
                     li   
                         if navLink.val== 'Услуги' || navLink.val== 'Соглашения'
                             +navLink(navLink.href, navLink.val, 'dropdownLink')
-                            include ../icons/drop-arrow/drop-arrow      
+                            .material-icons     
                         else
                             +navLink(navLink.href, navLink.val, '')
