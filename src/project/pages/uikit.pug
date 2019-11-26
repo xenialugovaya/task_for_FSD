@@ -4,6 +4,7 @@ include ../modules/checkbox/checkbox
 include ../modules/toggle/toggle
 include ../modules/like_button/like_button
 include ../modules/forms/__radio-buttons/form__radio-buttons
+include ../modules/ratings/ratings
 
 mixin color-column(colorClass, colorName, colorCode)
     .wrap-color
@@ -74,4 +75,10 @@ html(lang='ru')
                     +like_button('12', 'mylike2', 'like2', 'checked')
                 .rate-block
                     h3 rate button
+                    +rating('4')
+                    +rating('4')
+                   
             .column3
+                .range-block
+                    h3 range slider
+                    include ../modules/range_slider/multirange

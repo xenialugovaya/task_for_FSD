@@ -230,6 +230,20 @@ letter-spacing: -0.05em;
     margin-top: 34px;
 }
 
+.star_block{
+    display: inline-block;
+    margin-top:15px;
+    &:nth-child(3){
+        margin-left: 20px;
+    }
+}
+
+.column3{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 62px;
+    margin-left:127px;
+}
 
 
 

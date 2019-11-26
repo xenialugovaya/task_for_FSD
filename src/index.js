@@ -2,6 +2,9 @@
 import './js/'
 import 'jquery'
 import 'popper.js'
+import './project/modules/ratings/rating.js'
+import './project/modules/range_slider/multirange.js'
+
 
 
 // SCSS

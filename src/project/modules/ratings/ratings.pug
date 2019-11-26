@@ -1,0 +1,7 @@
+mixin rating(starsChecked)
+    .star_block#star-rating
+        each star in ['1', '2', '3', '4', '5']
+            if star < starsChecked
+                input.rating(type='radio', name='example', value=star, check='checked')
+            else    
+                input.rating(type='radio', name='example', value=star)
