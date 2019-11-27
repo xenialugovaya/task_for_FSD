@@ -1,19 +1,16 @@
 .button{
-    height: 36px;
+    height: 44px;
     border-radius: 22px;
     font-style: normal;
     font-weight: bold;
     font-size: 12px;
-    line-height: 30px;
+    line-height: 42px;
     text-transform: uppercase;
     font-stretch: extra-expanded;
+    box-sizing: border-box;
 }
 
 .button:hover{
     opacity: 0.5;
     cursor:pointer;
-}
-
-.arrow{
-    fill: white;
 }

@@ -1,5 +1,3 @@
-mixin Button(buttonMod, btn_name, arrow)
+mixin Button(buttonMod, btn_name)
   button(class ='button' + ' ' + buttonMod) #{btn_name}
-    if arrow
-      include ../icons/arrow/arrow
-      +button-arrow() 
+    .material-icons

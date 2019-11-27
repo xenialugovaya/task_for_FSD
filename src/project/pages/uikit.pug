@@ -5,6 +5,7 @@ include ../modules/toggle/toggle
 include ../modules/like_button/like_button
 include ../modules/forms/__radio-buttons/form__radio-buttons
 include ../modules/ratings/ratings
+include ../modules/button/button
 
 mixin color-column(colorClass, colorName, colorCode)
     .wrap-color
@@ -82,3 +83,16 @@ html(lang='ru')
                 .range-block
                     h3 range slider
                     include ../modules/range_slider/multirange
+                .button-block
+                    h3 buttons
+                    .small_button-block
+                        +Button('button_small-button', 'click me')
+                        +Button('button_small-button', 'click me')
+                    .ghost_button-block
+                        +Button('button_ghost-button', 'click me')
+                        +Button('button_ghost-button', 'click me')
+                    .transperent_button-block
+                        +Button('button_transparent-button', 'click me')
+                        +Button('button_transparent-button', 'click me')
+                    +Button('btn-arrow', 'перейти к оплате')
+

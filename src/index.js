@@ -3,8 +3,9 @@ import './js/'
 import 'jquery'
 import 'popper.js'
 import './project/modules/ratings/rating.js'
-import './project/modules/range_slider/multirange.js'
-
+import './project/modules/range_slider/multirange'
+import 'webpack-jquery-ui'
+import 'webpack-jquery-ui/css'
 
 
 // SCSS

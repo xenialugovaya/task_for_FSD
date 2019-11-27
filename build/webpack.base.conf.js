@@ -12,6 +12,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
+  modules: path.join(__dirname, "node_modules"),
   assets: 'assets/'
 }
 
@@ -116,6 +117,8 @@ module.exports = {
     alias: {
       '~': PATHS.src,
       'vue$': 'vue/dist/vue.js',
+      'jquery-ui$': 'jquery-ui/dist/jquery-ui.js', 
+
     }
   },
   plugins: [
@@ -131,6 +134,8 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
+      'window.jQuery':'jquery',
+      'window.$': 'jquery'
     }),
     
     // Automatic creation any html pages (Don't forget to RERUN dev server)

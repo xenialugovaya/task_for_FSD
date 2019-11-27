@@ -1,9 +1,12 @@
 .btn-arrow{
+    position: relative;
     background: $purpleButton;
     width: 320px;
     color:$white;
-  
+    .material-icons::before{
+        @include right-arrow;
+        color:$white;
+        top:10px;
+      }  
 }
-.button-arrow{
-    float: right; 
-}
+
