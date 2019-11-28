@@ -1,7 +1,5 @@
-mixin formInput(input_type, i_h, ph_txt, mod, dropdown)
-    .wrap-input
+mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod)
+    .wrap-input(class=wrap_mod)
         .input-header #{i_h}
         input(class='form-input' + ' ' + mod  type=input_type placeholder=ph_txt)
         .material-icons
-       
-           

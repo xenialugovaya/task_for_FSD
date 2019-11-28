@@ -45,15 +45,7 @@ text-transform: uppercase;
     text-align: center;
     color: $dark_shade_50;
 }
-@mixin dropdown{
-  &::placeholder{
-      color: $dark_shade_75;
-      }
-border: 1px solid $dark_shade_25;
-+ .material-icons::before{
-  @include drop-arrow;
-}
-}
+
 @mixin right-arrow{
   content: "\e5c8";
   font-family: Material Icons;

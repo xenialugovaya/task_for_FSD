@@ -47,18 +47,16 @@ html(lang='ru')
                 .input_uikit
                     +formInput('text', 'text field', 'This is pretty awesome', 'focused')
                 .input_uikit
-                    +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown')
+                    +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown', 'wrap-dropdown')
                 .input_uikit
                     +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default')
                 .input_uikit
                     +formInput('text', 'date dropdown', 'ДД.ММ.ГГГГ', 'small-input')    
                     +formInput('text', 'date dropdown', '19.08.2019', 'small-input') 
                 .input_uikit
-                    +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-input')  
+                    +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-input', 'wrap-middle')  
                 .input_uikit
-                    +formInput('text', 'subscription text field', 'Email', 'subscription')
-                .input_uikit
-                    +formInput('text', 'dropdown', '2 спальни, 2 кровати...', 'middle-input')  
+                    +formInput('text', 'subscription text field', 'Email', 'subscription', 'subscription-wrap')
             .column2
                 .checkbox-block
                     h3 Checkbox Buttons
@@ -101,5 +99,10 @@ html(lang='ru')
                 .pagination-block
                     h3 pagination
                     +pagination
-                    
+            .wrap-dropbox-block
+                .dropbox-column1
+                    .input_uikit
+                        +formInput('text', 'dropdown', '2 спальни, 2 кровати...', 'middle-input', 'wrap-middle') 
+                .dropbox-column2
+                .dropbox-column3
 

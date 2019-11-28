@@ -1,4 +1,16 @@
+@mixin dropdown{
+    &::placeholder{
+        color: $dark_shade_75;
+        }
+  border: 1px solid $dark_shade_25;
+  + .material-icons::before{
+    @include drop-arrow;
+  }
+}
+
+.wrap-dropdown{
+    width:320px;
+}
 .dropdown{
     @include dropdown;
 }
-
