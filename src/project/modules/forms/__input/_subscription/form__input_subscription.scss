@@ -2,6 +2,9 @@
   + .material-icons::before{
     @include right-arrow;
     color:$purple;
+    right:10px;
+    top:30px;
+    position: absolute;
   }
   width:266px;
   }

@@ -6,6 +6,7 @@ include ../modules/like_button/like_button
 include ../modules/forms/__radio-buttons/form__radio-buttons
 include ../modules/ratings/ratings
 include ../modules/button/button
+include ../modules/pagination/pagination
 
 mixin color-column(colorClass, colorName, colorCode)
     .wrap-color
@@ -56,6 +57,8 @@ html(lang='ru')
                     +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-input')  
                 .input_uikit
                     +formInput('text', 'subscription text field', 'Email', 'subscription')
+                .input_uikit
+                    +formInput('text', 'dropdown', '2 спальни, 2 кровати...', 'middle-input')  
             .column2
                 .checkbox-block
                     h3 Checkbox Buttons
@@ -95,4 +98,8 @@ html(lang='ru')
                         +Button('button_transparent-button', 'click me')
                         +Button('button_transparent-button', 'click me')
                     +Button('btn-arrow', 'перейти к оплате')
+                .pagination-block
+                    h3 pagination
+                    +pagination
+                    
 

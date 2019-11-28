@@ -5,6 +5,8 @@
     color:$white;
     .material-icons::before{
         @include right-arrow;
+        right:10px;
+        position: absolute;
         color:$white;
         top:10px;
       }  

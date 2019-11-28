@@ -1,10 +1,13 @@
 .slider-wrap{
+    width: 266px;
+   text-align: right;
 
- 
 }
 
 #amount{
-    color:$dark_shade_25;
+    color:$dark_shade_50;
+    font-size: 12px;
+    
 }
 
 .ui-slider{
@@ -16,7 +19,8 @@ border-radius: 3px;
 }
 .ui-slider-handle{
     display: block;
-    border-radius: 50%;  
+    border-radius: 50%;
+    
 }
 .ui-state-default{
     border: 2px solid #FFFFFF!important;
@@ -25,6 +29,7 @@ border-radius: 3px;
     background: $greenGradient!important;
     box-sizing: border-box!important;
     margin-top: -1px;
+    cursor: pointer!important;
 }
 .ui-slider-range{
     background: $greenGradient;

@@ -1,0 +1,52 @@
+.pagination {
+  display: block;
+  .material-icons{
+    background: $greenGradient;
+    border-radius: 50%;
+    position: relative;
+    vertical-align: bottom;
+  }
+ 
+  .material-icons:before{
+      @include right-arrow;
+      color: $white; 
+      position: absolute;
+      bottom: 8px;
+      left:8px;
+
+  }
+}
+
+.pagination-button {
+  display: inline-block;
+  width:40px;
+  height: 40px;
+  color:$dark_shade_50;
+  cursor: pointer;
+  font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+
+  
+  &:hover {
+    background: $purpleGradient;
+    color: $white;
+    border-radius: 50%;  
+  }
+  
+  &.active {
+    background: $purpleGradient;
+    color: $white;
+    border-radius: 50%;  
+  }
+  
+}
+.pag-caption{
+  color:$dark_shade_75;
+  margin-top: 8px;
+  margin-left: 5px;
+}
