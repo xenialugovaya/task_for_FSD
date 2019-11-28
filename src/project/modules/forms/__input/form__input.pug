@@ -1,5 +1,8 @@
-mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod)
+mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod, masked)
     .wrap-input(class=wrap_mod)
         .input-header #{i_h}
-        input(class='form-input' + ' ' + mod  type=input_type placeholder=ph_txt)
+        if masked
+            input(class='form-input' + ' ' + mod id='masked' type=input_type placeholder=ph_txt)
+        else
+            input(class='form-input' + ' ' + mod  type=input_type placeholder=ph_txt)
         .material-icons
