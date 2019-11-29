@@ -1,34 +1,36 @@
-include ../modules/icons/logo/logo
-include ../modules/forms/__input/form__input
-include ../modules/checkbox/checkbox
-include ../modules/toggle/toggle
-include ../modules/like_button/like_button
-include ../modules/forms/__radio-buttons/form__radio-buttons
-include ../modules/ratings/ratings
-include ../modules/button/button
-include ../modules/pagination/pagination
-
-mixin color-column(colorClass, colorName, colorCode)
-    .wrap-color
-        .color-box(class=colorClass)
-        .color-text
-            .color-head #{colorName}
-            .color-descr #{colorCode}
-
-mixin text-column(textTag, nameTage, textSample)
-    .wrap-text
-        .tag-name(class=textTag)  #{nameTage}
-        .text-sample(class=textTag) #{textSample}
-
 doctype html
 html(lang='ru')
     head
         title= pageTitle 
-        link(rel='stylesheet', href='dist/main.css')
+        link(rel='stylesheet', href='./assets/css/main.css')
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
         link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
+        script(src='./assets/js/index.js')
+
 
     body
+        include ../modules/icons/logo/logo
+        include ../modules/forms/__input/form__input
+        include ../modules/checkbox/checkbox
+        include ../modules/toggle/toggle
+        include ../modules/like_button/like_button
+        include ../modules/forms/__radio-buttons/form__radio-buttons
+        include ../modules/ratings/ratings
+        include ../modules/button/button
+        include ../modules/pagination/pagination
+
+        mixin color-column(colorClass, colorName, colorCode)
+            .wrap-color
+                .color-box(class=colorClass)
+                .color-text
+                    .color-head #{colorName}
+                    .color-descr #{colorCode}
+
+        mixin text-column(textTag, nameTage, textSample)
+            .wrap-text
+                .tag-name(class=textTag)  #{nameTage}
+                .text-sample(class=textTag) #{textSample}
+
         .content-colors_types
             .logo_uikit
                 +logo()
@@ -69,7 +71,7 @@ html(lang='ru')
                     +radio-button('Женщина', 'female')
                 .toggle-block
                     h3 Toggle    
-                    +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
+                    +toggle('receive спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
                     +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
                 .like-block
                     h3 like button

@@ -29,7 +29,7 @@ module.exports = {
   },
   entry: {
     app: PATHS.src,
-    // module: `${PATHS.src}/your-module.js`,
+   // module: `${PATHS.src}/index.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
@@ -117,14 +117,13 @@ module.exports = {
     alias: {
       '~': PATHS.src,
       'vue$': 'vue/dist/vue.js',
-      'jquery-ui$': 'jquery-ui/dist/jquery-ui.js', 
 
     }
   },
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: `${PATHS.assets}css/main.css`,
     }),
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
@@ -144,6 +143,7 @@ module.exports = {
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,
       filename: `./${page.replace(/\.pug/,'.html')}`
-    }))
+    })),
+    
   ],
 }

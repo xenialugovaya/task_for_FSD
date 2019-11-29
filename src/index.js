@@ -2,8 +2,6 @@
 import './js/'
 import 'jquery'
 import 'popper.js'
-import './project/modules/ratings/rating'
-import './project/modules/range_slider/multirange'
 import 'webpack-jquery-ui'
 import 'webpack-jquery-ui/css'
 import './project/modules/forms/__input/_masked/jquery.maskedinput'
