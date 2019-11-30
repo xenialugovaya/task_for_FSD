@@ -1,8 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const fs = require('fs')
+const CopyWebpackPlugin = require ('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
 
@@ -84,7 +84,9 @@ module.exports = {
         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: { 
+            sourceMap: true,
+            url: false }
         }, {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
@@ -125,17 +127,16 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/main.css`,
     }),
-    new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
-      { from: `${PATHS.src}/static`, to: '' },
-    ]),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery':'jquery',
       'window.$': 'jquery'
     }),
+    new CopyWebpackPlugin([
+      {from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img`},
+      {from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts`},
+    ]),
     
     // Automatic creation any html pages (Don't forget to RERUN dev server)
     // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
