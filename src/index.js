@@ -6,7 +6,8 @@ import 'webpack-jquery-ui/css'
 import './project/modules/forms/__input/_masked/jquery.maskedinput'
 import './project/modules/ratings/rating'
 import './project/modules/range_slider/multirange'
-
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.js'
+import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 
 
 // SCSS
