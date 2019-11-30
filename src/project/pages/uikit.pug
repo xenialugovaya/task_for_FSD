@@ -2,10 +2,9 @@ doctype html
 html(lang='ru')
     head
         title= pageTitle 
-        link(rel='stylesheet', href='./assets/css/main.css')
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
         link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
-        script(src='./assets/js/index.js')
+
 
 
     body
@@ -71,7 +70,7 @@ html(lang='ru')
                     +radio-button('Женщина', 'female')
                 .toggle-block
                     h3 Toggle    
-                    +toggle('receive спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
+                    +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
                     +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
                 .like-block
                     h3 like button
