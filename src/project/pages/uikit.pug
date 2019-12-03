@@ -102,8 +102,10 @@ html(lang='ru')
                     +pagination
             .wrap-dropbox-block
                 .dropbox-column1
-                    .input_uikit
-                        +formInput('text', 'dropdown', '2 спальни, 2 кровати...', 'middle-input', 'wrap-middle') 
+                    .input_uikit.bedroom
+                        +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
+                    .input_uikit.bedroom
+                        +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты'])
                 .dropbox-column2
                 .dropbox-column3
 

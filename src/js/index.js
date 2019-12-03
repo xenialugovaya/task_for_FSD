@@ -10,6 +10,11 @@ $(document).ready(function($){                 // Start when document ready
     $.mask.definitions['d'] = '[0-3]';
     $('#masked').mask("d9.m9.y999");
 
-    $('.iqdropdown').iqDropdown();
+    $('.bedroom .iqdropdown').multipleDropdown({
+        selectionText: ['спальня', 'кровать', 'ванная комната'],
+        textPlural: ['спальни', 'кровати', 'ванные комнаты'],
+        textDefault: ['спален', 'кроватей', 'ванных комнат'],
+       
+    });
   
 });

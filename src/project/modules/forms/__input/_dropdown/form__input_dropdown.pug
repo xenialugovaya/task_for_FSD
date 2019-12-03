@@ -1,0 +1,10 @@
+
+mixin dropdownInput(itemsNumber, itemName)
+    .iqdropdown
+        p.iqdropdown-selection
+        .iqdropdown-menu
+            - for (var i=0; i<itemsNumber; i++) {     
+                .iqdropdown-menu-option(data-id='item' + (i+1))
+                    div
+                        p.iqdropdown-item #{itemName[i]}                            
+            - }             
