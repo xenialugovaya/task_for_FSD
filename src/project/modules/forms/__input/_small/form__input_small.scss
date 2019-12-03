@@ -1,3 +1,8 @@
+.wrap-small{
+    width:150px;
+    position: relative;
+}
+
 .small-input{
 width: 150px;
 border: 1px solid $dark_shade_25;
@@ -7,7 +12,4 @@ border: 1px solid $dark_shade_25;
 + .material-icons::before{
     @include drop-arrow;
 }
-}
-.wrap-input + .small-input{
-    width:150px;
 }

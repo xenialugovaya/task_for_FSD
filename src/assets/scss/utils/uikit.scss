@@ -293,7 +293,17 @@ letter-spacing: -0.05em;
 .wrap-dropbox-block{
     margin-left: 140px;
     margin-top: 101px;
-
+    .dropbox-column{
+        display: inline-block;
+        vertical-align: top;
+        &:nth-child(2){
+            margin-left: 181px;
+        }
+        &:nth-child(3){
+            margin-left: 72px;
+        }
+        
+    }
 }
 
 

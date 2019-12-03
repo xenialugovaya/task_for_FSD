@@ -1,5 +1,5 @@
 include _dropdown/form__input_dropdown
-mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod, masked, dropdown, itemsNumber, ...itemName, ...itemDescr)
+mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod, masked, dropdown, itemsNumber, ...itemName)
     .wrap-input(class=wrap_mod)
         .input-header #{i_h}
         if masked

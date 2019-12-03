@@ -12,6 +12,7 @@
 
 .wrap-dropdown{
     width:320px;
+    position: relative;
 }
 .dropdown{
     @include dropdown;
@@ -105,8 +106,6 @@ padding-bottom: 3px;
 }
 }
 
-
-
 .counter{
   border: none !important;
   font-family: 'Montserrat-bold', sans-serif !important;
@@ -147,3 +146,4 @@ width:32px!important;
   }
 
 }
+

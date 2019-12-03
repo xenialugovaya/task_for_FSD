@@ -1,12 +1,15 @@
-.wrap-input{
+@import './_focused/form__input_focused';
+
+.wrap-default{
     position: relative;
+    width:320px;
 }
 
 .input-header{
     @include h3;
 }
 
-.form-input { 
+.form-input, .default-input { 
     width: 320px;
     height: 44px;
     background: $white;
@@ -23,6 +26,11 @@
     &::placeholder{
         color: $dark_shade_25;
         }
+    &:focus{
+        @include focused;
+    }
 }
+
+
 
 

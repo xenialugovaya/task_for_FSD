@@ -47,7 +47,7 @@
         border: 1px solid $purple;
       }
     + .slider:before {
-        background-color: $purple;
+        background: $purpleGradient;
         left: 22px;
     }
   } 

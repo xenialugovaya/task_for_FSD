@@ -52,8 +52,8 @@ html(lang='ru')
                 .input_uikit
                     +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default', 'masked' ,'masked')
                 .input_uikit
-                    +formInput('text', 'date dropdown', 'ДД.ММ.ГГГГ', 'small-input')    
-                    +formInput('text', 'date dropdown', '19.08.2019', 'small-input') 
+                    +formInput('text', 'date dropdown', 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')    
+                    +formInput('text', 'date dropdown', '19.08.2019', 'small-input', 'wrap-small') 
                 .input_uikit
                     +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-input', 'wrap-middle')  
                 .input_uikit
@@ -101,11 +101,15 @@ html(lang='ru')
                     h3 pagination
                     +pagination
             .wrap-dropbox-block
-                .dropbox-column1
+                .dropbox-column
                     .input_uikit.bedroom
                         +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
                     .input_uikit.bedroom
                         +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты'])
-                .dropbox-column2
-                .dropbox-column3
+                .dropbox-column
+                    .input_uikit.guests
+                        +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+                .dropbox-column
+                    .input_uikit.guests
+                        +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
 

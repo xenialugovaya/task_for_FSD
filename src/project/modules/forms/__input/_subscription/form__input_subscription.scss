@@ -1,7 +1,8 @@
 .subscription-wrap{
   width:266px;
+  position: relative;
 }
-.subscription{
+ .subscription{
   + .material-icons::before{
     @include right-arrow;
     color:$purple;
