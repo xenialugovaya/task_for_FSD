@@ -17,6 +17,7 @@ html(lang='ru')
         include ../modules/ratings/ratings
         include ../modules/button/button
         include ../modules/pagination/pagination
+        include ../modules/bullet-list/bullet-list
 
         mixin color-column(colorClass, colorName, colorCode)
             .wrap-color
@@ -110,7 +111,11 @@ html(lang='ru')
                 .dropbox-column
                     .input_uikit.guests
                         +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+                    .checkbox-rich-block    
+                        +checkbox-group('2', 'rich checkbox buttons', '', '', ['Широкий коридор', 'Помощник для инвалидов'], '', 'rich', ['Ширина коридоров в номере не менее 91 см.', 'На 1 этаже вас встретит специалист и проводит до номера.'])
                 .dropbox-column
                     .input_uikit.guests
                         +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+                    .bullet-list-block
+                        +bullet-list('bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
 

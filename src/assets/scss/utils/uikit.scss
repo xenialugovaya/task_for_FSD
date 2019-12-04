@@ -302,7 +302,15 @@ letter-spacing: -0.05em;
 .checkbox-expandable-block{
     margin-top: 50px;
 }
+ .checkbox-rich-block{
+    margin-top: 150px;
+ }
 
+ .bullet-list-block{
+     .list-head{
+         @include h3;
+     }
+ }
 
 
 
