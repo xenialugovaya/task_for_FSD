@@ -1,0 +1,5 @@
+mixin checkbox-button(checkName, checkValue, checkHead, checkChecked)
+    .checkbox__elem
+        label(class='fakeCheckbox') 
+            input(class='checkbox-button', type='checkbox', name=checkName, value=checkValue, checked=checkChecked)
+            span #{checkHead}

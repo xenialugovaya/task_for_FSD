@@ -149,6 +149,9 @@ letter-spacing: -0.05em;
     }
 }
 
+
+// Form elements
+
 .content-form_elements{
     height: 1853px;
 }
@@ -189,17 +192,7 @@ letter-spacing: -0.05em;
     margin-top: 62px;
     margin-left:127px;
 }
-.checkbox_elem{
-    &:nth-child(2){
-        margin-top:14px;
-    }
-    &:nth-child(3){
-        margin-top:7px;
-    }
-    &:nth-child(4){
-        margin-top:9px;
-    }
-}
+
 .radio-block{
     margin-top: 38px;
 }
@@ -304,6 +297,10 @@ letter-spacing: -0.05em;
         }
         
     }
+}
+
+.checkbox-expandable-block{
+    margin-top: 50px;
 }
 
 

@@ -46,6 +46,21 @@ text-transform: uppercase;
     text-align: center;
     color: $dark_shade_50;
 }
+@mixin up-arrow{
+  content: "\e316";
+    right:10px;
+    top:30px;
+    position: absolute;
+    font-family: Material Icons;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $dark_shade_50;
+}
 
 @mixin right-arrow{
   content: "\e5c8";

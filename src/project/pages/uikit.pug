@@ -10,7 +10,7 @@ html(lang='ru')
     body
         include ../modules/icons/logo/logo
         include ../modules/forms/__input/form__input
-        include ../modules/checkbox/checkbox
+        include ../modules/checkbox-group/checkbox-group
         include ../modules/toggle/toggle
         include ../modules/like_button/like_button
         include ../modules/forms/__radio-buttons/form__radio-buttons
@@ -60,10 +60,8 @@ html(lang='ru')
                     +formInput('text', 'subscription text field', 'Email', 'subscription', 'subscription-wrap')
             .column2
                 .checkbox-block
-                    h3 Checkbox Buttons
-                    +checkbox-button('mycheckbox', 'check1', 'Можно курить')
-                    +checkbox-button('mycheckbox2', 'check2', 'Можно с питомцами', 'checked')
-                    +checkbox-button('mycheckbox2', 'check2', 'Можно пригласить гостей (до 10 человек)', 'checked')
+                    +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['', 'checked', 'checked'])
+    
                 .radio-block
                     h3 Radio Buttons
                     +radio-button('Мужчина', 'male', 'checked')
@@ -106,6 +104,9 @@ html(lang='ru')
                         +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
                     .input_uikit.bedroom
                         +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты'])
+                    .checkbox-expandable-block
+                        +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], ['', 'checked', 'checked', 'checked', '', '', '', ''], 'expandable')
+                        +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
                 .dropbox-column
                     .input_uikit.guests
                         +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])

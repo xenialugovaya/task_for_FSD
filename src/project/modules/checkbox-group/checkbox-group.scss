@@ -1,0 +1,17 @@
+@import './__elem/checkbox.scss';
+@import './checkbox-expandable/checkbox-expandable';
+
+.checkbox__elem{
+    margin-top:10px;
+    &:first-child{
+        margin-top:17px;
+    }
+   
+    span{
+        font-family: $mainFont;
+        font-size: $mainFontSize;
+        text-transform: none;
+        color:$dark_shade_50;
+
+    }
+}

@@ -1,0 +1,10 @@
+include ./__elem/checkbox
+
+mixin checkbox-group(checkboxNumber, groupHead, checkName, checkValue, checkHead, checkChecked, expandable)
+    .wrap-checkbox-group(class=expandable)
+        .material-icons(class='down-arrow')
+        h3 #{groupHead}
+            .checkbox-elements
+                - for (i= 0; i< checkboxNumber; i++ ){
+                    +checkbox-button(checkName[i], checkValue[i], checkHead[i], checkChecked[i])
+                -}
