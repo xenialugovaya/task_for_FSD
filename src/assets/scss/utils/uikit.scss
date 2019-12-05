@@ -307,11 +307,23 @@ letter-spacing: -0.05em;
  }
 
  .bullet-list-block{
+    margin-top: 150px;
      .list-head{
          @include h3;
      }
  }
+ .icons-block{
+ margin-left: 140px;
+ margin-top: 45px;
+ .icons-block-column{
+     display: inline-block;
+     &:not(:first-child){
+         margin-left: 150px;
+     }
+ }
+ }
 
+ 
 
 
 

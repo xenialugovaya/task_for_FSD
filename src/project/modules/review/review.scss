@@ -1,0 +1,32 @@
+.avatar{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    
+ 
+    img{
+        display:block;
+        width: 48px;
+        height: 46px;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 20px $dark_shade_10;
+        border-radius: 32px;
+
+    }
+    .like_button{
+        display: block;
+
+    }
+}
+.review-text{
+    margin-left: 10px;
+    display: inline-block;
+    max-width: 653px;
+    .name{
+        @include sub-header;
+    }
+    .textReview{
+        margin-top:10px;
+    }
+}

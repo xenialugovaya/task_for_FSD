@@ -18,6 +18,8 @@ html(lang='ru')
         include ../modules/button/button
         include ../modules/pagination/pagination
         include ../modules/bullet-list/bullet-list
+        include ../modules/room-icons/room-icons
+        include ../modules/review/review
 
         mixin color-column(colorClass, colorName, colorCode)
             .wrap-color
@@ -99,7 +101,7 @@ html(lang='ru')
                 .pagination-block
                     h3 pagination
                     +pagination
-            .wrap-dropbox-block
+            section.wrap-dropbox-block
                 .dropbox-column
                     .input_uikit.bedroom
                         +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
@@ -118,4 +120,11 @@ html(lang='ru')
                         +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
                     .bullet-list-block
                         +bullet-list('bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+            section.icons-block
+                .icons-block-column
+                    +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
+                    +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
+                .icons-block-column
+                    +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')
+
 
