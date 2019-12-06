@@ -9,6 +9,7 @@ import './project/modules/range_slider/multirange'
 
 
 
+
 // SCSS
 import './assets/scss/main.scss'
 

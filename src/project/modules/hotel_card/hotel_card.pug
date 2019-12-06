@@ -1,9 +1,13 @@
 include ../ratings/ratings
 
-mixin hotel_card (hcImg, hcNum, hcPrice, roomType, hcReviews)
+mixin hotel_card (hcImgs, hcNum, hcPrice, roomType, hcReviews, hotel_img_arrow)
+    
     .hotel_card
-        .hotel_img
-            img(src=hcImg)
+        .hotel_img(class=hotel_img_arrow)
+            ul.hotelSlider#light-slider
+                each hcImg in hcImgs
+                    li 
+                        img(src=hcImg)
         .hotel_descr
             .hotel_card-header
                 span.numbersign №
