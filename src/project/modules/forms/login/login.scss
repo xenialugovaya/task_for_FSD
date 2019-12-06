@@ -1,9 +1,22 @@
-.login .wrap-input{
-    display:inline-block;  
-    &:nth-child(3){ margin-left: 15px;}
+.login {
+
+.wrap-input{
+    margin-top:19px;
+    display:inline-block;
+    &:nth-child(3){ margin-left: 18px;}
+}
+.wrap-default{
+    margin-top:21px;
+}
+.form-header{
+    letter-spacing: 1px;
+}
+
+
 }
 
 .form-footer{
-    margin-top:31px;
+    margin-top:7px;
+   
 }
 

@@ -1,4 +1,8 @@
 .form-footer{
+    width: 320px;
     p {display: inline-block;}
-    button {display: inline-block;}
+    .button_ghost-button {
+        display: inline-block;
+        margin-left: 35px;
+    }
 }

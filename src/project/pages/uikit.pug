@@ -20,6 +20,7 @@ html(lang='ru')
         include ../modules/bullet-list/bullet-list
         include ../modules/room-icons/room-icons
         include ../modules/review/review
+        include ../modules/hotel_card/hotel_card
 
         mixin color-column(colorClass, colorName, colorCode)
             .wrap-color
@@ -126,5 +127,17 @@ html(lang='ru')
                     +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
                 .icons-block-column
                     +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')
-
+        .content-cards
+            .logo_uikit
+                +logo()
+            .wrap-cadrs-columns
+                .column
+                    include ../modules/forms/login/login
+                    include ../modules/forms/registration/registration
+                .column
+                     include ../modules/forms/booking/booking
+                     include ../modules/forms/signup/signup
+                .column
+                    .calendar
+                    +hotel_card ('assets/img/image2.png', '888', '9 990₽', 'люкс', '145')
 

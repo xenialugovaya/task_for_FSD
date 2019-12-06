@@ -1,3 +1,8 @@
+@import './registration/registration';
+@import './login/login';
+@import './booking/booking';
+@import './signup/signup';
+
 .wrap-form{
     
     width: 380px;
@@ -7,14 +12,17 @@
     box-sizing: border-box;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-   
+   form{
+       width:320px;
+   }
 }
 
+
+
 .form-header{
-@include h1;
-font-size: 26px;
-font-weight: 900;
-letter-spacing: 0.02em;
+@include h1-cyrillic;
+
+
 }
 
 
@@ -24,9 +32,7 @@ letter-spacing: 0.02em;
     margin-top:30px;
 }
 
-.wrap-input{
-    margin-top: 20px;
-}
+
 
 .material-icons{
     cursor: pointer;

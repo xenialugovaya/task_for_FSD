@@ -1,0 +1,15 @@
+include ../__input/form__input
+include ../__form-footer/form__form-footer
+include ../__radio-buttons/form__radio-buttons
+.wrap-form
+    form(class='registration')
+        .form-header Регистрация аккаунта
+        +formInput('text', '', 'Имя', 'default', 'wrap-default')
+        +formInput('text', '', 'Фамилия', 'default', 'wrap-default')
+        +radio-button('Мужчина', 'male', 'checked')
+        +radio-button('Женщина', 'female')
+        +formInput('text', 'Дата рождения', 'ДД.ММ.ГГГ', 'default', 'masked' ,'masked')
+        +formInput('text', 'данные для входа в сервис', 'Email', 'default', 'wrap-default')
+        +formInput('text', '', 'Пароль', 'default', 'wrap-default')
+        +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
+        +form-footer('Перейти к оплате', 'войти', 'Уже есть аккаунт на Toxin', 'full')

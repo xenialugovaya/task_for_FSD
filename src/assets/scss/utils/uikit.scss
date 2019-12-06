@@ -323,6 +323,53 @@ letter-spacing: -0.05em;
  }
  }
 
+ //Cards
+
+.content-cards{
+    width: 1440px;
+    height: 1350px;
+    background: #F4F4F6;
+    padding-top: 1px;
+    
+
+    .logo_uikit .logo{
+        margin-left: 29px;
+        margin-top: 28px;
+        width: 50px;
+        height: 50px;
+    }
+    .wrap-cadrs-columns{
+        margin-left:139px;
+        margin-top:71px;
+        
+    }
+    .wrap-form{
+
+        &:not(:first-child){
+            margin-top: 40px;
+    }
+}
+.column{
+    display: inline-block;
+    vertical-align: top;
+    &:not(:first-child){
+        margin-left: 40px;
+    }
+
+}
+}
+.calendar{
+    background: #FFFFFF;
+border: 1px solid rgba(31, 32, 65, 0.25);
+box-sizing: border-box;
+box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+border-radius: 4px;
+width: 320px;
+height: 369px;
+}
+.hotel_card{
+    margin-top: 40px;
+}
  
 
 

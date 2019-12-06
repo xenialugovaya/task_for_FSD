@@ -2,9 +2,10 @@ include ../__input/form__input
 include ../__form-footer/form__form-footer
 include ../__radio-buttons/form__radio-buttons
 .wrap-form
-     form(class='login')
-        .form-header Найдём номера под ваши пожелания
-        +formInput('text', 'прибытие', 'ДД.ММ.ГГГГ', 'small-input')
-        +formInput('text', 'выезд', 'ДД.ММ.ГГГГ', 'small-input')
-        +formInput('text', 'гости', 'Сколько гостей', 'dropdown')
-        +form-footer('Подобрать номер')
+      form(class='login')
+         .form-header Найдём номера под ваши пожелания
+         +formInput('text', 'прибытие', 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')
+         +formInput('text', 'выезд', 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')
+         .guests
+            +formInput('', 'гости', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+         +form-footer('Подобрать номер')
