@@ -5,6 +5,8 @@ import 'webpack-jquery-ui'
 import 'webpack-jquery-ui/css'
 import './project/modules/ratings/rating'
 import './project/modules/range_slider/multirange'
+//import 'air-datepicker/dist/css/datepicker.min.css'
+import 'air-datepicker/dist/js/datepicker.js'
 
 
 

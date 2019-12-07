@@ -21,6 +21,7 @@ html(lang='ru')
         include ../modules/room-icons/room-icons
         include ../modules/review/review
         include ../modules/hotel_card/hotel_card
+        include ../modules/calendar/calendar
 
         mixin color-column(colorClass, colorName, colorCode)
             .wrap-color
@@ -138,7 +139,7 @@ html(lang='ru')
                      include ../modules/forms/booking/booking
                      include ../modules/forms/signup/signup
                 .column
-                    .calendar
+                    +calendar()
                     +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')
                     +hotel_card (['assets/img/image3.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '840', '9 990₽', 'люкс', '65')
 

@@ -1,5 +1,5 @@
 include _dropdown/form__input_dropdown
-mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod, masked, dropdown, itemsNumber, ...itemName)
+mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod, masked, dropdown, itemsNumber, itemName, ADDdatepicker)
     .wrap-input(class=wrap_mod)
         .input-header #{i_h}
         if masked
@@ -7,5 +7,5 @@ mixin formInput(input_type, i_h, ph_txt, mod, wrap_mod, masked, dropdown, itemsN
         else if dropdown
             +dropdownInput(itemsNumber, ...itemName)
         else
-            input(class='form-input' + ' ' + mod  type=input_type placeholder=ph_txt)
+            input(class='form-input' + ' ' + mod + ' ' + ADDdatepicker type=input_type placeholder=ph_txt)
         .material-icons
