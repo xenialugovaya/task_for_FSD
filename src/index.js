@@ -1,5 +1,5 @@
 // JS
-import './js/'
+
 import 'popper.js'
 import 'webpack-jquery-ui'
 import 'webpack-jquery-ui/css'
@@ -7,6 +7,10 @@ import './project/modules/ratings/rating'
 import './project/modules/range_slider/multirange'
 //import 'air-datepicker/dist/css/datepicker.min.css'
 import 'air-datepicker/dist/js/datepicker.js'
+import './project/modules/calendar/calendar'
+import './project/modules/forms/__input/_small/form__input-small' //надо будет пересмотреть и отключить
+import './js/'
+import './project/modules/forms/__calendar-block/form__calendar-block'
 
 
 

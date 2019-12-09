@@ -15,10 +15,15 @@
 }
 
 .datepicker {
+  
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  border-radius: 4px;
+  width: 320px;
   background: #fff;
-  border: 1px solid map_get($datepickerBorderColor, default);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-  border-radius: $datepickerBorderRadius;
+  //border: 1px solid map_get($datepickerBorderColor, default);
+  //box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+  //border-radius: $datepickerBorderRadius;
   box-sizing: content-box;
   font-family: $datepickerFontFamily, sans-serif;
   font-size: $datepickerFontSize;
@@ -53,7 +58,7 @@
 
 .datepicker-inline {
   .datepicker {
-    border-color: map-get($datepickerBorderColor, inline);
+    //border-color: map-get($datepickerBorderColor, inline);
     box-shadow: none;
     position: static;
     left: auto;

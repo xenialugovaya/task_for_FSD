@@ -1,13 +1,25 @@
 .slider-wrap{
     width: 266px;
-   text-align: right;
+    .range-head-wrap{
+    display: flex;
+    justify-content: space-between;
+    h3{
+        flex:1;
+    }
 
+    #amount{
+        color:$dark_shade_50;
+        font-size: 12px;
+        text-align: right;
+        flex:1;
+        align-self: flex-end;
+        font-family: Montserrat;
+        font-size: 12px;
+        text-transform: uppercase;
+
+    }
 }
 
-#amount{
-    color:$dark_shade_50;
-    font-size: 12px;
-    
 }
 
 .ui-slider{
@@ -16,6 +28,8 @@ height: 6px;
 border: 1px solid $dark_shade_25;
 box-sizing: border-box;
 border-radius: 3px;
+margin-top:23px;
+
 }
 .ui-slider-handle{
     display: block;

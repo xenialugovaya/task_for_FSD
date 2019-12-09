@@ -2,6 +2,7 @@ import 'item-quantity-dropdown/src/index.js'
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css'
 import './_dropdown/_multiple-dropdown'
 import './_masked/jquery.maskedinput'
+import './_middle-calendar/form__input_middle-calendar'
 
 
 $(document).ready(function($){                 

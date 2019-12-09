@@ -1,8 +1,13 @@
 .button_ghost-button{ 
     width: 99px;
-    line-height: 40px !important;
+    line-height: 40px!important;
     color: $purple;
-    background: transparent;
-    border: 2px solid $purple;
+    background: $purpleGradient;
+    padding:2px;
+    span{
+        background: white;
+        display: block;
+        border-radius: 22px;
+    }
   
 }

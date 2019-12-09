@@ -39,8 +39,10 @@ input[type=checkbox] {
         content: "";
         width: 6px;
         height: 8px;
-        border-right: 2px solid $purple; 
-        border-bottom: 2px solid $purple; 
+        border-right: 2px solid transparent; 
+        border-bottom: 2px solid transparent; 
+        border-image: $purpleGradient;
+        border-image-slice: 1;
         position: absolute; 
         left: 7px;
         top: 4px;  

@@ -1,18 +1,23 @@
-nav
-    .navbar
-        include ../icons/logo/logo
-        +logo('url(#purple)', 'url(#green)', '42', '42')  
-        include ../button/button
-        +Button('button_ghost-button', 'войти')
-        include ../button/button
-        +Button('button_big-button', 'зарегистрироваться') 
-        .menu
-            include ../nav_link/nav_link
-            ul
-                each navLink in [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения'}]
-                    li   
-                        if navLink.val== 'Услуги' || navLink.val== 'Соглашения'
-                            +navLink(navLink.href, navLink.val, 'dropdownLink')
-                            .material-icons     
-                        else
-                            +navLink(navLink.href, navLink.val, '')
+include ../button/button
+include ../nav_link/nav_link
+include ../icons/logo/logo
+mixin navbar(loginState, navLinks, buttons)
+    nav.header_navigation
+        .navbar 
+            +logo('url(#purple)', 'url(#green)', '42', '42')             
+            .menu 
+                ul
+                    each navLink in navLinks
+                        li   
+                            if navLink.mod
+                                +navLink(navLink.href, navLink.val, 'dropdownLink')
+                                .material-icons     
+                            else
+                                +navLink(navLink.href, navLink.val)
+            if buttons
+                .header_buttons
+                    each button in buttons
+                        +Button(button.style, button.name, button.position)
+            else
+                each state in loginState
+                    .user_name #{state.user_name}

@@ -1,3 +1,6 @@
-mixin Button(buttonMod, btn_name)
-  button(class ='button' + ' ' + buttonMod) #{btn_name}
-    .material-icons
+mixin Button(buttonStyle, buttonName, buttonPosition)  
+  button.button(class='button_' + buttonStyle + ' button_'+ buttonPosition)
+      span #{buttonName}
+      .material-icons  
+  
+
