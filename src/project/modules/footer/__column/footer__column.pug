@@ -1,2 +1,9 @@
-mixin footerColumn(name)
-    li= name            
+include ../../nav_link/nav_link
+
+mixin footerColumn(columnHead, footerLinks)
+    .footer__column
+        h3 #{columnHead}
+        ul
+            each navLink in footerLinks
+                li
+                    +navLink(navLink.href, navLink.val)          
