@@ -4,12 +4,12 @@
     .down-arrow::before{
         position: absolute;
         @include drop-arrow;
-        top:17px;   
+        top:20px;   
     }
     .up-arrow::after{
         position: absolute;
         @include up-arrow;
-        top:17px;   
+        top:20px;   
     }
     h3{
         cursor:pointer;

@@ -1,0 +1,53 @@
+.search-room-content{
+    padding: 30px 9.7% 70px 9.7%; /* 140px / 1440px = 0,097*/ 
+    display: grid;
+    grid-template-columns: 1fr 3.135fr; /* 266px / 834px = 3,135*/ 
+    grid-gap:5%; /* 60px / 1440px = 0,042*/ 
+    h1{
+        letter-spacing: 0.8px;
+    }
+    .filter-column-elem{
+        &:nth-child(2){
+            margin-top: 20px;
+        }
+        &:nth-child(3){
+            margin-top: 7px;
+            p{
+                font-size: 12px;
+                color: $dark_shade_50;
+                margin-top: 9px;
+            }
+        }
+        &:nth-child(5){
+            margin-top: 9px;
+        }
+        &:nth-child(6){
+            margin-top: 30px;
+        }
+        &:nth-child(7){
+            margin-top: -20px;
+        }
+    }
+    
+}
+.room-cards-column{
+    display: grid;
+}
+.room-cards-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 12px;
+    margin-top: 10px;
+    .hotel_card{
+        margin-top: 10px;
+    }
+  
+     
+}
+.room-search-pagination{
+    margin-top: 40px;
+    margin-left: -12px;
+    justify-self: center;
+
+    
+}

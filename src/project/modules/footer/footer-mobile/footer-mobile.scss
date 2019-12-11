@@ -1,0 +1,19 @@
+.wrap-footer-mobile{
+    padding: 100px 30% 159px 30%; /* 440px / 1440px = 0,3*/
+    text-align: center;
+    .logo .logo_name{
+        fill:#1F2041;
+        margin-left: 10px; 
+    }
+    p{
+        margin-top: 20px;
+    }
+    .socials{
+        display: block;
+        margin-top: 25px;
+        .social-twitter, .social-fb, .social-insta{
+            display: inline-block;
+        }
+    }
+ 
+}

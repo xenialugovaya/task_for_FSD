@@ -2,10 +2,23 @@ include ../button/button
 include ../nav_link/nav_link
 include ../icons/logo/logo
 mixin navbar(loginState, navLinks, buttons)
-    nav.header_navigation
+    .header_navigation    
         .navbar 
-            +logo('url(#purple)', 'url(#green)', '42', '42')             
-            .menu 
+            +logo('url(#purple)', 'url(#green)', '42', '42')    
+            a(class="mburger" href="#my-menu")
+                b
+                b
+                b 
+            nav.menu-mobile#my-menu
+                ul
+                    each navLink in navLinks
+                        li   
+                            if navLink.mod
+                                +navLink(navLink.href, navLink.val, 'dropdownLink')
+                                .material-icons     
+                            else
+                                +navLink(navLink.href, navLink.val)
+            nav.menu
                 ul
                     each navLink in navLinks
                         li   

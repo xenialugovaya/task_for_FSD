@@ -25,6 +25,7 @@ html(lang='ru')
         include ../modules/range_slider/multirange
         include ../modules/nav/nav
         include ../modules/footer/footer
+        include ../modules/footer/footer-mobile/footer-mobile
 
         mixin color-column(colorClass, colorName, colorCode)
             .wrap-color
@@ -149,5 +150,6 @@ html(lang='ru')
                 +logo()
             .wrap-hf-grid
                 +navbar([{state : 'logged_out'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}], [{style:'ghost-button', name:'login', position:'in-header'}, {style:'big-button', name:'register', position:'in-header'}])
-                +navbar([{state : 'logged_in', user_name : 'User Name'}], [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги', mod : 'dropdown'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения'}])
+                +navbar([{state : 'logged_in', user_name : 'Cosmin Negoita'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}])
                 +footer()
+                +footer-mobile()

@@ -133,6 +133,14 @@ text-transform: uppercase;
   }
 }
 
+@mixin header-registration-page{
+  background: url(../img/image4.png) no-repeat;
+  background-size: cover;
+  height:702px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   // px to rem
 
 /*

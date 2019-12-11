@@ -7,6 +7,7 @@ import '../project/modules/hotel_card/hotel_card'
 import 'lightslider/src/js/lightslider.js'
 import 'lightslider/src/css/lightslider.css'
 import '../project/modules/forms/__input/form__input'
+import '../project/modules/nav/nav'
 
 $(document).ready(function($){                 
     $('.star_block#star-rating').rating(); 

@@ -7,15 +7,18 @@ html(lang='ru')
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
         link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
         link(rel='stylesheet', href='font-awesome.min.css')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
 
 
     body
     include ../modules/nav/nav
     include ../modules/footer/footer
+    include ../modules/footer/footer-mobile/footer-mobile
 
     +navbar([{state : 'logged_out'}], [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги', mod : 'dropdown'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения', mod : 'dropdown'}], [{style:'ghost-button', name:'войти'}, {style:'big-button', name:'зарегистрироваться'}])
-    include ../modules/header/header
+    
     block content
 
     footer
     +footer()
+    +footer-mobile()

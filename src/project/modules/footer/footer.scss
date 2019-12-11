@@ -1,4 +1,5 @@
 @import './__column/footer__column.scss';
+@import './footer-mobile/footer-mobile';
 
 footer{
     background: #FFFFFF;
@@ -26,11 +27,13 @@ footer{
     
     .footer_subscription-column{
         grid-area: subscription;
+        margin-top: 5px;
+
         p{
             margin-top: 15px;
         }
         .subscription-wrap{
-            margin-top: 15px;
+            margin-top: 10px;
             .input-header{
                 visibility: hidden;
             }
@@ -83,3 +86,17 @@ footer{
     margin-left: 20px;
     
  }
+
+ @media (min-width: 1000px) {
+    .wrap-footer-mobile {
+       display: none !important;
+    }
+ }
+ @media (max-width: 1000px) {
+    .wrap-footer {
+    display: none !important;
+ }
+ .wrap-footer-copyright{
+    display: none !important;
+ }
+}
