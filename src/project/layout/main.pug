@@ -3,6 +3,7 @@ block variables
 doctype html
 html(lang='ru')
     head
+        meta(charset='utf-8')
         title= pageTitle 
         link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
         link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
@@ -12,7 +13,7 @@ html(lang='ru')
 
     body
     include ../modules/nav/nav
-    include ../modules/footer/footer
+    include ../modules/footer/footer-rus/footer-rus
     include ../modules/footer/footer-mobile/footer-mobile
 
     +navbar([{state : 'logged_out'}], [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги', mod : 'dropdown'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения', mod : 'dropdown'}], [{style:'ghost-button', name:'войти'}, {style:'big-button', name:'зарегистрироваться'}])
@@ -20,5 +21,5 @@ html(lang='ru')
     block content
 
     footer
-    +footer()
+    +footer-rus()
     +footer-mobile()

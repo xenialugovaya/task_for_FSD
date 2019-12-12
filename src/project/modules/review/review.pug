@@ -1,10 +1,11 @@
 include ../like_button/like_button
 
 mixin review(imgReview, Name, Date, textReview, defaultCounter, likeName, likeValue, likeChecked)
-    .avatar
-        img(src=imgReview)
-        +like_button(defaultCounter, likeName, likeValue, likeChecked)
-    .review-text
-        .name #{Name}
-        p.date #{Date}
-        p.textReview #{textReview}
+    .review-block
+        .avatar
+            img(src=imgReview)
+            +like_button(defaultCounter, likeName, likeValue, likeChecked)
+        .review-text
+            .name #{Name}
+            p.date #{Date}
+            p.textReview #{textReview}
