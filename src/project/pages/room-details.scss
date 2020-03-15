@@ -36,6 +36,16 @@
     .room-reviews{
         grid-column: span 2;
         margin-top: 5px;
+        max-width: 711px;
+        .room-heading{
+            display: flex;
+            justify-content: space-between;
+        }
+        .review-number{
+            font-family: $mainFont;
+            font-size: $mainFontSize;
+            color: $dark_shade_50;
+        }
         .review-block{
             margin-top: 21px;
         }
