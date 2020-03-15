@@ -1,6 +1,8 @@
 include ../__input/form__input
 include ../__form-footer/form__form-footer
 include ../__radio-buttons/form__radio-buttons
+include ../__calendar-block/form__calendar-block
+
 .wrap-form
     form(class='booking')
         .form-header 
@@ -10,8 +12,7 @@ include ../__radio-buttons/form__radio-buttons
             .priceline
                 span.price 9 990₽
                 span.priceper в сутки
-        +formInput('text', 'прибытие', '19.08.2019', 'small-input', 'wrap-small')
-        +formInput('text', 'выезд', '23.08.2019', 'small-input', 'wrap-small')
+        +form__calendar-block('прибытие', 'выезд')        
         .guests
             +formInput('', 'гости', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
         .calculation-block

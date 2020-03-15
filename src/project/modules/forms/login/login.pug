@@ -5,8 +5,7 @@ include ../__calendar-block/form__calendar-block
 .wrap-form
       form(class='login')
          .form-header Найдём номера под ваши пожелания
-         +formInput('text', 'прибытие', 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')
-         +formInput('text', 'выезд', 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')
+         +form__calendar-block('прибытие', 'выезд')
          .guests
             +formInput('', 'гости', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
          +form-footer('Подобрать номер')
