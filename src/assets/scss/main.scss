@@ -1,4 +1,4 @@
-@import "utils/libs";
+
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
@@ -36,6 +36,7 @@
 @import "../../project/modules/review/review";
 @import "../../project/modules/hotel_card/hotel_card";
 @import "../../project/modules/calendar/calendar";
+@import "../../project/modules/donut-chart/donut-chart";
 
 body{
 font-family: $mainFont;
