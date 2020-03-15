@@ -8,6 +8,7 @@ block content
     include ../modules/review/review
     include ../modules/room-icons/room-icons
     include ../modules/bullet-list/bullet-list
+    include ../modules/donut-chart/donut-chart
     head
     .header-room-details
         .main-img
@@ -24,6 +25,7 @@ block content
             +room-icons('cosy', 'Уют', 'Номер оснащен камином')
         .room-details-diagram
             h2 Впечатления о номере
+            +donut-chart()
         .room-form-booking
             include ../modules/forms/booking/booking
         .room-reviews
