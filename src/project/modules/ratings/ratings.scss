@@ -1,21 +1,23 @@
+.star {
+  &:before {
+    content: "\e83a";
+  }
 
-.star{
-    &:before{
-        content:"\e83a";
-    }
-    width: 24px;    
-    height: 24px;
-    cursor: pointer;
-    color: $purple; 
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: $purple;
 }
-.fullStar{
-    &:before{
-        content: '\e838';
-    }
-  
+
+.fullStar {
+  &:before {
+    content: '\e838';
+  }
+
 }
-.tmp_fs{
-    &:before{
-        content: '\e838';
-    }
+
+.tmp_fs {
+  &:before {
+    content: '\e838';
+  }
 }

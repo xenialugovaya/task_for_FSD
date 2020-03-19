@@ -2,40 +2,40 @@ extends ../layout/main
 
 block variables
 
-    -var pageTitle= 'Landing Page'
+  -var pageTitle= 'Landing Page'
 
 block content
-    include ../modules/review/review
-    include ../modules/room-icons/room-icons
-    include ../modules/bullet-list/bullet-list
-    include ../modules/donut-chart/donut-chart
-    head
-    .header-room-details
-        .main-img
-            img(src="assets/img/image2.png")
-        .small-img1
-            img(src="assets/img/image-head2.png")
-        .small-img2
-            img(src="assets/img/image-head3.png")
-    .content-room-details
-        .room-details-icons
-            h2 Сведения о номере
-            +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
-            +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
-            +room-icons('cosy', 'Уют', 'Номер оснащен камином')
-        .room-details-diagram
-            h2 Впечатления от номера
-            +donut-chart()
-        .room-form-booking
-            include ../modules/forms/booking/booking
-        .room-reviews
-            div.room-heading
-                h2 Отзывы посетителей номера
-                span.review-number 2 отзыва
-            +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')
-            +review('assets/img/image1.png', 'Патрисия Стёклышкова', 'Неделю назад', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', '2')
-        .room-bullet-list
-            +bullet-list('Правила', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
-        .room-short-text
-            h2 Отмена
-            p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+  include ../modules/review/review
+  include ../modules/room-icons/room-icons
+  include ../modules/bullet-list/bullet-list
+  include ../modules/donut-chart/donut-chart
+  head
+  .header-room-details
+    .main-img
+      img(src="assets/img/image2.png")
+    .small-img1
+      img(src="assets/img/image-head2.png")
+    .small-img2
+      img(src="assets/img/image-head3.png")
+  .content-room-details
+    .room-details-icons
+      h2 Сведения о номере
+      +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
+      +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
+      +room-icons('cosy', 'Уют', 'Номер оснащен камином')
+    .room-details-diagram
+      h2 Впечатления от номера
+      +donut-chart()
+    .room-form-booking
+      include ../modules/forms/booking/booking
+    .room-reviews
+      div.room-heading
+        h2 Отзывы посетителей номера
+        span.review-number 2 отзыва
+      +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')
+      +review('assets/img/image1.png', 'Патрисия Стёклышкова', 'Неделю назад', 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент', '2')
+    .room-bullet-list
+      +bullet-list('Правила', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+    .room-short-text
+      h2 Отмена
+      p Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.

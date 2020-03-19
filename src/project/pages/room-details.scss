@@ -1,78 +1,89 @@
-.header-room-details{
-    height:485px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
-    overflow: hidden;
-  
-    img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.header-room-details {
+  height: 485px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(320px, 1fr));
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
-.main-img{
+
+.main-img {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 100%;
+}
+
+
+
+.content-room-details {
+  padding: 70px 9.7% 70px 9.7%;
+  /* 140px / 1440px = 0,097*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 1%;
+
+  /* 70px / 1440px = 0,05*/
+  h2 {
+    @include h2;
+  }
+
+  .room-details-diagram {
+    margin-left: -25px;
+  }
+
+  .room-form-booking {
+    grid-row: span 3;
+
+  }
+
+  .room-reviews {
     grid-column: span 2;
-    grid-row: span 2;
-    height:100%;
-}
+    margin-top: 5px;
+    max-width: 711px;
 
-
-
-.content-room-details{
-    padding: 70px 9.7% 70px 9.7%; /* 140px / 1440px = 0,097*/
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-gap:1%; /* 70px / 1440px = 0,05*/
-    h2{
-        @include h2;
-    }
-    .room-details-diagram{
-        margin-left: -25px;
-    }
-    .room-form-booking{
-        grid-row: span 3;
-
-    }
-    .room-reviews{
-        grid-column: span 2;
-        margin-top: 5px;
-        max-width: 711px;
-        .room-heading{
-            display: flex;
-            justify-content: space-between;
-        }
-        .review-number{
-            font-family: $mainFont;
-            font-size: $mainFontSize;
-            color: $dark_shade_50;
-        }
-        .review-block{
-            margin-top: 21px;
-        }
-       
-    }
-    .room-bullet-list{
-        margin-top: 27px;
-        max-width: 260px;
-        min-width: 250px;
-        .list-head{
-            @include h2;
-            margin-left: 20px;
-            
-        }
+    .room-heading {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .room-short-text{
-        margin-top: 27px;
-        max-width: 340px;
-        min-width: 300px;
-        margin-left: -27px;
-        p{
-            margin-top: 15px;
-        }
+    .review-number {
+      font-family: $mainFont;
+      font-size: $mainFontSize;
+      color: $dark_shade_50;
+    }
+
+    .review-block {
+      margin-top: 21px;
+    }
+
+  }
+
+  .room-bullet-list {
+    margin-top: 27px;
+    max-width: 260px;
+    min-width: 250px;
+
+    .list-head {
+      @include h2;
+      margin-left: 20px;
 
     }
+  }
+
+  .room-short-text {
+    margin-top: 27px;
+    max-width: 340px;
+    min-width: 300px;
+    margin-left: -27px;
+
+    p {
+      margin-top: 15px;
+    }
+
+  }
 
 }
-
-

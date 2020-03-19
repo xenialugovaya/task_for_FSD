@@ -1,9 +1,8 @@
 include ../__input/form__input
 include ../../calendar/calendar
 mixin form__calendar-block(header1, header2)
-    .form__calendar-block
-        +formInput('text', header1, 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')  
-        +formInput('text', header2, 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')  
-        .calendar-dropdown
-            +calendar()
-            
+  .form__calendar-block
+    +formInput('text', header1, 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')  
+    +formInput('text', header2, 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')  
+    .calendar-dropdown
+      +calendar()

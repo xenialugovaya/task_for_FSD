@@ -1,155 +1,155 @@
 doctype html
 html(lang='ru')
-    head
-        title= pageTitle 
-        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-        link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap', rel='stylesheet')
+  head
+    title= pageTitle 
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap' rel='stylesheet')
 
 
 
-    body
-        include ../modules/icons/logo/logo
-        include ../modules/forms/__input/form__input
-        include ../modules/checkbox-group/checkbox-group
-        include ../modules/toggle/toggle
-        include ../modules/like_button/like_button
-        include ../modules/forms/__radio-buttons/form__radio-buttons
-        include ../modules/ratings/ratings
-        include ../modules/button/button
-        include ../modules/pagination/pagination
-        include ../modules/bullet-list/bullet-list
-        include ../modules/room-icons/room-icons
-        include ../modules/review/review
-        include ../modules/hotel_card/hotel_card
-        include ../modules/calendar/calendar
-        include ../modules/range_slider/multirange
-        include ../modules/nav/nav
-        include ../modules/footer/footer
-        include ../modules/footer/footer-mobile/footer-mobile
-        include ../modules/forms/__calendar-block/form__calendar-block
+  body
+    include ../modules/icons/logo/logo
+    include ../modules/forms/__input/form__input
+    include ../modules/checkbox-group/checkbox-group
+    include ../modules/toggle/toggle
+    include ../modules/like_button/like_button
+    include ../modules/forms/__radio-buttons/form__radio-buttons
+    include ../modules/ratings/ratings
+    include ../modules/button/button
+    include ../modules/pagination/pagination
+    include ../modules/bullet-list/bullet-list
+    include ../modules/room-icons/room-icons
+    include ../modules/review/review
+    include ../modules/hotel_card/hotel_card
+    include ../modules/calendar/calendar
+    include ../modules/range_slider/multirange
+    include ../modules/nav/nav
+    include ../modules/footer/footer
+    include ../modules/footer/footer-mobile/footer-mobile
+    include ../modules/forms/__calendar-block/form__calendar-block
 
-        mixin color-column(colorClass, colorName, colorCode)
-            .wrap-color
-                .color-box(class=colorClass)
-                .color-text
-                    .color-head #{colorName}
-                    .color-descr #{colorCode}
+    mixin color-column(colorClass, colorName, colorCode)
+      .wrap-color
+        .color-box(class=colorClass)
+        .color-text
+          .color-head #{colorName}
+          .color-descr #{colorCode}
 
-        mixin text-column(textTag, nameTage, textSample)
-            .wrap-text
-                .tag-name(class=textTag)  #{nameTage}
-                .text-sample(class=textTag) #{textSample}
+    mixin text-column(textTag, nameTage, textSample)
+      .wrap-text
+        .tag-name(class=textTag)  #{nameTage}
+        .text-sample(class=textTag) #{textSample}
 
-        .content-colors_types
-            .logo_uikit
-                +logo()
-            .color-column
-                each box in [{colorClass : 'dark_shade_100', colorName : 'Dark Shade 100%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_75', colorName : 'Dark Shade 75%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_50', colorName : 'Dark Shade 50%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_25', colorName : 'Dark Shade 25%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_5', colorName : 'Dark Shade 5%', colorCode: '#1F2041'}, {colorClass : 'purple', colorName : 'Purple', colorCode: '#BC9CFF'}, {colorClass : 'green', colorName : 'Green', colorCode: '#6FCF97'}]
-                    +color-column(box.colorClass, box.colorName, box.colorCode)
-            .text-column
-                each textType in [{textTag : 'h1', nameTage : 'H1', textSample :'This one is the sub-section or widget title'}, {textTag : 'h2', nameTage : 'H2', textSample :'Next one is the item title inside widgets'}, {textTag : 'h3', nameTage : 'H3', textSample :'This is a label or CTA text'}, {textTag : 'p', nameTage : 'Body', textSample :'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
-                    +text-column(textType.textTag, textType.nameTage, textType.textSample)
-        .content-form_elements
-            .logo_uikit
-                +logo()
-            .column1
-                .input_uikit
-                    +formInput('text', 'text field', 'Email', 'default')
-                .input_uikit
-                    +formInput('text', 'text field', 'This is pretty awesome', 'focused')
-                .input_uikit
-                    +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown', 'wrap-dropdown')
-                .input_uikit
-                    +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default', 'masked' ,'masked')
-                .input_uikit
-                    +form__calendar-block('date dropdown', 'date dropdown')
-                .input_uikit
-                    +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
-                .input_uikit
-                    +formInput('text', 'subscription text field', 'Email', 'subscription', 'subscription-wrap')
-            .column2
-                .checkbox-block
-                    +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
-    
-                .radio-block
-                    h3 Radio Buttons
-                    +radio-button('Мужчина', 'male', 'checked')
-                    +radio-button('Женщина', 'female')
-                .toggle-block
-                    h3 Toggle    
-                    +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
-                    +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
-                .like-block
-                    h3 like button
-                    +like_button('2', 'mylike1', 'like1')
-                    +like_button('12', 'mylike2', 'like2', 'checked')
-                .rate-block
-                    h3 rate button
-                    +rating('4')
-                    +rating('4')
-                   
-            .column3
-                .range-block
-                    +rangeMixin('range slider')
-                .button-block
-                    h3 buttons
-                    .small_button-block
-                        +Button('small-button', 'click me')
-                        +Button('small-button', 'click me')
-                    .ghost_button-block
-                        +Button('ghost-button', 'click me')
-                        +Button('ghost-button', 'click me')
-                    .transperent_button-block
-                        +Button('transparent-button', 'click me')
-                        +Button('transparent-button', 'click me')
-                    +Button('btn-arrow', 'перейти к оплате')
-                .pagination-block
-                    h3 pagination
-                    +pagination
-            section.wrap-dropbox-block
-                .dropbox-column
-                    .input_uikit.bedroom
-                        +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
-                    .input_uikit.bedroom
-                        +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты'])
-                    .checkbox-expandable-block
-                        +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
-                        +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
-                .dropbox-column
-                    .input_uikit.guests
-                        +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
-                    .checkbox-rich-block    
-                        +checkbox-group('2', 'rich checkbox buttons', '', '', ['Широкий коридор', 'Помощник для инвалидов'], '', 'rich', ['Ширина коридоров в номере не менее 91 см.', 'На 1 этаже вас встретит специалист и проводит до номера.'])
-                .dropbox-column
-                    .input_uikit.guests
-                        +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
-                    .bullet-list-block
-                        +bullet-list('bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
-            section.icons-block
-                .icons-block-column
-                    +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
-                    +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
-                .icons-block-column
-                    +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')
-        .content-cards
-            .logo_uikit
-                +logo()
-            .wrap-cadrs-columns
-                .column
-                    include ../modules/forms/login/login
-                    include ../modules/forms/registration/registration
-                .column
-                     include ../modules/forms/booking/booking
-                     include ../modules/forms/signup/signup
-                .column
-                    +calendar()
-                    +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')
-                    +hotel_card (['assets/img/image3.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '840', '9 990₽', 'люкс', '65')
-        .content-headers-footers
-            .logo_uikit
-                +logo()
-            .wrap-hf-grid
-                +navbar([{state : 'logged_out'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}], [{style:'ghost-button', name:'login', position:'in-header'}, {style:'big-button', name:'register', position:'in-header'}])
-                +navbar([{state : 'logged_in', user_name : 'Cosmin Negoita'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}])
-                +footer()
-                +footer-mobile()
+    .content-colors_types
+      .logo_uikit
+        +logo()
+      .color-column
+        each box in [{colorClass : 'dark_shade_100', colorName : 'Dark Shade 100%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_75', colorName : 'Dark Shade 75%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_50', colorName : 'Dark Shade 50%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_25', colorName : 'Dark Shade 25%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_5', colorName : 'Dark Shade 5%', colorCode: '#1F2041'}, {colorClass : 'purple', colorName : 'Purple', colorCode: '#BC9CFF'}, {colorClass : 'green', colorName : 'Green', colorCode: '#6FCF97'}]
+          +color-column(box.colorClass, box.colorName, box.colorCode)
+      .text-column
+        each textType in [{textTag : 'h1', nameTage : 'H1', textSample :'This one is the sub-section or widget title'}, {textTag : 'h2', nameTage : 'H2', textSample :'Next one is the item title inside widgets'}, {textTag : 'h3', nameTage : 'H3', textSample :'This is a label or CTA text'}, {textTag : 'p', nameTage : 'Body', textSample :'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
+          +text-column(textType.textTag, textType.nameTage, textType.textSample)
+    .content-form_elements
+      .logo_uikit
+        +logo()
+      .column1
+        .input_uikit
+          +formInput('text', 'text field', 'Email', 'default')
+        .input_uikit
+          +formInput('text', 'text field', 'This is pretty awesome', 'focused')
+        .input_uikit
+          +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown', 'wrap-dropdown')
+        .input_uikit
+          +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default', 'masked' ,'masked')
+        .input_uikit
+          +form__calendar-block('date dropdown', 'date dropdown')
+        .input_uikit
+          +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
+        .input_uikit
+          +formInput('text', 'subscription text field', 'Email', 'subscription', 'subscription-wrap')
+      .column2
+        .checkbox-block
+          +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
+
+        .radio-block
+          h3 Radio Buttons
+          +radio-button('Мужчина', 'male', 'checked')
+          +radio-button('Женщина', 'female')
+        .toggle-block
+          h3 Toggle    
+          +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
+          +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
+        .like-block
+          h3 like button
+          +like_button('2', 'mylike1', 'like1')
+          +like_button('12', 'mylike2', 'like2', 'checked')
+        .rate-block
+          h3 rate button
+          +rating('4')
+          +rating('4')
+
+      .column3
+        .range-block
+          +rangeMixin('range slider')
+        .button-block
+          h3 buttons
+          .small_button-block
+            +Button('small-button', 'click me')
+            +Button('small-button', 'click me')
+          .ghost_button-block
+            +Button('ghost-button', 'click me')
+            +Button('ghost-button', 'click me')
+          .transperent_button-block
+            +Button('transparent-button', 'click me')
+            +Button('transparent-button', 'click me')
+          +Button('btn-arrow', 'перейти к оплате')
+        .pagination-block
+          h3 pagination
+          +pagination
+      section.wrap-dropbox-block
+        .dropbox-column
+          .input_uikit.bedroom
+            +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
+          .input_uikit.bedroom
+            +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты'])
+          .checkbox-expandable-block
+            +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
+            +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
+        .dropbox-column
+          .input_uikit.guests
+            +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+          .checkbox-rich-block    
+            +checkbox-group('2', 'rich checkbox buttons', '', '', ['Широкий коридор', 'Помощник для инвалидов'], '', 'rich', ['Ширина коридоров в номере не менее 91 см.', 'На 1 этаже вас встретит специалист и проводит до номера.'])
+        .dropbox-column
+          .input_uikit.guests
+            +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+          .bullet-list-block
+            +bullet-list('bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+      section.icons-block
+        .icons-block-column
+          +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
+          +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
+        .icons-block-column
+          +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')
+    .content-cards
+      .logo_uikit
+        +logo()
+      .wrap-cadrs-columns
+        .column
+          include ../modules/forms/login/login
+          include ../modules/forms/registration/registration
+        .column
+          include ../modules/forms/booking/booking
+          include ../modules/forms/signup/signup
+        .column
+          +calendar()
+          +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')
+          +hotel_card (['assets/img/image3.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '840', '9 990₽', 'люкс', '65')
+    .content-headers-footers
+      .logo_uikit
+        +logo()
+      .wrap-hf-grid
+        +navbar([{state : 'logged_out'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}], [{style:'ghost-button', name:'login', position:'in-header'}, {style:'big-button', name:'register', position:'in-header'}])
+        +navbar([{state : 'logged_in', user_name : 'Cosmin Negoita'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}])
+        +footer()
+        +footer-mobile()

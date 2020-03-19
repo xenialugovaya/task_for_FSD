@@ -1,50 +1,55 @@
-.slider-wrap{
-    width: 266px;
-    .range-head-wrap{
+.slider-wrap {
+  width: 266px;
+
+  .range-head-wrap {
     display: flex;
     justify-content: space-between;
-    h3{
-        flex:1;
+
+    h3 {
+      flex: 1;
     }
 
-    #amount{
-        color:$dark_shade_50;
-        font-size: 12px;
-        text-align: right;
-        flex:1;
-        align-self: flex-end;
-        font-family: Montserrat;
-        font-size: 12px;
-        text-transform: uppercase;
+    #amount {
+      color: $dark_shade_50;
+      font-size: 12px;
+      text-align: right;
+      flex: 1;
+      align-self: flex-end;
+      font-family: Montserrat;
+      font-size: 12px;
+      text-transform: uppercase;
 
     }
-}
+  }
 
 }
 
-.ui-slider{
-width: 266px;
-height: 6px;
-border: 1px solid $dark_shade_25;
-box-sizing: border-box;
-border-radius: 3px;
-margin-top:21px;
+.ui-slider {
+  width: 266px;
+  height: 6px;
+  border: 1px solid $dark_shade_25;
+  box-sizing: border-box;
+  border-radius: 3px;
+  margin-top: 21px;
 
 }
-.ui-slider-handle{
-    display: block;
-    border-radius: 50%;
-    
+
+.ui-slider-handle {
+  display: block;
+  border-radius: 50%;
+
 }
-.ui-state-default{
-    border: 2px solid #FFFFFF!important;
-    height: 15px !important;
-    width: 15px!important;
-    background: $greenGradient!important;
-    box-sizing: border-box!important;
-    margin-top: -1px;
-    cursor: pointer!important;
+
+.ui-state-default {
+  border: 2px solid #FFFFFF !important;
+  height: 15px !important;
+  width: 15px !important;
+  background: $greenGradient !important;
+  box-sizing: border-box !important;
+  margin-top: -1px;
+  cursor: pointer !important;
 }
-.ui-slider-range{
-    background: $greenGradient;
+
+.ui-slider-range {
+  background: $greenGradient;
 }
