@@ -20,11 +20,23 @@ const PATHS = {
   assets: 'assets/'
 }
 
-// Pages const for HtmlWebpackPlugin
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#html-dir-folder
-// const PAGES_DIR = PATHS.src
-const PAGES_DIR = `${PATHS.src}/project/pages/`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const pages = [];
+
+fs
+  .readdirSync(path.resolve(__dirname, '..', 'src', 'project', 'pages'))
+  .filter((file) => {
+    return file.indexOf('base') !== 0;
+  })
+  .forEach((file) => {
+    pages.push(file.split('/', 2));
+  });
+
+const htmlPlugins = pages.map(fileName => new HtmlWebpackPlugin({
+
+  filename: `${fileName}.html`,
+  template: `./src/project/pages/${fileName}/${fileName}.pug`,
+
+}));
 
 module.exports = {
   // BASE config
@@ -160,14 +172,5 @@ module.exports = {
         to: `${PATHS.assets}fonts`
       },
     ]),
-
-    // Automatic creation any html pages (Don't forget to RERUN dev server)
-    // see more: https://github.com/vedees/webpack-template/blob/master/README.md#create-another-html-files
-    // best way to create pages: https://github.com/vedees/webpack-template/blob/master/README.md#third-method-best
-    ...PAGES.map(page => new HtmlWebpackPlugin({
-      template: `${PAGES_DIR}/${page}`,
-      filename: `./${page.replace(/\.pug/,'.html')}`
-    })),
-
-  ],
+  ].concat(htmlPlugins),
 }

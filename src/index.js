@@ -13,7 +13,12 @@ import 'jquery.mmenu/dist/jquery.mmenu.all.css'
 import 'jquery.mmenu/dist/jquery.mmenu.all.js'
 import 'mburger-css/dist/mburger.js'
 import 'mburger-css/dist/mburger.css'
-
+import './project/pages/landing-page/landing-page'
+import './project/pages/registration/registration'
+import './project/pages/room-details/room-details'
+import './project/pages/search-room/searh-room'
+import './project/pages/sign-in/sign-in'
+import './project/pages/uikit/uikit'
 
 
 

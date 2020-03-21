@@ -8,25 +8,25 @@ html(lang='ru')
 
 
   body
-    include ../modules/icons/logo/logo
-    include ../modules/forms/__input/form__input
-    include ../modules/checkbox-group/checkbox-group
-    include ../modules/toggle/toggle
-    include ../modules/like_button/like_button
-    include ../modules/forms/__radio-buttons/form__radio-buttons
-    include ../modules/ratings/ratings
-    include ../modules/button/button
-    include ../modules/pagination/pagination
-    include ../modules/bullet-list/bullet-list
-    include ../modules/room-icons/room-icons
-    include ../modules/review/review
-    include ../modules/hotel_card/hotel_card
-    include ../modules/calendar/calendar
-    include ../modules/range_slider/multirange
-    include ../modules/nav/nav
-    include ../modules/footer/footer
-    include ../modules/footer/footer-mobile/footer-mobile
-    include ../modules/forms/__calendar-block/form__calendar-block
+    include ../../modules/icons/logo/logo
+    include ../../modules/forms/__input/form__input
+    include ../../modules/checkbox-group/checkbox-group
+    include ../../modules/toggle/toggle
+    include ../../modules/like_button/like_button
+    include ../../modules/forms/__radio-buttons/form__radio-buttons
+    include ../../modules/ratings/ratings
+    include ../../modules/button/button
+    include ../../modules/pagination/pagination
+    include ../../modules/bullet-list/bullet-list
+    include ../../modules/room-icons/room-icons
+    include ../../modules/review/review
+    include ../../modules/hotel_card/hotel_card
+    include ../../modules/calendar/calendar
+    include ../../modules/range_slider/multirange
+    include ../../modules/nav/nav
+    include ../../modules/footer/footer
+    include ../../modules/footer/footer-mobile/footer-mobile
+    include ../../modules/forms/__calendar-block/form__calendar-block
 
     mixin color-column(colorClass, colorName, colorCode)
       .wrap-color
@@ -136,11 +136,11 @@ html(lang='ru')
         +logo()
       .wrap-cadrs-columns
         .column
-          include ../modules/forms/login/login
-          include ../modules/forms/registration/registration
+          include ../../modules/forms/login/login
+          include ../../modules/forms/registration/registration
         .column
-          include ../modules/forms/booking/booking
-          include ../modules/forms/signup/signup
+          include ../../modules/forms/booking/booking
+          include ../../modules/forms/signup/signup
         .column
           +calendar()
           +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')

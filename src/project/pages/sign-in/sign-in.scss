@@ -1,3 +1,5 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
 .header-sign-in {
   @include header-registration-page;
 }

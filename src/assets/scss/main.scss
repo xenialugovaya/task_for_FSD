@@ -1,18 +1,8 @@
-
 @import "utils/vars";
 @import "utils/mixins";
 @import "utils/fonts";
 @import "utils/reset";
-@import "../../project/pages/uikit";
-@import "../../project/pages/registration";
-@import "../../project/pages/sign-in";
-@import "../../project/pages/search-room";
-@import "../../project/pages/room-details";
-//@import "../../project/modules/button/_big-button/big-button";
-//@import "../../project/modules/button/_ghost-button/ghost-button";
-//@import "../../project/modules/button/_btn-arrow/btn-arrow";
-//@import "../../project/modules/button/_small-button/small-button";
-//@import "../../project/modules/button/_transparent-button/transparent-button";
+
 @import "../../project/modules/button/button";
 @import "../../project/modules/nav/nav";
 @import "../../project/modules/header/header";
@@ -38,15 +28,18 @@
 @import "../../project/modules/calendar/calendar";
 @import "../../project/modules/donut-chart/donut-chart";
 
-body{
-font-family: $mainFont;
-font-style: normal;
-font-weight: normal;
-font-size: $mainFontSize;
-line-height: $mainLineHeight;
-color:$dark_shade_75;
+body {
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+  color: $dark_shade_75;
 }
-h1 {@include h1;}
+
+h1 {
+  @include h1;
+}
 
 /*
 html {

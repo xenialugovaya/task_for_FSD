@@ -1,14 +1,14 @@
-extends ../layout/main
+extends ../../layout/main
 
 block variables
 
   -var pageTitle= 'Landing Page'
 
 block content
-  include ../modules/review/review
-  include ../modules/room-icons/room-icons
-  include ../modules/bullet-list/bullet-list
-  include ../modules/donut-chart/donut-chart
+  include ../../modules/review/review
+  include ../../modules/room-icons/room-icons
+  include ../../modules/bullet-list/bullet-list
+  include ../../modules/donut-chart/donut-chart
   head
   .header-room-details
     .main-img
@@ -27,7 +27,7 @@ block content
       h2 Впечатления от номера
       +donut-chart()
     .room-form-booking
-      include ../modules/forms/booking/booking
+      include ../../modules/forms/booking/booking
     .room-reviews
       div.room-heading
         h2 Отзывы посетителей номера
