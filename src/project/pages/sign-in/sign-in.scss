@@ -1,5 +1,9 @@
-@import '../../../assets/scss/utils/mixins.scss';
+.signin-content {
+  background: url('./images/registration-bg.jpg') no-repeat;
+  background-size: cover;
+  height: 830px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
-.header-sign-in {
-  // @include header-registration-page;
 }

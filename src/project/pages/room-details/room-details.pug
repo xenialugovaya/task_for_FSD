@@ -9,24 +9,23 @@ block content
   include ../../modules/room-icons/room-icons
   include ../../modules/bullet-list/bullet-list
   include ../../modules/donut-chart/donut-chart
-  head
-  .header-room-details
+  .room-gallery
     .main-img
-      img(src="assets/img/image2.png")
+      img(src=require('./images/main-gallery-image.png'))
     .small-img1
-      img(src="assets/img/image-head2.png")
+      img(src=require('./images/small-gallery-image-1.jpg'))
     .small-img2
-      img(src="assets/img/image-head3.png")
-  .content-room-details
-    .room-details-icons
+      img(src=require('./images/small-gallery-image-2.jpg'))
+  .room-details-content
+    .room-icons
       h2 Сведения о номере
       +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
       +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
       +room-icons('cosy', 'Уют', 'Номер оснащен камином')
-    .room-details-diagram
+    .room-diagram
       h2 Впечатления от номера
       +donut-chart()
-    .room-form-booking
+    .room-booking-form
       include ../../modules/forms/booking/booking
     .room-reviews
       div.room-heading
