@@ -1,0 +1,105 @@
+extends ../../layout/uikit.pug
+
+block variables
+
+  -var pageTitle= 'Form elements'
+
+block content
+  include ../../modules/icons/logo/logo
+  include ../../modules/forms/__input/form__input
+  include ../../modules/checkbox-group/checkbox-group
+  include ../../modules/toggle/toggle
+  include ../../modules/like_button/like_button
+  include ../../modules/forms/__radio-buttons/form__radio-buttons
+  include ../../modules/ratings/ratings
+  include ../../modules/button/button
+  include ../../modules/pagination/pagination
+  include ../../modules/bullet-list/bullet-list
+  include ../../modules/room-icons/room-icons
+  include ../../modules/review/review
+  include ../../modules/forms/__calendar-block/form__calendar-block
+  include ../../modules/calendar/calendar
+  include ../../modules/range_slider/multirange
+
+  .content-form_elements
+    .logo_uikit
+      +logo()
+    .column1
+      .input_uikit
+        +formInput('text', 'text field', 'Email', 'default')
+      .input_uikit
+        +formInput('text', 'text field', 'This is pretty awesome', 'focused')
+      .input_uikit
+        +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown', 'wrap-dropdown')
+      .input_uikit
+        +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default', 'masked' ,'masked')
+      .input_uikit
+        +form__calendar-block('date dropdown', 'date dropdown')
+      .input_uikit
+        +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
+      .input_uikit
+        +formInput('text', 'subscription text field', 'Email', 'subscription', 'subscription-wrap')
+    .column2
+      .checkbox-block
+        +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
+
+      .radio-block
+        h3 Radio Buttons
+        +radio-button('Мужчина', 'male', 'checked')
+        +radio-button('Женщина', 'female')
+      .toggle-block
+        h3 Toggle    
+        +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
+        +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
+      .like-block
+        h3 like button
+        +like_button('2', 'mylike1', 'like1')
+        +like_button('12', 'mylike2', 'like2', 'checked')
+      .rate-block
+        h3 rate button
+        +rating('4')
+        +rating('4')
+
+    .column3
+      .range-block
+        +rangeMixin('range slider')
+      .button-block
+        h3 buttons
+        .small_button-block
+          +Button('small-button', 'click me')
+          +Button('small-button', 'click me')
+        .ghost_button-block
+          +Button('ghost-button', 'click me')
+          +Button('ghost-button', 'click me')
+        .transperent_button-block
+          +Button('transparent-button', 'click me')
+          +Button('transparent-button', 'click me')
+        +Button('btn-arrow', 'перейти к оплате')
+      .pagination-block
+        h3 pagination
+        +pagination
+    section.wrap-dropbox-block
+      .dropbox-column
+        .input_uikit.bedroom
+          +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
+        .input_uikit.bedroom
+          +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты'])
+        .checkbox-expandable-block
+          +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
+          +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
+      .dropbox-column
+        .input_uikit.guests
+          +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+        .checkbox-rich-block    
+          +checkbox-group('2', 'rich checkbox buttons', '', '', ['Широкий коридор', 'Помощник для инвалидов'], '', 'rich', ['Ширина коридоров в номере не менее 91 см.', 'На 1 этаже вас встретит специалист и проводит до номера.'])
+      .dropbox-column
+        .input_uikit.guests
+          +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+        .bullet-list-block
+          +bullet-list('bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+    section.icons-block
+      .icons-block-column
+        +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
+        +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
+      .icons-block-column
+        +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')

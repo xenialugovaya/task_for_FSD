@@ -1,0 +1,173 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.content-colors_types {
+  width: 1440px;
+  max-width: 1920px;
+  font-family: $mainFont;
+}
+
+.logo_uikit .logo {
+  margin-left: 30px;
+  margin-top: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+.logo_uikit .logo .logo_name {
+  display: none;
+}
+
+.logo_uikit .logo .big_elem,
+.small_elem,
+.circle {
+  fill: $dark_shade_25;
+}
+
+h3 {
+  @include h3;
+}
+
+.content-colors_types {
+  height: 900px;
+}
+
+.color-column {
+  margin-left: 150px;
+  margin-top: 65px;
+  display: inline-block;
+}
+
+
+.wrap-color:not(:first-child) {
+  margin-top: 13px;
+}
+
+.color-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.dark_shade_100 {
+  background: $dark_shade_100;
+}
+
+.dark_shade_75 {
+  background: $dark_shade_75;
+}
+
+.dark_shade_50 {
+  background: $dark_shade_50;
+}
+
+.dark_shade_25 {
+  background: $dark_shade_25;
+}
+
+.dark_shade_25 {
+  background: $dark_shade_25;
+}
+
+.dark_shade_5 {
+  background: $dark_shade_5;
+}
+
+.purple {
+  background: $purple;
+}
+
+.green {
+  background: $green;
+}
+
+.color-text {
+  margin-left: 40px;
+  vertical-align: top;
+  margin-top: 9px;
+  display: inline-block;
+}
+
+.color-descr {
+  @include h2;
+  font-weight: normal;
+  margin-top: 5px;
+  letter-spacing: -0.05em;
+}
+
+.color-head {
+  @include h2;
+  font-weight: 550;
+}
+
+.text-column {
+  display: inline-block;
+  margin-left: 428px;
+  margin-top: 68px;
+  vertical-align: top;
+}
+
+.wrap-text {
+  &:not(:first-child) {
+    margin-top: 50px;
+  }
+
+  &:nth-child(3) {
+    margin-top: 43px;
+  }
+
+  &:nth-child(4) {
+    margin-top: 46px;
+  }
+
+}
+
+.tag-name {
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 37px;
+  color: $dark_shade_25;
+
+  &.h1 {
+    font-size: 24px;
+  }
+
+  &.h2 {
+    font-size: 19px;
+  }
+
+  &.h3 {
+    font-size: 12px;
+  }
+
+  &.p {
+    margin-top: -3px;
+    font-family: $mainFont;
+  }
+}
+
+.text-sample {
+  display: inline-block;
+  margin-left: 30px;
+  max-width: 336px;
+  margin-top: -3px;
+
+  &.h1 {
+    @include h1;
+  }
+
+  &.h2 {
+    @include h2;
+    margin-top: -1px;
+  }
+
+  &.h3 {
+    @include h3;
+  }
+
+  &.p {
+    width: 310px;
+  }
+}

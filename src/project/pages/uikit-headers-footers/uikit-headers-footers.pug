@@ -1,0 +1,20 @@
+extends ../../layout/uikit.pug
+
+block variables
+
+  -var pageTitle= 'Headers&Footers'
+
+block content
+  include ../../modules/icons/logo/logo
+  include ../../modules/nav/nav
+  include ../../modules/footer/footer
+  include ../../modules/footer/footer-mobile/footer-mobile
+
+  .content-headers-footers
+    .logo_uikit
+      +logo()
+    .wrap-hf-grid
+      +navbar([{state : 'logged_out'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}], [{style:'ghost-button', name:'login', position:'in-header'}, {style:'big-button', name:'register', position:'in-header'}])
+      +navbar([{state : 'logged_in', user_name : 'Cosmin Negoita'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}])
+      +footer()
+      +footer-mobile()

@@ -18,7 +18,11 @@ import './project/pages/registration/registration'
 import './project/pages/room-details/room-details'
 import './project/pages/search-room/searh-room'
 import './project/pages/sign-in/sign-in'
-import './project/pages/uikit/uikit'
+import './project/pages/uikit-colors-type/uikit-colors-type'
+import './project/pages/uikit-form-elements/uikit-form-elements'
+import './project/pages/uikit-cards/uikit-cards'
+import './project/pages/uikit-headers-footers/uikit-headers-footers'
+
 
 
 

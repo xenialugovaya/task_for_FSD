@@ -1,0 +1,55 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+
+.content-headers-footers {
+  width: 1440px;
+  height: 1350px;
+  background: #F4F4F6;
+  padding-top: 1px;
+
+  .wrap-hf-grid {
+    margin-top: 71px;
+
+  }
+
+  .logo_uikit .logo {
+    margin-left: 29px;
+    margin-top: 28px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .header_navigation {
+    &:not(:first-child) {
+      margin-top: 40px;
+    }
+
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+
+  .wrap-footer-mobile {
+    display: block;
+    margin-top: 40px;
+
+  }
+}
+
+@media (min-width: 1000px) {
+  .content-headers-footers .wrap-footer-mobile {
+    display: block !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .content-headers-footers .wrap-footer {
+    display: block !important;
+  }
+
+  .content-headers-footers .wrap-footer-copyright {
+    display: block !important;
+  }
+}

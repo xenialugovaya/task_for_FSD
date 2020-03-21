@@ -1,0 +1,26 @@
+extends ../../layout/uikit.pug
+
+block variables
+
+  -var pageTitle= 'Cards'
+
+block content
+  include ../../modules/icons/logo/logo
+  include ../../modules/hotel_card/hotel_card
+  include ../../modules/calendar/calendar
+  include ../../modules/forms/__calendar-block/form__calendar-block
+
+  .content-cards
+    .logo_uikit
+      +logo()
+    .wrap-cadrs-columns
+      .column
+        include ../../modules/forms/login/login
+        include ../../modules/forms/registration/registration
+      .column
+        include ../../modules/forms/booking/booking
+        include ../../modules/forms/signup/signup
+      .column
+        +calendar()
+        +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')
+        +hotel_card (['assets/img/image3.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '840', '9 990₽', 'люкс', '65')
