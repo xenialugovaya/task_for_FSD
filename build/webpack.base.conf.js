@@ -1,7 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
 const fs = require('fs')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {
@@ -9,10 +8,6 @@ const {
 } = require('clean-webpack-plugin')
 
 
-
-
-// Main const
-// see more: https://github.com/vedees/webpack-template/blob/master/README.md#main-const
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
@@ -83,16 +78,35 @@ module.exports = {
       }
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: (url, resourcePath, context) => {
+          const relativePath = path.relative(context, resourcePath);
+          // ignore SVG file if its relative path contains "images"
+          if (/\/images\//.test(relativePath)) {
+            return;
+          }
+          return `assets/fonts/${url}`;
+        },
       }
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
-      }
+        name: '[name].[ext]',
+        outputPath: (url, resourcePath, context) => {
+          const relativePath = path.relative(context, resourcePath);
+
+          // ignore SVG file if its relative path contains "fonts"
+          if (/\/fonts\//.test(relativePath)) {
+            return;
+          }
+
+          return `assets/images/${url}`;
+        },
+      },
     }, {
       test: /\.scss$/,
       use: [
@@ -102,7 +116,7 @@ module.exports = {
           loader: 'css-loader',
           options: {
             sourceMap: true,
-            url: false
+            url: true
           }
         }, {
           loader: 'postcss-loader',
@@ -155,7 +169,7 @@ module.exports = {
 
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/main.css`,
+      filename: '[contenthash].css',
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -163,14 +177,10 @@ module.exports = {
       'window.jQuery': 'jquery',
       'window.$': 'jquery'
     }),
-    new CopyWebpackPlugin([{
-        from: `${PATHS.src}/${PATHS.assets}img`,
-        to: `${PATHS.assets}img`
-      },
-      {
-        from: `${PATHS.src}/${PATHS.assets}fonts`,
-        to: `${PATHS.assets}fonts`
-      },
-    ]),
+
   ].concat(htmlPlugins),
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    overlay: true,
+  },
 }

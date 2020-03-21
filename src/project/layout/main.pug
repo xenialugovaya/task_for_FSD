@@ -16,7 +16,8 @@ html(lang='ru')
   include ../modules/footer/footer-rus/footer-rus
   include ../modules/footer/footer-mobile/footer-mobile
 
-  +navbar([{state : 'logged_out'}], [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги', mod : 'dropdown'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения', mod : 'dropdown'}], [{style:'ghost-button', name:'войти'}, {style:'big-button', name:'зарегистрироваться'}])
+  header
+    +navbar([{state : 'logged_out'}], [{href : '#', val : 'О нас'}, {href :'#1', val :'Услуги', mod : 'dropdown'}, {href :'#2', val :'Вакансии'}, {href :'#3', val : 'Новости'}, {href :'#4', val : 'Соглашения', mod : 'dropdown'}], [{style:'ghost-button', name:'войти'}, {style:'big-button', name:'зарегистрироваться'}])
 
   block content
 

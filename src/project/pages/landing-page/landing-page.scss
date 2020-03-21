@@ -1,0 +1,15 @@
+.landing-content {
+  background: url('./images/landing-page-bg.jpg') no-repeat;
+  background-size: cover;
+  height: 830px;
+  position: relative;
+
+}
+
+.landing-content .wrap-form {
+  position: absolute;
+  left: 9.7%;
+  /* 140px / 1440px = 0,097 */
+  top: 9.7%;
+  /* 140px / 1440px = 0,097 */
+}
