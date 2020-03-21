@@ -22,6 +22,8 @@ import './project/pages/uikit-colors-type/uikit-colors-type'
 import './project/pages/uikit-form-elements/uikit-form-elements'
 import './project/pages/uikit-cards/uikit-cards'
 import './project/pages/uikit-headers-footers/uikit-headers-footers'
+import './project/modules/uikit-text/uikit-text'
+import './project/modules/color-box/color-box'
 
 
 
