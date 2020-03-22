@@ -15,7 +15,7 @@ block content
   include ../../modules/button/button
   include ../../modules/pagination/pagination
   include ../../modules/bullet-list/bullet-list
-  include ../../modules/room-icons/room-icons
+  include ../../modules/room-icon/room-icon
   include ../../modules/review/review
   include ../../modules/forms/__calendar-block/form__calendar-block
   include ../../modules/calendar/calendar
@@ -99,7 +99,7 @@ block content
           +bullet-list('bullet list', ['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
     section.icons-block
       .icons-block-column
-        +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
-        +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
+        +room-icon({icon:'tag_faces', title:'Комфорт', descr: 'Шумопоглощающие стены', hasLine: true})
+        +room-icon({icon:'location_city', title:'Удобство', descr: 'Окно в каждой из спален', hasLine: true})
       .icons-block-column
         +review('assets/img/image1.png', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')

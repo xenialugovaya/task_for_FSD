@@ -1,0 +1,33 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.room-icon {
+  width: 280px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+
+  &_with-line {
+    border-bottom: 1px solid $dark_shade_10;
+  }
+
+  &__icon {
+    font-family: 'Material Icons';
+    background: $purpleGradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 48px;
+  }
+
+  &__title {
+    @include sub-header;
+  }
+
+  &__descr {
+    font-family: $mainFont;
+    font-size: 14px;
+    color: $dark_shade_50;
+    text-transform: none;
+  }
+}

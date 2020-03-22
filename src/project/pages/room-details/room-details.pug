@@ -6,7 +6,7 @@ block variables
 
 block content
   include ../../modules/review/review
-  include ../../modules/room-icons/room-icons
+  include ../../modules/room-icon/room-icon
   include ../../modules/bullet-list/bullet-list
   include ../../modules/donut-chart/donut-chart
   .room-gallery
@@ -19,9 +19,9 @@ block content
   .room-details-content
     .room-icons
       h2 Сведения о номере
-      +room-icons('comfort', 'Комфорт', 'Шумопоглощающие стены', 'isLine')
-      +room-icons('convenience', 'Удобство', 'Окно в каждой из спален', 'isLine')
-      +room-icons('cosy', 'Уют', 'Номер оснащен камином')
+      +room-icon({icon:'tag_faces', title:'Комфорт', descr: 'Шумопоглощающие стены', hasLine: true})
+      +room-icon({icon:'location_city', title:'Удобство', descr: 'Окно в каждой из спален', hasLine: true})
+      +room-icon({icon:'whatshot', title:'Уют', descr: 'Номер оснащен камином'})
     .room-diagram
       h2 Впечатления от номера
       +donut-chart()
