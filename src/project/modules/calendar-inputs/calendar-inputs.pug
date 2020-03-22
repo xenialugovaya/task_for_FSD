@@ -1,0 +1,8 @@
+include ../forms/__input/form__input
+include ../calendar/calendar
+mixin calendar-inputs(header1, header2)
+  .calendar-inputs(class = 'js-calendar-inputs')
+    +formInput('text', header1, 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')  
+    +formInput('text', header2, 'ДД.ММ.ГГГГ', 'small-input', 'wrap-small')  
+    .calendar-dropdown
+      +calendar()

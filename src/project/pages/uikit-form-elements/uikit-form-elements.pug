@@ -21,7 +21,7 @@ block content
   include ../../modules/bullet-list/bullet-list
   include ../../modules/room-icon/room-icon
   include ../../modules/review/review
-  include ../../modules/forms/__calendar-block/form__calendar-block
+  include ../../modules/calendar-inputs/calendar-inputs
   include ../../modules/calendar/calendar
   include ../../modules/range_slider/multirange
 
@@ -38,7 +38,7 @@ block content
       .input_uikit
         +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default', 'masked' ,'masked')
       .input_uikit
-        +form__calendar-block('date dropdown', 'date dropdown')
+        +calendar-inputs('date dropdown', 'date dropdown')
       .input_uikit
         +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
       .input_uikit

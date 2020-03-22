@@ -1,11 +1,11 @@
 include ../__input/form__input
 include ../__form-footer/form__form-footer
 include ../__radio-buttons/form__radio-buttons
-include ../__calendar-block/form__calendar-block
+include ../../calendar-inputs/calendar-inputs
 .wrap-form
-      form(class='login')
-         .form-header Найдём номера под ваши пожелания
-         +form__calendar-block('прибытие', 'выезд')
-         .guests
-            +formInput('', 'гости', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
-         +form-footer('Подобрать номер')
+  form(class='login')
+    .form-header Найдём номера под ваши пожелания
+    +calendar-inputs('прибытие', 'выезд')
+    .guests
+      +formInput('', 'гости', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+    +form-footer('Подобрать номер')
