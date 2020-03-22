@@ -1,25 +1,24 @@
-.bullet-list{
+.bullet-list {
+  &__items {
     padding: 0;
     list-style: none;
+  }
 
-    li{
-        padding-left: 19px;
-        position: relative;
-        margin-top:13px;
-    }
+  &__item {
+    padding-left: 19px;
+    position: relative;
+    margin-top: 13px;
+  }
 
-    li:before{
-        content:'';
-        position: absolute;
-        top:7px;
-        left:0;
-    height:10px;
-    width:10px;
+  &__item:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background: $dark_shade_25;
 
- }
-
+  }
 }
-
-
