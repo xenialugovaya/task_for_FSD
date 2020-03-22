@@ -1,0 +1,18 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.button-transparent {
+  @include button;
+  background: transparent;
+  color: $purple;
+  cursor: pointer;
+
+  &:hover {
+    color: $dark_shade_50;
+  }
+
+  &_disabled {
+    color: $dark_shade_50;
+    cursor: initial;
+  }
+}
