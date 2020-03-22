@@ -14,6 +14,7 @@ block content
   include ../../modules/ratings/ratings
   include ../../modules/button/button
   include ../../modules/button-big/button-big
+  include ../../modules/button-ghost/button-ghost
   include ../../modules/pagination/pagination
   include ../../modules/bullet-list/bullet-list
   include ../../modules/room-icon/room-icon
@@ -70,15 +71,12 @@ block content
           +Button('small-button', 'click me')
           +Button('small-button', 'click me')
         .ghost_button-block
-          +Button('ghost-button', 'click me')
-          +Button('ghost-button', 'click me')
+          +button-ghost({text: 'click me'})
+          +button-ghost({text: 'click me', disabled: true})
         .transperent_button-block
           +Button('transparent-button', 'click me')
           +Button('transparent-button', 'click me')
-        +button-big({
-          text: 'перейти к оплате',
-          hasArrow: true
-        })
+        +button-big({text: 'перейти к оплате', hasArrow: true})
       .pagination-block
         h3 pagination
         +pagination

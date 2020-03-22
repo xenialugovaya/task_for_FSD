@@ -123,9 +123,8 @@
     display: block;
     margin-top: 30px;
 
-    .button:not(:first-child) {
+    .button-ghost:not(:first-child) {
       margin-left: 19px;
-      opacity: 0.5;
     }
   }
 
