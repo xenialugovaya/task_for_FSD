@@ -13,6 +13,7 @@ block content
   include ../../modules/forms/__radio-buttons/form__radio-buttons
   include ../../modules/ratings/ratings
   include ../../modules/button/button
+  include ../../modules/button-big/button-big
   include ../../modules/pagination/pagination
   include ../../modules/bullet-list/bullet-list
   include ../../modules/room-icon/room-icon
@@ -74,7 +75,10 @@ block content
         .transperent_button-block
           +Button('transparent-button', 'click me')
           +Button('transparent-button', 'click me')
-        +Button('btn-arrow', 'перейти к оплате')
+        +button-big({
+          text: 'перейти к оплате',
+          hasArrow: true
+        })
       .pagination-block
         h3 pagination
         +pagination

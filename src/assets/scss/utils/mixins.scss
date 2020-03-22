@@ -49,6 +49,28 @@
 
 }
 
+// Buttons
+
+@mixin button {
+  height: 44px;
+  border-radius: 22px;
+  font-style: normal;
+  font-family: 'Montserrat-bold', sans-serif;
+  font-size: 12px;
+  line-height: 42px;
+  text-transform: uppercase;
+  font-stretch: extra-expanded;
+  box-sizing: border-box;
+
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
+}
+
+
+// Arrows 
+
 @mixin drop-arrow {
   content: "\e313";
   right: 10px;
@@ -93,6 +115,7 @@
   text-align: center;
 }
 
+// Forms
 @mixin booking-form-header {
   position: relative;
 

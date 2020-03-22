@@ -25,6 +25,7 @@ import './project/pages/uikit-headers-footers/uikit-headers-footers'
 import './project/modules/uikit-text/uikit-text'
 import './project/modules/color-box/color-box'
 import './project/modules/room-icon/room-icon'
+import './project/modules/button-big/button-big'
 
 
 
