@@ -1,39 +1,45 @@
-.donut-chart{
-    position: relative;
-    width: 140px;
-    height: 140px;
-    display: inline-block; 
-    margin-top: 21px;
-   circle:hover{
-      stroke-width: 8;
-   }
-   svg{
+@import '../../../assets/scss/utils/vars.scss';
+
+.donut-chart {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: inline-block;
+  margin-top: 21px;
+
+  circle:hover {
+    stroke-width: 8;
+  }
+
+  svg {
     transform: scaleX(-1);
-   
-}
-.chart-text{
+
+  }
+
+  .chart-text {
     width: 60px;
     height: 40px;
-    top:50px;
+    top: 50px;
     left: 40px;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
-   
-    .chart-number{
-        font-size: 24px;
-        font-family: 'Quicksand-bold';
+
+    .chart-number {
+      font-size: 24px;
+      font-family: 'Quicksand-bold';
     }
-    .chart-label{
-        font-size: 12px;
-        font-family: $mainFont;
+
+    .chart-label {
+      font-size: 12px;
+      font-family: $mainFont;
     }
-}
+  }
 }
 
 
-.chart_options{
-    display: inline-block; 
-    vertical-align: bottom;
-    margin-left: 30px;
+.chart_options {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 30px;
 }

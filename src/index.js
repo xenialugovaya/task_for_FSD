@@ -3,17 +3,22 @@
 import 'popper.js'
 import 'webpack-jquery-ui'
 import 'webpack-jquery-ui/css'
-import './project/modules/ratings/rating'
-import './project/modules/donut-chart/donut-chart'
-import './project/modules/range_slider/multirange'
+
 import 'air-datepicker/dist/js/datepicker.js'
 import './js/'
-import './project/modules/forms/__calendar-block/form__calendar-block'
+
 import 'jquery.mmenu/dist/jquery.mmenu.all.css'
 import 'jquery.mmenu/dist/jquery.mmenu.all.js'
 import 'mburger-css/dist/mburger.js'
 import 'mburger-css/dist/mburger.css'
+/*
+import './project/modules/ratings/rating'
+import './project/modules/donut-chart/donut-chart-plugin'
+
+import './project/modules/donut-chart/donut-chart'
+import './project/modules/range_slider/multirange'
 import './project/pages/landing-page/landing-page'
+import './project/modules/forms/__calendar-block/form__calendar-block'
 import './project/pages/registration/registration'
 import './project/pages/room-details/room-details'
 import './project/pages/search-room/searh-room'
@@ -30,7 +35,14 @@ import './project/modules/button-ghost/button-ghost'
 import './project/modules/button-small/button-small'
 import './project/modules/button-transparent/button-transparent'
 
-
+*/
 
 // SCSS
 import './assets/scss/main.scss'
+
+function requireAll(requireContext) {
+  return requireContext.keys().map(requireContext);
+}
+
+requireAll(require.context('./project/modules', true, /\.js$/)); // pattern to take each .js(x) files except of the ones with __tests__ directory https://regex101.com/r/J8NWTj/1
+requireAll(require.context('./project/pages', true, /\.js$/));
