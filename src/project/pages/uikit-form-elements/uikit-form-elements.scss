@@ -113,9 +113,8 @@
     display: block;
     margin-top: 15px;
 
-    .button:not(:first-child) {
+    .button-small:not(:first-child) {
       margin-left: 19px;
-      opacity: 0.5;
     }
   }
 

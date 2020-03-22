@@ -1,0 +1,17 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.button-small {
+  @include button;
+  background: $purpleButton;
+  width: 99px;
+  color: $white;
+
+  &_disabled {
+    opacity: 0.5;
+
+    &:hover {
+      cursor: initial;
+    }
+  }
+}

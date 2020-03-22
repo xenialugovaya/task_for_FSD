@@ -27,7 +27,7 @@ import './project/modules/color-box/color-box'
 import './project/modules/room-icon/room-icon'
 import './project/modules/button-big/button-big'
 import './project/modules/button-ghost/button-ghost'
-
+import './project/modules/button-small/button-small'
 
 
 

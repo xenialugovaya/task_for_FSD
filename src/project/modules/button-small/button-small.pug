@@ -1,0 +1,6 @@
+mixin button-small({text, disabled})  
+  - let classes = ["button-small"]
+  if disabled
+    - classes.push("button-small_disabled")
+  button(class=classes)
+    span #{text} 

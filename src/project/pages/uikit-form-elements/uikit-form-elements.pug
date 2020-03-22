@@ -15,6 +15,7 @@ block content
   include ../../modules/button/button
   include ../../modules/button-big/button-big
   include ../../modules/button-ghost/button-ghost
+  include ../../modules/button-small/button-small
   include ../../modules/pagination/pagination
   include ../../modules/bullet-list/bullet-list
   include ../../modules/room-icon/room-icon
@@ -68,8 +69,8 @@ block content
       .button-block
         h3 buttons
         .small_button-block
-          +Button('small-button', 'click me')
-          +Button('small-button', 'click me')
+          +button-small({text: 'click me'})
+          +button-small({text: 'click me', disabled: true})
         .ghost_button-block
           +button-ghost({text: 'click me'})
           +button-ghost({text: 'click me', disabled: true})
