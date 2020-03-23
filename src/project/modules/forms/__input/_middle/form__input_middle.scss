@@ -1,11 +1,14 @@
-.wrap-middle{
-    width:266px;
-    position: relative;
+.wrap-middle {
+  width: 266px;
+  position: relative;
 }
-.middle-input, .middle-calendar{
-    @include dropdown; 
-    width:266px;
-    &::placeholder{
-        color: $dark_shade_75;
-        }
+
+.middle-input,
+.middle-calendar {
+  //  @include dropdown; 
+  width: 266px;
+
+  &::placeholder {
+    color: $dark_shade_75;
+  }
 }

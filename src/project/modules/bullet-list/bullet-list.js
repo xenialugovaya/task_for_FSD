@@ -1,1 +1,1 @@
-import './bullet-list.js';
+import './bullet-list.scss';

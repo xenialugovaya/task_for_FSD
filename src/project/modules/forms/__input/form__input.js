@@ -4,7 +4,7 @@ import './_dropdown/_multiple-dropdown'
 import './_masked/jquery.maskedinput'
 import './_middle-calendar/form__input_middle-calendar'
 
-
+/*
 $(document).ready(function($){                 
 
 
@@ -27,3 +27,4 @@ $(document).ready(function($){
     $('#masked').mask("d9.m9.y999");
   
 });
+*/

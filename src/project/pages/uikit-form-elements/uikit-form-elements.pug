@@ -25,11 +25,12 @@ block content
   include ../../modules/calendar/calendar
   include ../../modules/range_slider/multirange
   include ../../modules/input/input
+  include ../../modules/input-dropdown/input-dropdown
 
   .content-form-elements
     .logo_uikit
       +logo()
-    .column1
+    section.column-inputs
       .input-wrapper
         .input-header
           h3 text field
@@ -41,7 +42,10 @@ block content
           span.sub-title hover / focus
         +input({placeholder: 'This is pretty awesome', type: 'text', focused: true})
       .input-wrapper
-        +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown', 'wrap-dropdown')
+        .input-header
+          h3 dropdown
+          span.sub-title default
+        +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
       .input-wrapper
         .input-header
           h3 masked text field
@@ -59,7 +63,6 @@ block content
     .column2
       .checkbox-block
         +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
-
       .radio-block
         h3 Radio Buttons
         +radio-button('Мужчина', 'male', 'checked')
@@ -95,23 +98,37 @@ block content
       .pagination-block
         h3 pagination
         +pagination
-    section.wrap-dropbox-block
-      .dropbox-column
-        .input_uikit.bedroom
-          +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты']) 
-        .input_uikit.bedroom
-          +formInput('', 'dropdown', '', 'middle-input', 'wrap-middle', '', 'dropdown', '3', ['спальни', 'кровати', 'ванные комнаты'])
+
+    section.dropdown-inputs
+      .column-dropdown-inputs
+        .wrap-dropdown-input
+          .input-header
+            h3 dropdown 
+          +input-dropdown({items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true}) 
+        .wrap-dropdown-input
+          .input-header
+            h3 dropdown  
+          +input-dropdown({items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true}) 
+      .column-dropdown-inputs
+        .wrap-dropdown-input
+          .input-header
+            h3 dropdown 
+          +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
+      .column-dropdown-inputs
+        .wrap-dropdown-input
+          .input-header
+            h3 dropdown 
+          +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
+
+    section.lists
+      .column-lists  
         .checkbox-expandable-block
           +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
-          +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
-      .dropbox-column
-        .input_uikit.guests
-          +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+          +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')  
+      .column-lists 
         .checkbox-rich-block    
           +checkbox-group('2', 'rich checkbox buttons', '', '', ['Широкий коридор', 'Помощник для инвалидов'], '', 'rich', ['Ширина коридоров в номере не менее 91 см.', 'На 1 этаже вас встретит специалист и проводит до номера.'])
-      .dropbox-column
-        .input_uikit.guests
-          +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
+      .column-lists 
         .bullet-list-block
           +bullet-list({
             title:'bullet list', 
@@ -120,10 +137,11 @@ block content
               'Без вечеринок и мероприятий', 
               'Время прибытия — после 13:00, а выезд до 12:00'
               ]
-            })
-    section.icons-block
-      .icons-block-column
+            })   
+
+    section.room-details
+      .column-room-details
         +room-icon({icon:'tag_faces', title:'Комфорт', descr: 'Шумопоглощающие стены', hasLine: true})
         +room-icon({icon:'location_city', title:'Удобство', descr: 'Окно в каждой из спален', hasLine: true})
-      .icons-block-column
+      .column-room-details
         +review('review-image-1.jpg', 'Мурад Сарафанов', '5 дней назад', 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', '12', '', '', 'checked')

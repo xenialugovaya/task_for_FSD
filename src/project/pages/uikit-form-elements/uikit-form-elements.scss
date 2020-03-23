@@ -9,7 +9,7 @@
 }
 
 
-.column1 {
+.column-inputs {
   display: inline-block;
   margin-left: 140px;
   margin-top: 42px;
@@ -147,11 +147,13 @@
   }
 }
 
-.wrap-dropbox-block {
+// section dropdown inputs
+
+.dropdown-inputs {
   margin-left: 140px;
   margin-top: 101px;
 
-  .dropbox-column {
+  .column-dropdown-inputs {
     display: inline-block;
     vertical-align: top;
 
@@ -163,30 +165,44 @@
       margin-left: 72px;
     }
 
+    .wrap-dropdown-input {
+      margin-top: 20px;
+
+      .input {
+        margin-top: 8px;
+      }
+    }
   }
 }
 
-.checkbox-expandable-block {
-  margin-top: 50px;
-}
+// section lists
 
-.checkbox-rich-block {
-  margin-top: 150px;
-}
-
-.bullet-list-block {
+.lists {
+  margin-left: 140px;
   margin-top: 150px;
 
-  .list-head {
-    @include h3;
+  .column-lists {
+    display: inline-block;
+    vertical-align: top;
+
+    &:nth-child(2) {
+      margin-left: 181px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 72px;
+    }
   }
+
 }
 
-.icons-block {
+
+
+.room-details {
   margin-left: 140px;
   margin-top: 45px;
 
-  .icons-block-column {
+  .column-room-details {
     display: inline-block;
 
     &:not(:first-child) {
