@@ -1,43 +1,37 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.content-form_elements {
+.content-form-elements {
   width: 1440px;
+  height: 1853px;
   max-width: 1920px;
   font-family: $mainFont;
 }
 
-.content-form_elements {
-  height: 1853px;
-}
 
 .column1 {
   display: inline-block;
   margin-left: 140px;
   margin-top: 42px;
 
-  .input_uikit {
+  .input-wrapper {
     display: block;
-  }
+    margin-top: 20px;
 
-  .input_uikit {
-    &:nth-child(4) {
-      margin-top: 4px;
+    .input-header {
+      display: flex;
+      justify-content: space-between;
+
+      .sub-title {
+        font-family: $mainFont;
+        color: $dark_shade_50;
+      }
     }
 
-    &:nth-child(5) {
-      margin-top: 19px;
-    }
-
-    &:nth-child(6) {
-      margin-top: 20px;
-    }
-
-    &:nth-child(7) {
-      margin-top: 21px;
+    .input {
+      margin-top: 8px;
     }
   }
-
 }
 
 .column2 {

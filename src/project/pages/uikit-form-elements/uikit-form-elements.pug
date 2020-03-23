@@ -26,30 +26,35 @@ block content
   include ../../modules/range_slider/multirange
   include ../../modules/input/input
 
-  .content-form_elements
+  .content-form-elements
     .logo_uikit
       +logo()
     .column1
-      .input_uikit
-        h3 text field
+      .input-wrapper
+        .input-header
+          h3 text field
+          span.sub-title default
         +input({placeholder: 'Email', type: 'text'})
-      .input_uikit
-        h3 text field
+      .input-wrapper
+        .input-header
+          h3 text field
+          span.sub-title hover / focus
         +input({placeholder: 'This is pretty awesome', type: 'text', focused: true})
-      .input_uikit
+      .input-wrapper
         +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown', 'wrap-dropdown')
-      .input_uikit
-        h3 masked text field
+      .input-wrapper
+        .input-header
+          h3 masked text field
+          span.sub-title default
         +input({placeholder: 'ДД.ММ.ГГГ', type: 'text', masked: true})
-
-      .input_uikit
+      .input-wrapper
         +calendar-inputs({
           titles: ['date dropdown', 'date dropdown'],
           placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
         })
-      .input_uikit
+      .input-wrapper
         +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
-      .input_uikit
+      .input-wrapper
         +formInput('text', 'subscription text field', 'Email', 'subscription', 'subscription-wrap')
     .column2
       .checkbox-block
