@@ -13,14 +13,14 @@ $sea: #66D2EA;
 
 //Gradients
 $purpleGradient : linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-$greenGradient :  linear-gradient(180deg, $green 0%, $sea 100%);
+$greenGradient : linear-gradient(180deg, $green 0%, $sea 100%);
 
 //Body font
 
 $mainLineHeight : 24px;
 $mainFontSize : 14px;
-$mainFont: 'Montserrat', sans-serif;
+$mainFont: 'Montserrat',
+sans-serif;
 
 //Buttons
 $purpleButton : $purpleGradient;
-

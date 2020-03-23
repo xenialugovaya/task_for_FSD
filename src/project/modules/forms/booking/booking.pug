@@ -12,7 +12,10 @@ include ../../calendar-inputs/calendar-inputs
       .priceline
         span.price 9 990₽
         span.priceper в сутки
-    +calendar-inputs('прибытие', 'выезд')        
+    +calendar-inputs({
+      titles: ['прибытие', 'выезд'],
+      placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+    })      
     .guests
       +formInput('', 'гости', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
     .calculation-block

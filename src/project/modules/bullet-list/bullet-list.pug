@@ -1,6 +1,6 @@
-mixin bullet-list({head, items})
+mixin bullet-list({title, items})
   .bullet-list
-    p.bullet-list__head #{head}
+    p.bullet-list__title #{title}
     ul.bullet-list__items
       each item in items
         li.bullet-list__item #{item}

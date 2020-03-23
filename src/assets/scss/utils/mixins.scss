@@ -68,6 +68,27 @@
   }
 }
 
+// Inputs 
+
+@mixin input {
+  height: 44px;
+  line-height: 44px;
+  background: $white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-family: $mainFont;
+  font-size: $mainFontSize;
+  padding-left: 15px;
+  border: 1px solid $dark_shade_25;
+
+  &:focus {
+    &::placeholder {
+      color: $dark_shade_75;
+    }
+
+    border: 1px solid $dark_shade_50;
+  }
+}
 
 // Arrows 
 

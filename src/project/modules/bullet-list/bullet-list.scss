@@ -1,4 +1,10 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
 .bullet-list {
+  &__title {
+    @include h3
+  }
+
   &__items {
     padding: 0;
     list-style: none;

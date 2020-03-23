@@ -24,21 +24,29 @@ block content
   include ../../modules/calendar-inputs/calendar-inputs
   include ../../modules/calendar/calendar
   include ../../modules/range_slider/multirange
+  include ../../modules/input/input
 
   .content-form_elements
     .logo_uikit
       +logo()
     .column1
       .input_uikit
-        +formInput('text', 'text field', 'Email', 'default')
+        h3 text field
+        +input({placeholder: 'Email', type: 'text'})
       .input_uikit
-        +formInput('text', 'text field', 'This is pretty awesome', 'focused')
+        h3 text field
+        +input({placeholder: 'This is pretty awesome', type: 'text', focused: true})
       .input_uikit
         +formInput('text', 'dropdown', 'Сколько гостей', 'dropdown', 'wrap-dropdown')
       .input_uikit
-        +formInput('text', 'masked text field', 'ДД.ММ.ГГГ', 'default', 'masked' ,'masked')
+        h3 masked text field
+        +input({placeholder: 'ДД.ММ.ГГГ', type: 'text', masked: true})
+
       .input_uikit
-        +calendar-inputs('date dropdown', 'date dropdown')
+        +calendar-inputs({
+          titles: ['date dropdown', 'date dropdown'],
+          placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+        })
       .input_uikit
         +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
       .input_uikit
@@ -101,7 +109,7 @@ block content
           +formInput('', 'dropdown', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
         .bullet-list-block
           +bullet-list({
-            head:'bullet list', 
+            title:'bullet list', 
             items: [
               'Нельзя с питомцами', 
               'Без вечеринок и мероприятий', 

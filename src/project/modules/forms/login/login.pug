@@ -5,7 +5,10 @@ include ../../calendar-inputs/calendar-inputs
 .wrap-form
   form(class='login')
     .form-header Найдём номера под ваши пожелания
-    +calendar-inputs('прибытие', 'выезд')
+    +calendar-inputs({
+      titles: ['прибытие', 'выезд'],
+      placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+    })
     .guests
       +formInput('', 'гости', '', 'default-input', 'wrap-default', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
     +form-footer('Подобрать номер')

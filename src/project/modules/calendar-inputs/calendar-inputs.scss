@@ -1,14 +1,39 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
 .calendar-inputs {
-  position: relative;
 
   .wrap-input {
-    margin-top: 19px;
     display: inline-block;
+    width: 150px;
+    position: relative;
 
     &:not(:first-child) {
       margin-left: 18px;
     }
+
+    .input-header {
+      @include h3;
+    }
+
+    .small-input {
+      @include input;
+      width: 150px;
+      margin-top: 5px;
+
+
+      &::placeholder {
+        color: $dark_shade_75;
+      }
+
+
+    }
+
+    .material-icons::before {
+      @include drop-arrow;
+    }
   }
+
 
   .calendar-dropdown {
     margin-top: 5px;
@@ -16,5 +41,4 @@
     position: absolute;
     z-index: 1000;
   }
-
 }
