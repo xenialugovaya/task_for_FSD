@@ -8,6 +8,7 @@ block content
   include ../../modules/icons/logo/logo
   include ../../modules/hotel_card/hotel_card
   include ../../modules/calendar/calendar
+  include ../../modules/form-login/form-login
 
 
   .content-cards
@@ -15,7 +16,7 @@ block content
       +logo()
     .wrap-cadrs-columns
       .column
-        include ../../modules/forms/login/login
+        +form-login()
         include ../../modules/forms/registration/registration
       .column
         include ../../modules/forms/booking/booking

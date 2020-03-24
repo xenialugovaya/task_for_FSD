@@ -1,23 +1,23 @@
 include ../ratings/ratings
 
 mixin hotel_card (hcImgs, hcNum, hcPrice, roomType, hcReviews, hotel_img_arrow)
-    
-    .hotel_card
-        .hotel_img(class=hotel_img_arrow)
-            ul.hotelSlider#light-slider
-                each hcImg in hcImgs
-                    li 
-                        img(src=hcImg)
-        .hotel_descr
-            .hotel_card-header
-                span.numbersign №
-                span.number #{hcNum}
-                span.purpletext #{roomType}
-                .priceline
-                    span.price #{hcPrice}
-                    span.priceper в сутки
-            .hotel_card-ratings
-                +rating()
-                .priceline
-                    span.price #{hcReviews}
-                    span.priceper Отзывов
+
+  .hotel_card
+    .hotel_img(class=hotel_img_arrow)
+      ul.hotelSlider#light-slider
+        each hcImg, index in hcImgs
+          li 
+            img(src=hcImg alt='Room image' + index)
+    .hotel_descr
+      .hotel_card-header
+        span.numbersign №
+        span.number #{hcNum}
+        span.purpletext #{roomType}
+        .priceline
+          span.price #{hcPrice}
+          span.priceper в сутки
+      .hotel_card-ratings
+        +rating()
+        .priceline
+          span.price #{hcReviews}
+          span.priceper Отзывов

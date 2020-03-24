@@ -3,7 +3,7 @@ include ../like-button/like-button
 mixin review(image, author, date, text, likeNumber, likeName, likeValue, likeChecked)
   .review-block
     .avatar
-      img(src=require('../../modules/review/images/' + image))
+      img(src=require('../../modules/review/images/' + image) alt='avatar')
       +like-button({number: likeNumber, name: likeName, value: likeValue, checked: likeChecked})
     .review-text
       .name #{author}

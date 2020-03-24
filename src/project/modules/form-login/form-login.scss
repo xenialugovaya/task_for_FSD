@@ -1,0 +1,22 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
+.login {
+  @include form;
+
+  .form-header {
+    letter-spacing: 1px;
+  }
+
+  .login__calendar-inputs,
+  .login__input-dropdown {
+    margin-top: 20px;
+
+    .input {
+      margin-top: 8px;
+    }
+  }
+
+  .login__footer {
+    margin-top: 31px;
+  }
+}
