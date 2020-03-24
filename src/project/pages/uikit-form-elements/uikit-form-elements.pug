@@ -27,6 +27,7 @@ block content
   include ../../modules/input/input
   include ../../modules/input-dropdown/input-dropdown
   include ../../modules/input-subscription/input-subscription
+  include ../../modules/input-date-dropdown/input-date-dropdown
 
   .content-form-elements
     .logo_uikit
@@ -58,7 +59,9 @@ block content
           placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
         })
       .input-wrapper
-        +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
+        .input-header
+          h3 filter date dropdown
+        +input-date-dropdown({placeholder: '19 авг - 23 авг', type: 'text'})  
       .input-wrapper
         .input-header
           h3 subscription text field

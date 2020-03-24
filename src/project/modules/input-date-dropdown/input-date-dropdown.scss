@@ -1,24 +1,24 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.wrap-input-subscription {
-  width: 266px;
-  box-sizing: border-box;
+.wrap-input-date-dropdown {
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
   position: relative;
+  width: 266px;
 
-
-  .input_subscription {
+  .input_date-dropdown {
     @include input;
     width: 266px;
+    cursor: pointer;
+
+    &::placeholder {
+      color: $dark_shade_75;
+    }
   }
 
   &::after {
-    @include right-arrow;
-    color: $purple;
-    position: absolute;
-    right: 10px;
+    @include drop-arrow;
   }
 }
