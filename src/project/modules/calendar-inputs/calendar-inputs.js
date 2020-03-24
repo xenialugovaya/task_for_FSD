@@ -12,8 +12,8 @@ class CalendarInputs {
   }
 
   showCalendar() {
-    this.$elem.find('.small-input', this.$elem).on('click', () => {
-      this.$elem.find('.calendar-dropdown', this.$elem).show();
+    this.$elem.find('.input_small', this.$elem).on('click', () => {
+      this.$elem.find('.calendar-dropdown', this.$elem).toggle();
     });
   }
 
@@ -28,16 +28,16 @@ class CalendarInputs {
     this.$elem.find('.datepicker-here', this.$elem).on("click", () => {
       this.clearInputs();
       if ($datepicker.selectedDates[0]) {
-        $('.small-input', this.$elem).eq(0).val(this.formatDate($datepicker.selectedDates[0]));
+        $('.input_small', this.$elem).eq(0).val(this.formatDate($datepicker.selectedDates[0]));
       }
       if ($datepicker.selectedDates[1]) {
-        $('.small-input', this.$elem).eq(1).val(this.formatDate($datepicker.selectedDates[1]));
+        $('.input_small', this.$elem).eq(1).val(this.formatDate($datepicker.selectedDates[1]));
       }
     });
   }
 
   clearInputs() {
-    this.$elem.find('.small-input', this.$elem).val(' ');
+    this.$elem.find('.input_small', this.$elem).val(' ');
   }
 
   getCalendarData() {

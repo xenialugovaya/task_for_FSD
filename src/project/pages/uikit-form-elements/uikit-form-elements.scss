@@ -3,11 +3,11 @@
 
 .content-form-elements {
   width: 1440px;
-  height: 1853px;
   max-width: 1920px;
   font-family: $mainFont;
 }
 
+// Inputs
 
 .column-inputs {
   display: inline-block;
@@ -28,13 +28,15 @@
       }
     }
 
-    .input {
-      margin-top: 8px;
+    .input-header {
+      margin-bottom: 8px;
     }
   }
 }
 
-.column2 {
+//Checkbox, radio, toggle, like, rating buttons
+
+.column-small-buttons {
   display: inline-block;
   vertical-align: top;
   margin-top: 62px;
@@ -93,7 +95,8 @@
   }
 }
 
-.column3 {
+// Slider, buttons, pagination
+.buttons {
   display: inline-block;
   vertical-align: top;
   margin-top: 62px;

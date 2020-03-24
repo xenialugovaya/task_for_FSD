@@ -26,6 +26,7 @@ block content
   include ../../modules/range_slider/multirange
   include ../../modules/input/input
   include ../../modules/input-dropdown/input-dropdown
+  include ../../modules/input-subscription/input-subscription
 
   .content-form-elements
     .logo_uikit
@@ -59,8 +60,11 @@ block content
       .input-wrapper
         +formInput('text', 'filter date dropdown', '19 авг - 23 авг', 'middle-calendar', 'wrap-middle')  
       .input-wrapper
-        +formInput('text', 'subscription text field', 'Email', 'subscription', 'subscription-wrap')
-    .column2
+        .input-header
+          h3 subscription text field
+        +input-subscription({placeholder: 'Email', type: 'text'})
+
+    section.column-small-buttons
       .checkbox-block
         +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
       .radio-block
@@ -80,7 +84,7 @@ block content
         +rating('4')
         +rating('4')
 
-    .column3
+    section.buttons
       .range-block
         +rangeMixin('range slider')
       .button-block

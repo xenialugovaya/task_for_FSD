@@ -3,7 +3,7 @@
 
 .calendar-inputs {
 
-  .wrap-input {
+  .wrap-input-small {
     display: inline-block;
     width: 150px;
     position: relative;
@@ -12,25 +12,24 @@
       margin-left: 18px;
     }
 
-    .input-header {
+    .input-header-small {
       @include h3;
     }
 
-    .small-input {
+    .input_small {
       @include input;
       width: 150px;
-      margin-top: 5px;
-
+      margin-top: 8px;
+      cursor: pointer;
 
       &::placeholder {
         color: $dark_shade_75;
       }
-
-
     }
 
-    .material-icons::before {
+    &:after {
       @include drop-arrow;
+      bottom: 10px;
     }
   }
 
