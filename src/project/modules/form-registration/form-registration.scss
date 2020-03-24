@@ -1,0 +1,54 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
+.registration {
+  @include form;
+
+  .registration__header {
+    letter-spacing: 0.8px;
+  }
+
+  .registration__name {
+    margin-top: 20px;
+
+    .input:nth-child(2) {
+      margin-top: 10px;
+    }
+  }
+
+  .registration__sex {
+    margin-top: 10px;
+
+    .radio-button:nth-child(2) {
+      margin-left: 20px;
+    }
+  }
+
+  .registration__birth-date {
+    margin-top: 24px;
+
+    .input {
+      margin-top: 5px;
+    }
+  }
+
+  .registration__login-data {
+    margin-top: 20px;
+
+    .input {
+      margin-top: 5px;
+
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .registration__subscription {
+    margin-top: 10px;
+  }
+
+  .registration__footer {
+    margin-top: 24px;
+  }
+
+}
