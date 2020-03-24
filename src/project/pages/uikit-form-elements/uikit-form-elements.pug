@@ -9,7 +9,7 @@ block content
   include ../../modules/forms/__input/form__input
   include ../../modules/checkbox-group/checkbox-group
   include ../../modules/toggle/toggle
-  include ../../modules/like_button/like_button
+  include ../../modules/like-button/like-button
   include ../../modules/radio-button/radio-button
   include ../../modules/ratings/ratings
   include ../../modules/button/button
@@ -80,8 +80,8 @@ block content
         +toggle({title: 'Получать спецпредложения', value: 'mytoggle2', name: 'toggle2'})
       .like-block
         h3 like button
-        +like_button('2', 'mylike1', 'like1')
-        +like_button('12', 'mylike2', 'like2', 'checked')
+        +like-button({number: '2', name: 'mylike1', value: 'like1'})
+        +like-button({number: '12', name: 'mylike2', value: 'like2', checked: 'checked'})
       .rate-block
         h3 rate button
         +rating('4')

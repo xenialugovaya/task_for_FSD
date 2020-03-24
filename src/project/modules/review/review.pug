@@ -1,11 +1,11 @@
-include ../like_button/like_button
+include ../like-button/like-button
 
-mixin review(image, Name, Date, textReview, defaultCounter, likeName, likeValue, likeChecked)
+mixin review(image, author, date, text, likeNumber, likeName, likeValue, likeChecked)
   .review-block
     .avatar
       img(src=require('../../modules/review/images/' + image))
-      +like_button(defaultCounter, likeName, likeValue, likeChecked)
+      +like-button({number: likeNumber, name: likeName, value: likeValue, checked: likeChecked})
     .review-text
-      .name #{Name}
-      p.date #{Date}
-      p.textReview #{textReview}
+      .name #{author}
+      p.date #{date}
+      p.textReview #{text}

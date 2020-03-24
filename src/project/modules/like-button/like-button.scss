@@ -1,0 +1,99 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.like-button {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background: $purpleGradient;
+}
+
+.like-button .like {
+  opacity: 0;
+  width: 0;
+  height: 0;
+
+  &:not(:checked) {
+    +.like-body {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #FFFFFF;
+      border: 1px solid $dark_shade_25;
+      border-radius: 10px;
+      width: 40px;
+      height: 20px;
+    }
+
+    +.like-body .material-icons:before {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      content: "\e87e";
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      color: $dark_shade_25;
+    }
+
+    +.like-body .like-counter {
+      position: absolute;
+      top: 3px;
+      left: 20px;
+      color: $dark_shade_25;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+  }
+
+  &:checked {
+    +.like-body {
+      position: absolute;
+      cursor: pointer;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      border: 1px solid $purple;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 40px;
+      height: 20px;
+    }
+
+    +.like-body .material-icons:before {
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      color: $purple;
+      content: "\e87d";
+      font-family: 'Material Icons';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+
+    }
+
+    +.like-body .like-counter {
+      color: $purple;
+      top: 3px;
+      left: 20px;
+      position: absolute;
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+  }
+}
