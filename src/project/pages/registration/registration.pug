@@ -1,4 +1,5 @@
 extends ../../layout/main
+include ../../modules/form-registration/form-registration
 
 block variables
 
@@ -6,4 +7,4 @@ block variables
 
 block content
   .registration-content
-    include ../../modules/forms/registration/registration
+    +form-registration()

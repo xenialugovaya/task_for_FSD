@@ -1,0 +1,21 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
+.signup {
+  @include form;
+
+  .signup_header {
+    letter-spacing: 0.8px;
+  }
+
+  .signup__login-data {
+    margin-top: 20px;
+
+    .input:nth-child(2) {
+      margin-top: 10px;
+    }
+  }
+
+  .signup__footer {
+    margin-top: 20px;
+  }
+}

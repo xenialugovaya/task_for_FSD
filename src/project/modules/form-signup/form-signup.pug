@@ -1,0 +1,12 @@
+include ../input/input
+include ../form-footer/form-footer
+
+mixin form-signup()
+  .signup.form-wrapper
+    form.signup__form
+      h1.signup__header Войти
+      .signup__login-data
+        +input({placeholder: 'Email', type: 'text'})
+        +input({placeholder: 'Пароль', type: 'text'})
+      .signup__footer
+        +form-footer({bigButtonText: 'Перейти к оплате', ghostButtonText: 'войти', footerText:'Уже есть аккаунт на Toxin', logout: true})

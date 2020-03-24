@@ -1,4 +1,5 @@
 extends ../../layout/main
+include ../../modules/form-signup/form-signup
 
 block variables
 
@@ -6,4 +7,4 @@ block variables
 
 block content
   .signin-content
-    include ../../modules/forms/signup/signup
+    +form-signup()

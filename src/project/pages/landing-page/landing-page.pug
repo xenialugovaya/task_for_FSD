@@ -1,4 +1,5 @@
 extends ../../layout/main
+include ../../modules/form-login/form-login
 
 block variables
 
@@ -6,5 +7,5 @@ block variables
 
 block content
   .landing-content
-    include ../../modules/forms/login/login
+    +form-login()
     .landing-comment Лучшие номера для вашей работы, отдыха и просто вдохновения

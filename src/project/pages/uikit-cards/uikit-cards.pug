@@ -10,6 +10,7 @@ block content
   include ../../modules/calendar/calendar
   include ../../modules/form-login/form-login
   include ../../modules/form-registration/form-registration
+  include ../../modules/form-signup/form-signup
 
 
   .content-cards
@@ -21,7 +22,7 @@ block content
         +form-registration()
       .column
         include ../../modules/forms/booking/booking
-        include ../../modules/forms/signup/signup
+        +form-signup()
       .column
         +calendar()
         +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')
