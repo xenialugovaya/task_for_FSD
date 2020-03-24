@@ -1,6 +1,6 @@
-mixin toggle(toggleHeader, toggleName, toggleValue, toggleChecked)
+mixin toggle({title, value, name, checked})
   .toggle-button
-    label.switch
-      input(type='checkbox', name=toggleName, value=toggleValue, checked=toggleChecked)
-      span.slider.round
-    span.toggleName #{toggleHeader}
+    label.toggle-label
+      input(class='toggle' type='checkbox' name=name value=value checked=checked)
+      span.slider-body
+    span.toggle-title #{title}

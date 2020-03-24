@@ -10,7 +10,7 @@ block content
   include ../../modules/checkbox-group/checkbox-group
   include ../../modules/toggle/toggle
   include ../../modules/like_button/like_button
-  include ../../modules/forms/__radio-buttons/form__radio-buttons
+  include ../../modules/radio-button/radio-button
   include ../../modules/ratings/ratings
   include ../../modules/button/button
   include ../../modules/button-big/button-big
@@ -72,12 +72,12 @@ block content
         +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
       .radio-block
         h3 Radio Buttons
-        +radio-button('Мужчина', 'male', 'checked')
-        +radio-button('Женщина', 'female')
+        +radio-button({title: 'Мужчина', value: 'male', checked: 'checked'})
+        +radio-button({title: 'Женщина', value: 'female'})
       .toggle-block
         h3 Toggle    
-        +toggle('Получать спецпредложения', 'mytoggle1', 'toggle1', 'checked' )
-        +toggle('Получать спецпредложения', 'mytoggle2', 'toggle2')
+        +toggle({title: 'Получать спецпредложения', value: 'mytoggle1', name: 'toggle1', checked: 'checked' })
+        +toggle({title: 'Получать спецпредложения', value: 'mytoggle2', name: 'toggle2'})
       .like-block
         h3 like button
         +like_button('2', 'mylike1', 'like1')

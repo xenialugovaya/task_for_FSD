@@ -1,21 +1,24 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
 .toggle-button {
   position: relative;
 }
 
-.switch {
+.toggle-label {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
 }
 
-.switch input {
+.toggle-label .toggle {
   opacity: 0;
   width: 0;
   height: 0;
 }
 
-.slider {
+.slider-body {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -30,7 +33,7 @@
   transition: .4s;
 }
 
-.slider:before {
+.slider-body:before {
   position: absolute;
   content: "";
   width: 12px;
@@ -43,18 +46,18 @@
   transition: .4s;
 }
 
-input:checked {
-  +.slider {
+.toggle:checked {
+  +.slider-body {
     border: 1px solid $purple;
   }
 
-  +.slider:before {
+  +.slider-body:before {
     background: $purpleGradient;
     left: 22px;
   }
 }
 
-.toggleName {
+.toggle-title {
   display: inline-block;
   line-height: 20px;
   vertical-align: top;
