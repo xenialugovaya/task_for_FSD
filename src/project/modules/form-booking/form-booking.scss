@@ -21,32 +21,34 @@
     .price-list-item {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
 
       &:not(:first-child) {
         margin-top: 11px;
       }
 
-      .item-wrapper {
+      .item {
         width: 239px;
-        display: flex;
-        justify-content: space-between;
+        padding-right: 25px;
+        box-sizing: border-box;
+        position: relative;
 
-        .item {
-          width: 214px;
-        }
-
-        .material-icons {
-          font-family: 'Material Icons';
+        &_with-icon:after {
+          position: absolute;
+          content: 'i';
+          top: 0;
+          right: 0;
+          font-family: Montserrat, sans-serif;
+          font-weight: bold;
           color: $dark_shade_25;
+          border: 1px solid $dark_shade_25;
+          border-radius: 50%;
           width: 20px;
-          font-style: normal;
+          height: 20px;
+          line-height: 20px;
+          text-align: center;
         }
       }
-
-
-
-
     }
 
     .price-list-final {
@@ -59,8 +61,10 @@
       letter-spacing: 0.3px;
 
       .item-final-divider {
-        width: 187px;
+        width: 175px;
+        padding: 0px 5px;
         border-bottom: 1px dashed $dark_shade_25;
+        box-sizing: border-box;
       }
     }
   }

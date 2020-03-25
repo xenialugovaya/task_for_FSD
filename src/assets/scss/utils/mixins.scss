@@ -141,53 +141,6 @@
 
 }
 
-@mixin booking-form-header {
-  position: relative;
-
-  .number {
-    @include h1-cyrillic;
-    margin-left: 6px;
-    letter-spacing: 0.8px;
-
-  }
-
-  .numbersign {
-    font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
-    font-size: 13px;
-    color: $dark_shade_100;
-  }
-
-  .priceline {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-  }
-
-  .price {
-    font-family: 'Montserrat-bold', sans-serif;
-    color: $dark_shade_50;
-    font-size: 14px;
-
-
-  }
-
-  .priceper {
-    font-family: 'Montserrat', sans-serif;
-    color: $dark_shade_50;
-    font-size: 12px;
-    margin-left: 3px;
-  }
-
-  .purpletext {
-    font-family: 'Montserrat-bold', sans-serif;
-    color: $purple;
-    font-size: 12px;
-    text-transform: uppercase;
-    margin-left: 5px;
-  }
-}
 
 
 

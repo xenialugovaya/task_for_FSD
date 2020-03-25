@@ -1,3 +1,4 @@
+include ../booking-header/booking-header
 include ../ratings/ratings
 
 mixin hotel_card (hcImgs, hcNum, hcPrice, roomType, hcReviews, hotel_img_arrow)
@@ -10,12 +11,7 @@ mixin hotel_card (hcImgs, hcNum, hcPrice, roomType, hcReviews, hotel_img_arrow)
             img(src=hcImg alt='Room image' + index)
     .hotel_descr
       .hotel_card-header
-        span.numbersign №
-        span.number #{hcNum}
-        span.purpletext #{roomType}
-        .priceline
-          span.price #{hcPrice}
-          span.priceper в сутки
+        +booking-header({roomNumber: '888', roomType: 'люкс', roomPrice: '9 900'})
       .hotel_card-ratings
         +rating()
         .priceline
