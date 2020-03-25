@@ -1,0 +1,40 @@
+include ../booking-header/booking-header
+include ../calendar-inputs/calendar-inputs
+include ../input-dropdown/input-dropdown
+include ../form-footer/form-footer
+
+mixin form-booking()
+  .booking.form-wrapper
+    form.booking__form
+      .booking__header 
+        +booking-header({roomNumber: '888', roomType: 'люкс', roomPrice: '9 900'})
+      .booking__calendar-inputs
+        +calendar-inputs({
+          titles: ['прибытие', 'выезд'],
+          placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+        })      
+      .booking__input-dropdown
+        h3.input-header гости
+        +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
+      .booking__price-list
+        .price-list-item
+          .item 9 990₽ х 4 суток
+          .item-price 39 960₽
+        .price-list-item
+          .item-wrapper
+            .item Сбор за услуги: скидка 2 179₽ 
+            i.material-icons.md-dark
+              | info_outline
+          .item-price 0₽
+        .price-list-item
+          .item-wrapper
+            .item Сбор за дополнительные услуги 
+            i.material-icons.md-dark
+              | info_outline
+          .item-price 300₽
+        .price-list-final 
+          .item-final Итого 
+          .item-final-divider
+          .item-price-final 38 081₽
+      .booking__footer
+        +form-footer({bigButtonText: 'Подобрать номер'})

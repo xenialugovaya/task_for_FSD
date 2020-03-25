@@ -11,6 +11,7 @@ block content
   include ../../modules/form-login/form-login
   include ../../modules/form-registration/form-registration
   include ../../modules/form-signup/form-signup
+  include ../../modules/form-booking/form-booking
 
 
   .content-cards
@@ -21,7 +22,7 @@ block content
         +form-login()
         +form-registration()
       .column
-        include ../../modules/forms/booking/booking
+        +form-booking()
         +form-signup()
       .column
         +calendar()

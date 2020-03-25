@@ -1,0 +1,71 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
+.booking {
+  @include form;
+
+  &__calendar-inputs {
+    margin-top: 20px;
+  }
+
+  &__input-dropdown {
+    margin-top: 20px;
+
+    .input {
+      margin-top: 5px;
+    }
+  }
+
+  &__price-list {
+    margin-top: 21px;
+
+    .price-list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:not(:first-child) {
+        margin-top: 11px;
+      }
+
+      .item-wrapper {
+        width: 239px;
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+          width: 214px;
+        }
+
+        .material-icons {
+          font-family: 'Material Icons';
+          color: $dark_shade_25;
+          width: 20px;
+          font-style: normal;
+        }
+      }
+
+
+
+
+    }
+
+    .price-list-final {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: baseline;
+      @include h1;
+      font-size: 19px;
+      margin-top: 25px;
+      letter-spacing: 0.3px;
+
+      .item-final-divider {
+        width: 187px;
+        border-bottom: 1px dashed $dark_shade_25;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: 20px;
+  }
+}
