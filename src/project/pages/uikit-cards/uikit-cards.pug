@@ -1,19 +1,17 @@
 extends ../../layout/uikit.pug
+include ../../modules/icons/logo/logo
+include ../../modules/hotel-card/hotel-card
+include ../../modules/calendar/calendar
+include ../../modules/form-login/form-login
+include ../../modules/form-registration/form-registration
+include ../../modules/form-signup/form-signup
+include ../../modules/form-booking/form-booking
 
 block variables
 
   -var pageTitle= 'Cards'
 
 block content
-  include ../../modules/icons/logo/logo
-  include ../../modules/hotel_card/hotel_card
-  include ../../modules/calendar/calendar
-  include ../../modules/form-login/form-login
-  include ../../modules/form-registration/form-registration
-  include ../../modules/form-signup/form-signup
-  include ../../modules/form-booking/form-booking
-
-
   .content-cards
     .logo_uikit
       +logo()
@@ -26,5 +24,5 @@ block content
         +form-signup()
       .column
         +calendar()
-        +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')
-        +hotel_card (['assets/img/image3.png', 'assets/img/image2.png','assets/img/image1.png', 'assets/img/image2.png'], '840', '9 990₽', 'люкс', '65')
+        +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})
+        +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomType: 'люкс', roomReviews: '65'})

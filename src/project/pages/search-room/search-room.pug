@@ -5,7 +5,7 @@ block variables
   -var pageTitle= 'Search room'
 
 block content
-  include ../../modules/hotel_card/hotel_card
+  include ../../modules/hotel-card/hotel-card
   include ../../modules/forms/__input/form__input
   include ../../modules/range_slider/multirange
   include ../../modules/checkbox-group/checkbox-group
@@ -31,17 +31,17 @@ block content
     .room-cards-column
       h1 Номера, которые мы для вас подобрали
       .room-cards-grid
-        +hotel_card (['assets/img/image2.png', 'assets/img/image2.png','assets/img/image2.png', 'assets/img/image2.png'], '888', '9 990₽', 'люкс', '145', 'hotel_img_arrow')            
-        +hotel_card (['assets/img/image3.png', 'assets/img/image3.png','assets/img/image3.png', 'assets/img/image3.png'], '840', '9 990₽', '', '65')
-        +hotel_card (['assets/img/image5.png', 'assets/img/image5.png','assets/img/image5.png', 'assets/img/image5.png'], '980', '8 500₽', 'люкс', '35')        
-        +hotel_card (['assets/img/image6.png', 'assets/img/image6.png','assets/img/image6.png', 'assets/img/image6.png'], '856', '7 300₽', '', '19')
-        +hotel_card (['assets/img/image7.png', 'assets/img/image7.png','assets/img/image7.png', 'assets/img/image7.png'], '740', '6 000₽', '', '44')
-        +hotel_card (['assets/img/image8.png', 'assets/img/image8.png','assets/img/image8.png', 'assets/img/image8.png'], '982', '5 800₽', '', '56')
-        +hotel_card (['assets/img/image9.png', 'assets/img/image9.png','assets/img/image9.png', 'assets/img/image9.png'], '678', '5 500₽', '', '45')
-        +hotel_card (['assets/img/image10.png', 'assets/img/image10.png','assets/img/image10.png', 'assets/img/image10.png'], '450', '5 300₽', '', '39')
-        +hotel_card (['assets/img/image11.png', 'assets/img/image11.png','assets/img/image11.png', 'assets/img/image11.png'], '350', '5 000₽', '', '77')
-        +hotel_card (['assets/img/image12.png', 'assets/img/image12.png','assets/img/image12.png', 'assets/img/image12.png'], '666', '5 000₽', '', '25')
-        +hotel_card (['assets/img/image13.png', 'assets/img/image13.png','assets/img/image13.png', 'assets/img/image13.png'], '444', '5 000₽', '', '15')
-        +hotel_card (['assets/img/image14.png', 'assets/img/image14.png','assets/img/image14.png', 'assets/img/image14.png'], '352', '5 000₽', '', '55')
+        +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})            
+        +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'}) 
+        +hotel-card ({images: ['image4.jpg', 'image4.jpg','image4.jpg', 'image4.jpg'], roomNumber: '980', roomPrice: '8 500', roomType: 'люкс', roomReviews: '35'}) 
+        +hotel-card ({images: ['image5.jpg', 'image5.jpg','image5.jpg', 'image5.jpg'], roomNumber: '856', roomPrice: '7 300', roomReviews: '19'})   
+        +hotel-card ({images: ['image6.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '740', roomPrice: '6 000', roomReviews: '44'})
+        +hotel-card ({images: ['image7.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '982', roomPrice: '5 800', roomReviews: '56'})  
+        +hotel-card ({images: ['image8.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '678', roomPrice: '5 500', roomReviews: '45'})
+        +hotel-card ({images: ['image9.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '450', roomPrice: '5 300', roomReviews: '39'})  
+        +hotel-card ({images: ['image10.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '350', roomPrice: '5 000', roomReviews: '77'})
+        +hotel-card ({images: ['image11.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '666', roomPrice: '5 000', roomReviews: '25'})
+        +hotel-card ({images: ['image12.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '444', roomPrice: '5 000', roomReviews: '15'})       
+        +hotel-card ({images: ['image13.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '352', roomPrice: '5 000', roomReviews: '55'})
       .room-search-pagination
         +pagination

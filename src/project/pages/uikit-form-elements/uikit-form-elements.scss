@@ -84,16 +84,18 @@
 
 .rate-block {
   margin-top: 34px;
-}
 
-.star_block {
-  display: inline-block;
-  margin-top: 15px;
+  .star_block {
+    display: inline-block;
+    margin-top: 15px;
 
-  &:nth-child(3) {
-    margin-left: 20px;
+    &:nth-child(3) {
+      margin-left: 20px;
+    }
   }
 }
+
+
 
 // Slider, buttons, pagination
 .buttons {

@@ -1,14 +1,16 @@
 extends ../../layout/main
+include ../../modules/review/review
+include ../../modules/room-icon/room-icon
+include ../../modules/bullet-list/bullet-list
+include ../../modules/donut-chart/donut-chart
+include ../../modules/form-booking/form-booking
 
 block variables
 
   -var pageTitle= 'Room details'
 
 block content
-  include ../../modules/review/review
-  include ../../modules/room-icon/room-icon
-  include ../../modules/bullet-list/bullet-list
-  include ../../modules/donut-chart/donut-chart
+
   .room-gallery
     .main-img
       img(src=require('./images/main-gallery-image.jpg') alt='Main gallery image')
@@ -26,7 +28,7 @@ block content
       h2 Впечатления от номера
       +donut-chart()
     .room-booking-form
-      include ../../modules/forms/booking/booking
+      +form-booking()
     .room-reviews
       div.room-heading
         h2 Отзывы посетителей номера
