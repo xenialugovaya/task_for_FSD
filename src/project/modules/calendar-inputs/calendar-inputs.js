@@ -1,7 +1,6 @@
 import './calendar-inputs.scss';
-import $ from 'jquery';
-
 import 'air-datepicker/dist/js/datepicker.js'
+import $ from 'jquery';
 
 class CalendarInputs {
   constructor($element) {

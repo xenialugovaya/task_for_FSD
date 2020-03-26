@@ -1,4 +1,4 @@
 mixin rating
-  .star_block#star-rating
+  .rating
     each star in ['1', '2', '3', '4', '5'] 
-      input.rating(type='radio' name='example', value=star)
+      input.rating__star(type='radio' name='example', value=star)
