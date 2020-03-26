@@ -19,8 +19,11 @@
   .chart-text {
     width: 60px;
     height: 40px;
-    top: 50px;
-    left: 40px;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     text-align: center;
     font-weight: bold;
     text-transform: uppercase;
