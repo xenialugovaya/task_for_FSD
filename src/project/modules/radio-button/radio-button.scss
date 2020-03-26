@@ -2,51 +2,53 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .radio-button {
-  display: inline-block;
   height: 20px;
+  line-height: 20px;
   width: 98px;
   position: relative;
 
-  .radio {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+  &__label {
+    position: relative;
+    cursor: pointer;
+    line-height: 20px;
 
-    +span:before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      background: $white;
-      border: 1px solid $dark_shade_25;
-      box-sizing: border-box;
-      border-radius: 10px;
+    .radio {
       position: absolute;
-      left: 0px;
-      top: 0px;
+      z-index: -1;
+      opacity: 0;
+
+      +.title:before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: $white;
+        border: 1px solid $dark_shade_25;
+        box-sizing: border-box;
+        border-radius: 10px;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+      }
+
+
+      &:checked+.title:before {
+        border: 1px solid $purple;
+      }
+
+      &:checked+.title:after {
+        content: "";
+        width: 12px;
+        height: 12px;
+        background: $purpleGradient;
+        border-radius: 10px;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+      }
     }
 
-    .radio-label {
-      position: relative;
-      display: inline-block;
-      cursor: pointer;
-      line-height: 20px;
+    .title {
       padding-left: 30px;
-    }
-
-
-    &:checked+span:before {
-      border: 1px solid $purple;
-    }
-
-    &:checked+span:after {
-      content: "";
-      width: 12px;
-      height: 12px;
-      background: $purpleGradient;
-      border-radius: 10px;
-      position: absolute;
-      left: 4px;
-      top: 4px;
     }
   }
 }

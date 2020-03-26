@@ -1,14 +1,9 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .bullet-list {
-  &__title {
-    @include h2
-  }
+  padding: 0;
+  list-style: none;
 
-  &__items {
-    padding: 0;
-    list-style: none;
-  }
 
   &__item {
     padding-left: 19px;

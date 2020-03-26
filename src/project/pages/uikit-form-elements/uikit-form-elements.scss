@@ -5,6 +5,7 @@
   width: 1440px;
   max-width: 1920px;
   font-family: $mainFont;
+  padding-bottom: 132px;
 }
 
 // Inputs
@@ -43,22 +44,35 @@
   margin-left: 127px;
 }
 
-.radio-block {
-  margin-top: 38px;
-}
+.checkbox-block {
+  &__group {
+    margin-top: 17px;
+  }
 
-.radio-button {
-  margin-top: 14px;
-
-  &:nth-child(3) {
-    margin-left: 20px;
+  .checkbox-block__button:not(:first-child) {
+    margin-top: 10px;
   }
 }
+
+.radio-block {
+  margin-top: 38px;
+
+  &__button {
+    margin-top: 14px;
+    display: inline-block;
+
+    &:nth-child(3) {
+      margin-left: 20px;
+    }
+  }
+}
+
+
 
 .toggle-block {
   margin-top: 39px;
 
-  .toggle-button {
+  &__button {
     &:nth-child(2) {
       margin-top: 15px;
     }
@@ -199,6 +213,22 @@
     }
   }
 
+  .checkbox-expandable-block {
+    &__group:not(:first-child) {
+      margin-top: 49px;
+    }
+  }
+
+
+  .checkbox-rich-block {
+    &__group {
+      margin-top: 17px;
+    }
+
+    .checkbox-rich-block__button:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
 }
 
 

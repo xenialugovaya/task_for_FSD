@@ -8,6 +8,8 @@ block content
   include ../../modules/icons/logo/logo
   include ../../modules/forms/__input/form__input
   include ../../modules/checkbox-group/checkbox-group
+  include ../../modules/checkbox/checkbox
+  include ../../modules/checkbox-expandable/checkbox-expandable
   include ../../modules/toggle/toggle
   include ../../modules/like-button/like-button
   include ../../modules/radio-button/radio-button
@@ -69,15 +71,26 @@ block content
 
     section.column-small-buttons
       .checkbox-block
-        +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
+        h3 Checkbox Buttons
+        .checkbox-block__group
+          .checkbox-block__button
+            +checkbox({title: 'Можно курить', name: '1', value: '1'})
+          .checkbox-block__button
+            +checkbox({title: 'Можно с питомцами', name: '2', value: '2', checked: 'checked'})
+          .checkbox-block__button
+            +checkbox({title: 'Можно пригласить гостей (до 10 человек)', name: '3', value: '3', checked: 'checked'})
       .radio-block
         h3 Radio Buttons
-        +radio-button({title: 'Мужчина', value: 'male', checked: 'checked'})
-        +radio-button({title: 'Женщина', value: 'female'})
+        .radio-block__button
+          +radio-button({title: 'Мужчина', value: 'male', checked: 'checked'})
+        .radio-block__button
+          +radio-button({title: 'Женщина', value: 'female'})
       .toggle-block
-        h3 Toggle    
-        +toggle({title: 'Получать спецпредложения', value: 'mytoggle1', name: 'toggle1', checked: 'checked' })
-        +toggle({title: 'Получать спецпредложения', value: 'mytoggle2', name: 'toggle2'})
+        h3 Toggle 
+        .toggle-block__button   
+          +toggle({title: 'Получать спецпредложения', value: 'mytoggle1', name: 'toggle1', checked: 'checked' })
+        .toggle-block__button 
+          +toggle({title: 'Получать спецпредложения', value: 'mytoggle2', name: 'toggle2'})
       .like-block
         h3 like button
         +like-button({number: '2', name: 'mylike1', value: 'like1'})
@@ -130,15 +143,22 @@ block content
     section.lists
       .column-lists  
         .checkbox-expandable-block
-          +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')
-          +checkbox-group('7', 'expandable checkbox list', '', '', ['Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь', 'Телевизор'], '', 'expandable')  
+          .checkbox-expandable-block__group
+            +checkbox-expandable({title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}]})
+          .checkbox-expandable-block__group
+            +checkbox-expandable({title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол', checked: true}, {title: 'Стул для кормления', checked: true}, {title: 'Кроватка', checked: true}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}], open: true})
       .column-lists 
-        .checkbox-rich-block    
-          +checkbox-group('2', 'rich checkbox buttons', '', '', ['Широкий коридор', 'Помощник для инвалидов'], '', 'rich', ['Ширина коридоров в номере не менее 91 см.', 'На 1 этаже вас встретит специалист и проводит до номера.'])
+        .checkbox-rich-block 
+          h3 rich checkbox buttons
+          .checkbox-rich-block__group
+            .checkbox-rich-block__button
+              +checkbox({title: 'Широкий коридор', name: '1', value: '1', rich: true, description: 'Ширина коридоров в номере не менее 91 см.'})   
+            .checkbox-rich-block__button
+              +checkbox({title: 'Помощник для инвалидов', name: '2', value: '2', rich: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.'})   
       .column-lists 
         .bullet-list-block
+          h3 bullet list
           +bullet-list({
-            title:'bullet list', 
             items: [
               'Нельзя с питомцами', 
               'Без вечеринок и мероприятий', 
