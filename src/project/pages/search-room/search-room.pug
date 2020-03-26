@@ -7,7 +7,7 @@ block variables
 block content
   include ../../modules/hotel-card/hotel-card
   include ../../modules/forms/__input/form__input
-  include ../../modules/range_slider/multirange
+  include ../../modules/range-slider/range-slider
   include ../../modules/checkbox-group/checkbox-group
   include ../../modules/pagination/pagination
 
@@ -18,7 +18,7 @@ block content
       .filter-column-elem.guests
         +formInput('', 'гости', '', 'default-input', 'wrap-middle', '', 'dropdown', '3', ['взрослые', 'дети', 'младенцы'])
       .filter-column-elem
-        +rangeMixin('диапазон цены')
+        +range-slider('диапазон цены')
         p Стоимость за сутки пребывания в номере
       .filter-column-elem
         +checkbox-group('3', 'Checkbox Buttons', ['mycheckbox', 'mycheckbox2', 'mycheckbox2'], ['check1', 'check2', 'check3'], ['Можно курить', 'Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], ['none', 'checked', 'checked'])
