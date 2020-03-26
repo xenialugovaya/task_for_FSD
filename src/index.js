@@ -1,12 +1,7 @@
 // JS
 
-import 'popper.js'
 import 'webpack-jquery-ui'
 import 'webpack-jquery-ui/css'
-
-
-
-
 import 'jquery.mmenu/dist/jquery.mmenu.all.css'
 import 'jquery.mmenu/dist/jquery.mmenu.all.js'
 import 'mburger-css/dist/mburger.js'

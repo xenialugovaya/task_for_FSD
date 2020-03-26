@@ -53,8 +53,6 @@
     "lightslider": "^1.1.6",
     "material-components-web": "^4.0.0",
     "mburger-css": "^1.3.3",
-    "popper.js": "^1.16.0",
-    "vue": "^2.6.10",
     "webpack-jquery-ui": "^2.0.1"
   }
 }
