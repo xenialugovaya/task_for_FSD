@@ -13,7 +13,7 @@ class Ratings {
 
 export default function renderComponent() {
   $(() => {
-    $('.rating').each((index, node) => {
+    $('.js-rating').each((index, node) => {
       new Ratings($(node));
     });
   });

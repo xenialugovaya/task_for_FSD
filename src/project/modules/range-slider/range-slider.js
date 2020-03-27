@@ -1,6 +1,5 @@
 import './range-slider.scss';
-import 'webpack-jquery-ui'
-import 'webpack-jquery-ui/css'
+
 
 class RangeSlider {
   constructor(element) {

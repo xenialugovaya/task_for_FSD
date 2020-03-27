@@ -5,7 +5,8 @@ import 'jquery.mmenu/dist/jquery.mmenu.all.css'
 import 'jquery.mmenu/dist/jquery.mmenu.all.js'
 import 'mburger-css/dist/mburger.js'
 import 'mburger-css/dist/mburger.css'
-
+import 'webpack-jquery-ui'
+import 'webpack-jquery-ui/css'
 
 // SCSS
 import './assets/scss/main.scss'

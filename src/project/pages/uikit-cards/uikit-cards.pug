@@ -1,5 +1,5 @@
 extends ../../layout/uikit.pug
-include ../../modules/icons/logo/logo
+include ../../modules/logo/logo
 include ../../modules/hotel-card/hotel-card
 include ../../modules/calendar/calendar
 include ../../modules/form-login/form-login
@@ -14,7 +14,7 @@ block variables
 block content
   .content-cards
     .logo_uikit
-      +logo()
+      +logo-icon({disabled: true})
     .wrap-cadrs-columns
       .column
         +form-login()
