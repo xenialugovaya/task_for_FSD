@@ -1,4 +1,4 @@
-extends ../../layout/uikit.pug
+extends ../../layout/uikit/uikit-layout.pug
 include ../../modules/logo/logo
 include ../../modules/hotel-card/hotel-card
 include ../../modules/calendar/calendar
@@ -13,8 +13,6 @@ block variables
 
 block content
   .content-cards
-    .logo_uikit
-      +logo-icon({disabled: true})
     .wrap-cadrs-columns
       .column
         +form-login()

@@ -17,3 +17,4 @@ function requireAll(requireContext) {
 
 requireAll(require.context('./project/modules', true, /\.js$/)); // pattern to take each .js(x) files except of the ones with __tests__ directory https://regex101.com/r/J8NWTj/1
 requireAll(require.context('./project/pages', true, /\.js$/));
+requireAll(require.context('./project/layout', true, /\.js$/));

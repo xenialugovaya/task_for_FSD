@@ -1,4 +1,4 @@
-extends ../../layout/uikit.pug
+extends ../../layout/uikit/uikit-layout.pug
 
 block variables
 
@@ -11,8 +11,6 @@ block content
 
 
   .content-colors_types
-    .logo_uikit
-      +logo()
     .color-column
       each box in [{colorClass : 'dark_shade_100', colorName : 'Dark Shade 100%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_75', colorName : 'Dark Shade 75%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_50', colorName : 'Dark Shade 50%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_25', colorName : 'Dark Shade 25%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_5', colorName : 'Dark Shade 5%', colorCode: '#1F2041'}, {colorClass : 'purple', colorName : 'Purple', colorCode: '#BC9CFF'}, {colorClass : 'green', colorName : 'Green', colorCode: '#6FCF97'}]
         +color-box({colorClass: box.colorClass,colorName: box.colorName, colorCode: box.colorCode} )
