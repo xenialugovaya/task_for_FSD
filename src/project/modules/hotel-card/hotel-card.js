@@ -20,7 +20,7 @@ class ImageSlider {
 
 export default function renderElement() {
   $(() => {
-    $('.hotel-images-list').each((index, node) => {
+    $('.js-hotel-images-list').each((index, node) => {
       new ImageSlider($(node));
     });
   });

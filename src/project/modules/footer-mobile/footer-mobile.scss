@@ -13,15 +13,8 @@
     text-align: center;
   }
 
-  .socials {
-    display: block;
+  &__socials {
     margin-top: 25px;
-
-    .social-twitter,
-    .social-fb,
-    .social-insta {
-      display: inline-block;
-    }
   }
 
 }

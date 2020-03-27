@@ -7,7 +7,7 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, roomReviews, sliderCo
     - classes.push('hotel-card__slider_with-controls')
   .hotel-card
     .hotel-card__slider(class=classes)
-      ul.hotel-images-list
+      ul.hotel-images-list.js-hotel-images-list
         each image, index in images
           li.hotel-image 
             img(src=require('../../modules/hotel-card/images/' + image) alt='Room image' + index)

@@ -1,4 +1,5 @@
 include ../logo/logo
+include ../social-icons/social-icons
 
 mixin footer-mobile()
   .footer-mobile
@@ -6,6 +7,4 @@ mixin footer-mobile()
       +logo-icon({disabled:false})
     .footer-mobile__text Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
     .footer-mobile__socials
-      .social-twitter
-      .social-fb
-      .social-insta
+      +social-icons()
