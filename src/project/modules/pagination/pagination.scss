@@ -2,56 +2,79 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .pagination {
-  display: block;
+  height: 40px;
+  display: flex;
 
-  .material-icons {
+  &__button {
+    width: 40px;
+    color: $dark_shade_50;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 40px;
+    text-align: center;
+    box-sizing: border-box;
+
+
+    &:hover {
+      background: $purpleGradient;
+      color: $white;
+      border-radius: 50%;
+    }
+
+    &.active {
+      background: $purpleGradient;
+      color: $white;
+      border-radius: 50%;
+    }
+
+  }
+
+  &__divider {
+    align-self: flex-end;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+
+  }
+
+  &__control {
     background: $greenGradient;
     border-radius: 50%;
     position: relative;
-    vertical-align: bottom;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &.next {
+      &:before {
+        @include right-arrow;
+        color: $white;
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+      }
+    }
+
+    &.prev {
+      display: none;
+
+      &:before {
+        @include left-arrow;
+        color: $white;
+        position: absolute;
+        bottom: 8px;
+        left: 8px;
+      }
+    }
+
   }
 
-  .material-icons:before {
-    @include right-arrow;
-    color: $white;
-    position: absolute;
-    bottom: 8px;
-    left: 8px;
-
+  &__caption {
+    color: $dark_shade_75;
+    margin-top: 8px;
+    margin-left: 5px;
   }
-}
-
-.pagination-button {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  color: $dark_shade_50;
-  cursor: pointer;
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 40px;
-  text-align: center;
-  box-sizing: border-box;
-
-
-  &:hover {
-    background: $purpleGradient;
-    color: $white;
-    border-radius: 50%;
-  }
-
-  &.active {
-    background: $purpleGradient;
-    color: $white;
-    border-radius: 50%;
-  }
-
-}
-
-.pag-caption {
-  color: $dark_shade_75;
-  margin-top: 8px;
-  margin-left: 5px;
 }

@@ -13,7 +13,6 @@ block content
   include ../../modules/like-button/like-button
   include ../../modules/radio-button/radio-button
   include ../../modules/ratings/ratings
-  include ../../modules/button/button
   include ../../modules/button-big/button-big
   include ../../modules/button-ghost/button-ghost
   include ../../modules/button-small/button-small
@@ -114,7 +113,7 @@ block content
         +button-big({text: 'перейти к оплате', type: 'button', hasArrow: true})
       .pagination-block
         h3 pagination
-        +pagination
+        +pagination({text:'1 – 12 из 100+ вариантов аренды', items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']})
 
     section.dropdown-inputs
       .column-dropdown-inputs

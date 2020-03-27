@@ -1,12 +1,19 @@
-mixin pagination
+mixin pagination({items, text})
   .pagination
-    each item in ['1', '2', '3', '...', '15']
-      if item== '1'
-        span.pagination-button(class='active') #{item}
-      else
-        span.pagination-button #{item}
-    span.pagination-button.material-icons 
-  .pag-caption 1 – 12 из 100+ вариантов аренды
+    .pagination__control.prev
+    .pagination__button.active= items[0]
+    if items.length > 4
+      - let i = 0;
+      while i < 2
+        .pagination__button= items[++i]
+      .pagination__divider ...
+      .pagination__button= items[items.length-1]
+    else 
+      each item, index in items
+        if index > 0
+          .pagination__button= items[index]
+    .pagination__control.next
+  .pagination__caption= text
 
 
 

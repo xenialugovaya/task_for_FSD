@@ -1,0 +1,9 @@
+include ../../nav-link/nav-link
+
+mixin footer-column({title, links})
+  .footer-column
+    h3.footer-column__title #{title}
+    ul.footer-column__list
+      each link in links
+        li.footer-column__link
+          +nav-link({href: link.href, name: link.val})          

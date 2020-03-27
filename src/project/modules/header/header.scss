@@ -77,4 +77,12 @@
   .header__menu {
     display: none !important;
   }
+
+  .mburger {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    --mb-bar-height: 2px;
+    cursor: pointer;
+  }
 }
