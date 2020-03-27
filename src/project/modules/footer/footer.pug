@@ -1,11 +1,11 @@
 include ./__column/footer__column
-include ../icons/logo/logo
+include ../logo/logo
 include ../forms/__input/form__input
 
 mixin footer()
   .wrap-footer
     .footer_logo-column
-      +logo('url(#purple)', 'url(#green)', '42', '42')
+      +logo-icon({disabled:false})
       p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. */
     +footerColumn('Navigation', [{href:'#', val:'About us'}, {href:'#', val:'News'}, {href:'#', val:'Support'}, {href:'#', val:'Products'}])
     +footerColumn('ABOUT US', [{href:'#', val:'Who we are'}, {href:'#', val:'Our team'}, {href:'#', val:'Careers'}, {href:'#', val:'Investors'}])
