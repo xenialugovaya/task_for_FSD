@@ -7,22 +7,6 @@
   font-family: $mainFont;
 }
 
-.logo_uikit .logo {
-  margin-left: 30px;
-  margin-top: 30px;
-  width: 50px;
-  height: 50px;
-}
-
-.logo_uikit .logo .logo_name {
-  display: none;
-}
-
-.logo_uikit .logo .big_elem,
-.small_elem,
-.circle {
-  fill: $dark_shade_25;
-}
 
 h3 {
   @include h3;

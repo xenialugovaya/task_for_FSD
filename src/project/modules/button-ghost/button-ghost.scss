@@ -4,12 +4,12 @@
 .button-ghost {
   @include button;
   width: 99px;
-  line-height: 40px !important;
+  line-height: 40px;
   color: $purple;
   background: $purpleGradient;
   padding: 2px;
 
-  span {
+  &__text {
     background: white;
     display: block;
     border-radius: 22px;

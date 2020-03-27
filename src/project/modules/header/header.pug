@@ -1,0 +1,27 @@
+include ../logo/logo
+include ../menu/menu
+include ../button-big/button-big
+include ../button-ghost/button-ghost
+
+mixin header({links, buttonLogin, buttonRegister, user, loggedIn})   
+  header.header
+    .header__mburger
+      a(class='mburger mburger--spin' href='#collapse-menu')  
+        b
+        b
+        b
+    nav.header__menu-mobile.js-header__menu-mobile#collapse-menu
+      +menu({links: links}) 
+    .header__logo
+      +logo-icon({disabled: false})
+    nav.header__menu
+      +menu({links: links})
+    if !loggedIn
+      .header__buttons
+        .button_login
+          +button-ghost({text: buttonLogin})
+        .button_register
+          +button-big({text: buttonRegister, type: 'button'})
+    else
+      .header__account-link
+        .user-name= user

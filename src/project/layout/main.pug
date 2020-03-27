@@ -12,12 +12,11 @@ html(lang='ru')
 
 
   body
-  include ../modules/nav/nav
+  include ../modules/header/header
   include ../modules/footer/footer-rus/footer-rus
   include ../modules/footer/footer-mobile/footer-mobile
 
-  header
-    +navbar([{state : 'logged_out'}], [{href : '/mock-address/change-me', val : 'О нас'}, {href :'/mock-address/change-me', val :'Услуги', mod : 'dropdown'}, {href :'/mock-address/change-me', val :'Вакансии'}, {href :'/mock-address/change-me', val : 'Новости'}, {href :'/mock-address/change-me', val : 'Соглашения', mod : 'dropdown'}], [{style:'ghost-button', name:'войти'}, {style:'big-button', name:'зарегистрироваться'}])
+  +header({links: [{href : '/mock-address/change-me', name : 'О нас'}, {href :'/mock-address/change-me', name :'Услуги', dropdown : true}, {href :'/mock-address/change-me', name :'Вакансии'}, {href :'/mock-address/change-me', name : 'Новости'}, {href :'/mock-address/change-me', name : 'Соглашения', dropdown : true}], buttonLogin:'войти', buttonRegister: 'зарегистрироваться'})
 
   block content
 

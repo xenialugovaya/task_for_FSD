@@ -5,13 +5,13 @@ block variables
   -var pageTitle= 'Headers&Footers'
 
 block content
-  include ../../modules/nav/nav
+  include ../../modules/header/header
   include ../../modules/footer/footer
   include ../../modules/footer/footer-mobile/footer-mobile
 
   .content-headers-footers
     .wrap-hf-grid
-      +navbar([{state : 'logged_out'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}], [{style:'ghost-button', name:'login', position:'in-header'}, {style:'big-button', name:'register', position:'in-header'}])
-      +navbar([{state : 'logged_in', user_name : 'Cosmin Negoita'}], [{href : '#', val : 'Home'}, {href :'#1', val :'About Us'}, {href :'#2', val :'Services', mod : 'dropdown'}, {href :'#3', val : 'Careers'}, {href :'#4', val : 'News'}, {href :'#4', val : 'Documentation'}])
+      +header({links: [{href : '/mock-address/change-me', name : 'Home'}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation', dropdown : true}], buttonLogin:'login', buttonRegister: 'register'})
+      +header({links: [{href : '/mock-address/change-me', name : 'Home'}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation', dropdown : true}], user: 'Cosmin Negoita', loggedIn: true})
       +footer()
       +footer-mobile()

@@ -3,6 +3,7 @@
 
 .button-big {
   @include button;
+  line-height: 42px;
   background: $purpleButton;
   color: $white;
   letter-spacing: 0.8px;

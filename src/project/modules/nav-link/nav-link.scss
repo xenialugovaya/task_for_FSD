@@ -1,0 +1,18 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.nav-link {
+  color: $dark_shade_50;
+  display: block;
+  line-height: 24px;
+
+  &_dropdown {
+    position: relative;
+    padding-right: 24px;
+  }
+
+  &_dropdown:after {
+    @include drop-arrow;
+    right: 0;
+  }
+}

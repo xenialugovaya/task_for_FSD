@@ -1,0 +1,7 @@
+include ../nav-link/nav-link
+
+mixin menu({links})
+  ul.menu
+    each link in links
+      li.menu__link   
+        +nav-link({href: link.href, name: link.name, dropdown: link.dropdown})

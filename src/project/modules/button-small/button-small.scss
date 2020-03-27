@@ -3,6 +3,7 @@
 
 .button-small {
   @include button;
+  line-height: 42px;
   background: $purpleButton;
   width: 99px;
   color: $white;
