@@ -1,19 +1,21 @@
-.landing-content {
-  background: url('./images/landing-page-bg.jpg') no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  box-sizing: border-box;
-  height: 830px;
-  display: flex;
-  justify-content: space-between;
-  padding: 9.7% 9.7% 2% 9.7%;
+.landing-page {
+  &__content {
+    background: url('./images/landing-page-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    box-sizing: border-box;
+    height: 830px;
+    display: flex;
+    justify-content: space-between;
+    padding: 9.7% 9.7% 2% 9.7%;
+    /* 140px / 1440px = 0,097 */
+  }
 
-  /* 140px / 1440px = 0,097 */
-  .login {
+  &__form-login {
     align-self: flex-start;
   }
 
-  .landing-comment {
+  &__comment {
     align-self: flex-end;
     width: 260px;
     text-align: right;

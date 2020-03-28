@@ -1,9 +1,0 @@
-include ../../nav-link/nav-link
-
-mixin footerColumn(columnHead, footerLinks)
-  .footer__column
-    h3 #{columnHead}
-    ul
-      each link in footerLinks
-        li
-          +nav-link({href: link.href, name: link.val})          

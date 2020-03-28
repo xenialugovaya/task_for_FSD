@@ -1,10 +1,10 @@
 
 include ../calendar/calendar
 mixin calendar-inputs({titles, placeholders})
-  .calendar-inputs(class = 'js-calendar-inputs')
+  .calendar-inputs.js-calendar-inputs
     each title, index in titles
-      .wrap-input-small
-        .input-header-small #{title}
+      .calendar-inputs__wrap-input
+        .input-header #{title}
         input(class='input input_small' placeholder=placeholders[index])
-    .calendar-dropdown
+    .calendar-inputs__calendar-dropdown
       +calendar()

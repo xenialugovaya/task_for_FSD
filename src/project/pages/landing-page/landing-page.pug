@@ -6,6 +6,8 @@ block variables
   -var pageTitle= 'Landing Page'
 
 block content
-  .landing-content
-    +form-login()
-    .landing-comment Лучшие номера для вашей работы, отдыха и просто вдохновения
+  .landing-page
+    .landing-page__content
+      .landing-page__form-login
+        +form-login()
+      .landing-page__comment Лучшие номера для вашей работы, отдыха и просто вдохновения

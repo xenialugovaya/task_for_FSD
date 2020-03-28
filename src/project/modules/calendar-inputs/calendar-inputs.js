@@ -12,13 +12,13 @@ class CalendarInputs {
 
   showCalendar() {
     this.$elem.find('.input_small', this.$elem).on('click', () => {
-      this.$elem.find('.calendar-dropdown', this.$elem).toggle();
+      this.$elem.find('.calendar-inputs__calendar-dropdown', this.$elem).toggle();
     });
   }
 
   hideCalendar() {
     this.$elem.find('span[data-action="add"]', this.$elem).on('click', () => {
-      this.$elem.find('.calendar-dropdown', this.$elem).hide();
+      this.$elem.find('.calendar-inputs__calendar-dropdown', this.$elem).hide();
     });
   }
 
