@@ -1,32 +1,18 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.content-colors_types {
-  width: 1440px;
-  max-width: 1920px;
-  font-family: $mainFont;
-}
+.colors-types {
+  &__content {
+    padding: 145px 191px 145px 150px;
+    min-width: 1440px;
+    max-width: 1920px;
+    font-family: $mainFont;
+    display: flex;
+    justify-content: space-between;
 
+    .text-column {
+      margin-top: 3px;
+    }
 
-h3 {
-  @include h3;
-}
-
-.content-colors_types {
-  height: 900px;
-}
-
-.color-column {
-  margin-left: 150px;
-  margin-top: 65px;
-  display: inline-block;
-}
-
-
-
-.text-column {
-  display: inline-block;
-  margin-left: 428px;
-  margin-top: 68px;
-  vertical-align: top;
+  }
 }
