@@ -12,15 +12,22 @@ block variables
   -var pageTitle= 'Cards'
 
 block content
-  .content-cards
-    .wrap-cadrs-columns
-      .column
-        +form-login()
-        +form-registration()
-      .column
-        +form-booking()
-        +form-signup()
-      .column
-        +calendar()
-        +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})
-        +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomType: 'люкс', roomReviews: '65'})
+  .cards-page
+    .cards-page__content
+      .cards-page__column
+        .cards-page__form-login
+          +form-login()
+        .cards-page__form-registration
+          +form-registration()
+      .cards-page__column
+        .cards-page__form-booking
+          +form-booking()
+        .cards-page__form-signup
+          +form-signup()
+      .cards-page__column
+        .cards-page__calendar
+          +calendar()
+        .cards-page__hotel-card
+          +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})
+        .cards-page__hotel-card 
+          +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'})

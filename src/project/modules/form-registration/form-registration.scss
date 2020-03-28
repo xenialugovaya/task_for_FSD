@@ -3,11 +3,16 @@
 .registration {
   @include form;
 
-  .registration__header {
+  &__header {
     letter-spacing: 0.8px;
+    margin-top: -2px;
   }
 
-  .registration__name {
+  &__title {
+    @include h3;
+  }
+
+  &__name {
     margin-top: 20px;
 
     .input:nth-child(2) {
@@ -15,7 +20,7 @@
     }
   }
 
-  .registration__sex {
+  &__sex {
     margin-top: 10px;
     display: flex;
 
@@ -24,7 +29,7 @@
     }
   }
 
-  .registration__birth-date {
+  &__birth-date {
     margin-top: 24px;
 
     .input {
@@ -32,7 +37,7 @@
     }
   }
 
-  .registration__login-data {
+  &__login-data {
     margin-top: 20px;
 
     .input {
@@ -44,12 +49,12 @@
     }
   }
 
-  .registration__subscription {
+  &__subscription {
     margin-top: 10px;
   }
 
-  .registration__footer {
-    margin-top: 24px;
+  &__footer {
+    margin-top: 21px;
   }
 
 }

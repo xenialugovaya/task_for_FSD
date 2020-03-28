@@ -14,10 +14,10 @@ mixin form-registration()
         +radio-button({title: 'Мужчина', value: 'male', checked: 'checked'})
         +radio-button({title: 'Женщина', value: 'female'})
       .registration__birth-date   
-        h3 Дата рождения
+        h3.registration__title Дата рождения
         +input({placeholder: 'ДД.ММ.ГГГ', type: 'text', masked: true}) 
       .registration__login-data
-        h3 Данные для входа в сервис 
+        h3.registration__title Данные для входа в сервис 
         +input({placeholder: 'Email', type: 'text'}) 
         +input({placeholder: 'Пароль', type: 'text'}) 
       .registration__subscription

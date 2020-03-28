@@ -1,13 +1,16 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .signup {
-  @include form;
-
-  .signup_header {
-    letter-spacing: 0.8px;
+  &__form {
+    @include form;
   }
 
-  .signup__login-data {
+  &__header {
+    letter-spacing: 0.8px;
+    margin-top: -2px;
+  }
+
+  &__login-data {
     margin-top: 20px;
 
     .input:nth-child(2) {
@@ -15,7 +18,7 @@
     }
   }
 
-  .signup__footer {
+  &__footer {
     margin-top: 20px;
   }
 }

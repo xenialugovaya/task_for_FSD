@@ -24,20 +24,20 @@
   justify-content: center;
 }
 
-[data-action="next"]{
-  margin-right:-12px;
+[data-action="next"] {
+  margin-right: -12px;
 }
 
 .datepicker--nav-action {
   width: $datepickerDayCellSize;
   border-radius: $datepickerBorderRadius;
   user-select: none;
-  margin-top:6px;
+  margin-top: 6px;
 
 
 
   &:hover {
-    opacity:0.5;
+    opacity: 0.5;
   }
 
   &.-disabled- {
@@ -53,7 +53,7 @@
   path {
     //fill: none;
     //stroke: map_get($datepickerTextColor, navArrows);
-   // stroke-width: 2px;
+    // stroke-width: 2px;
   }
 }
 
@@ -62,8 +62,8 @@
   padding: 0 8px;
   @include h1;
   font-size: 19px;
-  margin-top: -4px;
-  margin-left: -12px;
+  margin-top: -6px;
+  margin-left: -14px;
 
 
   /*i {
@@ -73,7 +73,7 @@
   }*/
 
   &:hover {
-    opacity:0.5;
+    opacity: 0.5;
 
   }
 
@@ -90,7 +90,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px 0 20px;
-  margin-top: -3px;
+  margin-top: -1px;
   //border-top: 1px solid map_get($datepickerBorderColor, nav);
 }
 
@@ -104,26 +104,26 @@
   //align-items: center;
   height: 41px;
 
-   
-    font-family: 'Montserrat-bold', sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-stretch: extra-expanded;
-    box-sizing: border-box;
-    background: transparent;
-    
+
+  font-family: 'Montserrat-bold', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-stretch: extra-expanded;
+  box-sizing: border-box;
+  background: transparent;
+
 
   &:hover {
-    opacity:0.5;
+    opacity: 0.5;
   }
- 
+
 }
 
-[data-action='clear']{
-  color:$dark_shade_50;
+[data-action='clear'] {
+  color: $dark_shade_50;
 }
 
 [data-action='add'] {
-  color:$purple;
+  color: $purple;
   text-align: right;
 }

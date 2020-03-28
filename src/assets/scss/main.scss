@@ -18,6 +18,14 @@ h1 {
   @include h1;
 }
 
+h2 {
+  @include h2;
+}
+
+h3 {
+  @include h3;
+}
+
 /*
 html {
   line-height: $mainLineHeight;

@@ -4,11 +4,15 @@
   @include form;
 
   &__calendar-inputs {
-    margin-top: 20px;
+    margin-top: 18px;
   }
 
   &__input-dropdown {
     margin-top: 20px;
+
+    .input-header {
+      @include h3;
+    }
 
     .input {
       margin-top: 5px;
@@ -16,15 +20,16 @@
   }
 
   &__price-list {
-    margin-top: 21px;
+    margin-top: 20px;
 
     .price-list-item {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
 
+
       &:not(:first-child) {
-        margin-top: 11px;
+        margin-top: 16px;
       }
 
       .item {
@@ -32,6 +37,8 @@
         padding-right: 25px;
         box-sizing: border-box;
         position: relative;
+        line-height: 18px;
+
 
         &_with-icon:after {
           position: absolute;
@@ -49,15 +56,19 @@
           text-align: center;
         }
       }
+
+      .item-price {
+        line-height: 18px;
+      }
     }
 
     .price-list-final {
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-between;
       align-items: baseline;
       @include h1;
       font-size: 19px;
-      margin-top: 25px;
+      margin-top: 28px;
       letter-spacing: 0.3px;
 
       .item-final-divider {
@@ -70,6 +81,6 @@
   }
 
   &__footer {
-    margin-top: 20px;
+    margin-top: 17px;
   }
 }

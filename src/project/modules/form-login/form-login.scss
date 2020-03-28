@@ -3,20 +3,27 @@
 .login {
   @include form;
 
-  .form-header {
+  &__header {
     letter-spacing: 1px;
   }
 
-  .login__calendar-inputs,
-  .login__input-dropdown {
+  &__calendar-inputs {
+    margin-top: 20px;
+  }
+
+  &__input-dropdown {
     margin-top: 20px;
 
+    .input-header {
+      @include h3;
+    }
+
     .input {
-      margin-top: 8px;
+      margin-top: 5px;
     }
   }
 
-  .login__footer {
+  &__footer {
     margin-top: 31px;
   }
 }

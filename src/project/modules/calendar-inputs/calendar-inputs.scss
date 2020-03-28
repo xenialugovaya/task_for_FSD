@@ -19,8 +19,8 @@
     .input_small {
       @include input;
       width: 150px;
-      margin-top: 8px;
       cursor: pointer;
+      margin-top: 5px;
 
       &::placeholder {
         color: $dark_shade_75;

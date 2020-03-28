@@ -1,37 +1,23 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-
-.content-cards {
-  width: 1440px;
-  height: 1350px;
-  background: #F4F4F6;
-  padding-top: 1px;
-
-
-  .wrap-cadrs-columns {
-    margin-left: 139px;
-    margin-top: 71px;
-
+.cards-page {
+  &__content {
+    width: 1440px;
+    background: #F4F4F6;
+    padding: 150px 140px 140px 140px;
+    display: flex;
   }
 
-  .form-wrapper {
-    &:not(:first-child) {
-      margin-top: 40px;
-    }
-  }
-
-  .column {
-    display: inline-block;
-    vertical-align: top;
-
+  &__column {
     &:not(:first-child) {
       margin-left: 40px;
     }
-
   }
-}
 
-.hotel-card {
-  margin-top: 40px;
+  &__form-registration,
+  &__form-signup,
+  &__hotel-card {
+    margin-top: 40px;
+  }
 }
