@@ -7,7 +7,6 @@ html(lang='ru')
     title= pageTitle 
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap' rel='stylesheet')
-    link(rel='stylesheet' href='font-awesome.min.css')
     meta(name='viewport' content='width=device-width, initial-scale=1')
 
 
@@ -16,7 +15,8 @@ html(lang='ru')
   include ../modules/footer/footer
   include ../modules/footer-mobile/footer-mobile
 
-  +header({links: [{href : '/mock-address/change-me', name : 'О нас'}, {href :'/mock-address/change-me', name :'Услуги', dropdown : true}, {href :'/mock-address/change-me', name :'Вакансии'}, {href :'/mock-address/change-me', name : 'Новости'}, {href :'/mock-address/change-me', name : 'Соглашения', dropdown : true}], buttonLogin:'войти', buttonRegister: 'зарегистрироваться'})
+  header
+    +header({links: [{href : '/mock-address/change-me', name : 'О нас'}, {href :'/mock-address/change-me', name :'Услуги', dropdown : true}, {href :'/mock-address/change-me', name :'Вакансии'}, {href :'/mock-address/change-me', name : 'Новости'}, {href :'/mock-address/change-me', name : 'Соглашения', dropdown : true}], buttonLogin:'войти', buttonRegister: 'зарегистрироваться'})
 
   block content
 

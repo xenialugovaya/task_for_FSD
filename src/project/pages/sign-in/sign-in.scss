@@ -1,9 +1,10 @@
-.signin-content {
-  background: url('./images/registration-bg.jpg') no-repeat;
-  background-size: cover;
-  height: 830px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
+.signin-page {
+  &__content {
+    background: url('./images/registration-bg.jpg') no-repeat;
+    background-size: cover;
+    height: 830px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
