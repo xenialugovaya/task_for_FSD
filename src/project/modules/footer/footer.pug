@@ -1,23 +1,28 @@
-include ./__column/footer__column
 include ../logo/logo
-include ../forms/__input/form__input
+include ../footer-column/footer-column
+include ../input-subscription/input-subscription
+include ../social-icons/social-icons
 
-mixin footer()
-  .wrap-footer
-    .footer_logo-column
-      +logo-icon({disabled:false})
-      p Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis. */
-    +footerColumn('Navigation', [{href:'#', val:'About us'}, {href:'#', val:'News'}, {href:'#', val:'Support'}, {href:'#', val:'Products'}])
-    +footerColumn('ABOUT US', [{href:'#', val:'Who we are'}, {href:'#', val:'Our team'}, {href:'#', val:'Careers'}, {href:'#', val:'Investors'}])
-    +footerColumn('Support', [{href:'#', val:'Documentation'}, {href:'#', val:'Community'}, {href:'#', val:'Get in touch'}])
-    .footer_subscription-column
-      h3 Subscribe to our newsletter
-      p Receive our latest news and promotions in your inbox!
-      +formInput('text', 'subscription', 'Your Email address', 'subscription', 'subscription-wrap')
-  .wrap-footer-copyright
-    p Copyright © 2018 Toxin UI Kit. All rights reserved.
-    .socials
-      .social-twitter
-      .social-fb
-      .social-insta
+mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyright})
+  .footer
+    section.footer__main-section
+      .footer__company-info-block
+        .footer__logo
+          +logo-icon({disabled:false})
+        p.footer__text= mainText
 
+      .footer__menu
+        each column in menu
+          .footer__menu-column
+            +footer-column({title: column.title, links: column.links})
+
+      .footer__subscription-block
+        h3= title
+        p.footer__text= text
+        .footer__input-subscription
+          +input-subscription({placeholder: placeholder})
+
+    section.footer__copyright-section
+      p.footer__text= copyright
+      .footer__social-icons
+        +social-icons()

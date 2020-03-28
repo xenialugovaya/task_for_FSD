@@ -1,0 +1,12 @@
+.footer-column {
+  min-width: 113px;
+
+
+  &__list {
+    margin-top: 21px;
+  }
+
+  &__link:not(:first-child) {
+    margin-top: 20px;
+  }
+}

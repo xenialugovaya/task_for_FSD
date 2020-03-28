@@ -13,5 +13,18 @@ block content
     .wrap-hf-grid
       +header({links: [{href : '/mock-address/change-me', name : 'Home'}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation', dropdown : true}], buttonLogin:'login', buttonRegister: 'register'})
       +header({links: [{href : '/mock-address/change-me', name : 'Home'}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation', dropdown : true}], user: 'Cosmin Negoita', loggedIn: true})
-      +footer()
+      +footer({
+        mainText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+        menu: {
+          column1: {title: 'Navigation', links: [{href:'/mock-address/change-me', val:'About us'}, {href:'/mock-address/change-me', val:'News'}, {href:'/mock-address/change-me', val:'Support'}, {href:'/mock-address/change-me', val:'Products'}]},
+          column2: {title: 'About us', links: [{href:'/mock-address/change-me', val:'Who we are'}, {href:'/mock-address/change-me', val:'Our team'}, {href:'/mock-address/change-me', val:'Careers'}, {href:'/mock-address/change-me', val:'Investors'}]},
+          column3: {title: 'Support',links:  [{href:'/mock-address/change-me', val:'Documentation'}, {href:'/mock-address/change-me', val:'Community'}, {href:'/mock-address/change-me', val:'Get in touch'}]}
+            },
+        subscription: {
+          title: 'Subscribe to our newsletter',
+          text: 'Receive our latest news and promotions in your inbox!',
+          placeholder: 'Your Email address'
+        },
+        copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+          })
       +footer-mobile()
