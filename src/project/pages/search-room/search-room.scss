@@ -2,7 +2,7 @@
 
 .search-room-page {
   &__content {
-    padding: 30px 9.7% 75px 9.7%;
+    padding: 28px 9.7% 75px 9.7%;
     /* 140px / 1440px = 0,097*/
     display: grid;
     grid-template-columns: 1fr 3.135fr;
@@ -42,7 +42,7 @@
     }
 
     .room-options {
-      margin-top: 30px;
+      margin-top: 25px;
 
       &__group {
         margin-top: 16px;
@@ -61,7 +61,7 @@
       }
 
       &__button:not(:first-child) {
-        margin-top: 11px;
+        margin-top: 8px;
       }
     }
 
