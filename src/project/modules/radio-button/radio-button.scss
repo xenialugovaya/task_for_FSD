@@ -12,12 +12,13 @@
     cursor: pointer;
     line-height: 20px;
 
+
     .radio {
       position: absolute;
       z-index: -1;
       opacity: 0;
 
-      +.title:before {
+      +.radio-button__title:before {
         content: "";
         width: 20px;
         height: 20px;
@@ -31,11 +32,11 @@
       }
 
 
-      &:checked+.title:before {
+      &:checked+.radio-button__title:before {
         border: 1px solid $purple;
       }
 
-      &:checked+.title:after {
+      &:checked+.radio-button__title:after {
         content: "";
         width: 12px;
         height: 12px;
@@ -47,8 +48,9 @@
       }
     }
 
-    .title {
+    .radio-button__title {
       padding-left: 30px;
+
     }
   }
 }

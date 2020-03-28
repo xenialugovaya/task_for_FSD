@@ -17,8 +17,9 @@
 
   .registration__sex {
     margin-top: 10px;
+    display: flex;
 
-    .radio-button:nth-child(2) {
+    .radio-button:not(:first-child) {
       margin-left: 20px;
     }
   }
