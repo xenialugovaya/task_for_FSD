@@ -1,70 +1,101 @@
 @import '../../../assets/scss/utils/vars.scss';
 
+.search-room-page {
+  &__content {
+    padding: 30px 9.7% 75px 9.7%;
+    /* 140px / 1440px = 0,097*/
+    display: grid;
+    grid-template-columns: 1fr 3.135fr;
+    /* 266px / 834px = 3,135*/
+    grid-gap: 5%;
+    /* 60px / 1440px = 0,042*/
+  }
 
-.search-room-content {
-  padding: 30px 9.7% 75px 9.7%;
-  /* 140px / 1440px = 0,097*/
-  display: grid;
-  grid-template-columns: 1fr 3.135fr;
-  /* 266px / 834px = 3,135*/
-  grid-gap: 5%;
-
-  /* 60px / 1440px = 0,042*/
-  h1 {
+  &__title {
     letter-spacing: 0.8px;
   }
 
-  .filter-column-elem {
-    &:nth-child(2) {
-      margin-top: 20px;
+  &__filter-column {
+    .dates-selection {
+      .input {
+        margin-top: 5px;
+      }
     }
 
-    &:nth-child(3) {
-      margin-top: 7px;
+    .guests-selection {
+      margin-top: 20px;
 
-      p {
+      .input {
+        max-width: 266px;
+        margin-top: 5px;
+      }
+    }
+
+    .price-selection {
+      margin-top: 30px;
+
+      .text {
         font-size: 12px;
         color: $dark_shade_50;
         margin-top: 9px;
       }
     }
 
-    &:nth-child(5) {
-      margin-top: 9px;
+    .room-options {
+      margin-top: 30px;
+
+      &__group {
+        margin-top: 16px;
+      }
+
+      &__button:not(:first-child) {
+        margin-top: 10px;
+      }
     }
 
-    &:nth-child(6) {
+    .room-availability {
+      margin-top: 30px;
+
+      &__group {
+        margin-top: 16px;
+      }
+
+      &__button:not(:first-child) {
+        margin-top: 11px;
+      }
+    }
+
+    .room-facilities {
+      margin-top: 30px;
+
+      .input {
+        margin-top: 5px;
+      }
+    }
+
+    .room-additional-facilities {
       margin-top: 30px;
     }
+  }
 
-    &:nth-child(7) {
-      margin-top: -20px;
+  &__room-cards {
+    display: grid;
+  }
+
+  &__room-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 12px;
+    margin-top: 10px;
+
+    .hotel-card {
+      margin-top: 10px;
     }
   }
 
-}
-
-.room-cards-column {
-  display: grid;
-}
-
-.room-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  grid-gap: 12px;
-  margin-top: 10px;
-
-  .hotel_card {
-    margin-top: 10px;
+  &__pagination {
+    margin-top: 40px;
+    margin-left: -12px;
+    justify-self: center;
   }
-
-
-}
-
-.room-search-pagination {
-  margin-top: 40px;
-  margin-left: -12px;
-  justify-self: center;
-
-
 }

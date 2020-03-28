@@ -1,9 +1,0 @@
-@mixin focused{
-  &::placeholder{
-    color: $dark_shade_75;
-    }
-    border: 1px solid $dark_shade_50;
-}
-.focused{
-  @include focused;
-}

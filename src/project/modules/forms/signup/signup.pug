@@ -1,9 +1,0 @@
-include ../__form-footer/form__form-footer
-include ../__radio-buttons/form__radio-buttons
-
-.wrap-form
-  form(class='signup')
-    .form-header Войти
-    +formInput('text', '', 'Email', 'default', 'wrap-default')
-    +formInput('text', '', 'Пароль', 'default', 'wrap-default')
-    +form-footer('Войти', 'Создать', 'Нет аккаунта на Toxin?', 'full')
