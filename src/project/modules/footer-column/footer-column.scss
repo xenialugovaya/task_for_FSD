@@ -1,12 +1,17 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
 .footer-column {
   min-width: 113px;
 
+  &__title {
+    @include h3;
+  }
 
   &__list {
-    margin-top: 21px;
+    margin-top: 19px;
   }
 
   &__link:not(:first-child) {
-    margin-top: 20px;
+    margin-top: 14px;
   }
 }

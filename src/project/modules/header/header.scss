@@ -1,11 +1,10 @@
 @import '../../../assets/scss/utils/vars.scss';
 
 .header {
-  padding: 0 9.7%;
+  padding: 15px 9.7%;
   /* 15px / 1440 = 0.01  140px / 1440 = 0.097 */
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  height: 70px;
   display: grid;
   grid-template-columns: 1fr 9.5fr 2.25fr;
   grid-template-areas: "logo menu buttons";
@@ -35,7 +34,6 @@
       margin-left: 20px;
 
       .button-ghost {
-        width: 87px;
         height: 34px;
         line-height: 30px;
       }
@@ -47,7 +45,7 @@
       .button-big {
         height: 34px;
         line-height: 34px;
-        padding: 0px 19px;
+        padding: 0px 17px;
       }
     }
   }

@@ -1,10 +1,12 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
 .footer {
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
 
   &__main-section {
-    padding: 100px 9.7%;
+    padding: 100px 9.2% 97px 9.6%;
     /*140px / 1440 = 0.097 */
     border-bottom: 1px solid rgba(31, 32, 65, 0.05);
     display: grid;
@@ -25,7 +27,10 @@
   &__menu {
     grid-area: menu;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-top: 5px;
+    padding-right: 13%;
+    padding-left: 4%;
 
   }
 
@@ -34,19 +39,31 @@
   &__subscription-block {
     grid-area: subscription;
     max-width: 260px;
+    margin-top: 5px;
+    text-align: left;
+
+    .footer__subscription-title {
+      @include h3;
+      margin-left: 5px;
+    }
 
     .footer__text {
-      margin-top: 21px;
+      margin-top: 19px;
+      margin-left: 5px;
     }
 
     .footer__input-subscription {
-      margin-top: 20px;
+      margin-top: 22px;
+
+      .input {
+        width: 260px;
+      }
     }
   }
 
   &__copyright-section {
     background: #FFFFFF;
-    padding: 26px 9.7%;
+    padding: 23px 9.3% 23px 9.7%;
     /*140px / 1440 = 0.097 */
     display: flex;
     justify-content: space-between;

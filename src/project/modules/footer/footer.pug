@@ -17,7 +17,7 @@ mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyrigh
             +footer-column({title: column.title, links: column.links})
 
       .footer__subscription-block
-        h3= title
+        h3.footer__subscription-title= title
         p.footer__text= text
         .footer__input-subscription
           +input-subscription({placeholder: placeholder})

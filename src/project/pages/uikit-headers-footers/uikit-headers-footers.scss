@@ -1,36 +1,37 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-
-.content-headers-footers {
-  width: 1440px;
-  height: 1350px;
-  background: #F4F4F6;
-  padding-top: 1px;
-
-  .wrap-hf-grid {
-    margin-top: 71px;
-
+.headers-footers {
+  &__content {
+    padding-top: 149px;
+    padding-bottom: 130px;
+    width: 1440px;
+    background: #F4F4F6;
   }
 
-  .header_navigation {
-    &:not(:first-child) {
-      margin-top: 40px;
+  &__header-loggedin {
+    margin-top: 38px;
+  }
+
+  &__footer-desktop {
+    margin-top: 38px;
+
+    .footer {
+      display: block !important;
     }
-
   }
 
-  footer {
-    margin-top: 40px;
-  }
-
-  .wrap-footer-mobile {
-    display: block;
+  &__footer-mobile {
     margin-top: 40px;
 
+    .footer-mobile {
+      display: flex !important;
+    }
   }
+
 }
 
+/*
 @media (min-width: 1000px) {
   .content-headers-footers .wrap-footer-mobile {
     display: block !important;
@@ -46,3 +47,5 @@
     display: block !important;
   }
 }
+
+*/
