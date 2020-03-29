@@ -1,7 +1,7 @@
 @import '../../../assets/scss/utils/vars.scss';
 
 .header {
-  padding: 15px 9.7%;
+  padding: 14.5px 9.7%;
   /* 15px / 1440 = 0.01  140px / 1440 = 0.097 */
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
@@ -10,6 +10,12 @@
   grid-template-areas: "logo menu buttons";
   align-items: center;
 
+  &_logged-in {
+    display: grid;
+    grid-template-columns: 1fr 10.10fr 1.65fr;
+    grid-template-areas: "logo menu account";
+  }
+
   &__logo {
     grid-area: logo;
   }
@@ -17,6 +23,11 @@
   &__menu {
     grid-area: menu;
     justify-self: end;
+    margin-right: 20px;
+
+    .menu_eng {
+      margin-right: 8px;
+    }
   }
 
   &__menu-mobile {
@@ -31,11 +42,15 @@
     display: flex;
 
     .button_login {
-      margin-left: 20px;
 
       .button-ghost {
         height: 34px;
         line-height: 30px;
+        width: auto;
+
+        &__text {
+          padding: 0px 19px;
+        }
       }
     }
 
@@ -43,19 +58,22 @@
       margin-left: 20px;
 
       .button-big {
+        letter-spacing: 0px;
         height: 34px;
         line-height: 34px;
-        padding: 0px 17px;
+        padding-right: 20px;
+        padding-left: 19px;
       }
     }
   }
 
   &__account-link {
-    grid-area: buttons;
+    grid-area: account;
     color: $dark_shade_50;
     text-align: right;
     border-left: 1px solid rgba(31, 32, 65, 0.1);
-    margin-left: 30px;
+    padding-left: 30px;
+    margin-left: 3px;
   }
 
 }

@@ -12,9 +12,9 @@ block content
   .headers-footers
     .headers-footers__content
       .headers-footers__header-loggedout
-        +header({links: [{href : '/mock-address/change-me', name : 'Home'}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation'}], buttonLogin:'login', buttonRegister: 'register'})
+        +header({links: [{href : '/mock-address/change-me', name : 'Home', active: true}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation'}], buttonLogin:'login', buttonRegister: 'register', eng: true})
       .headers-footers__header-loggedin  
-        +header({links: [{href : '/mock-address/change-me', name : 'Home'}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation'}], user: 'Cosmin Negoita', loggedIn: true})
+        +header({links: [{href : '/mock-address/change-me', name : 'Home', active: true}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation'}], user: 'Cosmin Negoita', loggedIn: true, eng: true})
       .headers-footers__footer-desktop  
         +footer({
           mainText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
@@ -28,7 +28,8 @@ block content
             text: 'Receive our latest news and promotions in your inbox!',
             placeholder: 'Your Email address'
           },
-          copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.'
+          copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+          eng: true
             })
       .headers-footers__footer-mobile 
         +footer-mobile()

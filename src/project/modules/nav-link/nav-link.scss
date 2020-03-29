@@ -15,4 +15,9 @@
     @include drop-arrow;
     right: 0;
   }
+
+  &_active {
+    color: $dark_shade_75;
+    font-family: 'Montserrat-bold';
+  }
 }

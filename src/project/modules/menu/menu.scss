@@ -1,7 +1,17 @@
 .menu {
   display: flex;
 
-  &__link {
-    margin-left: 20px;
+  &__link:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &_eng {
+    .menu__link:not(:last-child) {
+      margin-right: 29px;
+
+      .nav-link_dropdown {
+        margin-right: -12px;
+      }
+    }
   }
 }

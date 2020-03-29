@@ -3,8 +3,11 @@ include ../footer-column/footer-column
 include ../input-subscription/input-subscription
 include ../social-icons/social-icons
 
-mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyright})
-  .footer
+mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyright, eng})
+  - let classes = 'footer_rus'
+  if eng
+    - classes ='footer_eng'
+  .footer(class= classes)
     section.footer__main-section
       .footer__company-info-block
         .footer__logo

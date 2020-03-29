@@ -6,7 +6,7 @@
 
 
   &__main-section {
-    padding: 100px 9.2% 97px 9.6%;
+    padding: 99px 9.1% 95px 9.7%;
     /*140px / 1440 = 0.097 */
     border-bottom: 1px solid rgba(31, 32, 65, 0.05);
     display: grid;
@@ -20,7 +20,7 @@
 
 
     .footer__text {
-      margin-top: 15px;
+      margin-top: 17px;
     }
   }
 
@@ -29,9 +29,24 @@
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
-    padding-right: 13%;
-    padding-left: 4%;
+  }
 
+  &_rus {
+    .footer__menu {
+      padding-right: 7.5%;
+      padding-left: 4%;
+
+      .footer__menu-column:nth-child(2) {
+        margin-left: -5%;
+      }
+    }
+  }
+
+  &_eng {
+    .footer__menu {
+      padding-right: 13%;
+      padding-left: 4%;
+    }
   }
 
 
@@ -48,12 +63,12 @@
     }
 
     .footer__text {
-      margin-top: 19px;
+      margin-top: 18px;
       margin-left: 5px;
     }
 
     .footer__input-subscription {
-      margin-top: 22px;
+      margin-top: 23px;
 
       .input {
         width: 260px;

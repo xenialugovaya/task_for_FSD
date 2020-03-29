@@ -1,7 +1,10 @@
 include ../nav-link/nav-link
 
-mixin menu({links})
-  ul.menu
+mixin menu({links, eng})
+  - let classes = ['menu']
+  if eng
+    - classes.push('menu_eng')
+  ul(class= classes)
     each link in links
       li.menu__link   
-        +nav-link({href: link.href, name: link.name, dropdown: link.dropdown})
+        +nav-link({href: link.href, name: link.name, dropdown: link.dropdown, active: link.active})

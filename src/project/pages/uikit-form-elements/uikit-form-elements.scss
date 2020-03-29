@@ -1,36 +1,42 @@
 @import '../../../assets/scss/utils/vars.scss';
 @import '../../../assets/scss/utils/mixins.scss';
 
-.content-form-elements {
-  width: 1440px;
-  max-width: 1920px;
-  font-family: $mainFont;
-  padding-bottom: 132px;
+.form-elements {
+  &__content {
+    width: 1440px;
+    max-width: 1920px;
+    font-family: $mainFont;
+    padding: 143px 141px 132px 141px;
+  }
 }
+
 
 // Inputs
 
 .column-inputs {
   display: inline-block;
-  margin-left: 140px;
-  margin-top: 42px;
+  vertical-align: top;
 
   .input-wrapper {
     display: block;
-    margin-top: 20px;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
 
     .input-header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      line-height: 12px;
+      margin-bottom: 5px;
 
       .sub-title {
         font-family: $mainFont;
         color: $dark_shade_50;
+        text-transform: uppercase;
+        font-size: 12px;
       }
-    }
-
-    .input-header {
-      margin-bottom: 8px;
     }
   }
 }
@@ -40,7 +46,6 @@
 .column-small-buttons {
   display: inline-block;
   vertical-align: top;
-  margin-top: 62px;
   margin-left: 127px;
 }
 
@@ -115,7 +120,6 @@
 .buttons {
   display: inline-block;
   vertical-align: top;
-  margin-top: 62px;
   margin-left: 132px;
 }
 
@@ -169,7 +173,6 @@
 // section dropdown inputs
 
 .dropdown-inputs {
-  margin-left: 140px;
   margin-top: 101px;
 
   .column-dropdown-inputs {
@@ -197,7 +200,7 @@
 // section lists
 
 .lists {
-  margin-left: 140px;
+
   margin-top: 150px;
 
   .column-lists {
@@ -234,7 +237,6 @@
 
 
 .room-details {
-  margin-left: 140px;
   margin-top: 45px;
 
   .column-room-details {
