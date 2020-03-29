@@ -2,7 +2,10 @@
   &__content {
     background: url('./images/registration-bg.jpg') no-repeat;
     background-size: cover;
-    height: 830px;
+    background-size: 107%;
+    background-position: 47% 51%;
+    padding-top: 163px;
+    padding-bottom: 164px;
     display: flex;
     justify-content: space-around;
     align-items: center;
