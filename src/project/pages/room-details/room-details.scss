@@ -13,6 +13,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-fit: 90%;
     }
 
     .main-img {
@@ -34,60 +35,85 @@
     /* 70px / 1440px = 0,05*/
     h2 {
       @include h2;
+      letter-spacing: 0.6px;
+    }
+  }
+
+
+  &__icons-charts {
+    grid-column: span 2;
+    display: flex;
+  }
+
+  &__room-icons {
+    &__icon {
+      margin-top: 20px;
+    }
+  }
+
+  &__room-chart {
+    margin-left: 10.5%;
+
+    &__chart {
+      margin-top: 10px;
+      margin-left: -10px;
+    }
+  }
+
+  &__booking-form {
+    grid-row: span 3;
+
+  }
+
+  &__room-reviews {
+    grid-column: span 2;
+    margin-top: 5px;
+    max-width: 711px;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
     }
 
-    .room-diagram {
-      margin-left: -25px;
-    }
+    &__review {
+      margin-top: 19px;
 
-    .room-booking-form {
-      grid-row: span 3;
-
-    }
-
-    .room-reviews {
-      grid-column: span 2;
-      margin-top: 5px;
-      max-width: 711px;
-
-      .room-heading {
-        display: flex;
-        justify-content: space-between;
+      &:last-child {
+        margin-top: 23px;
       }
-
-      .review-number {
-        font-family: $mainFont;
-        font-size: $mainFontSize;
-        color: $dark_shade_50;
-      }
-
-      .review-block {
-        margin-top: 21px;
-      }
-
     }
+
+  }
+
+  &__text {
+    grid-column: span 2;
+    margin-top: 25px;
+    display: flex;
+
 
     .room-bullet-list {
-      margin-top: 27px;
       max-width: 260px;
       min-width: 250px;
 
-      .list-head {
-        @include h2;
+      &__header {
         margin-left: 20px;
+      }
 
+      &__group {
+        margin-top: 16px;
       }
     }
 
     .room-short-text {
-      margin-top: 27px;
       max-width: 340px;
       min-width: 300px;
-      margin-left: -27px;
+      margin-left: 13%;
 
       .text {
-        margin-top: 15px;
+        margin-top: 18px;
       }
     }
   }
+
+
 }
