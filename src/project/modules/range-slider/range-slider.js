@@ -20,7 +20,7 @@ class RangeSlider {
   }
 
   setValuesToInput() {
-    this.$elem.find('.selected-amount').val(this.$elem.find('.js-range-slider__body').slider('values', 0).toLocaleString() + "\u20BD  - " +
+    this.$elem.find('.selected-amount').val(this.$elem.find('.js-range-slider__body').slider('values', 0).toLocaleString() + "\u20BD - " +
       this.$elem.find('.js-range-slider__body').slider('values', 1).toLocaleString() + "\u20BD");
   }
 }

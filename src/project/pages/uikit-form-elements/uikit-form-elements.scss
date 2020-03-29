@@ -4,25 +4,15 @@
 .form-elements {
   &__content {
     width: 1440px;
-    max-width: 1920px;
     font-family: $mainFont;
-    padding: 143px 141px 132px 141px;
+    padding: 143px 141px 132px 140px;
   }
-}
 
+  // Inputs
 
-// Inputs
-
-.column-inputs {
-  display: inline-block;
-  vertical-align: top;
-
-  .input-wrapper {
-    display: block;
-
-    &:not(:first-child) {
-      margin-top: 20px;
-    }
+  &__inputs {
+    display: inline-block;
+    vertical-align: top;
 
     .input-header {
       display: flex;
@@ -39,211 +29,249 @@
       }
     }
   }
-}
 
-//Checkbox, radio, toggle, like, rating buttons
-
-.column-small-buttons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 127px;
-}
-
-.checkbox-block {
-  &__group {
-    margin-top: 17px;
-  }
-
-  .checkbox-block__button:not(:first-child) {
-    margin-top: 10px;
-  }
-}
-
-.radio-block {
-  margin-top: 38px;
-
-  &__button {
-    margin-top: 14px;
-    display: inline-block;
-
-    &:nth-child(3) {
-      margin-left: 20px;
-    }
-  }
-}
-
-
-
-.toggle-block {
-  margin-top: 39px;
-
-  &__button {
-    &:nth-child(2) {
-      margin-top: 15px;
-    }
-
-    &:nth-child(3) {
-      margin-top: 7px;
-    }
-  }
-}
-
-.like-block {
-  margin-top: 39px;
-}
-
-.like-button {
-  display: inline-block;
-  margin-top: 15px;
-
-  &:nth-child(3) {
-    margin-left: 10px;
-  }
-}
-
-.rate-block {
-  margin-top: 34px;
-
-  .star_block {
-    display: inline-block;
-    margin-top: 15px;
-
-    &:nth-child(3) {
-      margin-left: 20px;
-    }
-  }
-}
-
-
-
-// Slider, buttons, pagination
-.buttons {
-  display: inline-block;
-  vertical-align: top;
-  margin-left: 132px;
-}
-
-.button-block {
-  margin-top: 43px;
-
-  .small_button-block {
+  &__input-default {
     display: block;
-    margin-top: 15px;
-
-    .button-small:not(:first-child) {
-      margin-left: 19px;
-    }
   }
 
-  .ghost_button-block {
+  &__input-focus,
+  &__input-dropdown,
+  &__input-masked {
     display: block;
-    margin-top: 30px;
-
-    .button-ghost:not(:first-child) {
-      margin-left: 19px;
-    }
+    margin-top: 20px;
   }
 
-  .transperent_button-block {
-    margin-left: -5px;
-    margin-top: 17px;
-
-    .button-transparent:not(:first-child) {
-      margin-left: 8px;
-    }
+  &__inputs-calendar,
+  &__input-date-dropdown,
+  &__input-subscription {
+    display: block;
+    margin-top: 42px;
   }
 
-  .btn-arrow {
-    margin-top: 15px;
-  }
+  //Checkbox, radio, toggle, like, rating buttons
 
-  .button {
-    display: inline-block;
-  }
-}
-
-.pagination-block {
-  margin-top: 41px;
-
-  .pagination {
-    margin-top: 16px;
-  }
-}
-
-// section dropdown inputs
-
-.dropdown-inputs {
-  margin-top: 101px;
-
-  .column-dropdown-inputs {
+  &__small-buttons {
     display: inline-block;
     vertical-align: top;
-
-    &:nth-child(2) {
-      margin-left: 181px;
-    }
-
-    &:nth-child(3) {
-      margin-left: 72px;
-    }
-
-    .wrap-dropdown-input {
-      margin-top: 20px;
-
-      .input {
-        margin-top: 8px;
-      }
-    }
-  }
-}
-
-// section lists
-
-.lists {
-
-  margin-top: 150px;
-
-  .column-lists {
-    display: inline-block;
-    vertical-align: top;
-
-    &:nth-child(2) {
-      margin-left: 181px;
-    }
-
-    &:nth-child(3) {
-      margin-left: 72px;
-    }
+    margin-left: 126px;
   }
 
-  .checkbox-expandable-block {
-    &__group:not(:first-child) {
-      margin-top: 49px;
-    }
-  }
-
-
-  .checkbox-rich-block {
+  &__checkbox-block {
     &__group {
       margin-top: 17px;
     }
 
-    .checkbox-rich-block__button:not(:first-child) {
+    &__button:not(:first-child) {
       margin-top: 10px;
+      line-height: 14px;
     }
   }
-}
 
+  &__radio-block {
+    margin-top: 38px;
 
+    &__button {
+      margin-top: 16px;
+      display: inline-block;
 
-.room-details {
-  margin-top: 45px;
+      &:nth-child(3) {
+        margin-left: 20px;
+      }
+    }
+  }
 
-  .column-room-details {
+  &__toggle-block {
+    margin-top: 39px;
+
+    &__button {
+      &:nth-child(2) {
+        margin-top: 15px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__like-block {
+    margin-top: 41px;
+
+    &__button {
+      display: inline-block;
+      margin-top: 13px;
+
+      &:nth-child(3) {
+        margin-left: 50px;
+      }
+    }
+
+  }
+
+  &__ratings-block {
+    margin-top: 39px;
+
+    &__rating {
+      display: inline-block;
+      margin-top: 15px;
+
+      &:nth-child(3) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  // Slider, buttons, pagination
+
+  &__buttons {
     display: inline-block;
+    vertical-align: top;
+    margin-left: 132px;
+  }
 
-    &:not(:first-child) {
-      margin-left: 150px;
+  &__buttons-block {
+    margin-top: 44px;
+
+    &__small-buttons {
+      display: block;
+      margin-top: 16px;
+
+      .button-small:not(:first-child) {
+        margin-left: 19px;
+      }
+    }
+
+    &__ghost-buttons {
+      display: block;
+      margin-top: 30px;
+
+      .button-ghost:not(:first-child) {
+        margin-left: 19px;
+      }
+    }
+
+    &__transparent-buttons {
+      margin-left: -5px;
+      margin-top: 17px;
+
+      .button-transparent:not(:first-child) {
+        margin-left: 6px;
+      }
+    }
+
+    &__big-button {
+      margin-top: 15px;
+    }
+  }
+
+  &__pagination-block {
+    margin-top: 40px;
+
+    .pagination {
+      margin-top: 16px;
+    }
+  }
+
+  // Section dropdown inputs
+
+  &__dropdown-inputs {
+    margin-top: 79px;
+
+    &__column {
+      display: inline-block;
+      vertical-align: top;
+
+      &:nth-child(2) {
+        margin-left: 181px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 72px;
+      }
+
+      .wrap-dropdown-input {
+        margin-top: 20px;
+
+        .input-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          line-height: 12px;
+          margin-bottom: 5px;
+
+          .sub-title {
+            font-family: $mainFont;
+            color: $dark_shade_50;
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  // section lists
+  &__lists {
+    margin-top: 172px;
+
+    &__column {
+      display: inline-block;
+      vertical-align: top;
+
+      &:nth-child(2) {
+        margin-left: 190px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 132px;
+      }
+    }
+
+    .checkbox-expandable-block {
+      &__group:not(:first-child) {
+        margin-top: 49px;
+      }
+    }
+
+    .checkbox-rich-block {
+      &__group {
+        margin-top: 16px;
+      }
+
+      &__button:not(:first-child) {
+        margin-top: 9px;
+      }
+    }
+
+    .bullet-list-block {
+      &__group {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  //room icons, room review
+
+  &__room-details {
+    margin-top: 41px;
+
+    &__column {
+      display: inline-block;
+      vertical-align: top;
+
+      &:not(:first-child) {
+        margin-left: 167px;
+      }
+    }
+
+    &__room-icon {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    &__room-review {
+      margin-top: 10px;
     }
   }
 }

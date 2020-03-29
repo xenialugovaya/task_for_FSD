@@ -3,12 +3,15 @@
 .bullet-list {
   padding: 0;
   list-style: none;
-
+  max-width: 260px;
 
   &__item {
-    padding-left: 19px;
+    padding-left: 21px;
     position: relative;
-    margin-top: 13px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
   }
 
   &__item:before {

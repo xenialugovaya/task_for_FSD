@@ -9,10 +9,10 @@
     position: relative;
 
     &:not(:first-child) {
-      margin-left: 18px;
+      margin-left: 20px;
     }
 
-    .input-header {
+    &__input-header {
       @include h3;
     }
 

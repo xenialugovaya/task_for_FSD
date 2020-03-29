@@ -29,120 +29,127 @@ block content
 
   .form-elements
     .form-elements__content
-      section.column-inputs
-        .input-wrapper
+      section.form-elements__inputs
+        .form-elements__input-default
           .input-header
             h3 text field
             span.sub-title default
           +input({placeholder: 'Email', type: 'text'})
-        .input-wrapper
+        .form-elements__input-focus
           .input-header
             h3 text field
             span.sub-title hover / focus
           +input({placeholder: 'This is pretty awesome', type: 'text', focused: true})
-        .input-wrapper
+        .form-elements__input-dropdown
           .input-header
             h3 dropdown
             span.sub-title default
           +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
-        .input-wrapper
+        .form-elements__input-masked
           .input-header
             h3 masked text field
             span.sub-title default
           +input({placeholder: 'ДД.ММ.ГГГ', type: 'text', masked: true})
-        .input-wrapper
+        .form-elements__inputs-calendar
           +calendar-inputs({
             titles: ['date dropdown', 'date dropdown'],
             placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
           })
-        .input-wrapper
+        .form-elements__input-date-dropdown
           .input-header
             h3 filter date dropdown
           +input-date-dropdown({placeholder: '19 авг - 23 авг', type: 'text'})  
-        .input-wrapper
+        .form-elements__input-subscription
           .input-header
             h3 subscription text field
           +input-subscription({placeholder: 'Email', type: 'text'})
 
-      section.column-small-buttons
-        .checkbox-block
+      section.form-elements__small-buttons
+        .form-elements__checkbox-block
           h3 Checkbox Buttons
-          .checkbox-block__group
-            .checkbox-block__button
+          .form-elements__checkbox-block__group
+            .form-elements__checkbox-block__button
               +checkbox({title: 'Можно курить', name: '1', value: '1'})
-            .checkbox-block__button
+            .form-elements__checkbox-block__button
               +checkbox({title: 'Можно с питомцами', name: '2', value: '2', checked: 'checked'})
-            .checkbox-block__button
+            .form-elements__checkbox-block__button
               +checkbox({title: 'Можно пригласить гостей (до 10 человек)', name: '3', value: '3', checked: 'checked'})
-        .radio-block
+        .form-elements__radio-block
           h3 Radio Buttons
-          .radio-block__button
+          .form-elements__radio-block__button
             +radio-button({title: 'Мужчина', value: 'male', checked: 'checked'})
-          .radio-block__button
+          .form-elements__radio-block__button
             +radio-button({title: 'Женщина', value: 'female'})
-        .toggle-block
+        .form-elements__toggle-block
           h3 Toggle 
-          .toggle-block__button   
+          .form-elements__toggle-block__button   
             +toggle({title: 'Получать спецпредложения', value: 'mytoggle1', name: 'toggle1', checked: 'checked' })
-          .toggle-block__button 
+          .form-elements__toggle-block__button 
             +toggle({title: 'Получать спецпредложения', value: 'mytoggle2', name: 'toggle2'})
-        .like-block
+        .form-elements__like-block
           h3 like button
-          +like-button({number: '2', name: 'mylike1', value: 'like1'})
-          +like-button({number: '12', name: 'mylike2', value: 'like2', checked: 'checked'})
-        .rate-block
+          .form-elements__like-block__button 
+            +like-button({number: '2', name: 'mylike1', value: 'like1'})
+          .form-elements__like-block__button 
+            +like-button({number: '12', name: 'mylike2', value: 'like2', checked: 'checked'})
+        .form-elements__ratings-block
           h3 rate button
-          +rating('4')
-          +rating('4')
+          .form-elements__ratings-block__rating
+            +rating('4')
+          .form-elements__ratings-block__rating
+            +rating('4')
 
-      section.buttons
-        .range-block
+      section.form-elements__buttons
+        .form-elements__range-slider
           +range-slider('range slider')
-        .button-block
+        .form-elements__buttons-block
           h3 buttons
-          .small_button-block
+          .form-elements__buttons-block__small-buttons
             +button-small({text: 'click me'})
             +button-small({text: 'click me', disabled: true})
-          .ghost_button-block
+          .form-elements__buttons-block__ghost-buttons
             +button-ghost({text: 'click me'})
             +button-ghost({text: 'click me', disabled: true})
-          .transperent_button-block
+          .form-elements__buttons-block__transparent-buttons
             +button-transparent({text: 'click me'})
             +button-transparent({text: 'click me', disabled: true})
-          +button-big({text: 'перейти к оплате', type: 'button', hasArrow: true})
-        .pagination-block
+          .form-elements__buttons-block__big-button
+            +button-big({text: 'перейти к оплате', type: 'button', hasArrow: true})
+        .form-elements__pagination-block
           h3 pagination
           +pagination({text:'1 – 12 из 100+ вариантов аренды', items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']})
 
-      section.dropdown-inputs
-        .column-dropdown-inputs
+      section.form-elements__dropdown-inputs
+        .form-elements__dropdown-inputs__column
           .wrap-dropdown-input
             .input-header
-              h3 dropdown 
+              h3 dropdown
+              span.sub-title default
             +input-dropdown({items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true}) 
           .wrap-dropdown-input
             .input-header
-              h3 dropdown  
+              h3 dropdown
+              span.sub-title expanded  
             +input-dropdown({items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true}) 
-        .column-dropdown-inputs
+        .form-elements__dropdown-inputs__column
           .wrap-dropdown-input
             .input-header
               h3 dropdown 
             +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
-        .column-dropdown-inputs
+        .form-elements__dropdown-inputs__column
           .wrap-dropdown-input
             .input-header
               h3 dropdown 
             +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
 
-      section.lists
-        .column-lists  
+      section.form-elements__lists
+        .form-elements__lists__column 
           .checkbox-expandable-block
             .checkbox-expandable-block__group
-              +checkbox-expandable({title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}]})
+              +checkbox-expandable({title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}, {title: 'Шампунь'}]})
             .checkbox-expandable-block__group
-              +checkbox-expandable({title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол', checked: true}, {title: 'Стул для кормления', checked: true}, {title: 'Кроватка', checked: true}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}], open: true})
-        .column-lists 
+              +checkbox-expandable({title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол', checked: true}, {title: 'Стул для кормления', checked: true}, {title: 'Кроватка', checked: true}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}, {title: 'Шампунь'}], open: true})
+        .form-elements__lists__column 
           .checkbox-rich-block 
             h3 rich checkbox buttons
             .checkbox-rich-block__group
@@ -150,20 +157,24 @@ block content
                 +checkbox({title: 'Широкий коридор', name: '1', value: '1', rich: true, description: 'Ширина коридоров в номере не менее 91 см.'})   
               .checkbox-rich-block__button
                 +checkbox({title: 'Помощник для инвалидов', name: '2', value: '2', rich: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.'})   
-        .column-lists 
+        .form-elements__lists__column 
           .bullet-list-block
             h3 bullet list
-            +bullet-list({
-              items: [
-                'Нельзя с питомцами', 
-                'Без вечеринок и мероприятий', 
-                'Время прибытия — после 13:00, а выезд до 12:00'
-                ]
-              })   
+            .bullet-list-block__group
+              +bullet-list({
+                items: [
+                  'Нельзя с питомцами', 
+                  'Без вечеринок и мероприятий', 
+                  'Время прибытия — после 13:00, а выезд до 12:00'
+                  ]
+                })   
 
-      section.room-details
-        .column-room-details
-          +room-icon({icon:'tag_faces', title:'Комфорт', descr: 'Шумопоглощающие стены', hasLine: true})
-          +room-icon({icon:'location_city', title:'Удобство', descr: 'Окно в каждой из спален', hasLine: true})
-        .column-room-details
-          +review({image: 'review-image-1.jpg', author: 'Мурад Сарафанов', date: '5 дней назад', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', likeNumber: '12', likeChecked: 'checked'})
+      section.form-elements__room-details
+        .form-elements__room-details__column
+          .form-elements__room-details__room-icon
+            +room-icon({icon:'tag_faces', title:'Комфорт', descr: 'Шумопоглощающие стены', hasLine: true})
+          .form-elements__room-details__room-icon
+            +room-icon({icon:'location_city', title:'Удобство', descr: 'Окно в каждой из спален', hasLine: true})
+        .form-elements__room-details__column
+          .form-elements__room-details__room-review
+            +review({image: 'review-image-1.jpg', author: 'Мурад Сарафанов', date: '5 дней назад', text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', likeNumber: '12', likeChecked: 'checked'})

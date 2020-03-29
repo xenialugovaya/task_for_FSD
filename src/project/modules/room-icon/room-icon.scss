@@ -3,9 +3,8 @@
 
 .room-icon {
   width: 280px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   display: flex;
-  justify-content: space-evenly;
   box-sizing: border-box;
 
   &_with-line {
@@ -22,6 +21,7 @@
 
   &__title {
     @include sub-header;
+    margin-left: 10px;
   }
 
   &__descr {

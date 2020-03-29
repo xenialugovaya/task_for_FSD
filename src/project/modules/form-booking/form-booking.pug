@@ -7,7 +7,7 @@ mixin form-booking()
   .booking.form-wrapper
     form.booking__form
       .booking__header 
-        +booking-header({roomNumber: '888', roomType: 'люкс', roomPrice: '9 900'})
+        +booking-header({roomNumber: '888', roomType: 'люкс', roomPrice: '9 990'})
       .booking__calendar-inputs
         +calendar-inputs({
           titles: ['прибытие', 'выезд'],
@@ -31,4 +31,4 @@ mixin form-booking()
           .item-final-divider
           .item-price-final 38 081₽
       .booking__footer
-        +form-footer({bigButtonText: 'Подобрать номер'})
+        +form-footer({bigButtonText: 'забронировать'})

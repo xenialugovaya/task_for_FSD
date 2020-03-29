@@ -5,7 +5,6 @@
   display: flex;
 
   &__avatar {
-    text-align: center;
 
     .avatar-image {
       img {
@@ -17,6 +16,45 @@
         border-radius: 32px;
       }
     }
+
+    .avatar-like {
+      margin-top: 10px;
+      margin-left: 4px;
+    }
+  }
+
+  &__body {
+    max-width: 653px;
+    margin-left: 10px;
+
+    .name {
+      @include sub-header;
+    }
+
+    .text {
+      margin-top: 10px;
+    }
+
+  }
+}
+
+/*
+  &__avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .avatar-image {
+      img {
+        width: 48px;
+        height: 46px;
+        border: 2px solid #FFFFFF;
+        box-sizing: border-box;
+        box-shadow: 0px 10px 20px $dark_shade_10;
+        border-radius: 32px;
+      }
+    }
+
   }
 
   &__body {
@@ -33,43 +71,4 @@
 
   }
 }
-
-/*
-.avatar {
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-
-
-  img {
-    display: block;
-    width: 48px;
-    height: 46px;
-    border: 2px solid #FFFFFF;
-    box-sizing: border-box;
-    box-shadow: 0px 10px 20px $dark_shade_10;
-    border-radius: 32px;
-
-  }
-
-  .like_button {
-    display: block;
-
-  }
-}
-
-.review-text {
-  margin-left: 10px;
-  display: inline-block;
-  max-width: 653px;
-
-  .name {
-    @include sub-header;
-  }
-
-  .textReview {
-    margin-top: 10px;
-  }
-}
-
 */
