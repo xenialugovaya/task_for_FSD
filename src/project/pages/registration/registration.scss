@@ -1,7 +1,6 @@
 .registration-page {
   &__content {
     background: url('./images/registration-bg.jpg') no-repeat;
-    background-size: cover;
     background-size: 107%;
     background-position: 47% 53%;
     display: flex;
@@ -9,5 +8,10 @@
     align-items: center;
     padding-top: 30px;
     padding-bottom: 24px;
+
+    @media (max-width: 1200px) {
+      background-size: cover;
+      flex-direction: column;
+    }
   }
 }

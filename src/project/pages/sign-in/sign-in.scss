@@ -1,7 +1,6 @@
 .signin-page {
   &__content {
     background: url('./images/registration-bg.jpg') no-repeat;
-    background-size: cover;
     background-size: 107%;
     background-position: 47% 51%;
     padding-top: 163px;
@@ -9,5 +8,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 1200px) {
+      background-size: cover;
+      flex-direction: column;
+    }
   }
 }
