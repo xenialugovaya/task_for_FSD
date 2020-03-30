@@ -12,7 +12,6 @@
 
   svg {
     transform: scaleX(-1);
-
   }
 
   .chart-text {
@@ -39,11 +38,13 @@
   }
 }
 
-
 .chart_options {
   display: inline-block;
   vertical-align: middle;
-  margin-left: 20px;
-  margin-top: 33px;
+  margin-left: 21px;
+  margin-top: 32px;
 
+  span {
+    top: 7px;
+  }
 }

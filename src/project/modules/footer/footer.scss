@@ -8,7 +8,7 @@
   &__main-section {
     padding: 99px 9.1% 95px 9.7%;
     /*140px / 1440 = 0.097 */
-    border-bottom: 1px solid rgba(31, 32, 65, 0.05);
+    border-bottom: 1px solid $dark_shade_10;
     display: grid;
     grid-template-columns: 2fr 4.5fr 2fr;
     grid-template-areas: "logo menu subscription";

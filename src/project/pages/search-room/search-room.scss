@@ -3,13 +3,14 @@
 .search-room-page {
   &__content {
     max-width: 1440px;
-    padding: 28px 9.7% 75px 9.7%;
+    padding: 30px 9.7% 73px 9.7%;
     /* 140px / 1440px = 0,097*/
     display: grid;
     grid-template-columns: 1fr 3.135fr;
     /* 266px / 834px = 3,135*/
     grid-gap: 5%;
     /* 60px / 1440px = 0,042*/
+    border-bottom: 1px solid $dark_shade_10;
   }
 
   &__title {
@@ -87,15 +88,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-gap: 12px;
-    margin-top: 10px;
+    margin-top: 11px;
+    margin-left: 1px;
 
     .hotel-card {
-      margin-top: 10px;
+      margin-top: 9px;
     }
   }
 
   &__pagination {
-    margin-top: 40px;
+    margin-top: 41px;
     margin-left: -12px;
     justify-self: center;
   }

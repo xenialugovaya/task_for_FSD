@@ -41,14 +41,12 @@
   &__buttons {
     grid-area: buttons;
     display: flex;
-    height: 83%;
-
 
     .button_login {
 
       .button-ghost {
-        height: 100%; //34px
-        line-height: 258%;
+        height: 34px;
+        line-height: 30px;
         width: auto;
 
         &__text {
@@ -62,8 +60,8 @@
 
       .button-big {
         letter-spacing: 0px;
-        height: 100%; //34px
-        line-height: 258%; //34px
+        height: 34px;
+        line-height: 34px;
         padding-right: 20px;
         padding-left: 19px;
       }
