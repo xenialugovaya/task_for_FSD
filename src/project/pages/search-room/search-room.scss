@@ -1,6 +1,8 @@
 @import '../../../assets/scss/utils/vars.scss';
 
 .search-room-page {
+  flex: 1 0 auto;
+
   &__content {
     max-width: 1440px;
     padding: 30px 9.7% 73px 9.7%;
