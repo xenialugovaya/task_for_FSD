@@ -6,6 +6,7 @@
     background-position: 47% 67%;
     box-sizing: border-box;
     height: 830px;
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     padding: 70px 9.4% 20px 9.7%;
@@ -14,17 +15,26 @@
     @media (max-width: 1200px) {
       background-size: cover;
       flex-direction: column;
+
     }
   }
 
 
   &__form-login {
     align-self: flex-start;
+
+    @media (max-width: 1200px) {
+      align-self: center;
+    }
   }
 
   &__comment {
     align-self: flex-end;
     width: 260px;
     text-align: right;
+
+    @media (max-width: 1200px) {
+      align-self: center;
+    }
   }
 }

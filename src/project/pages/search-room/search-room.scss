@@ -2,6 +2,7 @@
 
 .search-room-page {
   &__content {
+    max-width: 1440px;
     padding: 28px 9.7% 75px 9.7%;
     /* 140px / 1440px = 0,097*/
     display: grid;
