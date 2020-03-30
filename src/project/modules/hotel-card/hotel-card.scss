@@ -134,13 +134,14 @@
       box-sizing: border-box;
 
       .reviews-number {
-        font-family: 'Montserrat-bold', sans-serif;
+        font-family: $mainFont;
+        font-weight: bold;
         color: $dark_shade_50;
 
       }
 
       .measure-unit {
-        font-family: 'Montserrat', sans-serif;
+        font-family: $mainFont;
         color: $dark_shade_50;
         margin-left: 3px;
       }

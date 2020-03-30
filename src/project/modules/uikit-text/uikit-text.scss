@@ -49,11 +49,14 @@
 
   &.h1 {
     @include h1;
+    letter-spacing: -1px;
+    font-size: 25px;
   }
 
   &.h2 {
     @include h2;
     margin-top: -1px;
+    letter-spacing: -0.4px;
   }
 
   &.h3 {

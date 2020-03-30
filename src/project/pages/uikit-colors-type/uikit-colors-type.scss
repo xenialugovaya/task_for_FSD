@@ -4,11 +4,11 @@
 .colors-types {
   &__content {
     padding: 145px 191px 145px 150px;
-    min-width: 1440px;
-    max-width: 1920px;
+    width: 1440px;
     font-family: $mainFont;
     display: flex;
     justify-content: space-between;
+
 
     .text-column {
       margin-top: 3px;

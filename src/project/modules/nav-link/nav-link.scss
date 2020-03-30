@@ -18,6 +18,7 @@
 
   &_active {
     color: $dark_shade_75;
-    font-family: 'Montserrat-bold';
+    font-family: $mainFont;
+    font-weight: bold;
   }
 }

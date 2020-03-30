@@ -4,7 +4,7 @@
 .button-big {
   @include button;
   line-height: 42px;
-  background: $purpleButton;
+  background: $purpleGradient;
   color: $white;
 
   &_with-arrow {

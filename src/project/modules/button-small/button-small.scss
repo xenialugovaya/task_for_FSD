@@ -4,7 +4,7 @@
 .button-small {
   @include button;
   line-height: 42px;
-  background: $purpleButton;
+  background: $purpleGradient;
   width: 99px;
   color: $white;
 
