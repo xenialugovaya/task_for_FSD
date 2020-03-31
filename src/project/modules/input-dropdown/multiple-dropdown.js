@@ -38,19 +38,33 @@
         $items.each(function(index) {
           const $item = $(this);
           const id = $item.data('id');
-          $lastDigit = itemCount[id].toString().split('').pop();
           itemCount[id] == 0 ? $item.addClass("defaultClass").removeClass("activeClass") : $item.removeClass("defaultClass").addClass("activeClass");
-          $useDefault = $lastDigit == 0 && settings.textDefault[index].length > 0;
-          $usePluralFirst = $lastDigit > 1 && $lastDigit < 5 && settings.textPlural[0][index].length > 0;
-          $usePluralSecond = $lastDigit > 4 && settings.textPlural[1][index].length > 0;
-          $textChange = $usePluralFirst ? settings.textPlural[0][index] : $usePluralSecond ? settings.textPlural[1][index] : settings.selectionText[index];
-          $text = $useDefault ? settings.textDefault[index] : $textChange;
+          $text = getWordForm(id, index);
           $multipleSelection += itemCount[id] + ` ` + `${$text}, `;
 
         });
         $selection.html($multipleSelection);
 
+      }
 
+      function getWordForm(id, index) {
+        let $lastDigit = itemCount[id] % 10;
+        if (itemCount[id] < 5 || itemCount[id] > 20) {
+          switch ($lastDigit) {
+            case 0:
+              return settings.textDefault[index];
+            case 1:
+              return settings.selectionText[index];
+            case 2:
+            case 3:
+            case 4:
+              return settings.textPlural[0][index];
+            default:
+              return settings.textPlural[1][index];
+          }
+        } else {
+          return settings.textPlural[1][index];
+        }
       }
 
       function setItemSettings(id, $item) {

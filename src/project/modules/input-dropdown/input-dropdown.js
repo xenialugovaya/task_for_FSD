@@ -14,11 +14,40 @@ class DropdownSingle {
 
   render() {
     this.$elem.iqDropdown({
-      selectionText: 'гость',
-      textPlural: 'гостя',
       textDefault: 'Cколько гостей',
+      onChange: (id, itemCount, totalItems) => {
+        let wordForm = this.getWordForm(totalItems);
+        let text = `${totalItems} ${wordForm}`
+        this.setWordForm(text);
+      }
     });
 
+  }
+
+  getWordForm(totalItems) {
+    const wordForms = ['гость', 'гостя', 'гостей'];
+    let $lastDigit = totalItems % 10;
+    if (totalItems < 5 || totalItems > 20) {
+      switch ($lastDigit) {
+        case 0:
+          return wordForms[2];
+        case 1:
+          return wordForms[0];
+        case 2:
+        case 3:
+        case 4:
+          return wordForms[1];
+        default:
+          return wordForms[2];
+      }
+    } else {
+      return wordForms[2];
+    }
+  }
+
+  setWordForm(item) {
+    const $selection = this.$elem.find('p.iqdropdown-selection').last();
+    $selection.html(item);
   }
 
   addButtonsBlock() {
@@ -45,7 +74,6 @@ class DropdownSingle {
           $decrement.click();
         }
       });
-
     });
   }
 
@@ -62,7 +90,6 @@ class DropdownSingle {
     this.$elem.find('.buttons-block').append(applyButton);
     $(applyButton).on('click', () => {
       this.$elem.removeClass('menu-open');
-
     });
 
   }
@@ -83,7 +110,6 @@ class DropdownSingle {
       });
     });
   }
-
 }
 
 class DropdownMultiple {
