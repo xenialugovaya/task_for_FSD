@@ -5,6 +5,7 @@
   display: flex;
 
   &__avatar {
+    min-width: 48px;
 
     .avatar-image {
       img {

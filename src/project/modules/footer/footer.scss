@@ -4,6 +4,9 @@
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
+  @media (max-width: 999px) {
+    display: none !important;
+  }
 
   &__main-section {
     padding: 99px 9.1% 95px 9.7%;
@@ -60,15 +63,15 @@
     max-width: 260px;
     margin-top: 5px;
     text-align: left;
+    margin-left: 5px;
+
 
     .footer__subscription-title {
       @include h3;
-      margin-left: 5px;
     }
 
     .footer__text {
       margin-top: 18px;
-      margin-left: 5px;
     }
 
     .footer__input-subscription {
@@ -94,11 +97,4 @@
   .footer-mobile {
     display: none !important;
   }
-}
-
-@media (max-width: 1000px) {
-  .footer {
-    display: none !important;
-  }
-
 }
