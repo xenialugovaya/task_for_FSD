@@ -43,3 +43,21 @@
     url('../fonts/fontawesome/fa-brands-400.ttf') format('opentype'),
     url('../fonts/fontawesome/fa-regular-400.svg') format('svg');
 }
+
+@font-face {
+  font-family: 'Font Awesome regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fontawesome/fa-regular-400.woff2') format('woff2'),
+    url('../fonts/fontawesome/fa-regular-400.woff') format('woff'),
+    url('../fonts/fontawesome/fa-regular-400.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Font Awesome solid';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/fontawesome/fa-solid-900.woff2') format('woff2'),
+    url('../fonts/fontawesome/fa-solid-900.woff') format('woff'),
+    url('../fonts/fontawesome/fa-solid-900.ttf') format('opentype');
+}

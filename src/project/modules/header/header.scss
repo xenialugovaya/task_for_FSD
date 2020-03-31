@@ -29,11 +29,19 @@
     .menu_eng {
       margin-right: 8px;
     }
+
+    @media (max-width: 1000px) {
+      display: none !important;
+    }
   }
 
   &__menu-mobile {
     .menu {
       display: block;
+    }
+
+    @media (min-width: 1000px) {
+      display: none !important;
     }
   }
 
@@ -41,6 +49,11 @@
   &__buttons {
     grid-area: buttons;
     display: flex;
+
+    @media (max-width: 400px) {
+      grid-area: menu;
+      margin-left: 5%;
+    }
 
     .button_login {
 
@@ -52,11 +65,16 @@
         &__text {
           padding: 0px 19px;
         }
+
       }
     }
 
     .button_register {
       margin-left: 20px;
+
+      @media (max-width: 700px) {
+        margin-left: 2%;
+      }
 
       .button-big {
         letter-spacing: 0px;
@@ -64,6 +82,26 @@
         line-height: 34px;
         padding-right: 20px;
         padding-left: 19px;
+
+        @media (max-width: 700px) {
+          display: none;
+        }
+      }
+
+      .icon-register {
+        display: none;
+        font-family: 'Font Awesome solid';
+        color: $dark_shade_75;
+        line-height: 34px;
+        font-size: 20px;
+
+        &::before {
+          content: '\f234';
+        }
+
+        @media (max-width: 700px) {
+          display: block;
+        }
       }
     }
   }
@@ -84,16 +122,16 @@
     display: none !important;
   }
 
-  .header__menu-mobile {
+  /*  .header__menu-mobile {
     display: none !important;
-  }
+  }*/
 }
 
 
 @media (max-width: 1000px) {
-  .header__menu {
+  /* .header__menu {
     display: none !important;
-  }
+  }*/
 
   .mburger {
     position: absolute;

@@ -23,8 +23,10 @@ mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})
       .header__buttons
         .button_login
           +button-ghost({text: buttonLogin})
+          a.icon-login(href='/mock-address/')
         .button_register
           +button-big({text: buttonRegister, type: 'button'})
+          a.icon-register(href='/mock-address/')
     else
       .header__account-link
         .user-name= user
