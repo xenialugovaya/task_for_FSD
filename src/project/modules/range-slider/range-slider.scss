@@ -7,6 +7,10 @@
     display: flex;
     justify-content: space-between;
 
+    .title {
+      min-width: 95px;
+    }
+
     .selected-amount {
       font-size: 12px;
       text-transform: uppercase;

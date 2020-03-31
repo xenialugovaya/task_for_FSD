@@ -67,6 +67,7 @@
   &__checkbox-block {
     &__group {
       margin-top: 17px;
+
     }
 
     &__button:not(:first-child) {
@@ -109,8 +110,12 @@
       display: inline-block;
       margin-top: 13px;
 
+      .like-button {
+        display: inline-block;
+      }
+
       &:nth-child(3) {
-        margin-left: 50px;
+        margin-left: 10px;
       }
     }
 
