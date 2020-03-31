@@ -6,11 +6,11 @@
   align-items: center;
   flex-direction: row-reverse;
   position: relative;
-  width: 266px;
+  width: 100%;
 
   .input_date-dropdown {
     @include input;
-    width: 266px;
+    width: 100%;
     cursor: pointer;
 
     &::placeholder {

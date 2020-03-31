@@ -2,23 +2,29 @@
 @import '../../../assets/scss/utils/mixins.scss';
 
 .calendar-inputs {
+  width: 100%;
+
+  &__wrap-flex {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__wrap-input {
-    display: inline-block;
-    width: 150px;
+    width: 46.88%; //150px
     position: relative;
 
+    /*
     &:not(:first-child) {
-      margin-left: 18px;
+      margin-left: 17px;
     }
-
+*/
     &__input-header {
       @include h3;
     }
 
     .input_small {
       @include input;
-      width: 150px;
+      width: 100%;
       cursor: pointer;
       margin-top: 5px;
 

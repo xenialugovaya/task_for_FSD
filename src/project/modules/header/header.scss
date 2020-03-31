@@ -1,6 +1,7 @@
 @import '../../../assets/scss/utils/vars.scss';
 
 .header {
+  position: relative;
   padding: 14.5px 9.7%;
   /* 14.5px / 1440 = 0.01  140px / 1440 = 0.097 */
   background: #FFFFFF;
@@ -14,6 +15,21 @@
     display: grid;
     grid-template-columns: 1fr 10.10fr 1.65fr;
     grid-template-areas: "logo menu account";
+  }
+
+  &__mburger {
+    @media (min-width: 1030px) {
+      display: none !important;
+    }
+
+    @media (max-width: 1030px) {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      --mb-bar-height: 2px;
+      cursor: pointer;
+
+    }
   }
 
   &__logo {
@@ -30,7 +46,7 @@
       margin-right: 8px;
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1024px) {
       display: none !important;
     }
   }
@@ -40,7 +56,7 @@
       display: block;
     }
 
-    @media (min-width: 1000px) {
+    @media (min-width: 1024px) {
       display: none !important;
     }
   }
@@ -50,9 +66,9 @@
     grid-area: buttons;
     display: flex;
 
-    @media (max-width: 400px) {
-      grid-area: menu;
-      margin-left: 5%;
+    @media (max-width: 500px) {
+      position: absolute;
+      right: 27px;
     }
 
     .button_login {
@@ -66,6 +82,9 @@
           padding: 0px 19px;
         }
 
+        @media (max-width: 700px) {
+          display: none;
+        }
       }
     }
 
@@ -73,7 +92,7 @@
       margin-left: 20px;
 
       @media (max-width: 700px) {
-        margin-left: 2%;
+        margin-left: 4%;
       }
 
       .button-big {
@@ -91,7 +110,7 @@
       .icon-register {
         display: none;
         font-family: 'Font Awesome solid';
-        color: $dark_shade_75;
+        color: $dark_shade_50;
         line-height: 34px;
         font-size: 20px;
 
@@ -115,29 +134,4 @@
     margin-left: 3px;
   }
 
-}
-
-@media (min-width: 1000px) {
-  .mburger {
-    display: none !important;
-  }
-
-  /*  .header__menu-mobile {
-    display: none !important;
-  }*/
-}
-
-
-@media (max-width: 1000px) {
-  /* .header__menu {
-    display: none !important;
-  }*/
-
-  .mburger {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    --mb-bar-height: 2px;
-    cursor: pointer;
-  }
 }

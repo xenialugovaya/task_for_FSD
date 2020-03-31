@@ -126,9 +126,11 @@ class DropdownMultiple {
         ['спален', 'кроватей', 'ванных комнат']
       ],
       textDefault: ['спален', 'кроватей', 'ванных комнат'],
+
     });
 
   }
+
 }
 
 export default function renderComponent() {

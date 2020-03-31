@@ -17,16 +17,26 @@
     @media (max-width: 1200px) {
       background-size: cover;
       flex-direction: column;
+    }
 
+    @media (max-width: 500px) {
+      height: 550px;
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 
 
   &__form-login {
+    width: 381px;
     align-self: flex-start;
 
     @media (max-width: 1200px) {
       align-self: center;
+    }
+
+    @media (max-width: 400px) {
+      width: 98%;
     }
   }
 

@@ -5,13 +5,17 @@
   &__content {
     width: 1440px;
     background: #F4F4F6;
-    padding: 150px 140px 140px 140px;
+    padding: 150px 0px 140px 140px;
     display: flex;
   }
 
   &__column {
     &:not(:first-child) {
       margin-left: 40px;
+    }
+
+    &:not(:last-child) {
+      width: 381px;
     }
   }
 

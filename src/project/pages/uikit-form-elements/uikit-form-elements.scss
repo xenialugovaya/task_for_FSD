@@ -13,6 +13,8 @@
   &__inputs {
     display: inline-block;
     vertical-align: top;
+    width: 320px;
+
 
     .input-header {
       display: flex;
@@ -46,6 +48,12 @@
   &__input-subscription {
     display: block;
     margin-top: 42px;
+
+  }
+
+  &__input-date-dropdown,
+  &__input-subscription {
+    width: 266px;
   }
 
   //Checkbox, radio, toggle, like, rating buttons
@@ -161,6 +169,7 @@
 
     &__big-button {
       margin-top: 15px;
+      width: 320px;
     }
   }
 
@@ -180,13 +189,16 @@
     &__column {
       display: inline-block;
       vertical-align: top;
+      width: 266px;
 
       &:nth-child(2) {
         margin-left: 181px;
+        width: 320px;
       }
 
       &:nth-child(3) {
         margin-left: 72px;
+        width: 320px;
       }
 
       .wrap-dropdown-input {

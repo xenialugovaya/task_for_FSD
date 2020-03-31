@@ -9,7 +9,7 @@
 
   &_with-arrow {
     position: relative;
-    width: 320px;
+    width: 100%; //320px;
 
     .material-icons::before {
       @include right-arrow;
@@ -24,6 +24,4 @@
     opacity: 0.5;
     cursor: none;
   }
-
-
 }
