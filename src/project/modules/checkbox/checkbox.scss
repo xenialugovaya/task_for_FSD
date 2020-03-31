@@ -4,6 +4,7 @@
 .checkbox-button {
   position: relative;
   cursor: pointer;
+  display: block;
 
   &__input {
     position: absolute;
