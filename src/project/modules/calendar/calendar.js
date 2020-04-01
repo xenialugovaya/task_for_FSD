@@ -1,2 +1,2 @@
 import './calendar.scss';
-import 'air-datepicker/dist/js/datepicker.js'
+import 'air-datepicker/dist/js/datepicker';

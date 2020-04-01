@@ -1,32 +1,30 @@
-const path = require('path')
-const webpack = require('webpack')
-const fs = require('fs')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const fs = require('fs');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {
-  CleanWebpackPlugin
-} = require('clean-webpack-plugin')
+  CleanWebpackPlugin,
+} = require('clean-webpack-plugin');
 
 
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
-  modules: path.join(__dirname, "node_modules"),
-  assets: 'assets/'
-}
+  modules: path.join(__dirname, 'node_modules'),
+  assets: 'assets/',
+};
 
 const pages = [];
 
 fs
   .readdirSync(path.resolve(__dirname, '..', 'src', 'project', 'pages'))
-  .filter((file) => {
-    return file.indexOf('base') !== 0;
-  })
+  .filter((file) => file.indexOf('base') !== 0)
   .forEach((file) => {
     pages.push(file.split('/', 2));
   });
 
-const htmlPlugins = pages.map(fileName => new HtmlWebpackPlugin({
+const htmlPlugins = pages.map((fileName) => new HtmlWebpackPlugin({
 
   filename: `${fileName}.html`,
   template: `./src/project/pages/${fileName}/${fileName}.pug`,
@@ -36,7 +34,7 @@ const htmlPlugins = pages.map(fileName => new HtmlWebpackPlugin({
 module.exports = {
   // BASE config
   externals: {
-    paths: PATHS
+    paths: PATHS,
   },
   entry: {
     app: PATHS.src,
@@ -45,7 +43,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    publicPath: './'
+    publicPath: './',
   },
   optimization: {
     splitChunks: {
@@ -54,20 +52,20 @@ module.exports = {
           name: 'vendors',
           test: /node_modules/,
           chunks: 'all',
-          enforce: true
-        }
-      }
-    }
+          enforce: true,
+        },
+      },
+    },
   },
   module: {
     rules: [{
       test: /\.pug$/,
       loader: 'pug-loader',
-      exclude: '/node_modules/'
+      exclude: '/node_modules/',
     }, {
       test: /\.js$/,
       loader: 'babel-loader',
-      exclude: '/node_modules/'
+      exclude: '/node_modules/',
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
 
@@ -82,7 +80,7 @@ module.exports = {
           }
           return `assets/fonts/${url}`;
         },
-      }
+      },
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
@@ -108,26 +106,26 @@ module.exports = {
           loader: 'css-loader',
           options: {
             sourceMap: true,
-            url: true
-          }
+            url: true,
+          },
         }, {
           loader: 'postcss-loader',
           options: {
             sourceMap: true,
             config: {
-              path: `./postcss.config.js`
-            }
-          }
+              path: './postcss.config.js',
+            },
+          },
         }, {
           loader: 'sass-loader',
           options: {
             sassOptions: {
-              includePaths: ['./node_modules']
+              includePaths: ['./node_modules'],
             },
-            sourceMap: true
-          }
-        }
-      ]
+            sourceMap: true,
+          },
+        },
+      ],
     }, {
       test: /\.css$/,
       use: [
@@ -137,25 +135,25 @@ module.exports = {
           loader: 'css-loader',
           options: {
             sourceMap: true,
-            url: false
-          }
+            url: false,
+          },
         }, {
           loader: 'postcss-loader',
           options: {
             sourceMap: true,
             config: {
-              path: `./postcss.config.js`
-            }
-          }
-        }
-      ]
-    }]
+              path: './postcss.config.js',
+            },
+          },
+        },
+      ],
+    }],
   },
   resolve: {
     alias: {
       '~': PATHS.src,
 
-    }
+    },
   },
   plugins: [
 
@@ -167,7 +165,7 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      'window.$': 'jquery'
+      'window.$': 'jquery',
     }),
 
   ].concat(htmlPlugins),
@@ -175,4 +173,4 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     overlay: true,
   },
-}
+};
