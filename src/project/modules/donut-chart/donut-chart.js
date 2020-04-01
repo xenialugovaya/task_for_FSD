@@ -5,6 +5,7 @@ class DonutChart {
     this.$elem = element;
     this.render();
   }
+
   render() {
     this.$elem.donutChart({
       chartOptions: ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
@@ -23,7 +24,8 @@ class DonutChart {
 export default function renderComponent() {
   $(() => {
     $('.js-donut-chart').each((index, node) => {
-      new DonutChart($(node));
+      const donutChart = new DonutChart($(node));
+      return donutChart;
     });
   });
 }

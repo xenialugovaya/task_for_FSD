@@ -53,6 +53,7 @@
     "air-datepicker": "^2.2.3",
     "item-quantity-dropdown": "^2.0.2",
     "jquery": "^3.4.1",
+    "jquery.maskedinput": "^1.4.1",
     "jquery.mmenu": "^7.3.3",
     "lightslider": "^1.1.6",
     "material-components-web": "^4.0.0",
