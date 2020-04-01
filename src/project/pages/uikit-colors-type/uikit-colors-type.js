@@ -1,1 +1,0 @@
-import './uikit-colors-type.scss';

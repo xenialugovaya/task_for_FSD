@@ -1,7 +1,0 @@
-mixin nav-link({href, name, dropdown, active})
-  - let classes = ['nav-link']
-  if dropdown
-    - classes.push('nav-link_dropdown') 
-  if active
-    - classes.push('nav-link_active') 
-  a(class=classes href=href)= name

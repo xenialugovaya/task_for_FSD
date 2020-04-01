@@ -1,9 +1,0 @@
-mixin button-big({text, hasArrow, type, disabled})  
-  - let classes = ["button-big"]
-  if hasArrow
-    - classes.push("button-big_with-arrow")
-  if disabled
-    - classes.push("button-big_disabled")
-  button(class=classes type=type)
-    span #{text}
-    .material-icons  

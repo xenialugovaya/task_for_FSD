@@ -1,8 +1,0 @@
-mixin room-icon({icon, title, descr, hasLine})
-  - let classes = ['room-icon']
-    if hasLine
-    - classes.push('room-icon_with-line')
-    div(class=classes)
-      i.room-icon__icon.material-icons #{icon}
-      .room-icon__title #{title}
-        p.room-icon__descr #{descr}

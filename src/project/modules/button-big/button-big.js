@@ -1,1 +1,0 @@
-import './button-big.scss';
