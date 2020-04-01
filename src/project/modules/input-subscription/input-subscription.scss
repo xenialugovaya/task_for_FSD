@@ -1,0 +1,24 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.wrap-input-subscription {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  position: relative;
+
+
+  .input_subscription {
+    @include input;
+    width: 100%;
+  }
+
+  &::after {
+    @include right-arrow;
+    color: $purple;
+    position: absolute;
+    right: 10px;
+  }
+}

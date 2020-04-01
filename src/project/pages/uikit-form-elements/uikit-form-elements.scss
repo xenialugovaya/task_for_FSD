@@ -1,0 +1,294 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.form-elements {
+  &__content {
+    width: 1440px;
+    font-family: $mainFont;
+    padding: 143px 141px 132px 140px;
+  }
+
+  // Inputs
+
+  &__inputs {
+    display: inline-block;
+    vertical-align: top;
+    width: 320px;
+
+
+    .input-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      line-height: 12px;
+      margin-bottom: 5px;
+
+      .sub-title {
+        font-family: $mainFont;
+        color: $dark_shade_50;
+        text-transform: uppercase;
+        font-size: 12px;
+      }
+    }
+  }
+
+  &__input-default {
+    display: block;
+  }
+
+  &__input-focus,
+  &__input-dropdown,
+  &__input-masked {
+    display: block;
+    margin-top: 20px;
+  }
+
+  &__inputs-calendar,
+  &__input-date-dropdown,
+  &__input-subscription {
+    display: block;
+    margin-top: 42px;
+
+  }
+
+  &__input-date-dropdown,
+  &__input-subscription {
+    width: 266px;
+  }
+
+  //Checkbox, radio, toggle, like, rating buttons
+
+  &__small-buttons {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 126px;
+  }
+
+  &__checkbox-block {
+    &__group {
+      margin-top: 17px;
+
+    }
+
+    &__button:not(:first-child) {
+      margin-top: 10px;
+      line-height: 14px;
+    }
+  }
+
+  &__radio-block {
+    margin-top: 38px;
+
+    &__button {
+      margin-top: 16px;
+      display: inline-block;
+
+      &:nth-child(3) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__toggle-block {
+    margin-top: 39px;
+
+    &__button {
+      &:nth-child(2) {
+        margin-top: 15px;
+      }
+
+      &:nth-child(3) {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__like-block {
+    margin-top: 41px;
+
+    &__button {
+      display: inline-block;
+      margin-top: 13px;
+
+      .like-button {
+        display: inline-block;
+      }
+
+      &:nth-child(3) {
+        margin-left: 10px;
+      }
+    }
+
+  }
+
+  &__ratings-block {
+    margin-top: 39px;
+
+    &__rating {
+      display: inline-block;
+      margin-top: 15px;
+
+      &:nth-child(3) {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  // Slider, buttons, pagination
+
+  &__buttons {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 132px;
+  }
+
+  &__buttons-block {
+    margin-top: 44px;
+
+    &__small-buttons {
+      display: block;
+      margin-top: 16px;
+
+      .button-small:not(:first-child) {
+        margin-left: 19px;
+      }
+    }
+
+    &__ghost-buttons {
+      display: block;
+      margin-top: 30px;
+
+      .button-ghost:not(:first-child) {
+        margin-left: 19px;
+      }
+    }
+
+    &__transparent-buttons {
+      margin-left: -5px;
+      margin-top: 17px;
+
+      .button-transparent:not(:first-child) {
+        margin-left: 6px;
+      }
+    }
+
+    &__big-button {
+      margin-top: 15px;
+      width: 320px;
+    }
+  }
+
+  &__pagination-block {
+    margin-top: 40px;
+
+    .pagination {
+      margin-top: 16px;
+    }
+  }
+
+  // Section dropdown inputs
+
+  &__dropdown-inputs {
+    margin-top: 79px;
+
+    &__column {
+      display: inline-block;
+      vertical-align: top;
+      width: 266px;
+
+      &:nth-child(2) {
+        margin-left: 181px;
+        width: 320px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 72px;
+        width: 320px;
+      }
+
+      .wrap-dropdown-input {
+        margin-top: 20px;
+
+        .input-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          line-height: 12px;
+          margin-bottom: 5px;
+
+          .sub-title {
+            font-family: $mainFont;
+            color: $dark_shade_50;
+            text-transform: uppercase;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  // section lists
+  &__lists {
+    margin-top: 172px;
+
+    &__column {
+      display: inline-block;
+      vertical-align: top;
+
+      &:nth-child(2) {
+        margin-left: 190px;
+      }
+
+      &:nth-child(3) {
+        margin-left: 132px;
+      }
+    }
+
+    .checkbox-expandable-block {
+      &__group:not(:first-child) {
+        margin-top: 49px;
+      }
+    }
+
+    .checkbox-rich-block {
+      &__group {
+        margin-top: 16px;
+      }
+
+      &__button:not(:first-child) {
+        margin-top: 9px;
+      }
+    }
+
+    .bullet-list-block {
+      &__group {
+        margin-top: 13px;
+      }
+    }
+  }
+
+  //room icons, room review
+
+  &__room-details {
+    margin-top: 41px;
+
+    &__column {
+      display: inline-block;
+      vertical-align: top;
+
+      &:not(:first-child) {
+        margin-left: 167px;
+      }
+    }
+
+    &__room-icon {
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    &__room-review {
+      margin-top: 10px;
+    }
+  }
+}

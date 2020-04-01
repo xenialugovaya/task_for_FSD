@@ -1,0 +1,14 @@
+mixin input-dropdown({items, placeholder, single, multiple})
+  - let classes = ['input',]
+  if single
+    - classes.push('input_dropdown-single', 'js-input_dropdown-single')
+  if multiple
+    - classes.push('input_dropdown-multiple', 'js-input_dropdown-multiple')
+  .iqdropdown(class=classes)
+    p.iqdropdown-selection= placeholder
+    .iqdropdown-menu
+      if items
+        each item, index in items     
+          .iqdropdown-menu-option(data-id='item' + (index+1))
+            div
+              p.iqdropdown-item #{item}                            

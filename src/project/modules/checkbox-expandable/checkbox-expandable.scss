@@ -1,0 +1,85 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+
+.checkbox-expandable {
+  &__title {
+    @include h3;
+    position: relative;
+    width: 257px;
+    cursor: pointer;
+
+    &.checkbox-expandable_closed {
+      &:before {
+        position: absolute;
+        @include drop-arrow;
+        line-height: 15px;
+        top: 0;
+        right: 0;
+      }
+
+      +.checkbox-expandable__items {
+        display: none;
+      }
+    }
+
+    &.checkbox-expandable_open {
+      &:after {
+        position: absolute;
+        @include up-arrow;
+        line-height: 15px;
+        top: 0;
+        right: 0;
+      }
+
+      +.checkbox-expandable__items {
+        display: block;
+      }
+    }
+  }
+
+  &__items {
+    margin-top: 17px;
+
+    .item:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+/*
+.expandable {
+  position: relative;
+  width: 268px;
+
+  .down-arrow::before {
+    position: absolute;
+    @include drop-arrow;
+    top: 20px;
+  }
+
+  .up-arrow::after {
+    position: absolute;
+    @include up-arrow;
+    top: 20px;
+  }
+
+  h3 {
+    cursor: pointer;
+  }
+
+  .checkbox-elements {
+    display: none;
+  }
+}
+*/

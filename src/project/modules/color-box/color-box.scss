@@ -1,0 +1,66 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.wrap-color:not(:first-child) {
+  margin-top: 13px;
+}
+
+.color-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.dark_shade_100 {
+  background: $dark_shade_100;
+}
+
+.dark_shade_75 {
+  background: $dark_shade_75;
+}
+
+.dark_shade_50 {
+  background: $dark_shade_50;
+}
+
+.dark_shade_25 {
+  background: $dark_shade_25;
+}
+
+.dark_shade_25 {
+  background: $dark_shade_25;
+}
+
+.dark_shade_5 {
+  background: $dark_shade_5;
+}
+
+.purple {
+  background: $purple;
+}
+
+.green {
+  background: $green;
+}
+
+.color-text {
+  margin-left: 40px;
+  vertical-align: top;
+  margin-top: 9px;
+  display: inline-block;
+}
+
+.color-descr {
+  @include h2;
+  font-weight: normal;
+  margin-top: 5px;
+  letter-spacing: -0.05em;
+}
+
+.color-head {
+  @include h2;
+  font-weight: 550;
+  letter-spacing: -0.4px;
+
+}

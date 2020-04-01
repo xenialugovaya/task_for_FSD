@@ -1,0 +1,6 @@
+mixin toggle({title, value, name, checked})
+  .toggle-button
+    label.toggle-label
+      input(class='toggle' type='checkbox' name=name value=value checked=checked)
+      span.slider-body
+    span.toggle-title #{title}

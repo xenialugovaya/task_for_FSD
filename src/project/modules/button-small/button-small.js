@@ -1,0 +1,1 @@
+import './button-small.scss';

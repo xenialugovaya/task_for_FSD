@@ -1,0 +1,27 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.cards-page {
+  &__content {
+    width: 1440px;
+    background: #F4F4F6;
+    padding: 150px 0px 140px 140px;
+    display: flex;
+  }
+
+  &__column {
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
+
+    &:not(:last-child) {
+      width: 381px;
+    }
+  }
+
+  &__form-registration,
+  &__form-signup,
+  &__hotel-card {
+    margin-top: 40px;
+  }
+}

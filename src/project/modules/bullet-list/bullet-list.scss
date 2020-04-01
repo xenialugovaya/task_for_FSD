@@ -1,0 +1,28 @@
+@import '../../../assets/scss/utils/mixins.scss';
+
+.bullet-list {
+  padding: 0;
+  list-style: none;
+  max-width: 260px;
+
+  &__item {
+    padding-left: 21px;
+    position: relative;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+
+  &__item:before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: $dark_shade_25;
+
+  }
+}

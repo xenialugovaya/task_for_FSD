@@ -1,0 +1,124 @@
+@import '../../../assets/scss/utils/vars.scss';
+
+.search-room-page {
+  flex: 1 0 auto;
+
+  &__content {
+    max-width: 1440px;
+    padding: 30px 9.7% 73px 9.7%;
+    /* 140px / 1440px = 0,097*/
+    display: grid;
+    grid-template-columns: 1fr 3.135fr;
+    /* 266px / 834px = 3,135*/
+    grid-gap: 5%;
+    /* 60px / 1440px = 0,042*/
+    border-bottom: 1px solid $dark_shade_10;
+
+    @media(max-width: 650px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    letter-spacing: 0.8px;
+  }
+
+  &__filter-column {
+    @media(max-width: 650px) {
+      max-width: 266px;
+    }
+
+    .dates-selection {
+      .input {
+        margin-top: 5px;
+      }
+    }
+
+    .guests-selection {
+      margin-top: 20px;
+
+      .input {
+        max-width: 266px;
+        margin-top: 5px;
+      }
+    }
+
+    .price-selection {
+      margin-top: 30px;
+
+      .text {
+        font-size: 12px;
+        color: $dark_shade_50;
+        margin-top: 9px;
+      }
+    }
+
+    .room-options {
+      margin-top: 25px;
+
+      &__group {
+        margin-top: 16px;
+      }
+
+      &__button:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+
+    .room-availability {
+      margin-top: 30px;
+
+      &__group {
+        margin-top: 16px;
+      }
+
+      &__button:not(:first-child) {
+        margin-top: 8px;
+      }
+    }
+
+    .room-facilities {
+      margin-top: 16px;
+
+      .input {
+        margin-top: 5px;
+      }
+    }
+
+    .room-additional-facilities {
+      margin-top: 30px;
+    }
+  }
+
+  &__room-cards {
+    display: grid;
+
+    @media(max-width: 650px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 15px;
+    }
+  }
+
+  &__room-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-gap: 12px;
+    margin-top: 11px;
+    margin-left: 1px;
+
+    .hotel-card {
+      margin-top: 9px;
+    }
+  }
+
+  &__pagination {
+    margin-top: 41px;
+    margin-left: -12px;
+    justify-self: center;
+  }
+}

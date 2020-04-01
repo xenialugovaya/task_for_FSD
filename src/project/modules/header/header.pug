@@ -1,0 +1,32 @@
+include ../logo/logo
+include ../menu/menu
+include ../button-big/button-big
+include ../button-ghost/button-ghost
+
+mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})   
+  - let classes = ['header']
+  if loggedIn
+    - classes.push('header_logged-in')
+  div(class=classes)
+    .header__mburger
+      a(class='mburger mburger--spin' href='#collapse-menu')  
+        b
+        b
+        b
+    nav.header__menu-mobile.js-header__menu-mobile#collapse-menu
+      +menu({links: links}) 
+    .header__logo
+      +logo-icon({disabled: false})
+    nav.header__menu
+      +menu({links: links, eng: eng})
+    if !loggedIn
+      .header__buttons
+        .button_login
+          +button-ghost({text: buttonLogin})
+          a.icon-login(href='/mock-address/')
+        .button_register
+          +button-big({text: buttonRegister, type: 'button'})
+          a.icon-register(href='/mock-address/')
+    else
+      .header__account-link
+        .user-name= user

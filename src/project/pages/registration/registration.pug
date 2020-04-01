@@ -1,0 +1,12 @@
+extends ../../layout/main/main
+include ../../modules/form-registration/form-registration
+
+block variables
+
+  -var pageTitle= 'Registration'
+
+block content
+  .registration-page
+    .registration-page__content
+      .registration-page__form-registration
+        +form-registration()

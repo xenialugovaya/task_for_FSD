@@ -1,0 +1,13 @@
+include ../like-button/like-button
+
+mixin review({image, author, date, text, likeNumber, likeName, likeValue, likeChecked})
+  .review
+    .review__avatar
+      .avatar-image
+        img(src=require('../../modules/review/images/' + image) alt='avatar')
+      .avatar-like
+        +like-button({number: likeNumber, name: likeName, value: likeValue, checked: likeChecked})
+    .review__body 
+      .name #{author}
+      .date #{date}
+      .text #{text}

@@ -1,0 +1,18 @@
+@import '../../../assets/scss/utils/vars.scss';
+@import '../../../assets/scss/utils/mixins.scss';
+
+.colors-types {
+  &__content {
+    padding: 145px 191px 145px 150px;
+    width: 1440px;
+    font-family: $mainFont;
+    display: flex;
+    justify-content: space-between;
+
+
+    .text-column {
+      margin-top: 3px;
+    }
+
+  }
+}

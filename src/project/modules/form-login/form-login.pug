@@ -1,0 +1,18 @@
+include ../calendar-inputs/calendar-inputs
+include ../input-dropdown/input-dropdown
+include ../form-footer/form-footer
+
+mixin form-login()
+  .login.form-wrapper
+    form.login__form
+      h1.login__header Найдём номера под ваши пожелания
+      .login__calendar-inputs
+        +calendar-inputs({
+          titles: ['прибытие', 'выезд'],
+          placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+        })
+      .login__input-dropdown
+        h3.input-header гости
+        +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
+      .login__footer
+        +form-footer({bigButtonText: 'Подобрать номер'})
