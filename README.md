@@ -1,17 +1,17 @@
 # Hotel booking service template
 
 <p>To install project run command:</p>
-<code><pre>$ git clone https://github.com/xenialugovaya/Hotel-booking-service-template</pre></code>
+<pre><code>$ git clone https://github.com/xenialugovaya/Hotel-booking-service-template</code></pre>
 <p>To build project:</p>
-<code><pre>
+<pre><code>
 $ cd Hotel-booking-service-template
 $ npm i
 $ npm run build
-</pre></code>
+</code></pre>
 <p>To run development mode and start server:</p>
-<code><pre>
+<pre><code>
 $ npm run dev
-</pre></code>
+</code></pre>
 
 <h2>See project</h2>
 <a href='https://xenialugovaya.github.io/Hotel-booking-service-template/dist/index.html'>menu</a>
