@@ -128,8 +128,8 @@
       display: inline-block;
       margin-top: 15px;
 
-      &:nth-child(3) {
-        margin-left: 20px;
+      &:last-child {
+       margin-left: 20px;
       }
     }
   }

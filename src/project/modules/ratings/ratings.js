@@ -1,24 +1,15 @@
 import $ from 'jquery';
+import StarRating from './StarRating';
 import './ratings.scss';
 
 
-class Ratings {
-  constructor(element) {
-    this.$elem = element;
-    this.render();
-  }
-
-  render() {
-    this.$elem.rating();
-  }
-}
-
-export default function renderComponent() {
+export default function renderStarRating() {
   $(() => {
     $('.js-rating').each((index, node) => {
-      new Ratings($(node));
+      const starRating = new StarRating($(node));
+      return starRating;
     });
   });
 }
 
-renderComponent();
+renderStarRating();

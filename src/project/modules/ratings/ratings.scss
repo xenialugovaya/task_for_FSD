@@ -2,28 +2,46 @@
 
 .rating {
   height: 24px;
-}
+ // width: 100px;
+  display: flex;
 
-.star {
-  &:before {
-    content: "\e83a";
+
+  &__star-input {
+    position: absolute;
+    opacity: 0;
   }
 
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  color: $purple;
-}
+  &__star{
+    position: relative;
+    width: 24px;
+    height: 24px;
 
-.fullStar {
-  &:before {
-    content: '\e838';
-  }
 
-}
-
-.tmp_fs {
-  &:before {
-    content: '\e838';
+    &:before {
+      position: absolute;
+      content: "\e83a";
+      font-family: 'Material Icons';
+      font-size: 24px;
+      font-weight: 200;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      background: $purpleGradient;
+      background-clip: text;
+      -webkit-text-fill-color:transparent;
+    }
+    &.star-checked, &.star-hover, &:hover {
+      &:before {
+        position: absolute;
+        content: '\e838';
+        font-family: 'Material Icons';
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background: $purpleGradient;
+        background-clip: text;
+        -webkit-text-fill-color:transparent;
+      }
+    }
   }
 }
