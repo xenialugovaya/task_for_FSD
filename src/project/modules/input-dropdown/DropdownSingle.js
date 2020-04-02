@@ -69,7 +69,7 @@ export default class DropdownSingle extends Dropdown {
   }
 
   updateText(totalItems) {
-    const wordForm = DropdownSingle.getWordForm(totalItems, this.wordForms);
+    const wordForm = Dropdown.getWordForm(totalItems, this.wordForms);
     const text = `${totalItems} ${wordForm}`;
     this.setInputText(text);
   }

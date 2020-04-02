@@ -1,5 +1,6 @@
-import './ratings.scss';
 import $ from 'jquery';
+import './ratings.scss';
+
 
 class Ratings {
   constructor(element) {

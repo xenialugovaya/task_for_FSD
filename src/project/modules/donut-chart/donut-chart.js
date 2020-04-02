@@ -1,5 +1,6 @@
-import './donut-chart.scss';
 import $ from 'jquery';
+import './donut-chart.scss';
+
 
 class DonutChart {
   constructor(element) {

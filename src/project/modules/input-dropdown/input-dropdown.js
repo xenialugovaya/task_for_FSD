@@ -1,7 +1,7 @@
-import './input-dropdown.scss';
 import $ from 'jquery';
 import DropdownSingle from './DropdownSingle';
 import DropdownMultiple from './DropdownMultiple';
+import './input-dropdown.scss';
 
 export default function renderDropdown() {
   $(() => {

@@ -1,7 +1,7 @@
-import './hotel-card.scss';
 import $ from 'jquery';
 import 'lightslider/src/js/lightslider';
 import 'lightslider/src/css/lightslider.css';
+import './hotel-card.scss';
 
 class ImageSlider {
   constructor(element) {
