@@ -1,4 +1,5 @@
 import './checkbox-expandable.scss';
+import $ from 'jquery';
 
 class CheckboxExpandable {
   constructor(element) {

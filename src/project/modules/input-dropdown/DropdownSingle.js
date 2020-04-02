@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import Dropdown from './abstract-dropdown';
+import Dropdown from './Dropdown';
 
 export default class DropdownSingle extends Dropdown {
   constructor(element) {
@@ -62,7 +62,7 @@ export default class DropdownSingle extends Dropdown {
     $controls.each((index, node) => {
       const $counter = $(node).find('.counter');
       const $decrement = $(node).find('.button-decrement');
-      while (parseInt($counter.html()) > 0) {
+      while (parseInt($counter.html(), 10) > 0) {
         $decrement.click();
       }
     });

@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import Dropdown from './abstract-dropdown';
+import Dropdown from './Dropdown';
 
 export default class DropdownMultiple extends Dropdown {
   constructor(element) {
@@ -28,7 +28,7 @@ export default class DropdownMultiple extends Dropdown {
     let text = '';
     $items.each((index, item) => {
       const $counter = $(item).find('.counter');
-      const itemCount = parseInt($counter.text());
+      const itemCount = parseInt($counter.text(), 10);
       const wordForm = Dropdown.getWordForm(itemCount, this.wordForms[index]);
       if (index === 0) {
         text += `${itemCount} ${wordForm}`;
