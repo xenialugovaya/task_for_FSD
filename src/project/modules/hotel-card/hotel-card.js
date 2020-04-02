@@ -1,6 +1,7 @@
 import './hotel-card.scss';
-import 'lightslider/src/js/lightslider.js'
-import 'lightslider/src/css/lightslider.css'
+import $ from 'jquery';
+import 'lightslider/src/js/lightslider';
+import 'lightslider/src/css/lightslider.css';
 
 class ImageSlider {
   constructor(element) {
@@ -21,7 +22,8 @@ class ImageSlider {
 export default function renderElement() {
   $(() => {
     $('.js-hotel-images-list').each((index, node) => {
-      new ImageSlider($(node));
+      const imageSlider = new ImageSlider($(node));
+      return imageSlider;
     });
   });
 }

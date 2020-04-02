@@ -105,7 +105,7 @@
   height: 41px;
 
 
-  font-family: 'Montserrat-bold', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   font-stretch: extra-expanded;
@@ -121,9 +121,11 @@
 
 [data-action='clear'] {
   color: $dark_shade_50;
+  font-weight: bold;
 }
 
 [data-action='add'] {
   color: $purple;
   text-align: right;
+  font-weight: bold;
 }

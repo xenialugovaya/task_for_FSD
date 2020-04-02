@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import Dropdown from './abstract-dropdown';
 
 export default class DropdownSingle extends Dropdown {

@@ -1,11 +1,12 @@
 import './ratings.scss';
-
+import $ from 'jquery';
 
 class Ratings {
   constructor(element) {
     this.$elem = element;
     this.render();
   }
+
   render() {
     this.$elem.rating();
   }

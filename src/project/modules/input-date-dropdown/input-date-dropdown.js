@@ -1,5 +1,5 @@
 import './input-date-dropdown.scss';
-
+import $ from 'jquery';
 
 class DropCalendar {
   constructor(element) {
@@ -21,8 +21,9 @@ class DropCalendar {
 export default function renderComponent() {
   $(() => {
     $('.js-input_date-dropdown').each((index, node) => {
-      new DropCalendar($(node));
+      const dropCalendar = new DropCalendar($(node));
+      return dropCalendar;
     });
-  })
+  });
 }
 renderComponent();

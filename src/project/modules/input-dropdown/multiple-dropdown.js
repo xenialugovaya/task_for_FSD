@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import Dropdown from './abstract-dropdown';
 
 export default class DropdownMultiple extends Dropdown {
