@@ -21,12 +21,12 @@ mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})
       +menu({links: links, eng: eng})
     if !loggedIn
       .header__buttons
-        .button_login
+        .header__button-login
           +button-ghost({text: buttonLogin})
-          a.icon-login(href='/mock-address/')
-        .button_register
+          a.header__icon-login(href='/mock-address/')
+        .header__button-register
           +button-big({text: buttonRegister, type: 'button'})
           a.icon-register(href='/mock-address/')
     else
       .header__account-link
-        .user-name= user
+        .header__user-name= user

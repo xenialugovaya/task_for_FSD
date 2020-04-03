@@ -1,8 +1,8 @@
 mixin color-box({colorClass, colorName, colorCode})
-  - let classes = ['color-box']
-  - classes.push(colorClass)
-  .wrap-color
-    div(class=classes)
-    .color-text
-      .color-head #{colorName}
-      .color-descr #{colorCode}
+  - let classes = ''
+  - classes = 'color-box__color_' + colorClass
+  .color-box
+    .color-box__color(class=classes)
+    .color-box__text
+      .color-box__name #{colorName}
+      .color-box__descr #{colorCode}

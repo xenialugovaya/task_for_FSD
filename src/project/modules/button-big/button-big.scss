@@ -10,14 +10,14 @@
   &_with-arrow {
     position: relative;
     width: 100%; //320px;
+  }
 
-    .material-icons::before {
-      @include right-arrow;
-      right: 10px;
-      position: absolute;
-      color: $white;
-      top: 10px;
-    }
+  &__arrow::before {
+    @include right-arrow;
+    right: 10px;
+    position: absolute;
+    color: $white;
+    top: 10px;
   }
 
   &_disabled {

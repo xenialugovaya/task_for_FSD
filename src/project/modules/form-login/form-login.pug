@@ -12,7 +12,7 @@ mixin form-login()
           placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
         })
       .login__input-dropdown
-        h3.input-header гости
+        h3.login__input-dropdown-header гости
         +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
       .login__footer
         +form-footer({bigButtonText: 'Подобрать номер'})

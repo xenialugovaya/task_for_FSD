@@ -13,14 +13,11 @@
 
   &__input-dropdown {
     margin-top: 20px;
+  }
 
-    .input-header {
-      @include h3;
-    }
-
-    .input {
-      margin-top: 5px;
-    }
+  &__input-dropdown-header {
+    @include h3;
+    margin-bottom: 5px;
   }
 
   &__footer {

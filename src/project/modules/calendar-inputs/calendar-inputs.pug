@@ -5,7 +5,7 @@ mixin calendar-inputs({titles, placeholders})
     .calendar-inputs__wrap-flex
       each title, index in titles
         .calendar-inputs__wrap-input
-          .calendar-inputs__wrap-input__input-header #{title}
-          input(class='input input_small' placeholder=placeholders[index])
+          .calendar-inputs__input-header #{title}
+          input(class='calendar-inputs__input-small input' placeholder=placeholders[index])
     .calendar-inputs__calendar-dropdown
       +calendar()

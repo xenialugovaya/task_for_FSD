@@ -20,11 +20,10 @@
   &__company-info-block {
     grid-area: logo;
     max-width: 260px;
+  }
 
-
-    .footer__text {
-      margin-top: 17px;
-    }
+  &__company-info-block-text {
+    margin-top: 17px;
   }
 
   &__menu {
@@ -57,30 +56,26 @@
   }
 
 
-
   &__subscription-block {
     grid-area: subscription;
     max-width: 260px;
     margin-top: 5px;
     text-align: left;
     margin-left: 5px;
+  }
 
+  &__subscription-title {
+    @include h3;
+  }
 
-    .footer__subscription-title {
-      @include h3;
-    }
+  &__subscription-text {
+    margin-top: 18px;
+  }
 
-    .footer__text {
-      margin-top: 18px;
-    }
+  &__input-subscription {
+    margin-top: 23px;
+    width: 260px;
 
-    .footer__input-subscription {
-      margin-top: 23px;
-
-      .input {
-        width: 260px;
-      }
-    }
   }
 
   &__copyright-section {

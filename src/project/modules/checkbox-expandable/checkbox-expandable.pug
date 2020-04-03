@@ -8,6 +8,6 @@ mixin checkbox-expandable({title, items, open})
     .checkbox-expandable__title.js-checkbox-expandable__title(class=classes) #{title}
     .checkbox-expandable__items
       each item, index in items
-        .item
+        .checkbox-expandable__item
           +checkbox({title: item.title, name: index, value: index, checked: item.checked})
 

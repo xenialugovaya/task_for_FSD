@@ -15,7 +15,7 @@
   height: 0;
 
   &:not(:checked) {
-    +.like-body {
+    +.like-button__body {
       position: absolute;
       cursor: pointer;
       top: 0;
@@ -29,7 +29,7 @@
       height: 20px;
     }
 
-    +.like-body .material-icons:before {
+    +.like-button__body .material-icons:before {
       position: absolute;
       top: 4px;
       left: 4px;
@@ -41,7 +41,7 @@
       color: $dark_shade_25;
     }
 
-    +.like-body .like-counter {
+    +.like-button__body .like-counter {
       position: absolute;
       top: 3px;
       left: 20px;
@@ -56,7 +56,7 @@
   }
 
   &:checked {
-    +.like-body {
+    +.like-button__body {
       position: absolute;
       cursor: pointer;
       background-color: #FFFFFF;
@@ -70,7 +70,7 @@
       height: 20px;
     }
 
-    +.like-body .material-icons:before {
+    +.like-button__body .material-icons:before {
       position: absolute;
       top: 4px;
       left: 4px;
@@ -83,7 +83,7 @@
 
     }
 
-    +.like-body .like-counter {
+    +.like-button__body .like-counter {
       color: $purple;
       top: 3px;
       left: 20px;

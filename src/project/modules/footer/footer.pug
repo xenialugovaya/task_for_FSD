@@ -12,7 +12,7 @@ mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyrigh
       .footer__company-info-block
         .footer__logo
           +logo-icon({disabled:false})
-        p.footer__text= mainText
+        p.footer__company-info-block-text= mainText
 
       .footer__menu
         each column in menu
@@ -21,11 +21,11 @@ mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyrigh
 
       .footer__subscription-block
         h3.footer__subscription-title= title
-        p.footer__text= text
+        p.footer__subscription-text= text
         .footer__input-subscription
           +input-subscription({placeholder: placeholder})
 
     section.footer__copyright-section
-      p.footer__text= copyright
+      p.footer__copyright-section-text= copyright
       .footer__social-icons
         +social-icons()

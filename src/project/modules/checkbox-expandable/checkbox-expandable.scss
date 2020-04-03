@@ -40,10 +40,10 @@
 
   &__items {
     margin-top: 17px;
+  }
 
-    .item:not(:first-child) {
-      margin-top: 10px;
-    }
+  &__item:not(:first-child) {
+    margin-top: 10px;
   }
 
 
