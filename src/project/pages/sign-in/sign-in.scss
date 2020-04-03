@@ -1,4 +1,4 @@
-.signin-page {
+.sign-in-page {
   flex: 1 0 auto;
 
   &__content {
@@ -18,7 +18,7 @@
     }
   }
 
-  &__form-signup {
+  &__form-sign-up {
     width: 381px;
 
     @media (max-width: 400px) {

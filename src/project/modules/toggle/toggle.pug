@@ -1,6 +1,6 @@
 mixin toggle({title, value, name, checked})
   .toggle-button
-    label.toggle-label
-      input(class='toggle' type='checkbox' name=name value=value checked=checked)
-      span.slider-body
-    span.toggle-title #{title}
+    label.toggle-button__label
+      input(class='toggle-button__toggle' type='checkbox' name=name value=value checked=checked)
+      span.toggle-button__slider-body
+    span.toggle-button__title #{title}

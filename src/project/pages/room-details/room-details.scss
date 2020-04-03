@@ -17,10 +17,10 @@
       height: 100%;
       object-fit: cover;
     }
+  }
 
-    .main-image {
-      grid-row: span 2;
-    }
+  &__main-image {
+    grid-row: span 2;
   }
 
   &__content {
@@ -65,11 +65,10 @@
 
   }
 
-  &__room-icons {
-    &__icon {
-      margin-top: 20px;
-    }
+  &__icon {
+    margin-top: 20px;
   }
+
 
   &__room-chart {
     margin-left: 10.5%;
@@ -78,11 +77,11 @@
       margin-left: 0;
       margin-top: 10px;
     }
+  }
 
-    &__chart {
-      margin-top: 10px;
-      margin-left: -10px;
-    }
+  &__chart {
+    margin-top: 10px;
+    margin-left: -10px;
   }
 
   &__booking-form {
@@ -102,23 +101,22 @@
     grid-column: span 2;
     margin-top: 5px;
     max-width: 711px;
-
-    &__header {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &__review {
-      margin-top: 19px;
-
-      &:last-child {
-        margin-top: 23px;
-      }
-    }
-
   }
 
-  &__text {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__review {
+    margin-top: 19px;
+
+    &:last-child {
+      margin-top: 23px;
+    }
+  }
+
+  &__text-block {
     grid-column: span 2;
     margin-top: 25px;
     display: flex;
@@ -126,36 +124,34 @@
     @media (max-width: 650px) {
       display: block;
     }
+  }
 
-    .room-bullet-list {
-      max-width: 260px;
-      min-width: 250px;
+  &__bullet-list {
+    max-width: 260px;
+    min-width: 250px;
+  }
 
-      &__header {
-        margin-left: 20px;
-      }
+  &__bullet-list-header {
+    margin-left: 20px;
+  }
 
-      &__group {
-        margin-top: 16px;
-      }
+  &__bullet-list-group {
+    margin-top: 16px;
+  }
 
-    }
+  &__short-text {
+    max-width: 340px;
+    min-width: 300px;
+    margin-left: 13%;
 
-    .room-short-text {
-      max-width: 340px;
-      min-width: 300px;
-      margin-left: 13%;
-
-      @media (max-width: 650px) {
-        margin-left: 0;
-        margin-top: 18px;
-      }
-
-      .text {
-        margin-top: 18px;
-      }
+    @media (max-width: 650px) {
+      margin-left: 0;
+      margin-top: 18px;
     }
   }
 
+  &__text {
+    margin-top: 18px;
+  }
 
 }

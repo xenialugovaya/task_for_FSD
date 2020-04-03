@@ -16,35 +16,35 @@ block content
   .search-room-page
     .search-room-page__content
       aside.search-room-page__filter-column
-        .dates-selection
+        .search-room-page__dates-selection
           h3 даты пребывания в отеле
           +input-date-dropdown({placeholder: '19 авг - 23 авг', type: 'text'})
-        .guests-selection
+        .search-room-page__guests-selection
           h3 гости
           +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
-        .price-selection
+        .search-room-page__price-selection
           +range-slider('диапазон цены')
-          p.text Стоимость за сутки пребывания в номере
-        .room-options
+          p.search-room-page__price-selection-text Стоимость за сутки пребывания в номере
+        .search-room-page__room-options
           h3 Checkbox Buttons
-          .room-options__group
-            .room-options__button
+          .search-room-page__room-options-group
+            .search-room-page__room-options-button
               +checkbox({title: 'Можно курить', name: '1', value: '1'})
-            .room-options__button
+            .search-room-page__room-options-button
               +checkbox({title: 'Можно с питомцами', name: '2', value: '2', checked: 'checked'})
-            .room-options__button
+            .search-room-page__room-options-button
               +checkbox({title: 'Можно пригласить гостей (до 10 человек)', name: '3', value: '3', checked: 'checked'})
-        .room-availability
+        .search-room-page__room-availability
           h3 доступность
-          .room-availability__group
-            .room-availability__button
+          .search-room-page__room-availability-group
+            .search-room-page__room-availability-button
               +checkbox({title: 'Широкий коридор', name: '1', value: '1', rich: true, description: 'Ширина коридоров в номере не менее 91 см.'})   
-            .room-availability__button
+            .search-room-page__room-availability-button
               +checkbox({title: 'Помощник для инвалидов', name: '2', value: '2', rich: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.'})   
-        .room-facilities
+        .search-room-page__room-facilities
           h3 удобства номера
           +input-dropdown({items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true})  
-        .room-additional-facilities
+        .search-room-page__room-additional-facilities
           +checkbox-expandable({title: 'дополнительные удобства', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}]})
       section.search-room-page__room-cards
         h1.search-room-page__title Номера, которые мы для вас подобрали

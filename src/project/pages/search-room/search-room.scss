@@ -29,67 +29,70 @@
     @media(max-width: 650px) {
       max-width: 266px;
     }
+  }
 
-    .dates-selection {
-      .input {
-        margin-top: 5px;
-      }
+  &__dates-selection {
+    .input {
+      margin-top: 5px;
     }
+  }
 
-    .guests-selection {
-      margin-top: 20px;
+  &__guests-selection {
+    margin-top: 20px;
 
-      .input {
-        max-width: 266px;
-        margin-top: 5px;
-      }
+    .input {
+      max-width: 266px;
+      margin-top: 5px;
     }
+  }
 
-    .price-selection {
-      margin-top: 30px;
+  &__price-selection {
+    margin-top: 30px;
+  }
 
-      .text {
-        font-size: 12px;
-        color: $dark_shade_50;
-        margin-top: 9px;
-      }
+  &__price-selection-text {
+    font-size: 12px;
+    color: $dark_shade_50;
+    margin-top: 9px;
+  }
+
+  &__room-options {
+    margin-top: 25px;
+
+  }
+
+  &__room-options-group {
+    margin-top: 16px;
+  }
+
+  &__room-options-button:not(:first-child) {
+    margin-top: 10px;
+  }
+
+  &__room-availability {
+    margin-top: 30px;
+
+
+  }
+
+  &__room-availability-group {
+    margin-top: 16px;
+  }
+
+  &__room-availability-button:not(:first-child) {
+    margin-top: 8px;
+  }
+
+  &__room-facilities {
+    margin-top: 16px;
+
+    .input {
+      margin-top: 5px;
     }
+  }
 
-    .room-options {
-      margin-top: 25px;
-
-      &__group {
-        margin-top: 16px;
-      }
-
-      &__button:not(:first-child) {
-        margin-top: 10px;
-      }
-    }
-
-    .room-availability {
-      margin-top: 30px;
-
-      &__group {
-        margin-top: 16px;
-      }
-
-      &__button:not(:first-child) {
-        margin-top: 8px;
-      }
-    }
-
-    .room-facilities {
-      margin-top: 16px;
-
-      .input {
-        margin-top: 5px;
-      }
-    }
-
-    .room-additional-facilities {
-      margin-top: 30px;
-    }
+  &__room-additional-facilities {
+    margin-top: 30px;
   }
 
   &__room-cards {

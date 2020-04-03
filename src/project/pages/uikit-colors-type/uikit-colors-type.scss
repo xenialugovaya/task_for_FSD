@@ -8,11 +8,9 @@
     font-family: $mainFont;
     display: flex;
     justify-content: space-between;
+  }
 
-
-    .text-column {
-      margin-top: 3px;
-    }
-
+  &__text-column {
+    margin-top: 3px;
   }
 }

@@ -6,18 +6,18 @@
   &__header {
     display: flex;
     justify-content: space-between;
+  }
 
-    .title {
-      min-width: 95px;
-    }
+  &__selected-amount {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: $dark_shade_50;
+    font-family: $mainFont;
+    text-align: right;
+  }
 
-    .selected-amount {
-      font-size: 12px;
-      text-transform: uppercase;
-      color: $dark_shade_50;
-      font-family: $mainFont;
-      text-align: right;
-    }
+  &__title {
+    min-width: 95px;
   }
 
   &__body {
@@ -31,7 +31,6 @@
     .ui-slider-handle {
       display: block;
       border-radius: 50%;
-
     }
 
     .ui-state-default {

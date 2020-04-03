@@ -13,46 +13,43 @@
     line-height: 20px;
     display: block;
 
-
-
-    .radio {
-      position: absolute;
-      z-index: -1;
-      opacity: 0;
-
-      +.radio-button__title:before {
-        content: "";
-        width: 20px;
-        height: 20px;
-        background: $white;
-        border: 1px solid $dark_shade_25;
-        box-sizing: border-box;
-        border-radius: 10px;
-        position: absolute;
-        left: 0px;
-        top: 0px;
-      }
-
-
-      &:checked+.radio-button__title:before {
-        border: 1px solid $purple;
-      }
-
-      &:checked+.radio-button__title:after {
-        content: "";
-        width: 12px;
-        height: 12px;
-        background: $purpleGradient;
-        border-radius: 10px;
-        position: absolute;
-        left: 4px;
-        top: 4px;
-      }
-    }
-
     .radio-button__title {
       padding-left: 30px;
+    }
+  }
 
+  &__radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+
+    +.radio-button__title:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: $white;
+      border: 1px solid $dark_shade_25;
+      box-sizing: border-box;
+      border-radius: 10px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+
+
+    &:checked+.radio-button__title:before {
+      border: 1px solid $purple;
+    }
+
+    &:checked+.radio-button__title:after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      background: $purpleGradient;
+      border-radius: 10px;
+      position: absolute;
+      left: 4px;
+      top: 4px;
     }
   }
 }
