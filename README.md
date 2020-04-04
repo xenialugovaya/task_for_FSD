@@ -18,7 +18,7 @@ $ npm run deploy
 </code></pre>
 
 <h2>See project</h2>
-<a href='https://xenialugovaya.github.io/Hotel-booking-service-template/dist/index.html'>menu</a>
+<a href='https://xenialugovaya.github.io/Hotel-booking-service-template'>menu</a>
 
 
 
