@@ -3,7 +3,7 @@
 .idea
 .vscode
 node_modules
-
+dist
 
 # BD, logs
 *.log
