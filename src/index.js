@@ -9,4 +9,4 @@ function requireAll(requireContext) {
   return requireContext.keys().map(requireContext);
 }
 
-requireAll(require.context('../src/', true, /\.js$/));
+requireAll(require.context('./project/', true, /\.(scss|js)$/));

@@ -124,6 +124,11 @@ module.exports = {
             },
             sourceMap: true,
           },
+        }, {
+          loader: 'sass-resources-loader',
+          options: {
+            resources: [path.resolve(__dirname, `${PATHS.src}/assets/scss/utils/vars.scss`), path.resolve(__dirname, `${PATHS.src}/assets/scss/utils/mixins.scss`)],
+          },
         },
       ],
     }, {

@@ -1,1 +1,0 @@
-import './uikit-text.scss';

@@ -12,6 +12,10 @@ $ npm run build
 <pre><code>
 $ npm run dev
 </code></pre>
+<p>Publish to gh-pages</p>
+<pre><code>
+$ npm run deploy
+</code></pre>
 
 <h2>See project</h2>
 <a href='https://xenialugovaya.github.io/Hotel-booking-service-template/dist/index.html'>menu</a>
