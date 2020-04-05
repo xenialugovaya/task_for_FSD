@@ -46,7 +46,6 @@
     border-radius: 0;
 
     &.-focus- {
-     // background-color: rgba(map_get($datepickerBG, inRange), .2);
      background: map_get($datepickerBG, inRange);
     }
   }
@@ -71,7 +70,6 @@
   }
 
   &.-range-from- {
-   // border: 1px solid rgba(map_get($datepickerBG, selected), .5);
    border: 1px solid map_get($datepickerBG, selected);
    background-color: map_get($datepickerBG, inRange);
    font-family: 'Montserrat-bold', sans-serif;
@@ -155,7 +153,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 0 3px;
-  margin-top:-7px;
 }
 
 
@@ -168,8 +165,6 @@
   justify-content: center;
   flex: 1;
   text-align: center;
-  //text-transform: uppercase;
-  //font-size: .8em;
   font-size: 12px;
 }
 

@@ -7,9 +7,8 @@
 .datepicker--nav {
   display: flex;
   justify-content: space-between;
-  //border-bottom: 1px solid map_get($datepickerBorderColor, nav);
   min-height: $datepickerNavigationHeight;
-  padding: 16px 20px 15px 20px;
+  padding: 15px 14px 15px 14px;
 
   .-only-timepicker- & {
     display: none;
@@ -25,15 +24,23 @@
 }
 
 [data-action="next"] {
-  margin-right: -12px;
+  &:before{
+    @include right-arrow;
+    color: map_get($datepickerTextColor, navArrows);
+  }
+}
+
+[data-action="prev"] {
+  &:before{
+    @include left-arrow;
+    color: map_get($datepickerTextColor, navArrows);
+  }
 }
 
 .datepicker--nav-action {
   width: $datepickerDayCellSize;
   border-radius: $datepickerBorderRadius;
   user-select: none;
-  margin-top: 6px;
-
 
 
   &:hover {
@@ -45,16 +52,9 @@
   }
 
   svg {
-    width: 32px;
-    height: 32px;
-    fill: map_get($datepickerTextColor, navArrows);
+  display: none;
   }
 
-  path {
-    //fill: none;
-    //stroke: map_get($datepickerTextColor, navArrows);
-    // stroke-width: 2px;
-  }
 }
 
 .datepicker--nav-title {
@@ -62,15 +62,12 @@
   padding: 0 8px;
   @include h1;
   font-size: 19px;
-  margin-top: -6px;
-  margin-left: -14px;
+  letter-spacing: normal;
 
-
-  /*i {
+  i {
     font-style: normal;
-    color: map_get($datepickerTextColor, navArrows);
     margin-left: 5px;
-  }*/
+  }
 
   &:hover {
     opacity: 0.5;
@@ -91,20 +88,13 @@
   justify-content: space-between;
   padding: 0 20px 0 20px;
   margin-top: -1px;
-  //border-top: 1px solid map_get($datepickerBorderColor, nav);
+
 }
 
 .datepicker--button {
-  //color: map_get($datepickerTextColor, currentDate);
   cursor: pointer;
-  //border-radius: $datepickerBorderRadius;
   flex: 1;
-  //display: inline-block;
-  //justify-content: center;
-  //align-items: center;
   height: 41px;
-
-
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   text-transform: uppercase;

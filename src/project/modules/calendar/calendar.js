@@ -6,6 +6,7 @@ class Calendar {
   constructor(element) {
     this.$elem = element;
     this.addApplyButton();
+    this.setHeader();
   }
 
   addApplyButton() {
@@ -16,6 +17,12 @@ class Calendar {
     const $buttonsBlock = this.$elem.find('.datepicker--buttons');
     $buttonsBlock.append(applyButton);
     $(applyButton).on('click', this.handleApplyEvent.bind(this));
+  }
+
+  setHeader() {
+    const $calendarHeader = this.$elem.find('.datepicker--nav-title');
+    const $headerText = $calendarHeader.text();
+    $calendarHeader.innerText = $headerText.split(',').join('');
   }
 
   handleApplyEvent() {

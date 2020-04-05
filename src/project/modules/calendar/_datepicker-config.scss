@@ -5,7 +5,7 @@ $datepickerDayCellSize: 40px !default;
 $datepickerWidth: 320px !default;
 $datepickerMinBodyHeight: 369px !default;
 $datepickerBorderRadius: 4px !default;
-$datepickerPadding: 20px 19px 15px 20px !default;
+$datepickerPadding: 20px 19px 15px 19px !default;
 $datepickerZIndex: 100 !default;
 
 $datepickerFontFamily: 'Montserrat',
@@ -77,7 +77,6 @@ $datepickerTransitionOffset: 8px !default;
 
 
     &.-focus- {
-      // background-color: rgba(map_get($datepickerBG, inRange), .2);
       background: map_get($datepickerBG, inRange);
 
     }

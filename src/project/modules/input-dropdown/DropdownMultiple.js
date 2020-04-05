@@ -10,12 +10,12 @@ export default class DropdownMultiple extends Dropdown {
       ['ванная комната', 'ванные комнаты', 'ванных комнат'],
     ];
     this.render({
-      textDefault: '0 спален, 0 кроватей, 0 ванных комнат',
       onChange: () => {
         const text = this.updateText();
         this.setInputText(text);
       },
     });
+    this.setInputText('0 спален, 0 кроватей, 0 ванных комнат');
   }
 
   getMenuItems() {

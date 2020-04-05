@@ -6,7 +6,6 @@ export default class DropdownSingle extends Dropdown {
     super(element);
     this.wordForms = ['гость', 'гостя', 'гостей'];
     this.render({
-      textDefault: 'Cколько гостей',
       onChange: (id, itemCount, totalItems) => {
         this.updateText(totalItems);
         if (totalItems > 0) {
@@ -16,6 +15,7 @@ export default class DropdownSingle extends Dropdown {
         }
       },
     });
+    this.setInputText('Сколько гостей');
     this.addButtonsBlock();
     this.addApplyButton();
   }
