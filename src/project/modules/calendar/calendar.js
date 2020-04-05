@@ -22,7 +22,7 @@ class Calendar {
   setHeader() {
     const $calendarHeader = this.$elem.find('.datepicker--nav-title');
     const $headerText = $calendarHeader.text();
-    $calendarHeader.innerText = $headerText.split(',').join('');
+    $calendarHeader.text($headerText.split(',').join(''));
   }
 
   handleApplyEvent() {
