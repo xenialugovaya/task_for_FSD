@@ -11,7 +11,7 @@ block content
   .colors-types
     .colors-types__content
       .colors-types__color-column
-        each box in [{colorClass : 'dark_shade_100', colorName : 'Dark Shade 100%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_75', colorName : 'Dark Shade 75%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_50', colorName : 'Dark Shade 50%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_25', colorName : 'Dark Shade 25%', colorCode: '#1F2041'}, {colorClass : 'dark_shade_5', colorName : 'Dark Shade 5%', colorCode: '#1F2041'}, {colorClass : 'purple', colorName : 'Purple', colorCode: '#BC9CFF'}, {colorClass : 'green', colorName : 'Green', colorCode: '#6FCF97'}]
+        each box in [{colorClass : 'with-dark-shade-100-color', colorName : 'Dark Shade 100%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-75-color', colorName : 'Dark Shade 75%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-50-color', colorName : 'Dark Shade 50%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-25-color', colorName : 'Dark Shade 25%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-5-color', colorName : 'Dark Shade 5%', colorCode: '#1F2041'}, {colorClass : 'with-purple-color', colorName : 'Purple', colorCode: '#BC9CFF'}, {colorClass : 'with-green-color', colorName : 'Green', colorCode: '#6FCF97'}]
           .colors-types__color-box
             +color-box({colorClass: box.colorClass,colorName: box.colorName, colorCode: box.colorCode} )
       .colors-types__text-column
