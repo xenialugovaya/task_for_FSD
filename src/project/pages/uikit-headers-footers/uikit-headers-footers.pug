@@ -1,13 +1,13 @@
 extends ../../layout/uikit/uikit-layout.pug
+include ../../modules/header/header
+include ../../modules/footer/footer
+include ../../modules/footer-mobile/footer-mobile
 
 block variables
 
   -var pageTitle= 'Headers&Footers'
 
 block content
-  include ../../modules/header/header
-  include ../../modules/footer/footer
-  include ../../modules/footer-mobile/footer-mobile
 
   .headers-footers
     .headers-footers__content

@@ -1,18 +1,18 @@
 extends ../../layout/main/main
+include ../../modules/hotel-card/hotel-card
+include ../../modules/input-date-dropdown/input-date-dropdown
+include ../../modules/input-dropdown/input-dropdown
+include ../../modules/range-slider/range-slider
+include ../../modules/checkbox-expandable/checkbox-expandable
+include ../../modules/checkbox/checkbox
+include ../../modules/pagination/pagination
 
 block variables
 
   -var pageTitle= 'Search room'
 
 block content
-  include ../../modules/hotel-card/hotel-card
-  include ../../modules/input-date-dropdown/input-date-dropdown
-  include ../../modules/input-dropdown/input-dropdown
-  include ../../modules/range-slider/range-slider
-  include ../../modules/checkbox-expandable/checkbox-expandable
-  include ../../modules/checkbox/checkbox
-  include ../../modules/pagination/pagination
-
+  
   .search-room-page
     .search-room-page__content
       aside.search-room-page__filter-column

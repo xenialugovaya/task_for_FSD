@@ -1,3 +1,6 @@
+include ../../modules/header/header
+include ../../modules/footer/footer
+include ../../modules/footer-mobile/footer-mobile
 block variables
 
 doctype html
@@ -11,10 +14,7 @@ html(lang='ru')
     link(rel='mask-icon' href='/assets/favicons/safari-favicon.svg' color='#BC9CFF')
 
   body
-  include ../../modules/header/header
-  include ../../modules/footer/footer
-  include ../../modules/footer-mobile/footer-mobile
-
+ 
   .content-wrapper
     header
       +header({links: [{href : '/mock-address/change-me', name : 'О нас'}, {href :'/mock-address/change-me', name :'Услуги', dropdown : true}, {href :'/mock-address/change-me', name :'Вакансии'}, {href :'/mock-address/change-me', name : 'Новости'}, {href :'/mock-address/change-me', name : 'Соглашения', dropdown : true}], buttonLogin:'войти', buttonRegister: 'зарегистрироваться'})
