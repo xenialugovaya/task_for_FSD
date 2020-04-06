@@ -5,7 +5,6 @@ import 'jquery.maskedinput/src/jquery.maskedinput';
 class MaskedInput {
   constructor(element) {
     this.$elem = element;
-
     this.render();
   }
 
