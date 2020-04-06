@@ -1,6 +1,3 @@
-import './input-date-dropdown.scss';
-import $ from 'jquery';
-
 class DropCalendar {
   constructor(element) {
     this.$elem = element;

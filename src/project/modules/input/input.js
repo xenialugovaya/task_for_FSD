@@ -1,5 +1,3 @@
-import './input.scss';
-import $ from 'jquery';
 import 'jquery.maskedinput/src/jquery.maskedinput';
 
 class MaskedInput {

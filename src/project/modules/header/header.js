@@ -1,9 +1,7 @@
-import $ from 'jquery';
 import 'jquery.mmenu/dist/jquery.mmenu.all.css';
 import 'jquery.mmenu/dist/jquery.mmenu.all';
 import 'mburger-css/dist/mburger';
 import 'mburger-css/dist/mburger.css';
-import './header.scss';
 
 class MobileMenu {
   constructor(element) {

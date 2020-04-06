@@ -1,6 +1,3 @@
-import $ from 'jquery';
-import './checkbox-expandable.scss';
-
 class CheckboxExpandable {
   constructor(element) {
     this.$elem = element;

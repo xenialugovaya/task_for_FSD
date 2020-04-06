@@ -1,6 +1,4 @@
 import 'air-datepicker/dist/js/datepicker';
-import $ from 'jquery';
-
 
 class Calendar {
   constructor(element) {

@@ -1,7 +1,3 @@
-import './range-slider.scss';
-import $ from 'jquery';
-
-
 class RangeSlider {
   constructor(element) {
     this.$elem = element;
