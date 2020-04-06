@@ -10,3 +10,4 @@ function requireAll(requireContext) {
 }
 
 requireAll(require.context('./project/', true, /\.(scss|js)$/));
+requireAll(require.context('./assets/favicons/', true, /\.js$/));
