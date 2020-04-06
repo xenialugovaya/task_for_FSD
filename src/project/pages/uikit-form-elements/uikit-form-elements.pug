@@ -105,19 +105,26 @@ block content
         .form-elements__buttons-block
           h3 buttons
           .form-elements__small-buttons-block
-            +button-small({text: 'click me'})
-            +button-small({text: 'click me', disabled: true})
+            .form-elements__small-button
+              +button-small({text: 'click me'})
+            .form-elements__small-button  
+              +button-small({text: 'click me', disabled: true})
           .form-elements__ghost-buttons-block
-            +button-ghost({text: 'click me'})
-            +button-ghost({text: 'click me', disabled: true})
+            .form-elements__ghost-button
+              +button-ghost({text: 'click me'})
+            .form-elements__ghost-button
+              +button-ghost({text: 'click me', disabled: true})
           .form-elements__transparent-buttons-block
-            +button-transparent({text: 'click me'})
-            +button-transparent({text: 'click me', disabled: true})
+            .form-elements__transparent-button
+              +button-transparent({text: 'click me'})
+            .form-elements__transparent-button
+              +button-transparent({text: 'click me', disabled: true})
           .form-elements__big-button
             +button-big({text: 'перейти к оплате', type: 'button', hasArrow: true})
         .form-elements__pagination-block
           h3 pagination
-          +pagination({text:'1 – 12 из 100+ вариантов аренды', items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']})
+          .form-elements__pagination
+            +pagination({text:'1 – 12 из 100+ вариантов аренды', items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']})
 
       section.form-elements__dropdown-inputs
         .form-elements__dropdown-inputs-column

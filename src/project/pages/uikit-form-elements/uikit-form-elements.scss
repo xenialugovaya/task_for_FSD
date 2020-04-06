@@ -105,10 +105,6 @@
     display: inline-block;
     margin-top: 13px;
 
-    .like-button {
-      display: inline-block;
-    }
-
     &:nth-child(3) {
       margin-left: 10px;
     }
@@ -142,28 +138,37 @@
   &__small-buttons-block {
     display: block;
     margin-top: 16px;
+  }
 
-    .button-small:last-child {
+  &__small-button{
+    display: inline-block;
+    &:last-child{
       margin-left: 19px;
-    }
+    }  
   }
 
   &__ghost-buttons-block {
     display: block;
     margin-top: 30px;
+  }
 
-    .button-ghost:last-child {
+  &__ghost-button{
+    display: inline-block;
+    &:last-child{
       margin-left: 19px;
-    }
+    }  
   }
 
   &__transparent-buttons-block {
     margin-left: -5px;
     margin-top: 17px;
+  }
 
-    .button-transparent:not(:first-child) {
+  &__transparent-button{
+    display: inline-block;
+    &:last-child{
       margin-left: 6px;
-    }
+    }  
   }
 
   &__big-button {
@@ -173,10 +178,10 @@
 
   &__pagination-block {
     margin-top: 40px;
-
-    .pagination {
-      margin-top: 16px;
-    }
+  }
+  
+  &__pagination{
+    margin-top: 16px;
   }
 
   // Section dropdown inputs

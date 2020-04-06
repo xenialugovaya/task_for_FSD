@@ -17,10 +17,10 @@ block content
     .search-room-page__content
       aside.search-room-page__filter-column
         .search-room-page__dates-selection
-          h3 даты пребывания в отеле
+          h3.search-room-page__input-header даты пребывания в отеле
           +input-date-dropdown({placeholder: '19 авг - 23 авг', type: 'text'})
         .search-room-page__guests-selection
-          h3 гости
+          h3.search-room-page__input-header гости
           +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
         .search-room-page__price-selection
           +range-slider('диапазон цены')
@@ -42,24 +42,36 @@ block content
             .search-room-page__room-availability-button
               +checkbox({title: 'Помощник для инвалидов', name: '2', value: '2', rich: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.'})   
         .search-room-page__room-facilities
-          h3 удобства номера
+          h3.search-room-page__input-header удобства номера
           +input-dropdown({items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true})  
         .search-room-page__room-additional-facilities
           +checkbox-expandable({title: 'дополнительные удобства', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}]})
       section.search-room-page__room-cards
         h1.search-room-page__title Номера, которые мы для вас подобрали
         .search-room-page__room-cards-grid
-          +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})            
-          +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'}) 
-          +hotel-card ({images: ['image4.jpg', 'image4.jpg','image4.jpg', 'image4.jpg'], roomNumber: '980', roomPrice: '8 500', roomType: 'люкс', roomReviews: '35'}) 
-          +hotel-card ({images: ['image5.jpg', 'image5.jpg','image5.jpg', 'image5.jpg'], roomNumber: '856', roomPrice: '7 300', roomReviews: '19'})   
-          +hotel-card ({images: ['image6.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '740', roomPrice: '6 000', roomReviews: '44'})
-          +hotel-card ({images: ['image7.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '982', roomPrice: '5 800', roomReviews: '56'})  
-          +hotel-card ({images: ['image8.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '678', roomPrice: '5 500', roomReviews: '45'})
-          +hotel-card ({images: ['image9.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '450', roomPrice: '5 300', roomReviews: '39'})  
-          +hotel-card ({images: ['image10.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '350', roomPrice: '5 000', roomReviews: '77'})
-          +hotel-card ({images: ['image11.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '666', roomPrice: '5 000', roomReviews: '25'})
-          +hotel-card ({images: ['image12.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '444', roomPrice: '5 000', roomReviews: '15'})       
-          +hotel-card ({images: ['image13.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '352', roomPrice: '5 000', roomReviews: '55'})
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})            
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'}) 
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image4.jpg', 'image4.jpg','image4.jpg', 'image4.jpg'], roomNumber: '980', roomPrice: '8 500', roomType: 'люкс', roomReviews: '35'}) 
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image5.jpg', 'image5.jpg','image5.jpg', 'image5.jpg'], roomNumber: '856', roomPrice: '7 300', roomReviews: '19'})   
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image6.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '740', roomPrice: '6 000', roomReviews: '44'})
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image7.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '982', roomPrice: '5 800', roomReviews: '56'})  
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image8.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '678', roomPrice: '5 500', roomReviews: '45'})
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image9.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '450', roomPrice: '5 300', roomReviews: '39'})  
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image10.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '350', roomPrice: '5 000', roomReviews: '77'})
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image11.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '666', roomPrice: '5 000', roomReviews: '25'})
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image12.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '444', roomPrice: '5 000', roomReviews: '15'})       
+          .search-room-page__hotel-card
+            +hotel-card ({images: ['image13.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '352', roomPrice: '5 000', roomReviews: '55'})
         .search-room-page__pagination
           +pagination({text:'1 – 12 из 100+ вариантов аренды', items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']})

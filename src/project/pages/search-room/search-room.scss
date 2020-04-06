@@ -29,19 +29,13 @@
     }
   }
 
-  &__dates-selection {
-    .input {
-      margin-top: 5px;
-    }
+  &__input-header{
+    margin-bottom: 5px;
   }
 
   &__guests-selection {
     margin-top: 20px;
-
-    .input {
-      max-width: 266px;
-      margin-top: 5px;
-    }
+    max-width: 266px;
   }
 
   &__price-selection {
@@ -83,10 +77,6 @@
 
   &__room-facilities {
     margin-top: 16px;
-
-    .input {
-      margin-top: 5px;
-    }
   }
 
   &__room-additional-facilities {
@@ -111,10 +101,10 @@
     grid-gap: 12px;
     margin-top: 11px;
     margin-left: 1px;
+  }
 
-    .hotel-card {
-      margin-top: 9px;
-    }
+  &__hotel-card{
+    margin-top: 9px;
   }
 
   &__pagination {
