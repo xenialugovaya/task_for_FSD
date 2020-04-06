@@ -4,7 +4,7 @@ include ../button-big/button-big
 include ../button-ghost/button-ghost
 
 mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})   
-  - let classes = ['header']
+  - const classes = ['header']
   if loggedIn
     - classes.push('header_logged-in')
   div(class=classes)

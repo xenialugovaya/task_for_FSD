@@ -1,6 +1,5 @@
 mixin input({placeholder, type, masked, focused})
-  - let classes = ['input']
-  - let focus = 'false'
+  - const classes = ['input']
   if focused
     - classes.push('input_focused')
   if masked

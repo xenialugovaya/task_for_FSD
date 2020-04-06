@@ -2,7 +2,7 @@ include ../button-big/button-big
 include ../button-ghost/button-ghost
 
 mixin form-footer({bigButtonText, ghostButtonText, footerText, logout})
-  - let classes = ['form-footer']
+  - const classes = ['form-footer']
   if logout
   - classes.push('form-footer_logout')
     div(class=classes)

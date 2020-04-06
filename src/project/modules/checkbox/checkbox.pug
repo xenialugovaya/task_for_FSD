@@ -1,5 +1,5 @@
 mixin checkbox({title, name, value, description, rich, checked})
-  - let classes = ['checkbox-button']
+  - const classes = ['checkbox-button']
   if rich
     - classes.push('checkbox-button_rich')
   label(class=classes)
