@@ -22,7 +22,6 @@
 
   &__content {
     padding: 70px 9.7% 90px 9.7%;
-    /* 140px / 1440px = 0,097*/
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-gap: 1%;

@@ -1,7 +1,6 @@
 .header {
   position: relative;
   padding: 14.5px 9.7%;
-  /* 14.5px / 1440 = 0.01  140px / 1440 = 0.097 */
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   display: grid;
@@ -38,7 +37,6 @@
     grid-area: menu;
     justify-self: end;
     margin-right: 20px;
-    /* 2.7% */
 
     .menu_eng {
       margin-right: 8px;
