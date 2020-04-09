@@ -2,8 +2,9 @@
   @include button;
   line-height: 42px;
   background: $purpleGradient;
-  width: 99px;
   color: $white;
+  padding-left: 19px;
+  padding-right: 19px;
 
   &_disabled {
     opacity: 0.5;

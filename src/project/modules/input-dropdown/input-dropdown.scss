@@ -3,7 +3,8 @@
 .iqdropdown {
   @include input;
   position: relative;
-
+  height: 44px;
+  
   &:before {
     @include drop-arrow;
     top: 10px !important;

@@ -47,7 +47,6 @@
 }
 
 @mixin button {
-  height: 44px;
   border-radius: 22px;
   font-style: normal;
   font-family: $mainFont;
@@ -64,8 +63,7 @@
 }
 
 @mixin input {
-  height: 44px;
-  line-height: 44px;
+  line-height: 41px;
   background: $white;
   box-sizing: border-box;
   border-radius: 4px;

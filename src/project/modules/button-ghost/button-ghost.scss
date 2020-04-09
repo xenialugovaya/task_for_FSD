@@ -1,6 +1,5 @@
 .button-ghost {
   @include button;
-  width: 99px;
   line-height: 40px;
   color: $purple;
   background: $purpleGradient;
@@ -10,6 +9,8 @@
     background: white;
     display: block;
     border-radius: 22px;
+    padding-left: 18px;
+    padding-right: 18px;
 
   }
 
