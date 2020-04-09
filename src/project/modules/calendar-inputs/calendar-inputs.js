@@ -1,5 +1,3 @@
-import 'air-datepicker/dist/js/datepicker';
-
 class CalendarInputs {
   constructor($element) {
     this.$elem = $element;

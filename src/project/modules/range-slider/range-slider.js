@@ -1,3 +1,4 @@
+
 class RangeSlider {
   constructor(element) {
     this.$elem = element;

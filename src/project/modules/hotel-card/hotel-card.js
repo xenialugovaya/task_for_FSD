@@ -1,5 +1,5 @@
-import 'lightslider/src/js/lightslider';
-import 'lightslider/src/css/lightslider.css';
+/* eslint-disable-next-line no-unused-vars */
+import lightslider from 'lightslider';
 
 class ImageSlider {
   constructor(element) {

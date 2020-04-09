@@ -1,4 +1,5 @@
-import 'air-datepicker/dist/js/datepicker';
+/* eslint-disable-next-line no-unused-vars */
+import Datepicker from 'air-datepicker';
 
 class Calendar {
   constructor(element) {

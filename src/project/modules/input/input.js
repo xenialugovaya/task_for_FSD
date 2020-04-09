@@ -1,4 +1,5 @@
-import 'jquery.maskedinput/src/jquery.maskedinput';
+/* eslint-disable-next-line no-unused-vars */
+import mask from 'jquery.maskedinput/src/jquery.maskedinput';
 
 class MaskedInput {
   constructor(element) {

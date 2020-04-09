@@ -1,7 +1,7 @@
-import 'jquery.mmenu/dist/jquery.mmenu.all.css';
-import 'jquery.mmenu/dist/jquery.mmenu.all';
-import 'mburger-css/dist/mburger';
-import 'mburger-css/dist/mburger.css';
+/* eslint-disable-next-line no-unused-vars */
+import mmenu from 'jquery.mmenu';
+import mburger from 'mburger-css';
+
 
 class MobileMenu {
   constructor(element) {

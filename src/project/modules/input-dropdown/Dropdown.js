@@ -1,5 +1,4 @@
 import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
-import 'item-quantity-dropdown/lib/item-quantity-dropdown.min.css';
 
 export default class Dropdown {
   constructor(element) {
