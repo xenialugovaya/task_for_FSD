@@ -40,11 +40,10 @@
 }
 
 @mixin sub-header {
-  font-family: $mainFont !important;
+  font-family: $mainFont;
   font-weight: bold;
   font-size: 14px;
-  color: $dark_shade_75 !important;
-
+  color: $dark_shade_75;
 }
 
 @mixin button {
