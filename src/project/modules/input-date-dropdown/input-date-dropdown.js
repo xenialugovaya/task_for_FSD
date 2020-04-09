@@ -33,7 +33,7 @@ class DropCalendar {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-input-date-dropdown__input').each((index, node) => {
       const dropCalendar = new DropCalendar($(node));

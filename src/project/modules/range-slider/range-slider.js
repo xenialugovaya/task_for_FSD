@@ -23,7 +23,7 @@ class RangeSlider {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-range-slider').each((index, node) => {
       const rangeSlider = new RangeSlider($(node));

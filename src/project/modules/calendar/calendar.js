@@ -31,7 +31,7 @@ class Calendar {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-calendar').each((index, node) => {
       const calendar = new Calendar($(node));

@@ -15,7 +15,7 @@ class CheckboxExpandable {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-checkbox-expandable__title').each((index, node) => {
       const checkboxExpandable = new CheckboxExpandable($(node));

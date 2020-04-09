@@ -14,7 +14,7 @@ class MobileMenu {
   }
 }
 
-export default function renderMobileMenu() {
+function renderMobileMenu() {
   $(() => {
     $('.js-header__menu-mobile').each((index, node) => {
       const mobileMenu = new MobileMenu($(node));

@@ -74,7 +74,7 @@ class DropdownSingle extends Dropdown {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-input_dropdown-single').each((index, node) => {
       const dropdownSingle = new DropdownSingle($(node));

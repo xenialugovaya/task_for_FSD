@@ -39,7 +39,7 @@ class DropdownMultiple extends Dropdown {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-input_dropdown-multiple').each((index, node) => {
       const dropdownMultiple = new DropdownMultiple($(node));

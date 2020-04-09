@@ -19,7 +19,7 @@ class DonutChart {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-donut-chart').each((index, node) => {
       const donutChart = new DonutChart($(node));

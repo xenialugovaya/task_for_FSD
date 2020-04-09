@@ -56,7 +56,7 @@ class StarRating {
 }
 
 
-export default function renderStarRating() {
+function renderStarRating() {
   $(() => {
     $('.js-rating').each((index, node) => {
       const starRating = new StarRating($(node));

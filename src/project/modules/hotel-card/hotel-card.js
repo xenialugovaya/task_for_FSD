@@ -17,7 +17,7 @@ class ImageSlider {
   }
 }
 
-export default function renderElement() {
+function renderElement() {
   $(() => {
     $('.js-hotel-images-list').each((index, node) => {
       const imageSlider = new ImageSlider($(node));

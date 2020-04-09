@@ -50,7 +50,7 @@ class CalendarInputs {
   }
 }
 
-export default function renderComponent() {
+function renderComponent() {
   $(() => {
     $('.js-calendar-inputs').each((index, node) => {
       const calendarInputs = new CalendarInputs($(node));
