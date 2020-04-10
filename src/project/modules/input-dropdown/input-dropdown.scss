@@ -4,18 +4,21 @@
   @include input;
   position: relative;
   height: 44px;
-  
+
   &:before {
     @include drop-arrow;
     top: 10px !important;
   }
+
   &.menu-open {
     border-radius: 4px 4px 0px 0px;
     border: 1px solid $dark_shade_50;
   }
+
   &.input_dropdown-multiple {
     width: 100%;
   }
+
   .iqdropdown-menu {
     margin-top: -7px;
     border: 1px solid $dark_shade_50;
@@ -24,7 +27,7 @@
     box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
     padding-bottom: 6px;
     border-radius: 0px 0px 4px 4px;
-  
+
     .buttons-block {
       margin-top: 7px;
       display: flex;
@@ -33,14 +36,13 @@
       padding: 12px 7px 6px 13px;
       position: relative;
       z-index: 99999;
-  
+
       .button-transparent {
         height: 15px;
       }
     }
   }
 }
-
 
 .iqdropdown-item {
   @include h3;
@@ -141,5 +143,4 @@
   &:after {
     display: none !important;
   }
-
 }

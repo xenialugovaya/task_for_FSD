@@ -41,41 +41,4 @@
   &__item:not(:first-child) {
     margin-top: 10px;
   }
-
-
 }
-
-
-
-
-
-
-
-
-
-/*
-.expandable {
-  position: relative;
-  width: 268px;
-
-  .down-arrow::before {
-    position: absolute;
-    @include drop-arrow;
-    top: 20px;
-  }
-
-  .up-arrow::after {
-    position: absolute;
-    @include up-arrow;
-    top: 20px;
-  }
-
-  h3 {
-    cursor: pointer;
-  }
-
-  .checkbox-elements {
-    display: none;
-  }
-}
-*/

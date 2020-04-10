@@ -11,7 +11,6 @@
     display: inline-block;
     vertical-align: top;
     width: 320px;
-
   }
 
   &__input-header {
@@ -45,7 +44,6 @@
   &__input-subscription {
     display: block;
     margin-top: 42px;
-
   }
 
   &__input-date-dropdown,
@@ -125,7 +123,7 @@
 
   // Slider, buttons, pagination
 
-  &__range-slider{
+  &__range-slider {
     width: 266px;
   }
 
@@ -144,11 +142,12 @@
     margin-top: 16px;
   }
 
-  &__small-button{
+  &__small-button {
     display: inline-block;
-    &:last-child{
+
+    &:last-child {
       margin-left: 19px;
-    }  
+    }
   }
 
   &__ghost-buttons-block {
@@ -156,11 +155,12 @@
     margin-top: 30px;
   }
 
-  &__ghost-button{
+  &__ghost-button {
     display: inline-block;
-    &:last-child{
+
+    &:last-child {
       margin-left: 19px;
-    }  
+    }
   }
 
   &__transparent-buttons-block {
@@ -168,11 +168,12 @@
     margin-top: 17px;
   }
 
-  &__transparent-button{
+  &__transparent-button {
     display: inline-block;
-    &:last-child{
+
+    &:last-child {
       margin-left: 6px;
-    }  
+    }
   }
 
   &__big-button {
@@ -183,8 +184,8 @@
   &__pagination-block {
     margin-top: 40px;
   }
-  
-  &__pagination{
+
+  &__pagination {
     margin-top: 16px;
   }
 

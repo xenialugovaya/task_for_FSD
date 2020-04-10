@@ -52,7 +52,6 @@
     }
   }
 
-
   &__subscription-block {
     grid-area: subscription;
     max-width: 260px;
@@ -72,7 +71,6 @@
   &__input-subscription {
     margin-top: 23px;
     width: 260px;
-
   }
 
   &__copyright-section {
@@ -81,7 +79,6 @@
     display: flex;
     justify-content: space-between;
   }
-
 }
 
 @media (min-width: 1000px) {

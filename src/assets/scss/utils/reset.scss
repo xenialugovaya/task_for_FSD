@@ -82,10 +82,8 @@ video {
   margin: 0;
   padding: 0;
   font-size: 100%;
-  // vertical-align: baseline;
 }
 
-// Links
 a {
   text-decoration: none;
 
@@ -95,7 +93,6 @@ a {
   }
 }
 
-// List
 ul,
 li {
   list-style-type: none;
@@ -103,7 +100,6 @@ li {
   padding: 0;
 }
 
-// Headlines
 h1,
 h2,
 h3,
@@ -114,7 +110,6 @@ h6 {
   font-weight: normal;
 }
 
-// Default
 html {
   box-sizing: border-box;
 }

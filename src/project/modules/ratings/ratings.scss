@@ -1,17 +1,15 @@
 .rating {
   display: flex;
 
-
   &__star-input {
     position: absolute;
     opacity: 0;
   }
 
-  &__star{
+  &__star {
     position: relative;
     width: 24px;
     height: 24px;
-
 
     &:before {
       position: absolute;
@@ -24,9 +22,12 @@
       cursor: pointer;
       background: $purpleGradient;
       background-clip: text;
-      -webkit-text-fill-color:transparent;
+      -webkit-text-fill-color: transparent;
     }
-    &.star-checked, &.star-hover, &:hover {
+
+    &.star-checked,
+    &.star-hover,
+    &:hover {
       &:before {
         position: absolute;
         content: '\e838';
@@ -36,7 +37,7 @@
         cursor: pointer;
         background: $purpleGradient;
         background-clip: text;
-        -webkit-text-fill-color:transparent;
+        -webkit-text-fill-color: transparent;
       }
     }
   }

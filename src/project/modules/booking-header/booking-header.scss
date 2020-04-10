@@ -3,13 +3,11 @@
   justify-content: space-between;
   align-items: baseline;
 
-
   &__number-sign {
     font-family: $mainFont;
     text-transform: uppercase;
     font-size: 13px;
     color: $dark_shade_100;
-
   }
 
   &__room-number {
@@ -40,6 +38,4 @@
     font-size: 12px;
     margin-left: 4px;
   }
-
-
 }

@@ -44,7 +44,6 @@
     }
   }
 
-
   &__icons-charts {
     grid-column: span 2;
     display: flex;
@@ -58,13 +57,11 @@
       display: block;
       width: auto;
     }
-
   }
 
   &__icon {
     margin-top: 20px;
   }
-
 
   &__room-chart {
     margin-left: 10.5%;
@@ -78,7 +75,6 @@
   &__chart {
     margin-top: 10px;
     margin-left: -10px;
-
   }
 
   &__booking-form {
@@ -150,5 +146,4 @@
   &__text {
     margin-top: 18px;
   }
-
 }

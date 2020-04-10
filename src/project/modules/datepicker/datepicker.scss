@@ -64,18 +64,14 @@ $datepickerTransitionOffset: 8px !default;
 
     &.-focus- {
       background: map_get($datepickerBG, selected);
-
     }
   }
 
   &.-in-range- {
     background-color: map_get($datepickerBG, inRange);
 
-
-
     &.-focus- {
       background: map_get($datepickerBG, inRange);
-
     }
   }
 
@@ -137,7 +133,7 @@ $datepickerTransitionOffset: 8px !default;
     border-radius: 0;
 
     &.-focus- {
-     background: map_get($datepickerBG, inRange);
+      background: map_get($datepickerBG, inRange);
     }
   }
 
@@ -161,26 +157,27 @@ $datepickerTransitionOffset: 8px !default;
   }
 
   &.-range-from- {
-   border: 1px solid map_get($datepickerBG, selected);
-   background-color: map_get($datepickerBG, inRange);
-   font-family: 'Montserrat-bold', sans-serif;
+    border: 1px solid map_get($datepickerBG, selected);
+    background-color: map_get($datepickerBG, inRange);
+    font-family: 'Montserrat-bold', sans-serif;
     border-radius: 50%;
     position: relative;
- 
-   
-    &:after{
+
+
+    &:after {
       content: "";
-      position:absolute;
-      top:0;
-      right:0;
-      bottom:0;
-      left:0;
-      background:$purpleGradient;
-      opacity:0.25;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $purpleGradient;
+      opacity: 0.25;
       border-radius: 50% 0 0 50%;
-      z-index:-10;
-        }
+      z-index: -10;
+    }
   }
+
   &.-range-to- {
     //border: 1px solid rgba(map_get($datepickerBG, selected), .5);
     border: 1px solid map_get($datepickerBG, selected);
@@ -188,19 +185,18 @@ $datepickerTransitionOffset: 8px !default;
     font-family: 'Montserrat-bold', sans-serif;
     border-radius: 50%;
 
-    &:before{
+    &:before {
       content: "";
-      position:absolute;
-      top:0;
-      right:0;
-      bottom:0;
-      left:0;
-      background:$purpleGradient;
-      opacity:0.25;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: $purpleGradient;
+      opacity: 0.25;
       border-radius: 0 50% 50% 0;
-      z-index:-10;
-        }
-    
+      z-index: -10;
+    }
   }
 
   &.-range-from-.-range-to- {
@@ -208,7 +204,6 @@ $datepickerTransitionOffset: 8px !default;
     background: map_get($datepickerBG, selected);
     position: relative;
     z-index: 1000;
-
   }
 
   &.-selected- {
@@ -218,8 +213,6 @@ $datepickerTransitionOffset: 8px !default;
     background: map_get($datepickerBG, selected);
     position: relative;
     z-index: 1000;
-  
-   
 
     &.-current- {
       color: #fff;
@@ -270,8 +263,8 @@ $datepickerTransitionOffset: 8px !default;
   }
 }
 
-.datepicker--cells-days{
-  margin-top:7px;
+.datepicker--cells-days {
+  margin-top: 7px;
 }
 
 
@@ -302,6 +295,7 @@ $datepickerTransitionOffset: 8px !default;
 .datepicker--cells-years {
   height: $datepickerMinBodyHeight;
 }
+
 //  Year cell
 // -------------------------
 
@@ -313,7 +307,6 @@ $datepickerTransitionOffset: 8px !default;
     @extend %otherMonth;
   }
 }
-
 
 /* -------------------------------------------------
     Datepicker
@@ -330,15 +323,11 @@ $datepickerTransitionOffset: 8px !default;
 }
 
 .datepicker {
-
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
   border-radius: 4px;
   width: 320px;
   background: #fff;
-  //border: 1px solid map_get($datepickerBorderColor, default);
-  //box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
-  //border-radius: $datepickerBorderRadius;
   box-sizing: content-box;
   font-family: $datepickerFontFamily, sans-serif;
   font-size: $datepickerFontSize;
@@ -376,7 +365,6 @@ $datepickerTransitionOffset: 8px !default;
 
 .datepicker-inline {
   .datepicker {
-    //border-color: map-get($datepickerBorderColor, inline);
     box-shadow: none;
     position: static;
     left: auto;
@@ -489,128 +477,123 @@ $pointerHalfSize: $datepickerPointerSize / 2 - 1;
   }
 }
 
-
 /* -------------------------------------------------
     Navigation
    ------------------------------------------------- */
 
-   .datepicker--nav {
-    display: flex;
-    justify-content: space-between;
-    min-height: $datepickerNavigationHeight;
-    padding: 15px 14px 15px 14px;
-  
-    .-only-timepicker- & {
-      display: none;
-    }
-  }
-  
-  .datepicker--nav-title,
-  .datepicker--nav-action {
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  [data-action="next"] {
-    &:before{
-      @include right-arrow;
-      color: map_get($datepickerTextColor, navArrows);
-    }
-  }
-  
-  [data-action="prev"] {
-    &:before{
-      @include left-arrow;
-      color: map_get($datepickerTextColor, navArrows);
-    }
-  }
-  
-  .datepicker--nav-action {
-    width: $datepickerDayCellSize;
-    border-radius: $datepickerBorderRadius;
-    user-select: none;
-  
-  
-    &:hover {
-      opacity: 0.5;
-    }
-  
-    &.-disabled- {
-      visibility: hidden;
-    }
-  
-    svg {
+.datepicker--nav {
+  display: flex;
+  justify-content: space-between;
+  min-height: $datepickerNavigationHeight;
+  padding: 15px 14px 15px 14px;
+
+  .-only-timepicker- & {
     display: none;
-    }
-  
   }
-  
-  .datepicker--nav-title {
-    border-radius: $datepickerBorderRadius;
-    padding: 0 8px;
-    @include h1;
-    font-size: 19px;
-    letter-spacing: normal;
-  
-    i {
-      font-style: normal;
-      margin-left: 5px;
-    }
-  
-    &:hover {
-      opacity: 0.5;
-  
-    }
-  
-    &.-disabled- {
-      cursor: default;
-      background: none;
-    }
+}
+
+.datepicker--nav-title,
+.datepicker--nav-action {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+[data-action="next"] {
+  &:before {
+    @include right-arrow;
+    color: map_get($datepickerTextColor, navArrows);
   }
-  
-  //  Buttons
-  // -------------------------------------------------
-  
-  .datepicker--buttons {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 20px 0 20px;
-    margin-top: -1px;
-  
+}
+
+[data-action="prev"] {
+  &:before {
+    @include left-arrow;
+    color: map_get($datepickerTextColor, navArrows);
   }
-  
-  .datepicker--button {
-    cursor: pointer;
-    flex: 1;
-    height: 41px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-stretch: extra-expanded;
-    box-sizing: border-box;
-    background: transparent;
-  
-  
-    &:hover {
-      opacity: 0.5;
-    }
-  
-  }
-  
-  [data-action='clear'] {
-    color: $dark_shade_50;
-    font-weight: bold;
-  }
-  
-  [data-action='add'] {
-    color: $purple;
-    text-align: right;
-    font-weight: bold;
+}
+
+.datepicker--nav-action {
+  width: $datepickerDayCellSize;
+  border-radius: $datepickerBorderRadius;
+  user-select: none;
+
+
+  &:hover {
+    opacity: 0.5;
   }
 
-  
+  &.-disabled- {
+    visibility: hidden;
+  }
+
+  svg {
+    display: none;
+  }
+
+}
+
+.datepicker--nav-title {
+  border-radius: $datepickerBorderRadius;
+  padding: 0 8px;
+  @include h1;
+  font-size: 19px;
+  letter-spacing: normal;
+
+  i {
+    font-style: normal;
+    margin-left: 5px;
+  }
+
+  &:hover {
+    opacity: 0.5;
+
+  }
+
+  &.-disabled- {
+    cursor: default;
+    background: none;
+  }
+}
+
+//  Buttons
+// -------------------------------------------------
+
+.datepicker--buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 0 20px;
+  margin-top: -1px;
+}
+
+.datepicker--button {
+  cursor: pointer;
+  flex: 1;
+  height: 41px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-stretch: extra-expanded;
+  box-sizing: border-box;
+  background: transparent;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+[data-action='clear'] {
+  color: $dark_shade_50;
+  font-weight: bold;
+}
+
+[data-action='add'] {
+  color: $purple;
+  text-align: right;
+  font-weight: bold;
+}
+
 /* -------------------------------------------------
     Timepicker
    ------------------------------------------------- */
@@ -755,7 +738,7 @@ $rangeThumbBg: #dedede;
   align-items: center;
   font-size: 11px;
   height: 17px;
-  background: linear-gradient(to right,$rangeTrackBg, $rangeTrackBg) left 50%/100% $rangeTrackHeight no-repeat;
+  background: linear-gradient(to right, $rangeTrackBg, $rangeTrackBg) left 50%/100% $rangeTrackHeight no-repeat;
 
   &:first-child {
     margin-bottom: 4px;
@@ -813,16 +796,16 @@ $rangeThumbBg: #dedede;
     &::-ms-fill-lower {
       background: transparent;
     }
-    &:focus::-ms-fill-lower {
 
-    }
+    &:focus::-ms-fill-lower {}
+
     &::-ms-fill-upper {
       background: transparent;
     }
-    &:focus::-ms-fill-upper {
 
-    }
+    &:focus::-ms-fill-upper {}
   }
+
   span {
     padding: 0 12px;
   }
@@ -838,7 +821,8 @@ $rangeThumbBg: #dedede;
   width: 1em;
   height: 1em;
 
-  &:after, &:before {
+  &:after,
+  &:before {
     content: '';
     background: currentColor;
     position: absolute;
@@ -859,4 +843,3 @@ $rangeThumbBg: #dedede;
     left: calc(50% - 1px);
   }
 }
-

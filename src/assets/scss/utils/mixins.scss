@@ -7,7 +7,6 @@
   font-size: 24px;
   line-height: 30px;
   color: $dark_shade_100;
-
 }
 
 @mixin h1-cyrillic {
@@ -17,7 +16,6 @@
   font-size: 24px;
   line-height: 30px;
   color: $dark_shade_100;
-
 }
 
 @mixin h2 {
@@ -81,7 +79,6 @@
   }
 }
 
-
 @mixin drop-arrow {
   content: "\e313";
   right: 10px;
@@ -114,7 +111,6 @@
   line-height: 24px;
 }
 
-
 @mixin left-arrow {
   content: "\e5c4";
   font-family: 'Material Icons';
@@ -135,5 +131,4 @@
   .form-header {
     @include h1-cyrillic;
   }
-
 }
