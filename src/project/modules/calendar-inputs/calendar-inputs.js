@@ -5,7 +5,7 @@ class CalendarInputs {
   }
 
   bindEventListeners() {
-    this.$elem.find('.calendar-inputs__input-small').on('click', this.showCalendar.bind(this));
+    this.$elem.find('.calendar-inputs__wrap-input').on('click', this.showCalendar.bind(this));
     this.$elem.find('span[data-action="add"]').on('click', this.hideCalendar.bind(this));
     this.$elem.find('.datepicker-here').on('click', this.setDatesToInputs.bind(this));
   }

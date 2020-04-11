@@ -4,11 +4,13 @@
   flex-direction: row-reverse;
   position: relative;
   width: 100%;
+  background: transparent;
 
   &__input {
     @include input;
     width: 100%;
     cursor: pointer;
+    background: transparent;
 
     &::placeholder {
       color: $dark_shade_75;
@@ -17,5 +19,7 @@
 
   &::after {
     @include drop-arrow;
+    cursor: pointer;
+    z-index: -1;
   }
 }

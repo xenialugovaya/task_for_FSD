@@ -13,6 +13,7 @@
     &:after {
       @include drop-arrow;
       bottom: 10px;
+      cursor: pointer;
     }
   }
 
