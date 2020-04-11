@@ -18,4 +18,8 @@
     font-family: $mainFont;
     font-weight: bold;
   }
+
+  &:hover {
+    color: $dark_shade_75;
+  }
 }

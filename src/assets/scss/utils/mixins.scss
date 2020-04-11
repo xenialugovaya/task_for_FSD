@@ -70,7 +70,8 @@
   padding-left: 15px;
   border: 1px solid $dark_shade_25;
 
-  &:focus {
+  &:focus,
+  &:hover {
     &::placeholder {
       color: $dark_shade_75;
     }
