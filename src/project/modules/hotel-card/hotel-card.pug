@@ -5,7 +5,7 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, roomReviews, sliderCo
   - const classes = ['hotel-card__slider']
   if sliderControls
     - classes.push('hotel-card__slider_with-controls')
-  .hotel-card
+  .hotel-card.js-hotel-card
     div(class=classes)
       ul.hotel-card__images-list.js-hotel-images-list
         each image, index in images
