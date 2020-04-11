@@ -7,14 +7,14 @@
   &_with-arrow {
     position: relative;
     width: 100%;
-  }
 
-  &__arrow::before {
-    @include right-arrow;
-    right: 10px;
-    position: absolute;
-    color: $white;
-    top: 10px;
+    &:before {
+      @include right-arrow;
+      right: 10px;
+      position: absolute;
+      color: $white;
+      top: 10px;
+    }
   }
 
   &_disabled {
