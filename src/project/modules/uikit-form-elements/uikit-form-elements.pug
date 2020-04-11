@@ -1,32 +1,26 @@
-extends ../../layout/uikit/uikit-layout.pug
-include ../../modules/checkbox/checkbox
-include ../../modules/checkbox-expandable/checkbox-expandable
-include ../../modules/toggle/toggle
-include ../../modules/like-button/like-button
-include ../../modules/radio-button/radio-button
-include ../../modules/ratings/ratings
-include ../../modules/button-big/button-big
-include ../../modules/button-ghost/button-ghost
-include ../../modules/button-small/button-small
-include ../../modules/button-transparent/button-transparent
-include ../../modules/pagination/pagination
-include ../../modules/bullet-list/bullet-list
-include ../../modules/room-icon/room-icon
-include ../../modules/review/review
-include ../../modules/calendar-inputs/calendar-inputs
-include ../../modules/datepicker/datepicker
-include ../../modules/range-slider/range-slider
-include ../../modules/input/input
-include ../../modules/input-dropdown/input-dropdown
-include ../../modules/input-subscription/input-subscription
-include ../../modules/input-date-dropdown/input-date-dropdown
+include ../checkbox/checkbox
+include ../checkbox-expandable/checkbox-expandable
+include ../toggle/toggle
+include ../like-button/like-button
+include ../radio-button/radio-button
+include ../ratings/ratings
+include ../button-big/button-big
+include ../button-ghost/button-ghost
+include ../button-small/button-small
+include ../button-transparent/button-transparent
+include ../pagination/pagination
+include ../bullet-list/bullet-list
+include ../room-icon/room-icon
+include ../review/review
+include ../calendar-inputs/calendar-inputs
+include ../datepicker/datepicker
+include ../range-slider/range-slider
+include ../input/input
+include ../input-dropdown/input-dropdown
+include ../input-subscription/input-subscription
+include ../input-date-dropdown/input-date-dropdown
 
-block variables
-
-  - let pageTitle= 'Form elements'
-
-block content
-
+mixin uikit-form-elements()
   .form-elements
     .form-elements__content
       section.form-elements__inputs

@@ -1,14 +1,8 @@
-extends ../../layout/uikit/uikit-layout.pug
 include ../../modules/header/header
 include ../../modules/footer/footer
 include ../../modules/footer-mobile/footer-mobile
 
-block variables
-
-  - let pageTitle= 'Headers&Footers'
-
-block content
-
+mixin uikit-headers-footers()
   .headers-footers
     .headers-footers__content
       .headers-footers__header-loggedout

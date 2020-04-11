@@ -1,17 +1,11 @@
-extends ../../layout/uikit/uikit-layout.pug
-include ../../modules/logo/logo
-include ../../modules/hotel-card/hotel-card
-include ../../modules/datepicker/datepicker
-include ../../modules/form-login/form-login
-include ../../modules/form-registration/form-registration
-include ../../modules/form-signup/form-signup
-include ../../modules/form-booking/form-booking
+include ../hotel-card/hotel-card
+include ../datepicker/datepicker
+include ../form-login/form-login
+include ../form-registration/form-registration
+include ../form-signup/form-signup
+include ../form-booking/form-booking
 
-block variables
-
-  - let pageTitle= 'Cards'
-
-block content
+mixin uikit-cards()
   .cards-page
     .cards-page__content
       .cards-page__column

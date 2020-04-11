@@ -1,13 +1,7 @@
-extends ../../layout/uikit/uikit-layout.pug
-include ../../modules/color-box/color-box
-include ../../modules/uikit-text/uikit-text
+include ../color-box/color-box
+include ../uikit-text/uikit-text
 
-block variables
-
-  - let pageTitle= 'Colors&Type'
-
-block content
-
+mixin uikit-colors-type()
   .colors-types
     .colors-types__content
       .colors-types__color-column

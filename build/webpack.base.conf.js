@@ -27,7 +27,7 @@ fs
 const htmlPlugins = pages.map((fileName) => new HtmlWebpackPlugin({
 
   filename: `${fileName}.html`,
-  template: `./src/project/pages/${fileName}/${fileName}.pug`,
+  template: `./src/project/pages/${fileName}.pug`,
 
 }));
 
