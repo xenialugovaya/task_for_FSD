@@ -1,12 +1,9 @@
 extends ../../layout/main/main
-include ../../modules/form-signup/form-signup
+include ../../modules/page-sign-in/page-sign-in
 
 block variables
 
   - let pageTitle= 'Sign in'
 
 block content
-  .sign-in-page
-    .sign-in-page__content
-      .sign-in-page__form-sign-up
-        +form-signup()
+  +sign-in-page()

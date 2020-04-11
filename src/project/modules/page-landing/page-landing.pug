@@ -1,0 +1,8 @@
+include ../form-login/form-login
+
+mixin landing-page({comment})
+  .landing-page
+    .landing-page__content
+      .landing-page__form-login
+        +form-login()
+      .landing-page__comment= comment

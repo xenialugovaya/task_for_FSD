@@ -1,0 +1,12 @@
+mixin project-menu({pages, uikit})
+  .project-menu
+    .project-menu__header
+      h1 Project menu
+    ul.project-menu__menu
+      each page in pages
+        li.project-menu__item
+          a(href= page.link)= page.name
+      h2 Uikit
+      each page in uikit
+        li.project-menu__item
+          a(href= page.link)= page.name
