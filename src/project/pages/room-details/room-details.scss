@@ -1,6 +1,5 @@
 .room-details-page {
   flex: 1 0 auto;
-  max-width: 1440px;
 
   &__gallery {
     height: 485px;
@@ -26,6 +25,10 @@
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-gap: 1%;
     border-bottom: 1px solid $dark_shade_10;
+
+    @media (min-width: 1800px) {
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
 
     @media (max-width: 1100px) {
       display: flex;

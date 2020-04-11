@@ -2,7 +2,6 @@
   flex: 1 0 auto;
 
   &__content {
-    max-width: 1440px;
     padding: 30px 9.7% 73px 9.7%;
     display: grid;
     grid-template-columns: 1fr 3.135fr;
@@ -26,7 +25,7 @@
     }
   }
 
-  &__input-header{
+  &__input-header {
     margin-bottom: 5px;
   }
 
@@ -100,7 +99,7 @@
     margin-left: 1px;
   }
 
-  &__hotel-card{
+  &__hotel-card {
     margin-top: 9px;
   }
 
