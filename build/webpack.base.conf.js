@@ -15,30 +15,21 @@ const PATHS = {
   assets: 'assets/',
 };
 
-const pages = [];
-
-fs
-  .readdirSync(path.resolve(__dirname, '..', 'src', 'project', 'pages'))
-  .filter((file) => file.indexOf('base') !== 0)
-  .forEach((file) => {
-    pages.push(file.split('/', 2));
-  });
+const pages = fs.readdirSync(path.resolve(__dirname, '..', 'src', 'project', 'pages')).filter((fileName) => fileName.endsWith('.pug'));
 
 const htmlPlugins = pages.map((fileName) => new HtmlWebpackPlugin({
 
-  filename: `${fileName}.html`,
-  template: `./src/project/pages/${fileName}.pug`,
+  filename: `./${fileName.replace(/\.pug/, '.html')}`,
+  template: `./src/project/pages/${fileName}`,
 
 }));
 
 module.exports = {
-  // BASE config
   externals: {
     paths: PATHS,
   },
   entry: {
     app: PATHS.src,
-    // module: `${PATHS.src}/index.js`,
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
@@ -156,7 +147,6 @@ module.exports = {
   resolve: {
     alias: {
       '~': PATHS.src,
-
     },
   },
   plugins: [
