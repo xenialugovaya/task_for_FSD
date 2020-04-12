@@ -1,14 +1,14 @@
 include ../color-box/color-box
 include ../uikit-text/uikit-text
 
-mixin uikit-colors-type()
+mixin uikit-colors-type({colorBoxes, textTypes})
   .colors-types
     .colors-types__content
       .colors-types__color-column
-        each box in [{colorClass : 'with-dark-shade-100-color', colorName : 'Dark Shade 100%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-75-color', colorName : 'Dark Shade 75%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-50-color', colorName : 'Dark Shade 50%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-25-color', colorName : 'Dark Shade 25%', colorCode: '#1F2041'}, {colorClass : 'with-dark-shade-5-color', colorName : 'Dark Shade 5%', colorCode: '#1F2041'}, {colorClass : 'with-purple-color', colorName : 'Purple', colorCode: '#BC9CFF'}, {colorClass : 'with-green-color', colorName : 'Green', colorCode: '#6FCF97'}]
+        each box in colorBoxes
           .colors-types__color-box
-            +color-box({colorClass: box.colorClass,colorName: box.colorName, colorCode: box.colorCode} )
+            +color-box({colorClass: box.colorClass, colorName: box.colorName, colorCode: box.colorCode})
       .colors-types__text-column
-        each textType in [{textTag : 'h1', nameTage : 'H1', textSample :'This one is the sub-section or widget title'}, {textTag : 'h2', nameTage : 'H2', textSample :'Next one is the item title inside widgets'}, {textTag : 'h3', nameTage : 'H3', textSample :'This is a label or CTA text'}, {textTag : 'p', nameTage : 'Body', textSample :'This is the body text which is used for most of the design, like paragraphs, lists, etc.'}]
+        each textType in textTypes
           .colors-types__text-box
             +text-column(textType.textTag, textType.nameTage, textType.textSample)
