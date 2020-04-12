@@ -2,28 +2,20 @@ include ../../modules/header/header
 include ../../modules/footer/footer
 include ../../modules/footer-mobile/footer-mobile
 
-mixin uikit-headers-footers()
+mixin uikit-headers-footers({headers, footer})
   .headers-footers
     .headers-footers__content
       .headers-footers__header-loggedout
-        +header({links: [{href : '/mock-address/change-me', name : 'Home', active: true}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation'}], buttonLogin:'login', buttonRegister: 'register', eng: true})
+        +header(headers.loggedOut)
       .headers-footers__header-loggedin  
-        +header({links: [{href : '/mock-address/change-me', name : 'Home', active: true}, {href :'/mock-address/change-me', name :'About Us'}, {href :'/mock-address/change-me', name :'Services', dropdown : true}, {href :'/mock-address/change-me', name :'Careers'}, {href :'/mock-address/change-me', name : 'News'}, {href :'/mock-address/change-me', name : 'Documentation'}], user: 'Cosmin Negoita', loggedIn: true, eng: true})
+        +header(headers.loggedIn)
       .headers-footers__footer-desktop  
         +footer({
-          mainText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
-          menu: {
-            column1: {title: 'Navigation', links: [{href:'/mock-address/change-me', val:'About us'}, {href:'/mock-address/change-me', val:'News'}, {href:'/mock-address/change-me', val:'Support'}, {href:'/mock-address/change-me', val:'Products'}]},
-            column2: {title: 'About us', links: [{href:'/mock-address/change-me', val:'Who we are'}, {href:'/mock-address/change-me', val:'Our team'}, {href:'/mock-address/change-me', val:'Careers'}, {href:'/mock-address/change-me', val:'Investors'}]},
-            column3: {title: 'Support',links:  [{href:'/mock-address/change-me', val:'Documentation'}, {href:'/mock-address/change-me', val:'Community'}, {href:'/mock-address/change-me', val:'Get in touch'}]}
-              },
-          subscription: {
-            title: 'Subscribe to our newsletter',
-            text: 'Receive our latest news and promotions in your inbox!',
-            placeholder: 'Your Email address'
-          },
-          copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
-          eng: true
-            })
+          mainText: footer.mainText,
+          menu: footer.menu,
+          subscription: footer.subscription,
+          copyright: footer.copyright,
+          eng: footer.eng,
+        })
       .headers-footers__footer-mobile 
         +footer-mobile()
