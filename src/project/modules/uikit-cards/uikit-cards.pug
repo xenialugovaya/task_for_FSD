@@ -5,7 +5,7 @@ include ../form-registration/form-registration
 include ../form-signup/form-signup
 include ../form-booking/form-booking
 
-mixin uikit-cards()
+mixin uikit-cards({hotelCards})
   .cards-page
     .cards-page__content
       .cards-page__column
@@ -21,7 +21,6 @@ mixin uikit-cards()
       .cards-page__column
         .cards-page__calendar
           +calendar()
-        .cards-page__hotel-card
-          +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})
-        .cards-page__hotel-card 
-          +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'})
+        each card in hotelCards
+          .cards-page__hotel-card
+            +hotel-card (card)

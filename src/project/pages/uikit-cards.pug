@@ -6,4 +6,9 @@ block variables
   - let pageTitle= 'Cards'
 
 block content
-  +uikit-cards()
+  +uikit-cards({
+    hotelCards:[
+      {images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true},
+      {images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'}
+    ]
+  })
