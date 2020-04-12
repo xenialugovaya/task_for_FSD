@@ -6,66 +6,41 @@ include ../checkbox-expandable/checkbox-expandable
 include ../checkbox/checkbox
 include ../pagination/pagination
 
-mixin search-room-page()
+mixin search-room-page({pageTitle, hotelCards, pagination, datesSelection, guestsSelection, rangeSlider, roomOptions, roomAvailability, roomFacilities, roomAdditionalFacilities})
   .search-room-page
     .search-room-page__content
       aside.search-room-page__filter-column
         .search-room-page__dates-selection
-          h3.search-room-page__input-header даты пребывания в отеле
-          +input-date-dropdown({placeholder: '19 авг - 23 авг', type: 'text'})
+          h3.search-room-page__input-header= datesSelection.title
+          +input-date-dropdown({placeholder: datesSelection.placeholder, type: datesSelection.type})
         .search-room-page__guests-selection
-          h3.search-room-page__input-header гости
-          +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
+          h3.search-room-page__input-header= guestsSelection.title
+          +input-dropdown({items: guestsSelection.items, placeholder: guestsSelection.placeholder, single: guestsSelection.single})
         .search-room-page__price-selection
-          +range-slider('диапазон цены')
-          p.search-room-page__price-selection-text Стоимость за сутки пребывания в номере
+          +range-slider(rangeSlider.title)
+          p.search-room-page__price-selection-text= rangeSlider.text
         .search-room-page__room-options
-          h3 Checkbox Buttons
+          h3= roomOptions.title
           .search-room-page__room-options-group
-            .search-room-page__room-options-button
-              +checkbox({title: 'Можно курить', name: '1', value: '1'})
-            .search-room-page__room-options-button
-              +checkbox({title: 'Можно с питомцами', name: '2', value: '2', checked: 'checked'})
-            .search-room-page__room-options-button
-              +checkbox({title: 'Можно пригласить гостей (до 10 человек)', name: '3', value: '3', checked: 'checked'})
+            each option in roomOptions.options
+              .search-room-page__room-options-button
+                +checkbox(option)
         .search-room-page__room-availability
-          h3 доступность
+          h3= roomAvailability.title
           .search-room-page__room-availability-group
-            .search-room-page__room-availability-button
-              +checkbox({title: 'Широкий коридор', name: '1', value: '1', rich: true, description: 'Ширина коридоров в номере не менее 91 см.'})   
-            .search-room-page__room-availability-button
-              +checkbox({title: 'Помощник для инвалидов', name: '2', value: '2', rich: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.'})   
+            each option in roomAvailability.options
+              .search-room-page__room-availability-button
+              +checkbox(option)   
         .search-room-page__room-facilities
-          h3.search-room-page__input-header удобства номера
-          +input-dropdown({items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true})  
+          h3.search-room-page__input-header= roomFacilities.title
+          +input-dropdown({items: roomFacilities.items, multiple: roomFacilities.multiple})  
         .search-room-page__room-additional-facilities
-          +checkbox-expandable({title: 'дополнительные удобства', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}]})
+          +checkbox-expandable({title: roomAdditionalFacilities.title, items: roomAdditionalFacilities.items})
       section.search-room-page__room-cards
-        h1.search-room-page__title Номера, которые мы для вас подобрали
+        h1.search-room-page__title= pageTitle
         .search-room-page__room-cards-grid
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true})            
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'}) 
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image4.jpg', 'image4.jpg','image4.jpg', 'image4.jpg'], roomNumber: '980', roomPrice: '8 500', roomType: 'люкс', roomReviews: '35'}) 
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image5.jpg', 'image5.jpg','image5.jpg', 'image5.jpg'], roomNumber: '856', roomPrice: '7 300', roomReviews: '19'})   
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image6.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '740', roomPrice: '6 000', roomReviews: '44'})
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image7.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '982', roomPrice: '5 800', roomReviews: '56'})  
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image8.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '678', roomPrice: '5 500', roomReviews: '45'})
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image9.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '450', roomPrice: '5 300', roomReviews: '39'})  
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image10.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '350', roomPrice: '5 000', roomReviews: '77'})
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image11.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '666', roomPrice: '5 000', roomReviews: '25'})
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image12.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '444', roomPrice: '5 000', roomReviews: '15'})       
-          .search-room-page__hotel-card
-            +hotel-card ({images: ['image13.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '352', roomPrice: '5 000', roomReviews: '55'})
+          each card in hotelCards
+            .search-room-page__hotel-card
+              +hotel-card (card)            
         .search-room-page__pagination
-          +pagination({text:'1 – 12 из 100+ вариантов аренды', items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']})
+          +pagination(pagination)

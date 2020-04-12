@@ -6,4 +6,39 @@ block variables
   - let pageTitle= 'Search room'
 
 block content
-  +search-room-page()
+  +search-room-page({
+    pageTitle: 'Номера, которые мы для вас подобрали',
+    hotelCards:[
+      {images: ['image1.jpg', 'image1.jpg','image1.jpg', 'image1.jpg'], roomNumber: '888', roomPrice: '9 990', roomType: 'люкс', roomReviews: '145', sliderControls: true},
+      {images: ['image2.jpg', 'image2.jpg','image2.jpg', 'image2.jpg'], roomNumber: '840', roomPrice: '9 990', roomReviews: '65'},
+      {images: ['image4.jpg', 'image4.jpg','image4.jpg', 'image4.jpg'], roomNumber: '980', roomPrice: '8 500', roomType: 'люкс', roomReviews: '35'},
+      {images: ['image5.jpg', 'image5.jpg','image5.jpg', 'image5.jpg'], roomNumber: '856', roomPrice: '7 300', roomReviews: '19'},
+      {images: ['image6.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '740', roomPrice: '6 000', roomReviews: '44'},
+      {images: ['image7.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '982', roomPrice: '5 800', roomReviews: '56'},
+      {images: ['image8.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '678', roomPrice: '5 500', roomReviews: '45'},
+      {images: ['image9.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '450', roomPrice: '5 300', roomReviews: '39'},
+      {images: ['image10.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '350', roomPrice: '5 000', roomReviews: '77'},
+      {images: ['image11.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '666', roomPrice: '5 000', roomReviews: '25'},
+      {images: ['image12.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '444', roomPrice: '5 000', roomReviews: '15'},
+      {images: ['image13.jpg', 'image6.jpg','image6.jpg', 'image6.jpg'], roomNumber: '352', roomPrice: '5 000', roomReviews: '55'},
+    ],
+    pagination: {text:'1 – 12 из 100+ вариантов аренды', items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']},
+    datesSelection: {title: 'даты пребывания в отеле', placeholder: '19 авг - 23 авг', type: 'text'},
+    guestsSelection: {title: 'гости', items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true},
+    rangeSlider: {title: 'диапазон цены', text: 'Стоимость за сутки пребывания в номере'},
+    roomOptions: {
+      title: 'Checkbox Buttons', 
+      options: [
+        {title: 'Можно курить', name: '1', value: '1'},
+        {title: 'Можно с питомцами', name: '2', value: '2', checked: 'checked'},
+        {title: 'Можно пригласить гостей (до 10 человек)', name: '3', value: '3', checked: 'checked'},
+      ]},
+    roomAvailability: {
+      title: 'доступность',
+      options:[
+        {title: 'Широкий коридор', name: '1', value: '1', rich: true, description: 'Ширина коридоров в номере не менее 91 см.'},
+        {title: 'Помощник для инвалидов', name: '2', value: '2', rich: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.'},
+      ]},
+    roomFacilities: {title: 'удобства номера', items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true},
+    roomAdditionalFacilities: {title: 'дополнительные удобства', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}]}
+  })
