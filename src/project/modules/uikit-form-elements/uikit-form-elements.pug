@@ -21,91 +21,97 @@ include ../input-subscription/input-subscription
 include ../input-date-dropdown/input-date-dropdown
 
 mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists, roomDetails})  
+  - const { defaultInput, focused, dropdown, masked, calendarInputs, dateDropdown, subscription } = inputs
+  - const { checkbox, radio, toggle, likebutton, rating } = smallButtons
+  - const { rangeSlider, buttons: {buttonsSmall, buttonsGhost, buttonsTransparent, buttonBig}, pagination } = buttons
+  - const { checkboxExpandable, checkboxRich, bullet } = lists
+  - const { roomIcons, review } = roomDetails
+
   .form-elements
     .form-elements__content
       section.form-elements__inputs
         .form-elements__input-default
           .form-elements__input-header
-            h3= inputs.default.title
-            span.form-elements__sub-title= inputs.default.subtitle
-          +input({placeholder: inputs.default.placeholder, type: inputs.default.type})
+            h3= defaultInput.title
+            span.form-elements__sub-title= defaultInput.subtitle
+          +input({placeholder: defaultInput.placeholder, type: defaultInput.type})
         .form-elements__input-focus
           .form-elements__input-header
-            h3= inputs.focus.title
-            span.form-elements__sub-title= inputs.focus.subtitle
-          +input({placeholder: inputs.focus.placeholder, type: inputs.focus.type, focused: inputs.focus.focused})
+            h3= focused.title
+            span.form-elements__sub-title= focused.subtitle
+          +input({placeholder: focused.placeholder, type: focused.type, focused})
         .form-elements__input-dropdown
           .form-elements__input-header
-            h3= inputs.dropdown.title
-            span.form-elements__sub-title= inputs.dropdown.subtitle
-          +input-dropdown({items: inputs.dropdown.items, placeholder: inputs.dropdown.placeholder, single: inputs.dropdown.single})
+            h3= dropdown.title
+            span.form-elements__sub-title= dropdown.subtitle
+          +input-dropdown({items: dropdown.items, placeholder: dropdown.placeholder, single: dropdown.single})
         .form-elements__input-masked
           .form-elements__input-header
-            h3= inputs.masked.title
-            span.form-elements__sub-title= inputs.masked.subtitle
-          +input({placeholder: inputs.masked.placeholder, type: inputs.masked.type, masked: inputs.masked.masked})
+            h3= masked.title
+            span.form-elements__sub-title= masked.subtitle
+          +input({placeholder: masked.placeholder, type: masked.type, masked})
         .form-elements__inputs-calendar
-          +calendar-inputs(inputs.calendarInputs)
+          +calendar-inputs(calendarInputs)
         .form-elements__input-date-dropdown
           .form-elements__input-header
-            h3= inputs.dateDropdown.title
-          +input-date-dropdown({placeholder: inputs.dateDropdown.placeholder, type: inputs.dateDropdown.type})  
+            h3= dateDropdown.title
+          +input-date-dropdown({placeholder: dateDropdown.placeholder, type: dateDropdown.type})  
         .form-elements__input-subscription
           .form-elements__input-header
-            h3= inputs.subscription.title
-          +input-subscription({placeholder: inputs.subscription.placeholder, type: inputs.subscription.type})
+            h3= subscription.title
+          +input-subscription({placeholder: subscription.placeholder, type: subscription.type})
 
       section.form-elements__small-buttons
         .form-elements__checkbox-block
-          h3= smallButtons.checkbox.title
+          h3= checkbox.title
           .form-elements__checkbox-block-group
-            each option in smallButtons.checkbox.options
+            each option in checkbox.options
               .form-elements__checkbox-block-button
                 +checkbox(option)
         .form-elements__radio-block
-          h3= smallButtons.radio.title
-          each option in smallButtons.radio.options
+          h3= radio.title
+          each option in radio.options
             .form-elements__radio-block-button
               +radio-button(option)
         .form-elements__toggle-block
-          h3= smallButtons.toggle.title
-          each option in smallButtons.toggle.options
+          h3= toggle.title
+          each option in toggle.options
             .form-elements__toggle-block-button   
               +toggle(option)
         .form-elements__like-block
-          h3= smallButtons.likebutton.title
-          each option in smallButtons.likebutton.options
+          h3= likebutton.title
+          each option in likebutton.options
             .form-elements__like-block-button 
               +like-button(option)
         .form-elements__ratings-block
-          h3= smallButtons.rating.title
-          each rating in smallButtons.rating.stars
+          h3= rating.title
+          each item in rating.stars
             .form-elements__ratings-block-rating
-              +rating(rating)
+              +rating(item)
 
       section.form-elements__buttons
         .form-elements__range-slider
-          +range-slider(buttons.rangeSlider.title)
+          +range-slider(rangeSlider.title)
         .form-elements__buttons-block
-          h3= buttons.buttons.title
+          h3= buttons.title
           .form-elements__small-buttons-block
-            each button in buttons.buttons.buttonsSmall
+            each button in buttonsSmall
               .form-elements__small-button
                 +button-small(button)
           .form-elements__ghost-buttons-block
-            each button in buttons.buttons.buttonsGhost
+            each button in buttonsGhost
               .form-elements__ghost-button
                 +button-ghost(button)
           .form-elements__transparent-buttons-block
-            each button in buttons.buttons.buttonsTransparent
+            each button in buttonsTransparent
               .form-elements__transparent-button
                 +button-transparent(button)
           .form-elements__big-button
-            +button-big(buttons.buttons.buttonBig)
+            +button-big(buttonBig)
         .form-elements__pagination-block
-          h3= buttons.pagination.title
+          h3= pagination.title
           .form-elements__pagination
-            +pagination({text: buttons.pagination.text, items: buttons.pagination.items})
+            +pagination({text: pagination.text, items: pagination.items})
 
       section.form-elements__dropdown-inputs
         .form-elements__dropdown-inputs-column
@@ -133,27 +139,27 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
       section.form-elements__lists
         .form-elements__lists-column 
           .form-elements__checkbox-expandable-block
-            each group in lists.checkboxExpandable
+            each group in checkboxExpandable
               .form-elements__checkbox-expandable-block-group
                 +checkbox-expandable(group)
         .form-elements__lists-column 
           .form-elements__checkbox-rich-block 
-            h3= lists.checkboxRich.title
+            h3= checkboxRich.title
             .form-elements__checkbox-rich-block-group
-              each group in lists.checkboxRich.group
+              each group in checkboxRich.group
                 .form-elements__checkbox-rich-block-button
                   +checkbox(group)    
         .form-elements__lists-column 
           .form-elements__bullet-list-block
-            h3= lists.bullet.title
+            h3= bullet.title
             .form-elements__bullet-list-block-group
-              +bullet-list({items: lists.bullet.items})   
+              +bullet-list({items: bullet.items})   
 
       section.form-elements__room-details
         .form-elements__room-details-column
-          each icon in roomDetails.roomIcons
+          each icon in roomIcons
             .form-elements__room-icon
               +room-icon(icon)
         .form-elements__room-details-column
           .form-elements__room-review
-            +review({image: roomDetails.review.image, author: roomDetails.review.author, date: roomDetails.review.date, text: roomDetails.review.text, likeNumber: roomDetails.review.likeNumber, likeChecked: roomDetails.review.likeChecked})
+            +review({image: review.image, author: review.author, date: review.date, text: review.text, likeNumber: review.likeNumber, likeChecked: review.likeChecked})
