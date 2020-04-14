@@ -21,15 +21,15 @@ class DropCalendar {
 
   addApplyButton(parent) {
     const applyButton = document.createElement('span');
-    applyButton.classList.add('datepicker--button');
-    applyButton.setAttribute('data-action', 'add');
+    applyButton.classList.add('calendar-inputs__add-button');
+    applyButton.classList.add('button-transparent');
     applyButton.innerText = 'Применить';
     parent.append(applyButton);
-    $(applyButton).on('click', this.handleApplyEvent.bind(this));
+    $(applyButton).on('click', this.handleCalendarInputsAddButtonClick.bind(this));
   }
 
-  handleApplyEvent() {
-    this.$elem.find('.datepicker').hide();
+  handleCalendarInputsAddButtonClick() {
+    this.$elem.blur();
   }
 }
 

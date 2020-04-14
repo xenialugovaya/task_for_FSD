@@ -5,20 +5,20 @@ class CalendarInputs {
   }
 
   bindEventListeners() {
-    this.$elem.find('.calendar-inputs__wrap-input').on('click', this.showCalendar.bind(this));
-    this.$elem.find('span[data-action="add"]').on('click', this.hideCalendar.bind(this));
-    this.$elem.find('.datepicker-here').on('click', this.setDatesToInputs.bind(this));
+    this.$elem.find('.calendar-inputs__wrap-input').on('click', this.handleCalendarInputsWrapInputClick.bind(this));
+    this.$elem.find('.calendar-inputs__add-button').on('click', this.handleCalendarInputsAddButtonClick.bind(this));
+    this.$elem.find('.datepicker-here').on('click', this.handleDatepickerHereClick.bind(this));
   }
 
-  showCalendar() {
+  handleCalendarInputsWrapInputClick() {
     this.$elem.find('.calendar-inputs__calendar-dropdown').toggle();
   }
 
-  hideCalendar() {
+  handleCalendarInputsAddButtonClick() {
     this.$elem.find('.calendar-inputs__calendar-dropdown').hide();
   }
 
-  setDatesToInputs() {
+  handleDatepickerHereClick() {
     const $datepicker = this.getCalendarData();
     this.clearInputs();
     if ($datepicker.selectedDates[0]) {

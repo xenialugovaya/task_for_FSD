@@ -19,7 +19,6 @@ export default class DropdownSingle extends Dropdown {
     this.addApplyButton();
   }
 
-
   addButtonsBlock() {
     const menu = this.$elem.find('.iqdropdown-menu');
     const buttonsBlock = document.createElement('div');
@@ -35,7 +34,7 @@ export default class DropdownSingle extends Dropdown {
       clearButton.classList.add('clear-button', 'button-transparent', 'button-transparent_disabled');
       clearButton.innerText = 'Очистить';
       this.$elem.find('.buttons-block').append(clearButton);
-      $(clearButton).on('click', this.clearInput.bind(this));
+      $(clearButton).on('click', this.handleClearButtonClick.bind(this));
     }
   }
 
@@ -49,14 +48,14 @@ export default class DropdownSingle extends Dropdown {
     applyButton.classList.add('apply-button', 'button-transparent');
     applyButton.innerText = 'Применить';
     this.$elem.find('.buttons-block').append(applyButton);
-    $(applyButton).on('click', this.removeMenuOpenClass.bind(this));
+    $(applyButton).on('click', this.handleApplyButtonClick.bind(this));
   }
 
-  removeMenuOpenClass() {
+  handleApplyButtonClick() {
     this.$elem.removeClass('menu-open');
   }
 
-  clearInput() {
+  handleClearButtonClick() {
     const $controls = this.$elem.find('.iqdropdown-item-controls');
     $controls.each((index, node) => {
       const $counter = $(node).find('.counter');

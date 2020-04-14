@@ -7,9 +7,13 @@ class StarRating {
   bindEventListeners() {
     const $starElements = this.getStarElements();
     $starElements.each((index, item) => {
-      $(item).on('click', { index }, this.ratingChangeState.bind(this));
-      $(item).on('mouseenter', { index }, this.ratingHoverState.bind(this));
-      $(item).on('mouseout', this.ratingDefaultState.bind(this));
+      $(item).on('click', {
+        index
+      }, this.handleRatingStarClick.bind(this));
+      $(item).on('mouseenter', {
+        index
+      }, this.handleRatingStarMouseEnter.bind(this));
+      $(item).on('mouseout', this.handleRatingStarMouseOut.bind(this));
     });
   }
 
@@ -18,7 +22,7 @@ class StarRating {
     return $starElements;
   }
 
-  ratingChangeState(event) {
+  handleRatingStarClick(event) {
     const currentIndex = event.data.index;
     const $currentStar = $(event.currentTarget);
     const $starElements = this.getStarElements();
@@ -37,7 +41,7 @@ class StarRating {
     }
   }
 
-  ratingHoverState(event) {
+  handleRatingStarMouseEnter(event) {
     const currentIndex = event.data.index;
     const $starElements = this.getStarElements();
     $starElements.each((index, item) => {
@@ -47,7 +51,7 @@ class StarRating {
     });
   }
 
-  ratingDefaultState() {
+  handleRatingStarMouseOut() {
     const $starElements = this.getStarElements();
     $starElements.each((index, item) => {
       $(item).removeClass('star-hover');

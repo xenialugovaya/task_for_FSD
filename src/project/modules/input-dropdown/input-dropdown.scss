@@ -94,11 +94,16 @@
 
 .defaultClass .button-decrement {
   border: 1px solid $dark_shade_25 !important;
+  cursor: initial;
 
   .icon-decrement {
     &:after {
       background: $dark_shade_25 !important;
     }
+  }
+
+  &:hover {
+    background: none !important;
   }
 }
 

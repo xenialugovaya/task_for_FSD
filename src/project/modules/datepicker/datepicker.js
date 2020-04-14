@@ -10,8 +10,8 @@ class Calendar {
 
   addApplyButton() {
     const applyButton = document.createElement('span');
-    applyButton.classList.add('datepicker--button');
-    applyButton.setAttribute('data-action', 'add');
+    applyButton.classList.add('calendar-inputs__add-button');
+    applyButton.classList.add('button-transparent');
     applyButton.innerText = 'Применить';
     const $buttonsBlock = this.$elem.find('.datepicker--buttons');
     $buttonsBlock.append(applyButton);
