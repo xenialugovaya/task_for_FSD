@@ -17,5 +17,6 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, roomReviews, sliderCo
       .hotel-card__reviews-block
         +rating()
         .hotel-card__reviews
-          span.hotel-card__reviews-number #{roomReviews}
-          span.hotel-card__measure-unit Отзывов
+          a(href="./room-details.html")
+            span.hotel-card__reviews-number #{roomReviews}
+            span.hotel-card__measure-unit Отзывов
