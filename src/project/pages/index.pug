@@ -1,12 +1,12 @@
 extends ../layout/uikit/uikit-layout
-include ../modules/page-index/index
+include ../modules/page-index/page-index
 
 block variables
 
   - let pageTitle= "Project menu"
 
 block content
-  +project-menu({
+  +page-index({
     pages:[
       {name:"Landing page", link: "./landing-page.html"},
       {name:"Sign in page", link: "./sign-in.html"}, 
