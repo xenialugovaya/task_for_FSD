@@ -9,10 +9,10 @@ class ImageSlider {
   }
 
   bindEvents() {
-    this.$elem.find('.lSPrev').on('mouseenter', this.addHoverState.bind(this));
-    this.$elem.find('.lSNext').on('mouseenter', this.addHoverState.bind(this));
-    this.$elem.find('.lSSlideWrapper').on('mouseenter', this.addHoverState.bind(this));
-    this.$elem.find('.lSSlideWrapper').on('mouseout', this.addDefaultState.bind(this));
+    this.$elem.find('.lSPrev').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
+    this.$elem.find('.lSNext').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
+    this.$elem.find('.lSSlideWrapper').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
+    this.$elem.find('.lSSlideWrapper').on('mouseout', this.handleHotelCardMouseOut.bind(this));
   }
 
   render() {
@@ -24,11 +24,11 @@ class ImageSlider {
     });
   }
 
-  addHoverState() {
+  handleHotelCardMouseEnter() {
     this.$elem.find('.hotel-card__slider').addClass('hotel-card__slider_with-controls');
   }
 
-  addDefaultState() {
+  handleHotelCardMouseOut() {
     this.$elem.find('.hotel-card__slider').removeClass('hotel-card__slider_with-controls');
   }
 }

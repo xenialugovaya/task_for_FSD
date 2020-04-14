@@ -5,10 +5,10 @@ class CheckboxExpandable {
   }
 
   bindEventListeners() {
-    this.$elem.on('click', this.toggleElement.bind(this));
+    this.$elem.on('click', this.handleCheckboxExpandableClick.bind(this));
   }
 
-  toggleElement() {
+  handleCheckboxExpandableClick() {
     this.$elem.next().toggle();
     this.$elem.toggleClass('checkbox-expandable_closed');
     this.$elem.toggleClass('checkbox-expandable_open');
