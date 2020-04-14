@@ -1,6 +1,6 @@
 import Dropdown from './Dropdown';
 
-class DropdownSingle extends Dropdown {
+export default class DropdownSingle extends Dropdown {
   constructor(element) {
     super(element);
     this.wordForms = ['гость', 'гостя', 'гостей'];
@@ -73,15 +73,3 @@ class DropdownSingle extends Dropdown {
     this.setInputText(text);
   }
 }
-
-function renderComponent() {
-  $(() => {
-    $('.js-input_dropdown-single').each((index, node) => {
-      const dropdownSingle = new DropdownSingle($(node));
-      return dropdownSingle;
-    });
-  });
-}
-
-
-renderComponent();

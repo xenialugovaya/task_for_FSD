@@ -1,6 +1,6 @@
 import Dropdown from './Dropdown';
 
-class DropdownMultiple extends Dropdown {
+export default class DropdownMultiple extends Dropdown {
   constructor(element) {
     super(element);
     this.wordForms = [
@@ -38,15 +38,3 @@ class DropdownMultiple extends Dropdown {
     return text;
   }
 }
-
-function renderComponent() {
-  $(() => {
-    $('.js-input_dropdown-multiple').each((index, node) => {
-      const dropdownMultiple = new DropdownMultiple($(node));
-      return dropdownMultiple;
-    });
-  });
-}
-
-
-renderComponent();
