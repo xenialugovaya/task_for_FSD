@@ -3,147 +3,147 @@ include ../modules/uikit-form-elements/uikit-form-elements
 
 block variables
 
-  - let pageTitle= 'Form elements'
+  - let pageTitle= "Form elements"
 
 block content
   +uikit-form-elements({
     inputs:{
       default: {
-        title: 'text field',
-        subtitle: 'default',
-        placeholder: 'Email', 
-        type: 'text'
+        title: "text field",
+        subtitle: "default",
+        placeholder: "Email", 
+        type: "text"
       },
       focus: {
-        title: 'text field',
-        subtitle: 'hover / focus',
-        placeholder: 'This is pretty awesome', 
-        type: 'text',
+        title: "text field",
+        subtitle: "hover / focus",
+        placeholder: "This is pretty awesome", 
+        type: "text",
         focused: true
       },
       dropdown: {
-        title: 'dropdown',
-        subtitle: 'default',
-        items: ['взрослые', 'дети', 'младенцы'],
-        placeholder: 'Сколько гостей', 
+        title: "dropdown",
+        subtitle: "default",
+        items: ["взрослые", "дети", "младенцы"],
+        placeholder: "Сколько гостей", 
         single: true
       },
       masked: {
-        title: 'masked text field',
-        subtitle: 'default',
-        placeholder: 'ДД.ММ.ГГГ', 
-        type: 'text',
+        title: "masked text field",
+        subtitle: "default",
+        placeholder: "ДД.ММ.ГГГ", 
+        type: "text",
         masked: true
       },
       calendarInputs: {
-        titles: ['date dropdown', 'date dropdown'],
-        placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+        titles: ["date dropdown", "date dropdown"],
+        placeholders: ["ДД.ММ.ГГГГ", "ДД.ММ.ГГГГ"]
       },
       dateDropdown: {
-        title: 'filter date dropdown',
-        placeholder: '19 авг - 23 авг', 
-        type: 'text',
+        title: "filter date dropdown",
+        placeholder: "19 авг - 23 авг", 
+        type: "text",
       },
       subscription: {
-        title: 'subscription text field',
-        placeholder: 'Email', 
-        type: 'text',
+        title: "subscription text field",
+        placeholder: "Email", 
+        type: "text",
       },
     }, 
     smallButtons: {
       checkbox: {
-        title: 'Checkbox Buttons',
+        title: "Checkbox Buttons",
         options:[
-          {title: 'Можно курить', name: '1', value: '1'},
-          {title: 'Можно с питомцами', name: '2', value: '2', checked: 'checked'},
-          {title: 'Можно пригласить гостей (до 10 человек)', name: '3', value: '3', checked: 'checked'}
+          {title: "Можно курить", name: "1", value: "1"},
+          {title: "Можно с питомцами", name: "2", value: "2", checked: "checked"},
+          {title: "Можно пригласить гостей (до 10 человек)", name: "3", value: "3", checked: "checked"}
         ]},
       radio: {
-        title: 'Radio Buttons',
+        title: "Radio Buttons",
         options: [
-          {title: 'Мужчина', value: 'male', checked: 'checked'},
-          {title: 'Женщина', value: 'female'}
+          {title: "Мужчина", value: "male", checked: "checked"},
+          {title: "Женщина", value: "female"}
         ]},
       toggle: {
-        title: 'Toggle',
+        title: "Toggle",
         options:[
-          {title: 'Получать спецпредложения', value: 'mytoggle1', name: 'toggle1', checked: 'checked' },
-          {title: 'Получать спецпредложения', value: 'mytoggle2', name: 'toggle2'}
+          {title: "Получать спецпредложения", value: "mytoggle1", name: "toggle1", checked: "checked" },
+          {title: "Получать спецпредложения", value: "mytoggle2", name: "toggle2"}
         ]},
       likebutton: {
-        title: 'like button',
+        title: "like button",
         options:[
-          {number: '2', name: 'mylike1', value: 'like1'},
-          {number: '12', name: 'mylike2', value: 'like2', checked: 'checked'}
+          {number: "2", name: "mylike1", value: "like1"},
+          {number: "12", name: "mylike2", value: "like2", checked: "checked"}
         ]},
       rating: {
-        title: 'rate button',
-        stars: ['4', '4']
+        title: "rate button",
+        stars: ["4", "4"]
         },
     }, 
     buttons: {
-      rangeSlider: {title: 'range slider'},
+      rangeSlider: {title: "range slider"},
       buttons: {
-        title: 'buttons',
+        title: "buttons",
         buttonsSmall:[
-          {text: 'click me'},
-          {text: 'click me', disabled: true}
+          {text: "click me"},
+          {text: "click me", disabled: true}
         ],
         buttonsGhost:[
-          {text: 'click me'},
-          {text: 'click me', disabled: true}
+          {text: "click me"},
+          {text: "click me", disabled: true}
         ],
         buttonsTransparent:[
-          {text: 'click me'},
-          {text: 'click me', disabled: true}
+          {text: "click me"},
+          {text: "click me", disabled: true}
         ],
-        buttonBig: {text: 'перейти к оплате', type: 'button', hasArrow: true}
+        buttonBig: {text: "перейти к оплате", type: "button", hasArrow: true}
       },
       pagination: {
-        title: 'pagination',
-        text: '1 – 12 из 100+ вариантов аренды', 
-        items: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15']
+        title: "pagination",
+        text: "1 – 12 из 100+ вариантов аренды", 
+        items: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
       }
     }, 
     dropdownInputs: {
-      title: 'dropdown',
-      subtitle: {default: 'default', expanded: 'expanded'},
-      multiple: {items: ['спальни', 'кровати', 'ванные комнаты'], multiple: true},
-      single: {items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true},
+      title: "dropdown",
+      subtitle: {default: "default", expanded: "expanded"},
+      multiple: {items: ["спальни", "кровати", "ванные комнаты"], multiple: true},
+      single: {items: ["взрослые", "дети", "младенцы"], placeholder: "Сколько гостей", single: true},
     }, 
     lists:{
       checkboxExpandable: [
-        {title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол'}, {title: 'Стул для кормления'}, {title: 'Кроватка'}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}, {title: 'Шампунь'}]},
-        {title: 'expandable checkbox list', items: [{title: 'Завтрак'}, {title: 'Письменный стол', checked: true}, {title: 'Стул для кормления', checked: true}, {title: 'Кроватка', checked: true}, {title: 'Телевизор'}, {title: 'Шампунь'}, {title: 'Телевизор'}, {title: 'Шампунь'}], open: true}
+        {title: "expandable checkbox list", items: [{title: "Завтрак"}, {title: "Письменный стол"}, {title: "Стул для кормления"}, {title: "Кроватка"}, {title: "Телевизор"}, {title: "Шампунь"}, {title: "Телевизор"}, {title: "Шампунь"}]},
+        {title: "expandable checkbox list", items: [{title: "Завтрак"}, {title: "Письменный стол", checked: true}, {title: "Стул для кормления", checked: true}, {title: "Кроватка", checked: true}, {title: "Телевизор"}, {title: "Шампунь"}, {title: "Телевизор"}, {title: "Шампунь"}], open: true}
       ],
       checkboxRich: {
-        title: 'rich checkbox buttons',
+        title: "rich checkbox buttons",
         group: [
-          {title: 'Широкий коридор', name: '1', value: '1', rich: true, description: 'Ширина коридоров в номере не менее 91 см.'},
-          {title: 'Помощник для инвалидов', name: '2', value: '2', rich: true, description: 'На 1 этаже вас встретит специалист и проводит до номера.'}
+          {title: "Широкий коридор", name: "1", value: "1", rich: true, description: "Ширина коридоров в номере не менее 91 см."},
+          {title: "Помощник для инвалидов", name: "2", value: "2", rich: true, description: "На 1 этаже вас встретит специалист и проводит до номера."}
         ]
       },
       bullet: {
-        title: 'bullet list',
+        title: "bullet list",
         items: [
-          'Нельзя с питомцами', 
-          'Без вечеринок и мероприятий', 
-          'Время прибытия — после 13:00, а выезд до 12:00'
+          "Нельзя с питомцами", 
+          "Без вечеринок и мероприятий", 
+          "Время прибытия — после 13:00, а выезд до 12:00"
         ]
       }
     }, 
     roomDetails:{
       roomIcons:[
-        {icon:'tag_faces', title:'Комфорт', descr: 'Шумопоглощающие стены', hasLine: true},
-        {icon:'location_city', title:'Удобство', descr: 'Окно в каждой из спален', hasLine: true}
+        {icon:"tag_faces", title:"Комфорт", descr: "Шумопоглощающие стены", hasLine: true},
+        {icon:"location_city", title:"Удобство", descr: "Окно в каждой из спален", hasLine: true}
       ],
       review: {
-        image: 'review-image-1.jpg', 
-        author: 'Мурад Сарафанов', 
-        date: '5 дней назад', 
-        text: 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.', 
-        likeNumber: '12', 
-        likeChecked: 'checked'
+        image: "review-image-1.jpg", 
+        author: "Мурад Сарафанов", 
+        date: "5 дней назад", 
+        text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.", 
+        likeNumber: "12", 
+        likeChecked: "checked"
       }
     }
   })

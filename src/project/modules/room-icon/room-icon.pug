@@ -1,7 +1,7 @@
 mixin room-icon({icon, title, descr, hasLine})
-  - const classes = ['room-icon']
+  - const classes = ["room-icon"]
     if hasLine
-    - classes.push('room-icon_with-line')
+    - classes.push("room-icon_with-line")
     div(class=classes)
       i.room-icon__icon.material-icons #{icon}
       .room-icon__title #{title}

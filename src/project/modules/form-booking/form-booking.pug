@@ -7,15 +7,15 @@ mixin form-booking()
   .booking
     form.booking__form
       .booking__header 
-        +booking-header({roomNumber: '888', roomType: 'люкс', roomPrice: '9 990'})
+        +booking-header({roomNumber: "888", roomType: "люкс", roomPrice: "9 990"})
       .booking__calendar-inputs
         +calendar-inputs({
-          titles: ['прибытие', 'выезд'],
-          placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+          titles: ["прибытие", "выезд"],
+          placeholders: ["ДД.ММ.ГГГГ", "ДД.ММ.ГГГГ"]
         })      
       .booking__input-dropdown
         h3.booking__input-dropdown-header гости
-        +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
+        +input-dropdown({items: ["взрослые", "дети", "младенцы"], placeholder: "Сколько гостей", single: true})
       .booking__price-list
         .booking__price-list-item
           .booking__item 9 990₽ х 4 суток
@@ -31,4 +31,4 @@ mixin form-booking()
           .booking__item-final-divider
           .booking__item-price-final 38 081₽
       .booking__footer
-        +form-footer({bigButtonText: 'забронировать'})
+        +form-footer({bigButtonText: "забронировать"})

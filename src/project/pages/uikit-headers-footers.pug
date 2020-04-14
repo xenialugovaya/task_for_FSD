@@ -3,51 +3,51 @@ include ../modules/uikit-headers-footers/uikit-headers-footers
 
 block variables
 
-  - let pageTitle= 'Headers&Footers'
+  - let pageTitle= "Headers&Footers"
 
 block content
   +uikit-headers-footers({
     headers: {
       loggedOut: {
         links: [
-          {href : '/mock-address/change-me', name : 'Home', active: true}, 
-          {href :'/mock-address/change-me', name :'About Us'}, 
-          {href :'/mock-address/change-me', name :'Services', dropdown : true}, 
-          {href :'/mock-address/change-me', name :'Careers'}, 
-          {href :'/mock-address/change-me', name : 'News'}, 
-          {href :'/mock-address/change-me', name : 'Documentation'}
+          {href :"/mock-address/change-me", name : "Home", active: true}, 
+          {href :"/mock-address/change-me", name :"About Us"}, 
+          {href :"/mock-address/change-me", name :"Services", dropdown : true}, 
+          {href :"/mock-address/change-me", name :"Careers"}, 
+          {href :"/mock-address/change-me", name : "News"}, 
+          {href :"/mock-address/change-me", name : "Documentation"}
         ], 
-        buttonLogin:'login', 
-        buttonRegister: 'register', 
+        buttonLogin:"login", 
+        buttonRegister: "register", 
         eng: true
       },
       loggedIn: {
         links: [
-          {href : '/mock-address/change-me', name : 'Home', active: true}, 
-          {href :'/mock-address/change-me', name :'About Us'}, 
-          {href :'/mock-address/change-me', name :'Services', dropdown : true}, 
-          {href :'/mock-address/change-me', name :'Careers'}, 
-          {href :'/mock-address/change-me', name : 'News'}, 
-          {href :'/mock-address/change-me', name : 'Documentation'}
+          {href : "/mock-address/change-me", name : "Home", active: true}, 
+          {href :"/mock-address/change-me", name :"About Us"}, 
+          {href :"/mock-address/change-me", name :"Services", dropdown : true}, 
+          {href :"/mock-address/change-me", name :"Careers"}, 
+          {href :"/mock-address/change-me", name : "News"}, 
+          {href :"/mock-address/change-me", name : "Documentation"}
         ], 
-        user: 'Cosmin Negoita', 
+        user: "Cosmin Negoita", 
         loggedIn: true, 
         eng: true
       }
     },
     footer: {
-      mainText: 'Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.',
+      mainText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
       menu: {
-        column1: {title: 'Navigation', links: [{href:'/mock-address/change-me', val:'About us'}, {href:'/mock-address/change-me', val:'News'}, {href:'/mock-address/change-me', val:'Support'}, {href:'/mock-address/change-me', val:'Products'}]},
-        column2: {title: 'About us', links: [{href:'/mock-address/change-me', val:'Who we are'}, {href:'/mock-address/change-me', val:'Our team'}, {href:'/mock-address/change-me', val:'Careers'}, {href:'/mock-address/change-me', val:'Investors'}]},
-        column3: {title: 'Support',links:  [{href:'/mock-address/change-me', val:'Documentation'}, {href:'/mock-address/change-me', val:'Community'}, {href:'/mock-address/change-me', val:'Get in touch'}]}
+        column1: {title: "Navigation", links: [{href:"/mock-address/change-me", val:"About us"}, {href:"/mock-address/change-me", val:"News"}, {href:"/mock-address/change-me", val:"Support"}, {href:"/mock-address/change-me", val:"Products"}]},
+        column2: {title: "About us", links: [{href:"/mock-address/change-me", val:"Who we are"}, {href:"/mock-address/change-me", val:"Our team"}, {href:"/mock-address/change-me", val:"Careers"}, {href:"/mock-address/change-me", val:"Investors"}]},
+        column3: {title: "Support",links:  [{href:"/mock-address/change-me", val:"Documentation"}, {href:"/mock-address/change-me", val:"Community"}, {href:"/mock-address/change-me", val:"Get in touch"}]}
           },
       subscription: {
-        title: 'Subscribe to our newsletter',
-        text: 'Receive our latest news and promotions in your inbox!',
-        placeholder: 'Your Email address'
+        title: "Subscribe to our newsletter",
+        text: "Receive our latest news and promotions in your inbox!",
+        placeholder: "Your Email address"
       },
-      copyright: 'Copyright © 2018 Toxin UI Kit. All rights reserved.',
+      copyright: "Copyright © 2018 Toxin UI Kit. All rights reserved.",
       eng: true
     }
   })

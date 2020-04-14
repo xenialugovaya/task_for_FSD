@@ -4,12 +4,12 @@ include ../button-big/button-big
 include ../button-ghost/button-ghost
 
 mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})   
-  - const classes = ['header']
+  - const classes = ["header"]
   if loggedIn
-    - classes.push('header_logged-in')
+    - classes.push("header_logged-in")
   div(class=classes)
     .header__mburger
-      a(class='mburger mburger--spin' href='#collapse-menu')  
+      a(class="mburger mburger--spin" href="#collapse-menu")  
         b
         b
         b
@@ -23,10 +23,10 @@ mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})
       .header__buttons
         .header__button-login
           +button-ghost({text: buttonLogin})
-          a.header__icon-login(href='/mock-address/')
+          a.header__icon-login(href="/mock-address/")
         .header__button-register
-          +button-big({text: buttonRegister, type: 'button'})
-          a.header__icon-register(href='/mock-address/')
+          +button-big({text: buttonRegister, type: "button"})
+          a.header__icon-register(href="/mock-address/")
     else
       .header__account-link
         .header__user-name= user

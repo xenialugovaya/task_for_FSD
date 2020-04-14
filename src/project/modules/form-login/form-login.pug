@@ -8,11 +8,11 @@ mixin form-login()
       h1.login__header Найдём номера под ваши пожелания
       .login__calendar-inputs
         +calendar-inputs({
-          titles: ['прибытие', 'выезд'],
-          placeholders: ['ДД.ММ.ГГГГ', 'ДД.ММ.ГГГГ']
+          titles: ["прибытие", "выезд"],
+          placeholders: ["ДД.ММ.ГГГГ", "ДД.ММ.ГГГГ"]
         })
       .login__input-dropdown
         h3.login__input-dropdown-header гости
-        +input-dropdown({items: ['взрослые', 'дети', 'младенцы'], placeholder: 'Сколько гостей', single: true})
+        +input-dropdown({items: ["взрослые", "дети", "младенцы"], placeholder: "Сколько гостей", single: true})
       .login__footer
-        +form-footer({bigButtonText: 'Подобрать номер'})
+        +form-footer({bigButtonText: "Подобрать номер"})

@@ -1,9 +1,9 @@
 include ../nav-link/nav-link
 
 mixin menu({links, eng})
-  - const classes = ['menu']
+  - const classes = ["menu"]
   if eng
-    - classes.push('menu_eng')
+    - classes.push("menu_eng")
   ul(class= classes)
     each link in links
       li.menu__link   

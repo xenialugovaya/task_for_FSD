@@ -1,8 +1,8 @@
 mixin input({placeholder, type, masked, focused})
-  - const classes = ['input']
+  - const classes = ["input"]
   if focused
-    - classes.push('input_focused')
+    - classes.push("input_focused")
   if masked
-    - classes.push('js-input_masked')
+    - classes.push("js-input_masked")
 
   input(class=classes type=type placeholder=placeholder)
