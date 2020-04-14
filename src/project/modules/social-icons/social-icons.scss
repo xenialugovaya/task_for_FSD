@@ -7,7 +7,7 @@
     width: 28px;
     height: 24px;
     background: $purpleGradient;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 
     &:not(:first-child) {
