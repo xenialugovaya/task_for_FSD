@@ -59,8 +59,6 @@
 
   &__room-availability {
     margin-top: 30px;
-
-
   }
 
   &__room-availability-group {
@@ -80,7 +78,8 @@
   }
 
   &__room-cards {
-    display: grid;
+    display: flex;
+    flex-direction: column;
 
     @media(max-width: 650px) {
       display: flex;
@@ -106,7 +105,6 @@
 
   &__pagination {
     margin-top: 41px;
-    margin-left: -12px;
-    justify-self: center;
+    align-self: center;
   }
 }

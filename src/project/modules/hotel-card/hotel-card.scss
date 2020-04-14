@@ -102,11 +102,9 @@
     }
   }
 
-
   &__caption {
     box-sizing: border-box;
     padding: 15px 20px 12px 20px;
-
   }
 
   &__header {
@@ -118,10 +116,6 @@
       @include h1-cyrillic;
       font-size: 127%;
       letter-spacing: 1.7px;
-    }
-
-    .booking-header__room-price {
-      margin-right: -3px;
     }
   }
 

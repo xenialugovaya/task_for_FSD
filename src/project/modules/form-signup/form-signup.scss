@@ -1,11 +1,11 @@
 .signup {
   &__form {
     @include form;
+    padding-top: 10%;
   }
 
   &__header {
     letter-spacing: 0.8px;
-    margin-top: -1px;
   }
 
   &__login-data {

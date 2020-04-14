@@ -23,7 +23,7 @@ include ../input-date-dropdown/input-date-dropdown
 mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists, roomDetails})  
   - const { defaultInput, focused, dropdown, masked, calendarInputs, dateDropdown, subscription } = inputs
   - const { checkbox, radio, toggle, likebutton, rating } = smallButtons
-  - const { rangeSlider, buttons: {buttonsSmall, buttonsGhost, buttonsTransparent, buttonBig}, pagination } = buttons
+  - const { rangeSlider, buttons: {title, buttonsSmall, buttonsGhost, buttonsTransparent, buttonBig}, pagination } = buttons
   - const { checkboxExpandable, checkboxRich, bullet } = lists
   - const { roomIcons, review } = roomDetails
 
@@ -93,7 +93,7 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
         .form-elements__range-slider
           +range-slider(rangeSlider.title)
         .form-elements__buttons-block
-          h3= buttons.title
+          h3= title
           .form-elements__small-buttons-block
             each button in buttonsSmall
               .form-elements__small-button

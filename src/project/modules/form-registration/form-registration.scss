@@ -1,9 +1,9 @@
 .registration {
   @include form;
+  padding-top: 9.8%;
 
   &__header {
     letter-spacing: 0.8px;
-    margin-top: -2px;
   }
 
   &__title {

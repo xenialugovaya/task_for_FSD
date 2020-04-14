@@ -1,5 +1,6 @@
 .button-transparent {
   @include button;
+  padding: 0;
   background: transparent;
   color: $purple;
   cursor: pointer;

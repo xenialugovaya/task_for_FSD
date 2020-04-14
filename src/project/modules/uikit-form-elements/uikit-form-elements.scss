@@ -164,25 +164,26 @@
   }
 
   &__transparent-buttons-block {
-    margin-left: -5px;
-    margin-top: 17px;
+    margin-top: 25px;
+    margin-left: 2px;
   }
 
   &__transparent-button {
     display: inline-block;
 
     &:last-child {
-      margin-left: 6px;
+      margin-left: 20px;
     }
   }
 
   &__big-button {
-    margin-top: 15px;
+    margin-top: 25px;
     width: 320px;
   }
 
   &__pagination-block {
     margin-top: 40px;
+    margin-left: 2px;
   }
 
   &__pagination {
