@@ -21,6 +21,35 @@ block content
       }, 
       footer: {bigButtonText: "Подобрать номер"}
     },
+    formRegistration:{
+      header: "Регистрация аккаунта",
+      name: {placeholder: "Имя", type: "text"}, 
+      surname: {placeholder: "Фамилия", type: "text"}, 
+      sex: [
+        {title: "Мужчина", value: "male", checked: "checked"},
+        {title: "Женщина", value: "female"},
+      ],
+      dateOfBirth: {
+        header: "Дата рождения",
+        input: {placeholder: "ДД.ММ.ГГГ", type: "text", masked: true},
+      },  
+      access: {
+        header: "Данные для входа в сервис",
+        email: {placeholder: "Email", type: "text"},
+        password: {placeholder: "Пароль", type: "text"},
+      }, 
+      subscription: {
+        title: "Получать спецпредложения", 
+        value: "mytoggle", 
+        name: "toggle"
+      },
+      footer: {
+        bigButtonText: "Перейти к оплате", 
+        ghostButtonText: "войти", 
+        footerText:"Уже есть аккаунт на Toxin", 
+        logout: true
+      }
+    },
     formBooking:{
       header:{
         roomNumber: "888", 

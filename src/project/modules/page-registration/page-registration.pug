@@ -1,7 +1,7 @@
 include ../form-registration/form-registration
 
-mixin page-registration()
+mixin page-registration({formRegistration})
   .registration-page
     .registration-page__content
       .registration-page__form-registration
-        +form-registration()
+        +form-registration(formRegistration)

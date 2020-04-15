@@ -3,24 +3,24 @@ include ../radio-button/radio-button
 include ../toggle/toggle
 include ../form-footer/form-footer
 
-mixin form-registration()
+mixin form-registration({header, name, surname, sex, dateOfBirth, access, subscription, footer})
   .registration
     form.registration__form
-      h1.registration__header Регистрация аккаунта
+      h1.registration__header= header
       .registration__name
-        +input({placeholder: "Имя", type: "text"})
-        +input({placeholder: "Фамилия", type: "text"}) 
+        +input(name)
+        +input(surname) 
       .registration__sex
-        +radio-button({title: "Мужчина", value: "male", checked: "checked"})
-        +radio-button({title: "Женщина", value: "female"})
+        each radio in sex
+          +radio-button(radio)
       .registration__birth-date   
-        h3.registration__title Дата рождения
-        +input({placeholder: "ДД.ММ.ГГГ", type: "text", masked: true}) 
+        h3.registration__title= dateOfBirth.header
+        +input(dateOfBirth.input) 
       .registration__login-data
-        h3.registration__title Данные для входа в сервис 
-        +input({placeholder: "Email", type: "text"}) 
-        +input({placeholder: "Пароль", type: "text"}) 
+        h3.registration__title= access.header 
+        +input(access.email) 
+        +input(access.password) 
       .registration__subscription
-        +toggle({title: "Получать спецпредложения", value: "mytoggle", name: "toggle"})
+        +toggle(subscription)
       .registration__footer
-        +form-footer({bigButtonText: "Перейти к оплате", ghostButtonText: "войти", footerText:"Уже есть аккаунт на Toxin", logout: true})
+        +form-footer(footer)
