@@ -1,8 +1,8 @@
 include ../form-login/form-login
 
-mixin page-landing({comment})
+mixin page-landing({formLogin, comment})
   .landing-page
     .landing-page__content
       .landing-page__form-login
-        +form-login()
+        +form-login(formLogin)
       .landing-page__comment= comment

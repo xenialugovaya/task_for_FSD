@@ -7,6 +7,20 @@ block variables
 
 block content
   +uikit-cards({
+    formLogin:{
+      header: "Найдём номера под ваши пожелания", 
+      datesInputs: {
+        titles: ["прибытие", "выезд"],
+        placeholders: ["ДД.ММ.ГГГГ", "ДД.ММ.ГГГГ"]
+      }, 
+      guestsInput: {
+        header: "гости", 
+        items: ["взрослые", "дети", "младенцы"], 
+        placeholder: "Сколько гостей", 
+        single: true
+      }, 
+      footer: {bigButtonText: "Подобрать номер"}
+    },
     formBooking:{
       header:{
         roomNumber: "888", 

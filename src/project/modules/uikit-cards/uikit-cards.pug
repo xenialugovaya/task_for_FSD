@@ -5,12 +5,12 @@ include ../form-registration/form-registration
 include ../form-signup/form-signup
 include ../form-booking/form-booking
 
-mixin uikit-cards({formBooking, hotelCards})
+mixin uikit-cards({formLogin, formBooking, hotelCards})
   .cards-page
     .cards-page__content
       .cards-page__column
         .cards-page__form-login
-          +form-login()
+          +form-login(formLogin)
         .cards-page__form-registration
           +form-registration()
       .cards-page__column

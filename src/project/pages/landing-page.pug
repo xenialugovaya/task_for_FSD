@@ -6,4 +6,20 @@ block variables
   - let pageTitle= "Landing Page"
 
 block content
-  +page-landing({comment: "Лучшие номера для вашей работы, отдыха и просто вдохновения"})
+  +page-landing({
+    formLogin:{
+      header: "Найдём номера под ваши пожелания", 
+      datesInputs: {
+        titles: ["прибытие", "выезд"],
+        placeholders: ["ДД.ММ.ГГГГ", "ДД.ММ.ГГГГ"]
+      }, 
+      guestsInput: {
+        header: "гости", 
+        items: ["взрослые", "дети", "младенцы"], 
+        placeholder: "Сколько гостей", 
+        single: true
+      }, 
+      footer: {bigButtonText: "Подобрать номер"}
+    },
+    comment: "Лучшие номера для вашей работы, отдыха и просто вдохновения"
+    })
