@@ -3,32 +3,24 @@ include ../calendar-inputs/calendar-inputs
 include ../input-dropdown/input-dropdown
 include ../form-footer/form-footer
 
-mixin form-booking()
+mixin form-booking({header, dateInputs, guestsInput, priceList, footer})
   .booking
     form.booking__form
       .booking__header 
-        +booking-header({roomNumber: "888", roomType: "люкс", roomPrice: "9 990"})
+        +booking-header(header)
       .booking__calendar-inputs
-        +calendar-inputs({
-          titles: ["прибытие", "выезд"],
-          placeholders: ["ДД.ММ.ГГГГ", "ДД.ММ.ГГГГ"]
-        })      
+        +calendar-inputs(dateInputs)      
       .booking__input-dropdown
-        h3.booking__input-dropdown-header гости
-        +input-dropdown({items: ["взрослые", "дети", "младенцы"], placeholder: "Сколько гостей", single: true})
+        h3.booking__input-dropdown-header= guestsInput.header
+        +input-dropdown({items: guestsInput.items, placeholder: guestsInput.placeholder, single: guestsInput.single})
       .booking__price-list
-        .booking__price-list-item
-          .booking__item 9 990₽ х 4 суток
-          .booking__item-price 39 960₽
-        .booking__price-list-item
-          .booking__item.booking__item_with-icon Сбор за услуги: скидка 2 179₽ 
-          .booking__item-price 0₽
-        .booking__price-list-item
-          .booking__item.booking__item_with-icon Сбор за дополнительные услуги 
-          .booking__item-price 300₽
+        each row in priceList.items
+          .booking__price-list-item
+            .booking__item= row.item
+            .booking__item-price= row.itemPrice
         .booking__price-list-final 
-          .booking__item-final Итого 
+          .booking__item-final= priceList.final
           .booking__item-final-divider
-          .booking__item-price-final 38 081₽
+          .booking__item-price-final= priceList.finalPrice
       .booking__footer
-        +form-footer({bigButtonText: "забронировать"})
+        +form-footer(footer)

@@ -7,8 +7,35 @@ block variables
 
 block content
   +uikit-cards({
+    formBooking:{
+      header:{
+        roomNumber: "888", 
+        roomType: "люкс", 
+        roomPrice: "9 990",
+      },
+      dateInputs:{
+        titles: ["прибытие", "выезд"],
+        placeholders: ["ДД.ММ.ГГГГ", "ДД.ММ.ГГГГ"],
+      },
+      guestsInput:{
+        header: "гости", 
+        items: ["взрослые", "дети", "младенцы"], 
+        placeholder: "Сколько гостей", 
+        single: true
+      },
+      priceList:{
+        items: [
+          {item: "9 990₽ х 4 суток", itemPrice: "39 960₽"},
+          {item: "Сбор за услуги: скидка 2 179₽", itemPrice: "0₽"},
+          {item: "Сбор за дополнительные услуги", itemPrice: "300₽"},
+        ],
+        final: "Итого", 
+        finalPrice: "38 081₽",
+      },
+      footer:{bigButtonText: "забронировать"},
+    },
     hotelCards:[
       {images: ["image1.jpg", "image1.jpg","image1.jpg", "image1.jpg"], roomNumber: "888", roomPrice: "9 990", roomType: "люкс", roomReviews: "145", sliderControls: true},
       {images: ["image2.jpg", "image2.jpg","image2.jpg", "image2.jpg"], roomNumber: "840", roomPrice: "9 990", roomReviews: "65"}
     ]
-  })
+    })
