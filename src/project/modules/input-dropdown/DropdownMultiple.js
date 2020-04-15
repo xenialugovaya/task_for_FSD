@@ -9,12 +9,40 @@ export default class DropdownMultiple extends Dropdown {
       ['ванная комната', 'ванные комнаты', 'ванных комнат'],
     ];
     this.render({
-      onChange: () => {
+      onChange: (id, itemCount, totalItems) => {
         const text = this.updateText();
         this.setInputText(text);
+        if (itemCount === 0) {
+          this.addDefaultClass(id);
+        } else {
+          this.removeDefaultClass(id);
+        }
       },
     });
     this.setInputText('0 спален, 0 кроватей, 0 ванных комнат');
+    this.addDefaultClass();
+  }
+
+  addDefaultClass(id = '') {
+    if (id) {
+      const $item = this.$elem.find(`[data-id=${id}]`);
+      const $control = $item.find('.iqdropdown-item-controls');
+      $control.addClass('defaultClass');
+    } else {
+      const $controls = this.$elem.find('.iqdropdown-item-controls');
+      $controls.addClass('defaultClass');
+    }
+  }
+
+  removeDefaultClass(id = '') {
+    if (id) {
+      const $item = this.$elem.find(`[data-id=${id}]`);
+      const $control = $item.find('.iqdropdown-item-controls');
+      $control.removeClass('defaultClass');
+    } else {
+      const $controls = this.$elem.find('.iqdropdown-item-controls');
+      $controls.removeClass('defaultClass');
+    }
   }
 
   getMenuItems() {

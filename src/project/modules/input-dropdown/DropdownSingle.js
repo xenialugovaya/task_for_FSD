@@ -12,11 +12,39 @@ export default class DropdownSingle extends Dropdown {
         } else {
           this.removeClearButton();
         }
+        if (itemCount === 0) {
+          this.addDefaultClass(id);
+        } else {
+          this.removeDefaultClass(id);
+        }
       },
     });
     this.setInputText('Сколько гостей');
     this.addButtonsBlock();
     this.addApplyButton();
+    this.addDefaultClass();
+  }
+
+  addDefaultClass(id = '') {
+    if (id) {
+      const $item = this.$elem.find(`[data-id=${id}]`);
+      const $control = $item.find('.iqdropdown-item-controls');
+      $control.addClass('defaultClass');
+    } else {
+      const $controls = this.$elem.find('.iqdropdown-item-controls');
+      $controls.addClass('defaultClass');
+    }
+  }
+
+  removeDefaultClass(id = '') {
+    if (id) {
+      const $item = this.$elem.find(`[data-id=${id}]`);
+      const $control = $item.find('.iqdropdown-item-controls');
+      $control.removeClass('defaultClass');
+    } else {
+      const $controls = this.$elem.find('.iqdropdown-item-controls');
+      $controls.removeClass('defaultClass');
+    }
   }
 
   addButtonsBlock() {
@@ -64,6 +92,7 @@ export default class DropdownSingle extends Dropdown {
         $decrement.click();
       }
     });
+    this.addDefaultClass();
   }
 
   updateText(totalItems) {

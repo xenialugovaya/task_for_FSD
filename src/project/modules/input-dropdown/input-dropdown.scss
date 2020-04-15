@@ -20,7 +20,7 @@
   }
 
   .iqdropdown-menu {
-    margin-top: -7px;
+    top: 45px;
     border: 1px solid $dark_shade_50;
     border-top: none;
     box-sizing: border-box;
@@ -91,7 +91,6 @@
   }
 }
 
-
 .defaultClass .button-decrement {
   border: 1px solid $dark_shade_25 !important;
   cursor: initial;
@@ -122,15 +121,11 @@
 
 .iqdropdown-menu-option {
   height: 37px !important;
-}
-
-.iqdropdown-content {
-  margin-left: -2px;
+  padding-right: 6px !important;
 }
 
 .iqdropdown-item-controls {
   margin-top: 8px !important;
-  margin-right: -9px !important;
 }
 
 .iqdropdown-selection {
