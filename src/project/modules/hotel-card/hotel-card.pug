@@ -13,10 +13,10 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, roomReviews, sliderCo
             img(src=require("../modules/hotel-card/images/" + image) alt="Room image" + index)
     .hotel-card__caption
       .hotel-card__header
-        +booking-header({roomNumber: roomNumber, roomType: roomType, roomPrice: roomPrice})
+        +booking-header({roomNumber, roomType, roomPrice})
       .hotel-card__reviews-block
         +rating()
         .hotel-card__reviews
           a(href="./room-details.html")
-            span.hotel-card__reviews-number #{roomReviews}
-            span.hotel-card__measure-unit Отзывов
+            span.hotel-card__reviews-number= roomReviews[0]
+            span.hotel-card__measure-unit= roomReviews[1]
