@@ -5,7 +5,7 @@ include ../form-registration/form-registration
 include ../form-signup/form-signup
 include ../form-booking/form-booking
 
-mixin uikit-cards({formLogin, formRegistration, formBooking, hotelCards})
+mixin uikit-cards({formLogin, formRegistration, formBooking, formSignup, hotelCards})
   .cards-page
     .cards-page__content
       .cards-page__column
@@ -17,7 +17,7 @@ mixin uikit-cards({formLogin, formRegistration, formBooking, hotelCards})
         .cards-page__form-booking
           +form-booking(formBooking)
         .cards-page__form-sign-up
-          +form-signup()
+          +form-signup(formSignup)
       .cards-page__column
         .cards-page__calendar
           +datepicker()

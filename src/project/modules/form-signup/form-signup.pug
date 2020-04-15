@@ -1,12 +1,12 @@
 include ../input/input
 include ../form-footer/form-footer
 
-mixin form-signup()
+mixin form-signup({header, email, password, footer})
   .signup
     form.signup__form
-      h1.signup__header Войти
+      h1.signup__header= header
       .signup__login-data
-        +input({placeholder: "Email", type: "text"})
-        +input({placeholder: "Пароль", type: "text"})
+        +input(email)
+        +input(password)
       .signup__footer
-        +form-footer({bigButtonText: "Войти", ghostButtonText: "создать", footerText:"Нет аккаунта на Toxin?", logout: true})
+        +form-footer(footer)

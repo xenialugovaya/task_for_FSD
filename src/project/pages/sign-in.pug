@@ -6,4 +6,16 @@ block variables
   - let pageTitle= "Sign in"
 
 block content
-  +page-sign-in()
+  +page-sign-in({
+    formSignup:{
+      header: "Войти", 
+      email: {placeholder: "Email", type: "text"}, 
+      password: {placeholder: "Пароль", type: "text"}, 
+      footer: {
+        bigButtonText: "Войти", 
+        ghostButtonText: "создать", 
+        footerText:"Нет аккаунта на Toxin?", 
+        logout: true
+      }
+    }
+  })
