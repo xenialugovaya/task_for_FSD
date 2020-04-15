@@ -7,4 +7,4 @@ mixin menu({links, eng})
   ul(class= classes)
     each link in links
       li.menu__link   
-        +nav-link({href: link.href, name: link.name, dropdown: link.dropdown, active: link.active})
+        +nav-link(link)

@@ -14,11 +14,11 @@ mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})
         b
         b
     nav.header__menu-mobile.js-header__menu-mobile#collapse-menu
-      +menu({links: links}) 
+      +menu({links}) 
     .header__logo
       +logo({disabled: false})
     nav.header__menu
-      +menu({links: links, eng: eng})
+      +menu({links, eng})
     if !loggedIn
       .header__buttons
         .header__button-login
