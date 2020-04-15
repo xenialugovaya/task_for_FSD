@@ -31,12 +31,18 @@
   }
 
   &_rus {
+
     .footer__menu {
+      justify-content: initial;
       padding-right: 7.5%;
       padding-left: 4%;
 
       .footer__menu-column:nth-child(2) {
-        margin-left: -5%;
+        margin-left: 10.5%;
+      }
+
+      .footer__menu-column:nth-child(3) {
+        margin-left: 15.8%;
       }
     }
   }
