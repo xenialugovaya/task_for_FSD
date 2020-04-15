@@ -9,6 +9,7 @@
 
     &.h1 {
       font-size: 24px;
+      line-height: 30px;
     }
 
     &.h2 {
@@ -20,7 +21,6 @@
     }
 
     &.p {
-      margin-top: -3px;
       font-family: $mainFont;
     }
   }
@@ -29,7 +29,6 @@
     display: inline-block;
     margin-left: 30px;
     max-width: 336px;
-    margin-top: -3px;
 
     &.h1 {
       @include h1;
@@ -39,7 +38,6 @@
 
     &.h2 {
       @include h2;
-      margin-top: -1px;
       letter-spacing: -0.4px;
     }
 

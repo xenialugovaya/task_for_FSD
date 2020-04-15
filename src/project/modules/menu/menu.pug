@@ -6,5 +6,9 @@ mixin menu({links, eng})
     - classes.push("menu_eng")
   ul(class= classes)
     each link in links
-      li.menu__link   
-        +nav-link(link)
+      if link.dropdown
+        li.menu__link_dropdown   
+          +nav-link(link)
+      else
+        li.menu__link   
+          +nav-link(link)

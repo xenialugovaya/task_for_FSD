@@ -5,13 +5,17 @@
     margin-right: 20px;
   }
 
+  &__link_dropdown:not(:last-child) {
+    margin-right: 20px;
+  }
+
   &_eng {
     .menu__link:not(:last-child) {
       margin-right: 29px;
+    }
 
-      .nav-link_dropdown {
-        margin-right: -12px;
-      }
+    .menu__link_dropdown {
+      margin-right: 17px;
     }
   }
 }
