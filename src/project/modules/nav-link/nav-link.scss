@@ -11,6 +11,7 @@
   &_dropdown:after {
     @include drop-arrow;
     right: 0;
+    top: 2px;
   }
 
   &_active {
