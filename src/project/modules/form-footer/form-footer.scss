@@ -6,4 +6,10 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  &__login-button {
+    .button-ghost {
+      min-width: 99px;
+    }
+  }
 }

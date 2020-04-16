@@ -7,6 +7,8 @@ mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})
   - const classes = ["header"]
   if loggedIn
     - classes.push("header_logged-in")
+  if eng
+    - classes.push("header_eng")
   div(class=classes)
     .header__mburger
       a(class="mburger mburger--spin" href="#collapse-menu")  

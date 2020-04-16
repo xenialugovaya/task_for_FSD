@@ -128,4 +128,13 @@
     padding-left: 30px;
     margin-left: 3px;
   }
+
+  &_eng {
+    .button-ghost {
+      &__text {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    }
+  }
 }
