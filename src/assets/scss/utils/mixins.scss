@@ -67,7 +67,7 @@
   border-radius: 4px;
   font-family: $mainFont;
   font-size: $mainFontSize;
-  padding-left: 15px;
+  padding-left: 13px;
   border: 1px solid $dark_shade_25;
 
   &:focus,
@@ -122,7 +122,7 @@
 }
 
 @mixin form {
-  padding: 10.53% 7.9% 7.9% 7.9%;
+  padding: 10.53% 7.9% 7.7% 7.9%;
   background: $white;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
