@@ -8,6 +8,10 @@
     grid-template-rows: 1fr 1fr;
     overflow: hidden;
 
+    @media (max-width: 660px) {
+      display: none !important;
+    }
+
     img {
       width: 100%;
       height: 100%;
