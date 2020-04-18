@@ -60,7 +60,6 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
           .form-elements__input-header
             h3= subscription.title
           +input-subscription({placeholder: subscription.placeholder, type: subscription.type})
-
       section.form-elements__small-buttons
         .form-elements__checkbox-block
           h3= checkbox.title
@@ -88,7 +87,6 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
           each item in rating.stars
             .form-elements__ratings-block-rating
               +rating(item)
-
       section.form-elements__buttons
         .form-elements__range-slider
           +range-slider(rangeSlider.title)
@@ -112,7 +110,6 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
           h3= pagination.title
           .form-elements__pagination
             +pagination({text: pagination.text, items: pagination.items})
-
       section.form-elements__dropdown-inputs
         .form-elements__dropdown-inputs-column
           .form-elements__wrap-dropdown-input
@@ -135,7 +132,6 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
             .form-elements__input-header
               h3= dropdownInputs.title 
             +input-dropdown(dropdownInputs.single)
-
       section.form-elements__lists
         .form-elements__lists-column 
           .form-elements__checkbox-expandable-block
@@ -154,7 +150,6 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
             h3= bullet.title
             .form-elements__bullet-list-block-group
               +bullet-list({items: bullet.items})   
-
       section.form-elements__room-details
         .form-elements__room-details-column
           each icon in roomIcons

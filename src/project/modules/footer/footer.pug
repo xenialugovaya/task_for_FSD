@@ -13,18 +13,15 @@ mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyrigh
         .footer__logo
           +logo({disabled:false})
         p.footer__company-info-block-text= mainText
-
       .footer__menu
         each column in menu
           .footer__menu-column
             +footer-column({title: column.title, links: column.links})
-
       .footer__subscription-block
         h3.footer__subscription-title= title
         p.footer__subscription-text= text
         .footer__input-subscription
           +input-subscription({placeholder: placeholder})
-
     section.footer__copyright-section
       p.footer__copyright-section-text= copyright
       .footer__social-icons
