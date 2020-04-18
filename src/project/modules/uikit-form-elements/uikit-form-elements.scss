@@ -270,6 +270,8 @@
   }
 
   &__room-icon {
+    width: 280px;
+
     &:not(:first-child) {
       margin-top: 20px;
     }
