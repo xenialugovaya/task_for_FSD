@@ -3,10 +3,13 @@ import Dropdown from './Dropdown';
 export default class DropdownSingle extends Dropdown {
   constructor(element) {
     super(element);
-    this.wordForms = ['гость', 'гостя', 'гостей'];
+    this.wordForms = [
+      ['гость', 'гостя', 'гостей'],
+      ['младенец', 'младенца', 'младенцев'],
+    ];
     this.render({
       onChange: (id, itemCount, totalItems) => {
-        this.updateText(totalItems);
+        this.updateText();
         if (totalItems > 0) {
           this.addClearButton();
         } else {
@@ -95,9 +98,24 @@ export default class DropdownSingle extends Dropdown {
     this.addDefaultClass();
   }
 
-  updateText(totalItems) {
-    const wordForm = Dropdown.getWordForm(totalItems, this.wordForms);
-    const text = `${totalItems} ${wordForm}`;
+  updateText() {
+    const $items = this.getMenuItems();
+    let text = '';
+    let guestsCount = 0;
+    let babiesCount = 0;
+    $items.each((index, item) => {
+      const $counter = $(item).find('.counter');
+      const itemCount = parseInt($counter.text(), 10);
+      if (index < 2) {
+        guestsCount += itemCount;
+        const wordForm = Dropdown.getWordForm(guestsCount, this.wordForms[0]);
+        text = `${guestsCount} ${wordForm}`;
+      } else {
+        babiesCount = itemCount;
+        const wordForm = Dropdown.getWordForm(babiesCount, this.wordForms[1]);
+        text += babiesCount ? `, ${babiesCount} ${wordForm}` : '';
+      }
+    });
     this.setInputText(text);
   }
 }

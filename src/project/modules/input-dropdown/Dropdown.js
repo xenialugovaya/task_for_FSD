@@ -3,6 +3,17 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 export default class Dropdown {
   constructor(element) {
     this.$elem = element;
+    this.bindEventListeners();
+  }
+
+  bindEventListeners() {
+    $(document).on('click', this.handleDocumentClick.bind(this));
+  }
+
+  handleDocumentClick(e) {
+    if (!($(e.target).hasClass('iqdropdown'))) {
+      this.$elem.removeClass('menu-open');
+    }
   }
 
   render(options) {
@@ -12,6 +23,11 @@ export default class Dropdown {
   setInputText(text) {
     const $selection = this.$elem.find('p.iqdropdown-selection').last();
     $selection.html(text);
+  }
+
+  getMenuItems() {
+    const $items = this.$elem.find('div.iqdropdown-menu').find('div.iqdropdown-menu-option');
+    return $items;
   }
 
   static getWordForm(totalItems, wordForms) {

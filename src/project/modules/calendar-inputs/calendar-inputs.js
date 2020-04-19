@@ -8,6 +8,7 @@ class CalendarInputs {
     this.$elem.find('.calendar-inputs__wrap-input').on('click', this.handleCalendarInputsWrapInputClick.bind(this));
     this.$elem.find('.calendar-inputs__add-button').on('click', this.handleCalendarInputsAddButtonClick.bind(this));
     this.$elem.find('.datepicker-here').on('click', this.handleDatepickerHereClick.bind(this));
+    $(document).on('click', this.handleDocumentClick.bind(this));
   }
 
   handleCalendarInputsWrapInputClick() {
@@ -26,6 +27,12 @@ class CalendarInputs {
     }
     if ($datepicker.selectedDates[1]) {
       this.$elem.find('.calendar-inputs__input-small').eq(1).val(CalendarInputs.formatDate($datepicker.selectedDates[1]));
+    }
+  }
+
+  handleDocumentClick(e) {
+    if (!($(e.target).hasClass('datepicker--cell')) && !($(e.target).parents('.calendar-inputs').length)) {
+      this.$elem.find('.calendar-inputs__calendar-dropdown').hide();
     }
   }
 
