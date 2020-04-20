@@ -7,6 +7,10 @@ export default class DropdownSingle extends Dropdown {
       ['гость', 'гостя', 'гостей'],
       ['младенец', 'младенца', 'младенцев'],
     ];
+    this.init();
+  }
+
+  init() {
     this.render({
       onChange: (id, itemCount, totalItems) => {
         this.updateText();
