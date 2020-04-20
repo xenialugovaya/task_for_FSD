@@ -37,7 +37,7 @@ class CalendarInputs {
   }
 
   clearInputs() {
-    this.$elem.find('.calendar-inputs__input-small').val(' ');
+    this.$elem.find('.calendar-inputs__input-small').val('').attr('placeholder', 'ДД.ММ.ГГГГ');
   }
 
   getCalendarData() {
