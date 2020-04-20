@@ -2,7 +2,6 @@
   flex: 1 0 auto;
 
   &__gallery {
-    height: 485px;
     display: grid;
     grid-template-columns: 2.125fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -20,7 +19,12 @@
   }
 
   &__main-image {
+    height: 485px;
     grid-row: span 2;
+  }
+
+  &__small-image {
+    height: 242.5px;
   }
 
   &__content {
