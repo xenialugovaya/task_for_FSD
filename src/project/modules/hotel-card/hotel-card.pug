@@ -1,7 +1,7 @@
 include ../booking-header/booking-header
 include ../ratings/ratings
 
-mixin hotel-card({images, roomNumber, roomPrice, roomType, roomReviews, sliderControls})
+mixin hotel-card({images, roomNumber, roomPrice, roomType, measureUnits, roomReviews, sliderControls})
   - const classes = ["hotel-card__slider"]
   if sliderControls
     - classes.push("hotel-card__slider_with-controls")
@@ -13,7 +13,7 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, roomReviews, sliderCo
             img(src=require("../modules/hotel-card/images/" + image) alt="Room image" + index)
     .hotel-card__caption
       .hotel-card__header
-        +booking-header({roomNumber, roomType, roomPrice})
+        +booking-header({roomNumber, roomType, roomPrice, measureUnits})
       .hotel-card__reviews-block
         +rating()
         .hotel-card__reviews

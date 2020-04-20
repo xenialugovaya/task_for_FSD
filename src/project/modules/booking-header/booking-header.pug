@@ -1,9 +1,9 @@
-mixin booking-header({roomNumber, roomType, roomPrice})
+mixin booking-header({roomNumber, roomType, roomPrice, measureUnits})
   .booking-header
     .booking-header__room-type
       span.booking-header__number-sign №
       span.booking-header__room-number #{roomNumber}
       span.booking-header__type #{roomType}
     .booking-header__room-price
-      span.booking-header__price #{roomPrice}₽
-      span.booking-header__measure-unit в сутки
+      span.booking-header__price #{roomPrice}#{measureUnits.rubles}
+      span.booking-header__measure-unit #{measureUnits.day}
