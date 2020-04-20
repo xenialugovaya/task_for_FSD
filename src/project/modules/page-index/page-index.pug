@@ -1,12 +1,12 @@
-mixin page-index({pages, uikit})
+mixin page-index({headings, pages, uikit})
   .project-menu
     .project-menu__header
-      h1 Project menu
+      h1= headings.main
     ul.project-menu__menu
       each page in pages
         li.project-menu__item
           a(href= page.link)= page.name
-      h2 Uikit
+      h2= headings.uikit
       each page in uikit
         li.project-menu__item
           a(href= page.link)= page.name
