@@ -2,7 +2,7 @@ include ../../modules/header/header
 include ../../modules/footer/footer
 include ../../modules/footer-mobile/footer-mobile
 
-mixin uikit-headers-footers({headers, footer})
+mixin uikit-headers-footers({headers, footer, mobileFooter})
   .headers-footers
     .headers-footers__content
       .headers-footers__header-loggedout
@@ -18,4 +18,4 @@ mixin uikit-headers-footers({headers, footer})
           eng: footer.eng,
         })
       .headers-footers__footer-mobile 
-        +footer-mobile()
+        +footer-mobile(mobileFooter)
