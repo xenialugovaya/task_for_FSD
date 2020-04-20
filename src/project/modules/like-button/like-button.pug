@@ -2,5 +2,5 @@ mixin like-button({number, name, value, checked})
   label.like-button
     input(class="like-button__like" type="checkbox", name=name, value=value, checked=checked)
     .like-button__body
-      .material-icons
+      span.material-icons
       span.like-button__counter #{number}

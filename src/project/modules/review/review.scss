@@ -19,8 +19,9 @@
   &__avatar-like {
     margin-top: 14px;
     margin-left: 4px;
-    width: 40px;
+    min-width: 40px;
     height: 20px;
+    padding-right: 4px;
   }
 
   &__body {
