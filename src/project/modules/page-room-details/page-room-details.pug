@@ -29,7 +29,7 @@ mixin page-room-details({gallery, roomIcons, chart, formBooking, reviews, bullet
       .room-details-page__room-reviews
         .room-details-page__header
           h2= reviews.title
-          span.room-details-page__review-number= reviews.amount
+          .room-details-page__review-number= reviews.amount
         each text in reviews.texts
           .room-details-page__review
             +review(text)

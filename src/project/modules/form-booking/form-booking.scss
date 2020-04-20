@@ -36,7 +36,6 @@
     position: relative;
     line-height: 18px;
 
-
     &_with-icon:after {
       position: absolute;
       content: 'i';
@@ -44,6 +43,7 @@
       right: 0;
       font-family: $mainFont;
       font-weight: bold;
+      font-size: 12px;
       color: $dark_shade_25;
       border: 1px solid $dark_shade_25;
       border-radius: 50%;
@@ -56,6 +56,8 @@
 
   &__item-price {
     line-height: 18px;
+    min-width: 60px;
+    text-align: right;
   }
 
   &__price-list-final {

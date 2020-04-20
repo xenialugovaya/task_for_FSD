@@ -29,6 +29,10 @@
 
     &::placeholder {
       color: $dark_shade_75;
+
+      @media(max-width: 350px) {
+        font-size: 12px;
+      }
     }
   }
 

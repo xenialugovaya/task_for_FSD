@@ -33,17 +33,25 @@
   }
 
   &__input-focus,
-  &__input-dropdown,
-  &__input-masked {
+  &__input-dropdown {
     display: block;
     margin-top: 20px;
   }
 
+  &__input-masked {
+    display: block;
+    margin-top: 23px;
+  }
+
   &__inputs-calendar,
-  &__input-date-dropdown,
   &__input-subscription {
     display: block;
-    margin-top: 42px;
+    margin-top: 40px;
+  }
+
+  &__input-date-dropdown {
+    display: block;
+    margin-top: 41px;
   }
 
   &__input-date-dropdown,
@@ -195,7 +203,7 @@
   // Section dropdown inputs
 
   &__dropdown-inputs {
-    margin-top: 79px;
+    margin-top: 81px;
   }
 
   &__dropdown-inputs-column {
