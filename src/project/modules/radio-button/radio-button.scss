@@ -10,6 +10,7 @@
 
     .radio-button__title {
       padding-left: 30px;
+      opacity: 0.5;
     }
   }
 
@@ -23,12 +24,16 @@
       width: 20px;
       height: 20px;
       background: $white;
-      border: 1px solid $dark_shade_25;
+      border: 1px solid $dark_shade_50;
       box-sizing: border-box;
       border-radius: 10px;
       position: absolute;
       left: 0px;
       top: 0px;
+    }
+
+    &:checked+.radio-button__title{
+      opacity: 1;
     }
 
     &:checked+.radio-button__title:before {
