@@ -277,8 +277,6 @@ $datepickerTransitionOffset: 8px !default;
 //  Months
 // -------------------------------------------------
 
-.datepicker--months {}
-
 .datepicker--cells-months {
   height: $datepickerMinBodyHeight;
 }
@@ -806,13 +804,9 @@ $rangeThumbBg: #dedede;
       background: transparent;
     }
 
-    &:focus::-ms-fill-lower {}
-
     &::-ms-fill-upper {
       background: transparent;
     }
-
-    &:focus::-ms-fill-upper {}
   }
 
   span {
