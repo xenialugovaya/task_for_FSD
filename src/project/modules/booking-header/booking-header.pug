@@ -1,5 +1,8 @@
-mixin booking-header({roomNumber, roomType, roomPrice, measureUnits})
-  .booking-header
+mixin booking-header({roomNumber, roomType, roomPrice, measureUnits, inHotelCard})
+  - const classes = ["booking-header"]
+  if inHotelCard
+    - classes.push("booking-header_in-hotel-card")
+  div(class=classes)
     .booking-header__room-type
       span.booking-header__number-sign №
       span.booking-header__room-number #{roomNumber}

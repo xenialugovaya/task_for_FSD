@@ -114,12 +114,6 @@
     padding-top: 2px;
     padding-bottom: 7px;
     border-bottom: 1px solid $dark_shade_10;
-
-    .booking-header__room-number {
-      @include h1-cyrillic;
-      font-size: 127%;
-      letter-spacing: 1.7px;
-    }
   }
 
   &__reviews-block {

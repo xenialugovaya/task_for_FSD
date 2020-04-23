@@ -13,7 +13,7 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, measureUnits, roomRev
             img(src=require("../modules/hotel-card/images/" + image) alt="Room image" + index)
     .hotel-card__caption
       .hotel-card__header
-        +booking-header({roomNumber, roomType, roomPrice, measureUnits})
+        +booking-header({roomNumber, roomType, roomPrice, measureUnits, inHotelCard: true})
       .hotel-card__reviews-block
         +rating()
         .hotel-card__reviews
