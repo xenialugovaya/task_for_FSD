@@ -20,4 +20,13 @@
       cursor: initial;
     }
   }
+
+  &_in-form-footer{
+    min-width: 99px;
+    
+    .button-ghost__text{
+      padding-left: 17px;
+      padding-right: 17px;
+    }
+  }
 }

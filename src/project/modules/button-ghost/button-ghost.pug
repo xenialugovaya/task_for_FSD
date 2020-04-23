@@ -1,6 +1,8 @@
-mixin button-ghost({text, disabled})  
+mixin button-ghost({text, disabled, inFormFooter})  
   - const classes = ["button-ghost"]
   if disabled
     - classes.push("button-ghost_disabled")
+  if inFormFooter
+    - classes.push("button-ghost_in-form-footer")
   button(class=classes)
     span.button-ghost__text #{text} 
