@@ -2,11 +2,11 @@ include ../input/input
 include ../form-footer/form-footer
 
 mixin form-signup({header, email, password, footer})
-  .signup
-    form.signup__form
-      h1.signup__header= header
-      .signup__login-data
+  .form-signup
+    form.form-signup__form
+      h1.form-signup__header= header
+      .form-signup__login-data
         +input(email)
         +input(password)
-      .signup__footer
+      .form-signup__footer
         +form-footer(footer)

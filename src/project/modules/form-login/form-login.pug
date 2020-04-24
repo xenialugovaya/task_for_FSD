@@ -3,13 +3,13 @@ include ../input-dropdown/input-dropdown
 include ../form-footer/form-footer
 
 mixin form-login({header, datesInputs, guestsInput, footer})
-  .login
-    form.login__form
-      h1.login__header= header
-      .login__calendar-inputs
+  .form-login
+    form.form-login__form
+      h1.form-login__header= header
+      .form-login__calendar-inputs
         +calendar-inputs(datesInputs)
-      .login__input-dropdown
-        h3.login__input-dropdown-header= guestsInput.header
+      .form-login__input-dropdown
+        h3.form-login__input-dropdown-header= guestsInput.header
         +input-dropdown({items: guestsInput.items, placeholder: guestsInput.placeholder, single: guestsInput.single})
-      .login__footer
+      .form-login__footer
         +form-footer(footer)

@@ -4,29 +4,29 @@ include ../toggle/toggle
 include ../form-footer/form-footer
 
 mixin form-registration({header, name, surname, sex, dateOfBirth, access, subscription, footer})
-  .registration
-    form.registration__form
-      h1.registration__header= header
-      .registration__name
-        .registration__name-input
+  .form-registration
+    form.form-registration__form
+      h1.form-registration__header= header
+      .form-registration__name
+        .form-registration__name-input
           +input(name)
-        .registration__name-input
+        .form-registration__name-input
           +input(surname) 
-      .registration__sex
+      .form-registration__sex
         each radio in sex
-          .registration__sex-radio
+          .form-registration__sex-radio
             +radio-button(radio)
-      .registration__birth-date   
-        h3.registration__title= dateOfBirth.header
-        .registration__birth-date-input
+      .form-registration__birth-date   
+        h3.form-registration__title= dateOfBirth.header
+        .form-registration__birth-date-input
           +input(dateOfBirth.input) 
-      .registration__login-data
-        h3.registration__title= access.header 
-        .registration__login-data-input
+      .form-registration__login-data
+        h3.form-registration__title= access.header 
+        .form-registration__login-data-input
           +input(access.email)
-        .registration__login-data-input 
+        .form-registration__login-data-input 
           +input(access.password) 
-      .registration__subscription
+      .form-registration__subscription
         +toggle(subscription)
-      .registration__footer
+      .form-registration__footer
         +form-footer(footer)

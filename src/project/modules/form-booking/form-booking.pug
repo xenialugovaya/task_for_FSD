@@ -4,26 +4,26 @@ include ../input-dropdown/input-dropdown
 include ../form-footer/form-footer
 
 mixin form-booking({header, dateInputs, guestsInput, priceList, footer})
-  .booking
-    form.booking__form
-      .booking__header 
+  .form-booking
+    form.form-booking__form
+      .form-booking__header 
         +booking-header(header)
-      .booking__calendar-inputs
+      .form-booking__calendar-inputs
         +calendar-inputs(dateInputs)      
-      .booking__input-dropdown
-        h3.booking__input-dropdown-header= guestsInput.header
+      .form-booking__input-dropdown
+        h3.form-booking__input-dropdown-header= guestsInput.header
         +input-dropdown({items: guestsInput.items, placeholder: guestsInput.placeholder, single: guestsInput.single})
-      .booking__price-list
+      .form-booking__price-list
         each row in priceList.items
-          .booking__price-list-item
+          .form-booking__price-list-item
             if row.withIcon
-              .booking__item.booking__item_with-icon= row.item
+              .form-booking__item.form-booking__item_with-icon= row.item
             else 
-              .booking__item= row.item
-            .booking__item-price= row.itemPrice
-        .booking__price-list-final 
-          .booking__item-final= priceList.final
-          .booking__item-final-divider
-          .booking__item-price-final= priceList.finalPrice
-      .booking__footer
+              .form-booking__item= row.item
+            .form-booking__item-price= row.itemPrice
+        .form-booking__price-list-final 
+          .form-booking__item-final= priceList.final
+          .form-booking__item-final-divider
+          .form-booking__item-price-final= priceList.finalPrice
+      .form-booking__footer
         +form-footer(footer)
