@@ -4,7 +4,7 @@ mixin review({image, author, date, text, likeNumber, likeName, likeValue, likeCh
   .review
     .review__avatar
       .review__avatar-image
-        img(src=require("../modules/review/images/" + image) alt="avatar")
+        img(src=require("../modules/review/images/" + image) class="review__image" alt="avatar")
       .review__avatar-like
         +like-button({number: likeNumber, name: likeName, value: likeValue, checked: likeChecked})
     .review__body 

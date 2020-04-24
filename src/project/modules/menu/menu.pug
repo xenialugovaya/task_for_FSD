@@ -1,9 +1,11 @@
 include ../nav-link/nav-link
 
-mixin menu({links, eng})
+mixin menu({links, eng, mobile})
   - const classes = ["menu"]
   if eng
     - classes.push("menu_eng")
+  if mobile
+    - classes.push("menu_mobile")
   ul(class= classes)
     each link in links
       if link.dropdown

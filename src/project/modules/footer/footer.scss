@@ -2,10 +2,6 @@
   background: #FFFFFF;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
 
-  @media (max-width: 1150px) {
-    display: none;
-  }
-
   &__main-section {
     padding: 99px 9.1% 95px 9.7%;
     border-bottom: 1px solid $dark_shade_10;
@@ -87,11 +83,5 @@
     padding: 23px 9.3% 23px 9.7%;
     display: flex;
     justify-content: space-between;
-  }
-}
-
-@media (min-width: 1151px) {
-  .footer-mobile {
-    display: none;
   }
 }

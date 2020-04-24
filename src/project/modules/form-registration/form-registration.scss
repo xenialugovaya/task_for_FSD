@@ -12,8 +12,10 @@
 
   &__name {
     margin-top: 20px;
+  }
 
-    .input:nth-child(2) {
+  &__name-input{
+    &:last-child{
       margin-top: 10px;
     }
   }
@@ -21,29 +23,30 @@
   &__sex {
     margin-top: 11px;
     display: flex;
+  }
 
-    .radio-button:not(:first-child) {
+  &__sex-radio{
+    &:last-child{
       margin-left: 20px;
     }
   }
 
   &__birth-date {
     margin-top: 23px;
+  }
 
-    .input {
-      margin-top: 5px;
-    }
+  &__birth-date-input{
+    margin-top: 5px;
   }
 
   &__login-data {
     margin-top: 20px;
+  }
 
-    .input {
-      margin-top: 5px;
-
-      &:last-child {
-        margin-top: 10px;
-      }
+  &__login-data-input{
+    margin-top: 5px;
+    &:last-child {
+      margin-top: 10px;
     }
   }
 

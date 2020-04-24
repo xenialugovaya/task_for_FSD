@@ -8,18 +8,24 @@ mixin form-registration({header, name, surname, sex, dateOfBirth, access, subscr
     form.registration__form
       h1.registration__header= header
       .registration__name
-        +input(name)
-        +input(surname) 
+        .registration__name-input
+          +input(name)
+        .registration__name-input
+          +input(surname) 
       .registration__sex
         each radio in sex
-          +radio-button(radio)
+          .registration__sex-radio
+            +radio-button(radio)
       .registration__birth-date   
         h3.registration__title= dateOfBirth.header
-        +input(dateOfBirth.input) 
+        .registration__birth-date-input
+          +input(dateOfBirth.input) 
       .registration__login-data
         h3.registration__title= access.header 
-        +input(access.email) 
-        +input(access.password) 
+        .registration__login-data-input
+          +input(access.email)
+        .registration__login-data-input 
+          +input(access.password) 
       .registration__subscription
         +toggle(subscription)
       .registration__footer

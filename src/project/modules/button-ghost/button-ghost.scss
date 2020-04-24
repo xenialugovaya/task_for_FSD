@@ -29,4 +29,20 @@
       padding-right: 17px;
     }
   }
+
+  &_in-header{
+    line-height: 30px;
+    width: auto;
+
+    .button-ghost__text{
+      padding: 0px 19px;
+    }
+  }
+
+  &_in-header-eng{
+    .button-ghost__text {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
 }

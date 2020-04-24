@@ -9,8 +9,8 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, measureUnits, roomRev
     div(class=classes)
       ul.hotel-card__images-list.js-hotel-images-list
         each image, index in images
-          li.hotel-card__image 
-            img(src=require("../modules/hotel-card/images/" + image) alt="Room image" + index)
+          li.hotel-card__image-wrapper 
+            img(src=require("../modules/hotel-card/images/" + image) class="hotel-card__image" alt="Room image" + index)
     .hotel-card__caption
       .hotel-card__header
         +booking-header({roomNumber, roomType, roomPrice, measureUnits, inHotelCard: true})

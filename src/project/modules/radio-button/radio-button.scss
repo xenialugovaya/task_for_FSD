@@ -7,11 +7,11 @@
     cursor: pointer;
     line-height: 20px;
     display: block;
+  }
 
-    .radio-button__title {
-      padding-left: 30px;
-      opacity: 0.5;
-    }
+  &__title {
+    padding-left: 30px;
+    opacity: 0.5;
   }
 
   &__radio {

@@ -1,8 +1,10 @@
-mixin button-big({text, hasArrow, type, disabled})  
+mixin button-big({text, hasArrow, type, disabled, inHeader})  
   - const classes = ["button-big"]
   if hasArrow
     - classes.push("button-big_with-arrow")
   if disabled
     - classes.push("button-big_disabled")
+  if inHeader
+    - classes.push("button-big_in-header")
   button(class=classes type=type)
     span #{text}
