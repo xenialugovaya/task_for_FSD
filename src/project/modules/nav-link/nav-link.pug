@@ -3,5 +3,5 @@ mixin nav-link({href, name, dropdown, active})
   if dropdown
     - classes.push("nav-link_dropdown") 
   if active
-    - classes.push("nav-link_active") 
+    - classes.push("nav-link_active")
   a(class=classes href=href)= name

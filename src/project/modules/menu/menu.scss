@@ -21,5 +21,13 @@
 
   &_mobile{
     display: block;
+    width: 100%;
+    .mm-listitem{
+      margin-right: 0px;
+    }
+    .nav-link_dropdown:after{
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 }
