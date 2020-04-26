@@ -27,134 +27,134 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
   - const { checkboxExpandable, checkboxRich, bullet } = lists
   - const { roomIcons, review } = roomDetails
 
-  .form-elements
-    .form-elements__content
-      section.form-elements__inputs
-        .form-elements__input-default
-          .form-elements__input-header
+  .uikit-form-elements
+    .uikit-form-elements__content
+      section.uikit-form-elements__inputs
+        .uikit-form-elements__input-default
+          .uikit-form-elements__input-header
             h3= defaultInput.title
-            span.form-elements__sub-title= defaultInput.subtitle
+            span.uikit-form-elements__sub-title= defaultInput.subtitle
           +input({placeholder: defaultInput.placeholder, type: defaultInput.type})
-        .form-elements__input-focus
-          .form-elements__input-header
+        .uikit-form-elements__input-focus
+          .uikit-form-elements__input-header
             h3= focused.title
-            span.form-elements__sub-title= focused.subtitle
+            span.uikit-form-elements__sub-title= focused.subtitle
           +input({placeholder: focused.placeholder, type: focused.type, focused})
-        .form-elements__input-dropdown
-          .form-elements__input-header
+        .uikit-form-elements__input-dropdown
+          .uikit-form-elements__input-header
             h3= dropdown.title
-            span.form-elements__sub-title= dropdown.subtitle
+            span.uikit-form-elements__sub-title= dropdown.subtitle
           +input-dropdown({items: dropdown.items, placeholder: dropdown.placeholder, single: dropdown.single})
-        .form-elements__input-masked
-          .form-elements__input-header
+        .uikit-form-elements__input-masked
+          .uikit-form-elements__input-header
             h3= masked.title
-            span.form-elements__sub-title= masked.subtitle
+            span.uikit-form-elements__sub-title= masked.subtitle
           +input({placeholder: masked.placeholder, type: masked.type, masked})
-        .form-elements__inputs-calendar
+        .uikit-form-elements__inputs-calendar
           +calendar-inputs(calendarInputs)
-        .form-elements__input-date-dropdown
-          .form-elements__input-header
+        .uikit-form-elements__input-date-dropdown
+          .uikit-form-elements__input-header
             h3= dateDropdown.title
           +input-date-dropdown({placeholder: dateDropdown.placeholder, type: dateDropdown.type})  
-        .form-elements__input-subscription
-          .form-elements__input-header
+        .uikit-form-elements__input-subscription
+          .uikit-form-elements__input-header
             h3= subscription.title
           +input-subscription({placeholder: subscription.placeholder, type: subscription.type})
-      section.form-elements__small-buttons
-        .form-elements__checkbox-block
+      section.uikit-form-elements__small-buttons
+        .uikit-form-elements__checkbox-block
           h3= checkbox.title
-          .form-elements__checkbox-block-group
+          .uikit-form-elements__checkbox-block-group
             each option in checkbox.options
-              .form-elements__checkbox-block-button
+              .uikit-form-elements__checkbox-block-button
                 +checkbox(option)
-        .form-elements__radio-block
+        .uikit-form-elements__radio-block
           h3= radio.title
           each option in radio.options
-            .form-elements__radio-block-button
+            .uikit-form-elements__radio-block-button
               +radio-button(option)
-        .form-elements__toggle-block
+        .uikit-form-elements__toggle-block
           h3= toggle.title
           each option in toggle.options
-            .form-elements__toggle-block-button   
+            .uikit-form-elements__toggle-block-button   
               +toggle(option)
-        .form-elements__like-block
+        .uikit-form-elements__like-block
           h3= likebutton.title
           each option in likebutton.options
-            .form-elements__like-block-button 
+            .uikit-form-elements__like-block-button 
               +like-button(option)
-        .form-elements__ratings-block
+        .uikit-form-elements__ratings-block
           h3= rating.title
           each item in rating.stars
-            .form-elements__ratings-block-rating
+            .uikit-form-elements__ratings-block-rating
               +rating(item)
-      section.form-elements__buttons
-        .form-elements__range-slider
+      section.uikit-form-elements__buttons
+        .uikit-form-elements__range-slider
           +range-slider(rangeSlider.title)
-        .form-elements__buttons-block
+        .uikit-form-elements__buttons-block
           h3= title
-          .form-elements__small-buttons-block
+          .uikit-form-elements__small-buttons-block
             each button in buttonsSmall
-              .form-elements__small-button
+              .uikit-form-elements__small-button
                 +button-small(button)
-          .form-elements__ghost-buttons-block
+          .uikit-form-elements__ghost-buttons-block
             each button in buttonsGhost
-              .form-elements__ghost-button
+              .uikit-form-elements__ghost-button
                 +button-ghost(button)
-          .form-elements__transparent-buttons-block
+          .uikit-form-elements__transparent-buttons-block
             each button in buttonsTransparent
-              .form-elements__transparent-button
+              .uikit-form-elements__transparent-button
                 +button-transparent(button)
-          .form-elements__big-button
+          .uikit-form-elements__big-button
             +button-big(buttonBig)
-        .form-elements__pagination-block
+        .uikit-form-elements__pagination-block
           h3= pagination.title
-          .form-elements__pagination
+          .uikit-form-elements__pagination
             +pagination({text: pagination.text, items: pagination.items})
-      section.form-elements__dropdown-inputs
-        .form-elements__dropdown-inputs-column
-          .form-elements__wrap-dropdown-input
-            .form-elements__input-header
+      section.uikit-form-elements__dropdown-inputs
+        .uikit-form-elements__dropdown-inputs-column
+          .uikit-form-elements__wrap-dropdown-input
+            .uikit-form-elements__input-header
               h3= dropdownInputs.title
-              span.form-elements__sub-title= dropdownInputs.subtitle.default
+              span.uikit-form-elements__sub-title= dropdownInputs.subtitle.default
             +input-dropdown(dropdownInputs.multiple) 
-          .form-elements__wrap-dropdown-input
-            .form-elements__input-header
+          .uikit-form-elements__wrap-dropdown-input
+            .uikit-form-elements__input-header
               h3= dropdownInputs.title
-              span.form-elements__sub-title= dropdownInputs.subtitle.expanded  
+              span.uikit-form-elements__sub-title= dropdownInputs.subtitle.expanded  
             +input-dropdown(dropdownInputs.multiple) 
-        .form-elements__dropdown-inputs-column
-          .form-elements__wrap-dropdown-input
-            .form-elements__input-header
+        .uikit-form-elements__dropdown-inputs-column
+          .uikit-form-elements__wrap-dropdown-input
+            .uikit-form-elements__input-header
               h3= dropdownInputs.title 
             +input-dropdown(dropdownInputs.single)
-        .form-elements__dropdown-inputs-column
-          .form-elements__wrap-dropdown-input
-            .form-elements__input-header
+        .uikit-form-elements__dropdown-inputs-column
+          .uikit-form-elements__wrap-dropdown-input
+            .uikit-form-elements__input-header
               h3= dropdownInputs.title 
             +input-dropdown(dropdownInputs.single)
-      section.form-elements__lists
-        .form-elements__lists-column 
-          .form-elements__checkbox-expandable-block
+      section.uikit-form-elements__lists
+        .uikit-form-elements__lists-column 
+          .uikit-form-elements__checkbox-expandable-block
             each group in checkboxExpandable
-              .form-elements__checkbox-expandable-block-group
+              .uikit-form-elements__checkbox-expandable-block-group
                 +checkbox-expandable(group)
-        .form-elements__lists-column 
-          .form-elements__checkbox-rich-block 
+        .uikit-form-elements__lists-column 
+          .uikit-form-elements__checkbox-rich-block 
             h3= checkboxRich.title
-            .form-elements__checkbox-rich-block-group
+            .uikit-form-elements__checkbox-rich-block-group
               each group in checkboxRich.group
-                .form-elements__checkbox-rich-block-button
+                .uikit-form-elements__checkbox-rich-block-button
                   +checkbox(group)    
-        .form-elements__lists-column 
-          .form-elements__bullet-list-block
+        .uikit-form-elements__lists-column 
+          .uikit-form-elements__bullet-list-block
             h3= bullet.title
-            .form-elements__bullet-list-block-group
+            .uikit-form-elements__bullet-list-block-group
               +bullet-list({items: bullet.items})   
-      section.form-elements__room-details
-        .form-elements__room-details-column
+      section.uikit-form-elements__room-details
+        .uikit-form-elements__room-details-column
           each icon in roomIcons
-            .form-elements__room-icon
+            .uikit-form-elements__room-icon
               +room-icon(icon)
-        .form-elements__room-details-column
-          .form-elements__room-review
+        .uikit-form-elements__room-details-column
+          .uikit-form-elements__room-review
             +review({image: review.image, author: review.author, date: review.date, text: review.text, likeNumber: review.likeNumber, likeChecked: review.likeChecked})

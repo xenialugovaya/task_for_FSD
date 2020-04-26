@@ -29,6 +29,8 @@
     .ui-slider-handle {
       display: block;
       border-radius: 50%;
+      top: 0px; 
+      transform:translate(0% -40%);
     }
 
     .ui-state-default {

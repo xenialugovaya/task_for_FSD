@@ -3,13 +3,13 @@ include ../../modules/footer/footer
 include ../../modules/footer-mobile/footer-mobile
 
 mixin uikit-headers-footers({headers, footer, mobileFooter})
-  .headers-footers
-    .headers-footers__content
-      .headers-footers__header-loggedout
+  .uikit-headers-footers
+    .uikit-headers-footers__content
+      .uikit-headers-footers__header-loggedout
         +header(headers.loggedOut)
-      .headers-footers__header-loggedin  
+      .uikit-headers-footers__header-loggedin  
         +header(headers.loggedIn)
-      .headers-footers__footer-desktop  
+      .uikit-headers-footers__footer-desktop  
         +footer({
           mainText: footer.mainText,
           menu: footer.menu,
@@ -17,5 +17,5 @@ mixin uikit-headers-footers({headers, footer, mobileFooter})
           copyright: footer.copyright,
           eng: footer.eng,
         })
-      .headers-footers__footer-mobile 
+      .uikit-headers-footers__footer-mobile 
         +footer-mobile(mobileFooter)

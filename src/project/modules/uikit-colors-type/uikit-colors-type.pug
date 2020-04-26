@@ -2,13 +2,13 @@ include ../color-box/color-box
 include ../uikit-text/uikit-text
 
 mixin uikit-colors-type({colorBoxes, textTypes})
-  .colors-types
-    .colors-types__content
-      .colors-types__color-column
+  .uikit-colors-type
+    .uikit-colors-type__content
+      .uikit-colors-type__color-column
         each box in colorBoxes
-          .colors-types__color-box
+          .uikit-colors-type__color-box
             +color-box({colorClass: box.colorClass, colorName: box.colorName, colorCode: box.colorCode})
-      .colors-types__text-column
+      .uikit-colors-type__text-column
         each textType in textTypes
-          .colors-types__text-box
+          .uikit-colors-type__text-box
             +uikit-text(textType.textTag, textType.nameTage, textType.textSample)

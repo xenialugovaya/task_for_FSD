@@ -7,40 +7,40 @@ include ../checkbox/checkbox
 include ../pagination/pagination
 
 mixin page-search-room({pageTitle, hotelCards, pagination, datesSelection, guestsSelection, rangeSlider, roomOptions, roomAvailability, roomFacilities, roomAdditionalFacilities})
-  .search-room-page
-    .search-room-page__content
-      aside.search-room-page__filter-column
-        .search-room-page__dates-selection
-          h3.search-room-page__input-header= datesSelection.title
+  .page-search-room
+    .page-search-room__content
+      aside.page-search-room__filter-column
+        .page-search-room__dates-selection
+          h3.page-search-room__input-header= datesSelection.title
           +input-date-dropdown({placeholder: datesSelection.placeholder, type: datesSelection.type})
-        .search-room-page__guests-selection
-          h3.search-room-page__input-header= guestsSelection.title
+        .page-search-room__guests-selection
+          h3.page-search-room__input-header= guestsSelection.title
           +input-dropdown({items: guestsSelection.items, placeholder: guestsSelection.placeholder, single: guestsSelection.single})
-        .search-room-page__price-selection
+        .page-search-room__price-selection
           +range-slider(rangeSlider.title)
-          p.search-room-page__price-selection-text= rangeSlider.text
-        .search-room-page__room-options
+          p.page-search-room__price-selection-text= rangeSlider.text
+        .page-search-room__room-options
           h3= roomOptions.title
-          .search-room-page__room-options-group
+          .page-search-room__room-options-group
             each option in roomOptions.options
-              .search-room-page__room-options-button
+              .page-search-room__room-options-button
                 +checkbox(option)
-        .search-room-page__room-availability
+        .page-search-room__room-availability
           h3= roomAvailability.title
-          .search-room-page__room-availability-group
+          .page-search-room__room-availability-group
             each option in roomAvailability.options
-              .search-room-page__room-availability-button
-              +checkbox(option)   
-        .search-room-page__room-facilities
-          h3.search-room-page__input-header= roomFacilities.title
+              .page-search-room__room-availability-button
+                +checkbox(option)   
+        .page-search-room__room-facilities
+          h3.page-search-room__input-header= roomFacilities.title
           +input-dropdown({items: roomFacilities.items, multiple: roomFacilities.multiple})  
-        .search-room-page__room-additional-facilities
+        .page-search-room__room-additional-facilities
           +checkbox-expandable({title: roomAdditionalFacilities.title, items: roomAdditionalFacilities.items})
-      section.search-room-page__room-cards
-        h1.search-room-page__title= pageTitle
-        .search-room-page__room-cards-grid
+      section.page-search-room__room-cards
+        h1.page-search-room__title= pageTitle
+        .page-search-room__room-cards-grid
           each card in hotelCards
-            .search-room-page__hotel-card
+            .page-search-room__hotel-card
               +hotel-card (card)            
-        .search-room-page__pagination
+        .page-search-room__pagination
           +pagination(pagination)

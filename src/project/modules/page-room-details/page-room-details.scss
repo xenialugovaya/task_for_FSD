@@ -1,4 +1,4 @@
-.room-details-page {
+.page-room-details {
   flex: 1 0 auto;
 
   &__gallery {
@@ -90,11 +90,8 @@
 
   &__chart {
     margin-top: 10px;
-
-    .donut-chart {
-      width: 139px;
-      height: 139px;
-    }
+    width: 139px;
+    height: 139px;
   }
 
   &__booking-form {
