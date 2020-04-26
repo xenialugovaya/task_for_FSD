@@ -1,7 +1,7 @@
 include ../review/review
 include ../room-icon/room-icon
 include ../bullet-list/bullet-list
-include ../donut-chart/donut-chart
+include ../chart/chart
 include ../form-booking/form-booking
 
 mixin page-room-details({gallery, roomIcons, chart, formBooking, reviews, bulletList, shortText})
@@ -9,9 +9,9 @@ mixin page-room-details({gallery, roomIcons, chart, formBooking, reviews, bullet
     .page-room-details__gallery
       .page-room-details__main-image
         img(src=require("../modules/page-room-details/images/" + gallery.main) class="page-room-details__gallery-img" alt="Main gallery image")
-      .room-details-page__small-image
+      .page-room-details__small-image
         img(src=require("../modules/page-room-details/images/" + gallery.small1) class="page-room-details__gallery-img" alt="Small gallery image 1")
-      .room-details-page__small-image
+      .page-room-details__small-image
         img(src=require("../modules/page-room-details/images/" + gallery.small2) class="page-room-details__gallery-img" alt="Small gallery image 2")
     .page-room-details__content
       .page-room-details__icons-charts
@@ -23,7 +23,7 @@ mixin page-room-details({gallery, roomIcons, chart, formBooking, reviews, bullet
         .page-room-details__room-chart
           h2.page-room-details__room-chart-title= chart.title
           .page-room-details__chart
-            +donut-chart()
+            +chart()
       .page-room-details__booking-form
         +form-booking(formBooking)
       .page-room-details__room-reviews
