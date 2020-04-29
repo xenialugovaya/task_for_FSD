@@ -10,7 +10,7 @@ class CheckboxExpandable {
   }
 
   handleDocumentClick(e) {
-    const notBody = !($(e.target).hasClass('js-checkbox-expandable__title')) && !($(e.target).hasClass('checkbox-expandable__items'));
+    const notBody = !($(e.target).hasClass('checkbox-expandable__title')) && !($(e.target).hasClass('checkbox-expandable__items'));
     const notButtons = !($(e.target).hasClass('checkbox-button__input')) && !($(e.target).hasClass('checkbox-button__title'));
     if (notBody && notButtons) {
       this.$elem.next().hide();

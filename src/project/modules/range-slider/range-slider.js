@@ -7,7 +7,7 @@ class RangeSlider {
   }
 
   render() {
-    this.$elem.find('.js-range-slider__body').slider({
+    this.$elem.find('.range-slider__body').slider({
       range: true,
       min: 0,
       max: 16000,
@@ -19,8 +19,8 @@ class RangeSlider {
   }
 
   setValuesToInput() {
-    this.$elem.find('.range-slider__selected-amount').val(`${this.$elem.find('.js-range-slider__body').slider('values', 0).toLocaleString()}\u20BD - ${
-      this.$elem.find('.js-range-slider__body').slider('values', 1).toLocaleString()}\u20BD`);
+    this.$elem.find('.range-slider__selected-amount').val(`${this.$elem.find('.range-slider__body').slider('values', 0).toLocaleString()}\u20BD - ${
+      this.$elem.find('.range-slider__body').slider('values', 1).toLocaleString()}\u20BD`);
   }
 }
 
