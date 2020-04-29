@@ -1,22 +1,24 @@
 .menu {
   display: flex;
 
-  &__link:not(:last-child) {
-    margin-right: 21px;
-  }
-
-  &__link_dropdown:not(:last-child) {
-    margin-right: 20px;
-  }
-
-  &_eng {
-    .menu__link:not(:last-child) {
-      margin-right: 29px;
+  &__link{
+    &:not(:last-child) {
+      margin-right: 21px;
     }
 
-    .menu__link_dropdown {
+    &_dropdown {
       margin-right: 17px;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
+
+    &_eng {
+      &:not(:last-child) {
+        margin-right: 29px;
+      }
+    }  
   }
 
   &_mobile{

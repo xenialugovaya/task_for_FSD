@@ -46,19 +46,14 @@
     max-width: 230px;
     line-height: 20px;
     padding-left: 30px;
-  }
 
-  &_rich {
-    font-family: $mainFont;
-    font-weight: bold;
-    font-size: 14px;
-    color: $dark_shade_75;
-
-    .checkbox-button__title {
+    &_rich {
       max-width: 260px;
     }
+  }
 
-    .checkbox-button__description {
+  &__description{
+    &_rich {
       font-family: $mainFont;
       font-weight: normal;
       font-size: 12px;
@@ -67,5 +62,12 @@
       margin-top: 5px;
       line-height: 14px;
     }
+  }
+
+  &_rich {
+    font-family: $mainFont;
+    font-weight: bold;
+    font-size: 14px;
+    color: $dark_shade_75;
   }
 }

@@ -1,8 +1,8 @@
 mixin checkbox({title, name, value, description, rich, checked})
-  - const classes = ["checkbox-button"]
+  - const mods = [""]
   if rich
-    - classes.push("checkbox-button_rich")
-  label(class=classes)
+    - mods.push("_rich")
+  label(class=mods.map(mod => "checkbox-button" + mod))
     input(class="checkbox-button__input" type="checkbox", name=name, value=value, checked=checked)
-    .checkbox-button__title #{title}
-      .checkbox-button__description #{description}
+    div(class=mods.map(mod => "checkbox-button__title" + mod))= title
+      div(class=mods.map(mod => "checkbox-button__description" + mod))= description

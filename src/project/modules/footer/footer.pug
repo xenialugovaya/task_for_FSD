@@ -4,18 +4,20 @@ include ../input-subscription/input-subscription
 include ../social-icons/social-icons
 
 mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyright, eng})
-  - let classes = "footer_rus"
+  - let mods = [""]
   if eng
-    - classes ="footer_eng"
-  .footer(class= classes)
-    section.footer__main-section
+    - mods.push("_eng")
+  else
+    - mods.push("_rus")
+  .div(class=mods.map(mod => "footer" + mod))
+    section(class=mods.map(mod => "footer__main-section" + mod))
       .footer__company-info-block
         .footer__logo
           +logo({disabled:false})
         p.footer__company-info-block-text= mainText
-      .footer__menu
+      .div(class=mods.map(mod => "footer__menu" + mod))
         each column in menu
-          .footer__menu-column
+          .div(class=mods.map(mod => "footer__menu-column" + mod))
             +footer-column({title: column.title, links: column.links})
       .footer__subscription-block
         h3.footer__subscription-title= title

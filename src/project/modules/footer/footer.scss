@@ -8,6 +8,14 @@
     display: grid;
     grid-template-columns: 2fr 4.5fr 2fr;
     grid-template-areas: "logo menu subscription";
+
+    &_rus {
+      padding-bottom: 97px;
+    }
+
+    &_eng {
+      padding-bottom: 97px;
+    }
   }
 
   &__company-info-block {
@@ -24,36 +32,26 @@
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
-  }
 
-  &_rus {
-    .footer__main-section {
-      padding-bottom: 97px;
-    }
-
-    .footer__menu {
+    &_rus {
       justify-content: initial;
       padding-right: 7.5%;
       padding-left: 4%;
-
-      .footer__menu-column:nth-child(2) {
-        margin-left: 10.5%;
-      }
-
-      .footer__menu-column:nth-child(3) {
-        margin-left: 15.8%;
-      }
-    }
-  }
-
-  &_eng {
-    .footer__main-section {
-      padding-bottom: 97px;
     }
 
-    .footer__menu {
+    &_eng {
       padding-right: 13%;
       padding-left: 4%;
+    }
+  }
+  
+  &__menu-column{
+    &_rus:nth-child(2) {
+      margin-left: 10.5%;
+    }
+
+    &_rus:nth-child(3) {
+      margin-left: 15.8%;
     }
   }
 

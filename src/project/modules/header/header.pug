@@ -4,12 +4,12 @@ include ../button-big/button-big
 include ../button-ghost/button-ghost
 
 mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})   
-  - const classes = ["header"]
+  - const mods = [""]
   if loggedIn
-    - classes.push("header_logged-in")
+    - mods.push("_logged-in")
   if eng
-    - classes.push("header_eng")
-  div(class=classes)
+    - mods.push("_eng")
+  div(class=mods.map(mod => "header" + mod))
     .header__mburger
       a(class="mburger mburger--spin" href="#collapse-menu")  
         b
@@ -19,7 +19,7 @@ mixin header({links, buttonLogin, buttonRegister, user, loggedIn, eng= false})
       +menu({links, mobile: true}) 
     .header__logo
       +logo({disabled: false})
-    nav.header__menu
+    nav(class=mods.map(mod => "header__menu" + mod))
       +menu({links, eng})
     if !loggedIn
       .header__buttons

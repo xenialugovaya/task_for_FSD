@@ -1,16 +1,16 @@
 include ../nav-link/nav-link
 
 mixin menu({links, eng, mobile})
-  - const classes = ["menu"]
+  - const mods = [""]
   if eng
-    - classes.push("menu_eng")
+    - mods.push("_eng")
   if mobile
-    - classes.push("menu_mobile")
-  ul(class= classes)
+    - mods.push("_mobile")
+  ul(class=mods.map(mod => "menu" + mod))
     each link in links
       if link.dropdown
-        li.menu__link_dropdown   
+        li(class=mods.map(mod => "menu__link" + mod)).menu__link_dropdown  
           +nav-link(link)
       else
-        li.menu__link   
+        li(class=mods.map(mod => "menu__link" + mod))   
           +nav-link(link)

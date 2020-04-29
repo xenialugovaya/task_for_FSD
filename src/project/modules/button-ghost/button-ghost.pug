@@ -1,12 +1,12 @@
 mixin button-ghost({text, disabled, inFormFooter, inHeader, inHeaderEng})  
-  - const classes = ["button-ghost"]
+  - const mods = [""]
   if disabled
-    - classes.push("button-ghost_disabled")
+    - mods.push("_disabled")
   if inFormFooter
-    - classes.push("button-ghost_in-form-footer")
+    - mods.push("_in-form-footer")
   if inHeader
-    - classes.push("button-ghost_in-header")
+    - mods.push("_in-header")
   if inHeaderEng
-    - classes.push("button-ghost_in-header-eng")
-  button(class=classes)
-    span.button-ghost__text #{text} 
+    - mods.push("_in-header-eng")
+  button(class=mods.map(mod => "button-ghost" + mod))
+    span(class=mods.map(mod => "button-ghost__text" + mod))= text
