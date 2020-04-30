@@ -1,14 +1,14 @@
 mixin input-dropdown({items, placeholder, single, multiple})
-  - const classes = ["iqdropdown"]
+  - const classes = []
   if single
     - classes.push("input-dropdown_single", "js-input-dropdown_single")
   if multiple
     - classes.push("input-dropdown_multiple", "js-input-dropdown_multiple")
-  .input-dropdown(class=classes)
-    p.input-dropdown__selection.iqdropdown-selection= placeholder
-    .input-dropdown__menu.iqdropdown-menu
+  .iqdropdown(class=classes)
+    p.iqdropdown-selection= placeholder
+    .iqdropdown-menu
       if items
         each item, index in items     
-          .input-dropdown__menu-option.iqdropdown-menu-option(data-id="item" + (index+1))
+          .iqdropdown-menu-option(data-id="item" + (index+1))
             div
-              p.input-dropdown__item.iqdropdown-item #{item}                            
+              p.iqdropdown-item #{item}                            
