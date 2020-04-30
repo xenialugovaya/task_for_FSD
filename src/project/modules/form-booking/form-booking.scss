@@ -29,11 +29,11 @@
   }
 
   &__item {
-    width: 239px;
     padding-right: 25px;
     box-sizing: border-box;
     position: relative;
     line-height: 18px;
+    flex-grow: 1;
 
     &_with-icon:after {
       position: absolute;
@@ -54,9 +54,10 @@
   }
 
   &__item-price {
-    line-height: 18px;
-    min-width: 60px;
+    line-height: initial;
+    min-width: 80px;
     text-align: right;
+    word-break: break-all;
   }
 
   &__price-list-final {
