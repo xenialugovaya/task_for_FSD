@@ -101,6 +101,16 @@
       margin-left: 50%;
       transform: translateX(-70%);
     }
+
+    @media  (min-width: 691px) and (max-width: 750px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media  (min-width: 1105px) and (max-width: 1250px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__booking-form {
