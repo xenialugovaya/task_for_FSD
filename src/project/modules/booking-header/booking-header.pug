@@ -1,11 +1,11 @@
 mixin booking-header({roomNumber, roomType, roomPrice, measureUnits, inHotelCard})
-  - const classes = ["booking-header"]
+  - const mods = [""]
   if inHotelCard
-    - classes.push("booking-header_in-hotel-card")
-  div(class=classes)
+    - mods.push("_in-hotel-card")
+  div(class=mods.map(mod => "booking-header" + mod))
     .booking-header__room-type
       span.booking-header__number-sign №
-      span.booking-header__room-number #{roomNumber}
+      span(class=mods.map(mod => "booking-header__room-number" + mod)) #{roomNumber}
       span.booking-header__type #{roomType}
     .booking-header__room-price
       span.booking-header__price #{roomPrice}#{measureUnits.rubles}

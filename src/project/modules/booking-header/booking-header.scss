@@ -15,6 +15,12 @@
     @include h1-cyrillic;
     letter-spacing: 0.8px;
     margin-left: 5px;
+
+    &_in-hotel-card{
+      @include h1-cyrillic;
+      font-size: 127%;
+      letter-spacing: 1.7px;
+    }
   }
 
   &__type {
@@ -38,13 +44,5 @@
     color: $dark_shade_50;
     font-size: 12px;
     margin-left: 4px;
-  }
-
-  &_in-hotel-card{
-    .booking-header__room-number{
-      @include h1-cyrillic;
-      font-size: 127%;
-      letter-spacing: 1.7px;
-    }
   }
 }

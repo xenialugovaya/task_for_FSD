@@ -20,7 +20,7 @@
       border-radius: 50%;
     }
 
-    &.active {
+    &_active {
       background: $purpleGradient;
       color: $white;
       border-radius: 50%;
@@ -42,7 +42,7 @@
     height: 40px;
     cursor: pointer;
 
-    &.next {
+    &_next {
       &:before {
         @include right-arrow;
         color: $white;
@@ -52,7 +52,7 @@
       }
     }
 
-    &.prev {
+    &_prev {
       display: none;
 
       &:before {
