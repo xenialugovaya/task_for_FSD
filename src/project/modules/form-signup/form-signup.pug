@@ -6,7 +6,9 @@ mixin form-signup({header, email, password, footer})
     form.form-signup__form
       h1.form-signup__header= header
       .form-signup__login-data
-        +input(email)
-        +input(password)
+        .form-signup__email
+          +input(email)
+        .form-signup__password
+          +input(password)
       .form-signup__footer
         +form-footer(footer)

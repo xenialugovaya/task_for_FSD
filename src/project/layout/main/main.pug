@@ -17,7 +17,17 @@ html(lang="ru")
 
   .content-wrapper
     header
-      +header({links: [{href : "/mock-address/change-me", name : "О нас"}, {href :"/mock-address/change-me", name :"Услуги", dropdown : true}, {href :"/mock-address/change-me", name :"Вакансии"}, {href :"/mock-address/change-me", name : "Новости"}, {href :"/mock-address/change-me", name : "Соглашения", dropdown : true}], buttonLogin:"войти", buttonRegister: "зарегистрироваться"})
+      +header({
+        links: [
+          {href : "/mock-address/change-me", name : "О нас"}, 
+          {href :"/mock-address/change-me", name :"Услуги", dropdown : true}, 
+          {href :"/mock-address/change-me", name :"Вакансии"}, 
+          {href :"/mock-address/change-me", name : "Новости"}, 
+          {href :"/mock-address/change-me", name : "Соглашения", dropdown : true}
+        ], 
+        buttonLogin: "войти", 
+        buttonRegister: "зарегистрироваться"
+      })
 
     block content
 

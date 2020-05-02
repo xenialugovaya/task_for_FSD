@@ -6,12 +6,19 @@
   &_dropdown {
     position: relative;
     padding-right: 24px;
-  }
 
-  &_dropdown:after {
-    @include drop-arrow;
-    right: 0;
-    top: 2px;
+    &:after {
+      @include drop-arrow;
+      right: 0;
+      top: 2px;
+    }
+
+    &.nav-link_mobile{
+      &:after{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   &_active {

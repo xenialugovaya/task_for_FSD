@@ -1,7 +1,9 @@
-mixin nav-link({href, name, dropdown, active})
-  - const classes = ["nav-link"]
+mixin nav-link({href, name, dropdown, active, mobile})
+  - const mods = [""]
   if dropdown
-    - classes.push("nav-link_dropdown") 
+    - mods.push("_dropdown")
   if active
-    - classes.push("nav-link_active")
-  a(class=classes href=href)= name
+    - mods.push("_active")
+  if mobile
+    - mods.push("_mobile")
+  a(class=mods.map((mod) => "nav-link" + mod) href=href)= name
