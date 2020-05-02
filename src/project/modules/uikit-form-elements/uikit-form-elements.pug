@@ -16,7 +16,7 @@ include ../calendar-inputs/calendar-inputs
 include ../datepicker/datepicker
 include ../range-slider/range-slider
 include ../input/input
-include ../input-dropdown/input-dropdown
+include ../iqdropdown/iqdropdown
 include ../input-subscription/input-subscription
 include ../input-date-dropdown/input-date-dropdown
 
@@ -44,7 +44,7 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
           .uikit-form-elements__input-header
             h3= dropdown.title
             span.uikit-form-elements__sub-title= dropdown.subtitle
-          +input-dropdown({items: dropdown.items, placeholder: dropdown.placeholder, single: dropdown.single})
+          +iqdropdown({items: dropdown.items, placeholder: dropdown.placeholder, single: dropdown.single})
         .uikit-form-elements__input-masked
           .uikit-form-elements__input-header
             h3= masked.title
@@ -116,22 +116,22 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
             .uikit-form-elements__input-header
               h3= dropdownInputs.title
               span.uikit-form-elements__sub-title= dropdownInputs.subtitle.default
-            +input-dropdown(dropdownInputs.multiple) 
+            +iqdropdown(dropdownInputs.multiple) 
           .uikit-form-elements__wrap-dropdown-input
             .uikit-form-elements__input-header
               h3= dropdownInputs.title
               span.uikit-form-elements__sub-title= dropdownInputs.subtitle.expanded  
-            +input-dropdown(dropdownInputs.multiple) 
+            +iqdropdown(dropdownInputs.multiple) 
         .uikit-form-elements__dropdown-inputs-column
           .uikit-form-elements__wrap-dropdown-input
             .uikit-form-elements__input-header
               h3= dropdownInputs.title 
-            +input-dropdown(dropdownInputs.single)
+            +iqdropdown(dropdownInputs.single)
         .uikit-form-elements__dropdown-inputs-column
           .uikit-form-elements__wrap-dropdown-input
             .uikit-form-elements__input-header
               h3= dropdownInputs.title 
-            +input-dropdown(dropdownInputs.single)
+            +iqdropdown(dropdownInputs.single)
       section.uikit-form-elements__lists
         .uikit-form-elements__lists-column 
           .uikit-form-elements__checkbox-expandable-block

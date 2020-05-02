@@ -1,6 +1,6 @@
 include ../booking-header/booking-header
 include ../calendar-inputs/calendar-inputs
-include ../input-dropdown/input-dropdown
+include ../iqdropdown/iqdropdown
 include ../form-footer/form-footer
 
 mixin form-booking({header, dateInputs, guestsInput, priceList, footer})
@@ -12,7 +12,7 @@ mixin form-booking({header, dateInputs, guestsInput, priceList, footer})
         +calendar-inputs(dateInputs)      
       .form-booking__input-dropdown
         h3.form-booking__input-dropdown-header= guestsInput.header
-        +input-dropdown({items: guestsInput.items, placeholder: guestsInput.placeholder, single: guestsInput.single})
+        +iqdropdown({items: guestsInput.items, placeholder: guestsInput.placeholder, single: guestsInput.single})
       .form-booking__price-list
         each row in priceList.items
           .form-booking__price-list-item

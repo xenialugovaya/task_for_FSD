@@ -1,5 +1,5 @@
 include ../calendar-inputs/calendar-inputs
-include ../input-dropdown/input-dropdown
+include ../iqdropdown/iqdropdown
 include ../form-footer/form-footer
 
 mixin form-login({header, datesInputs, guestsInput, footer})
@@ -10,6 +10,6 @@ mixin form-login({header, datesInputs, guestsInput, footer})
         +calendar-inputs(datesInputs)
       .form-login__input-dropdown
         h3.form-login__input-dropdown-header= guestsInput.header
-        +input-dropdown({items: guestsInput.items, placeholder: guestsInput.placeholder, single: guestsInput.single})
+        +iqdropdown({items: guestsInput.items, placeholder: guestsInput.placeholder, single: guestsInput.single})
       .form-login__footer
         +form-footer(footer)

@@ -1,6 +1,6 @@
 include ../hotel-card/hotel-card
 include ../input-date-dropdown/input-date-dropdown
-include ../input-dropdown/input-dropdown
+include ../iqdropdown/iqdropdown
 include ../range-slider/range-slider
 include ../checkbox-expandable/checkbox-expandable
 include ../checkbox/checkbox
@@ -15,7 +15,7 @@ mixin page-search-room({pageTitle, hotelCards, pagination, datesSelection, guest
           +input-date-dropdown({placeholder: datesSelection.placeholder, type: datesSelection.type})
         .page-search-room__guests-selection
           h3.page-search-room__input-header= guestsSelection.title
-          +input-dropdown({items: guestsSelection.items, placeholder: guestsSelection.placeholder, single: guestsSelection.single})
+          +iqdropdown({items: guestsSelection.items, placeholder: guestsSelection.placeholder, single: guestsSelection.single})
         .page-search-room__price-selection
           +range-slider(rangeSlider.title)
           p.page-search-room__price-selection-text= rangeSlider.text
@@ -33,7 +33,7 @@ mixin page-search-room({pageTitle, hotelCards, pagination, datesSelection, guest
                 +checkbox(option)   
         .page-search-room__room-facilities
           h3.page-search-room__input-header= roomFacilities.title
-          +input-dropdown({items: roomFacilities.items, multiple: roomFacilities.multiple})  
+          +iqdropdown({items: roomFacilities.items, multiple: roomFacilities.multiple})  
         .page-search-room__room-additional-facilities
           +checkbox-expandable({title: roomAdditionalFacilities.title, items: roomAdditionalFacilities.items})
       section.page-search-room__room-cards
