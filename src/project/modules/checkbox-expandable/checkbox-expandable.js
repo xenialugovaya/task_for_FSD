@@ -21,8 +21,8 @@ class CheckboxExpandable {
 
   handleCheckboxExpandableClick() {
     this.$elem.next().toggle();
-    this.$elem.toggleClass('checkbox-expandable_closed');
-    this.$elem.toggleClass('checkbox-expandable_open');
+    this.$elem.toggleClass('checkbox-expandable__title_closed');
+    this.$elem.toggleClass('checkbox-expandable__title_open');
   }
 }
 

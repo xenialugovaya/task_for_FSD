@@ -1,9 +1,9 @@
 include ../checkbox/checkbox
 
 mixin checkbox-expandable({title, items, open})
-  - let classes = "checkbox-expandable_closed"
+  - let classes = "checkbox-expandable__title_closed"
   if open
-    - classes = "checkbox-expandable_open"
+    - classes = "checkbox-expandable__title_open"
   .checkbox-expandable
     .checkbox-expandable__title.js-checkbox-expandable__title(class=classes) #{title}
     .checkbox-expandable__items

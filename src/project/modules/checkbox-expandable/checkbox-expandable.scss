@@ -5,7 +5,7 @@
     width: 257px;
     cursor: pointer;
 
-    &.checkbox-expandable_closed {
+    &_closed {
       &:before {
         position: absolute;
         @include drop-arrow;
@@ -19,7 +19,7 @@
       }
     }
 
-    &.checkbox-expandable_open {
+    &_open {
       &:after {
         position: absolute;
         @include up-arrow;

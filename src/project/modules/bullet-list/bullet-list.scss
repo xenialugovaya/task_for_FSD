@@ -10,16 +10,16 @@
     &:not(:first-child) {
       margin-top: 10px;
     }
-  }
-
-  &__item:before {
-    content: '';
-    position: absolute;
-    top: 7px;
-    left: 0;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background: $dark_shade_25;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: $dark_shade_25;
+    }
   }
 }
