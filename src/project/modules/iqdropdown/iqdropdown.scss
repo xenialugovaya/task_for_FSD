@@ -5,6 +5,7 @@
   position: relative;
   height: 44px;
   padding-top: 4px;
+  width: 100% !important;
 
   &:before {
     @include drop-arrow;
@@ -14,10 +15,6 @@
   &.menu-open {
     border-radius: 4px 4px 0px 0px;
     border: 1px solid $dark_shade_50;
-  }
-
-  &.input_dropdown-multiple {
-    width: 100%;
   }
 
   .iqdropdown-menu {
@@ -137,7 +134,7 @@
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   height: 44px !important;
-  width: 160px !important;
+  width: 70%!important;
   white-space: nowrap;
   flex: none !important;
 

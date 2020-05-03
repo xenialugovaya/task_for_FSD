@@ -20,9 +20,7 @@
   }
 
   &__filter-column {
-    @media(max-width: 650px) {
-      max-width: 266px;
-    }
+    max-width: 266px;
   }
 
   &__input-header {
@@ -31,7 +29,6 @@
 
   &__guests-selection {
     margin-top: 20px;
-    max-width: 266px;
   }
 
   &__price-selection {
