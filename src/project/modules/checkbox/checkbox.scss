@@ -1,4 +1,4 @@
-.checkbox-button {
+.checkbox {
   position: relative;
   cursor: pointer;
   display: block;
@@ -8,7 +8,7 @@
     z-index: -1;
     opacity: 0;
 
-    +.checkbox-button__title:before {
+    +.checkbox__title:before {
       content: "";
       position: absolute;
       left: 0px;
@@ -21,11 +21,11 @@
       border-radius: 4px;
     }
 
-    &:checked+.checkbox-button__title:before {
+    &:checked+.checkbox__title:before {
       border: 1px solid $purple;
     }
 
-    &:checked+.checkbox-button__title:after {
+    &:checked+.checkbox__title:after {
       content: "";
       width: 6px;
       height: 8px;
