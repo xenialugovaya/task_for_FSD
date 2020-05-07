@@ -21,8 +21,7 @@ class DropCalendar {
 
   addApplyButton(parent) {
     const applyButton = document.createElement('span');
-    applyButton.classList.add('calendar-inputs__add-button');
-    applyButton.classList.add('button-transparent');
+    applyButton.classList.add('calendar-inputs__add-button', 'button-transparent');
     applyButton.innerText = 'Применить';
     parent.append(applyButton);
     $(applyButton).on('click', this.handleCalendarInputsAddButtonClick.bind(this));

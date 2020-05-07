@@ -27,33 +27,6 @@ export default class DropdownMultiple extends Dropdown {
     this.addDefaultClass();
   }
 
-  addDefaultClass(id = '') {
-    if (id) {
-      const $item = this.$elem.find(`[data-id=${id}]`);
-      const $control = $item.find('.iqdropdown-item-controls');
-      $control.addClass('defaultClass');
-    } else {
-      const $controls = this.$elem.find('.iqdropdown-item-controls');
-      $controls.addClass('defaultClass');
-    }
-  }
-
-  removeDefaultClass(id = '') {
-    if (id) {
-      const $item = this.$elem.find(`[data-id=${id}]`);
-      const $control = $item.find('.iqdropdown-item-controls');
-      $control.removeClass('defaultClass');
-    } else {
-      const $controls = this.$elem.find('.iqdropdown-item-controls');
-      $controls.removeClass('defaultClass');
-    }
-  }
-
-  getMenuItems() {
-    const $items = this.$elem.find('div.iqdropdown-menu').find('div.iqdropdown-menu-option');
-    return $items;
-  }
-
   updateText() {
     const $items = this.getMenuItems();
     let text = '';

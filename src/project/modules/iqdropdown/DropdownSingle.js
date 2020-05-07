@@ -32,28 +32,6 @@ export default class DropdownSingle extends Dropdown {
     this.addDefaultClass();
   }
 
-  addDefaultClass(id = '') {
-    if (id) {
-      const $item = this.$elem.find(`[data-id=${id}]`);
-      const $control = $item.find('.iqdropdown-item-controls');
-      $control.addClass('defaultClass');
-    } else {
-      const $controls = this.$elem.find('.iqdropdown-item-controls');
-      $controls.addClass('defaultClass');
-    }
-  }
-
-  removeDefaultClass(id = '') {
-    if (id) {
-      const $item = this.$elem.find(`[data-id=${id}]`);
-      const $control = $item.find('.iqdropdown-item-controls');
-      $control.removeClass('defaultClass');
-    } else {
-      const $controls = this.$elem.find('.iqdropdown-item-controls');
-      $controls.removeClass('defaultClass');
-    }
-  }
-
   addButtonsBlock() {
     const menu = this.$elem.find('.iqdropdown-menu');
     const buttonsBlock = document.createElement('div');

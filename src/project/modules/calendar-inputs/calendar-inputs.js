@@ -21,17 +21,19 @@ class CalendarInputs {
 
   handleDatepickerHereClick() {
     const $datepicker = this.getCalendarData();
+    const $smallInputs = this.$elem.find('.calendar-inputs__input-small');
     this.clearInputs();
     if ($datepicker.selectedDates[0]) {
-      this.$elem.find('.calendar-inputs__input-small').eq(0).val(CalendarInputs.formatDate($datepicker.selectedDates[0]));
+      $smallInputs.eq(0).val(CalendarInputs.formatDate($datepicker.selectedDates[0]));
     }
     if ($datepicker.selectedDates[1]) {
-      this.$elem.find('.calendar-inputs__input-small').eq(1).val(CalendarInputs.formatDate($datepicker.selectedDates[1]));
+      $smallInputs.eq(1).val(CalendarInputs.formatDate($datepicker.selectedDates[1]));
     }
   }
 
   handleDocumentClick(e) {
-    if (!($(e.target).hasClass('datepicker--cell')) && !($(e.target).parents('.calendar-inputs').length)) {
+    const $targetElem = $(e.target);
+    if (!($targetElem.hasClass('datepicker--cell')) && !($targetElem.parents('.calendar-inputs').length)) {
       this.$elem.find('.calendar-inputs__calendar-dropdown').hide();
     }
   }

@@ -9,10 +9,11 @@ class ImageSlider {
   }
 
   bindEvents() {
+    const $sliderWrapper = this.$elem.find('.lSSlideWrapper');
     this.$elem.find('.lSPrev').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
     this.$elem.find('.lSNext').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
-    this.$elem.find('.lSSlideWrapper').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
-    this.$elem.find('.lSSlideWrapper').on('mouseout', this.handleHotelCardMouseOut.bind(this));
+    $sliderWrapper.on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
+    $sliderWrapper.on('mouseout', this.handleHotelCardMouseOut.bind(this));
   }
 
   render() {
