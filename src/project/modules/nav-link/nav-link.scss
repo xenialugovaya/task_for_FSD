@@ -10,7 +10,10 @@
     &:after {
       @include drop-arrow;
       right: 0;
-      top: 4px;
+      height: 21px;
+     // bottom: 4px;
+      //line-height: initial;
+      //top: 6px;
     }
 
     &.nav-link_mobile{
