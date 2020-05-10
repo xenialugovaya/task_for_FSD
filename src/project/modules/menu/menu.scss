@@ -3,16 +3,12 @@
 
   &__link{
     &:not(:last-child) {
-      margin-right: 21px;
+      margin-right: 20px;
     }
-
-    &_dropdown {
-      margin-right: 17px;
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-    }  
+    
+    &.menu__link_eng.menu__link_dropdown{
+      margin-right: 18px;
+    }
 
     &_eng {
       &:not(:last-child) {

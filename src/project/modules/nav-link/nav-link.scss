@@ -5,12 +5,12 @@
 
   &_dropdown {
     position: relative;
-    padding-right: 24px;
+    padding-right: 25px;
 
     &:after {
       @include drop-arrow;
       right: 0;
-      top: 2px;
+      top: 4px;
     }
 
     &.nav-link_mobile{
