@@ -2,7 +2,7 @@
   flex: 1 0 auto;
 
   &__content {
-    padding: 30px 9.7% 73px 9.7%;
+    padding: 30px 9.7% 72px 9.7%;
     display: grid;
     grid-template-columns: 1fr 3.135fr;
     grid-gap: 5%;
@@ -43,7 +43,6 @@
 
   &__room-options {
     margin-top: 25px;
-
   }
 
   &__room-options-group {
@@ -103,7 +102,7 @@
 
   &__pagination {
     margin-top: 41px;
-    margin-left: 35%;
+    margin-left: 34.9%;
 
     @media(max-width: 1075px) {
       margin-left: 0;
