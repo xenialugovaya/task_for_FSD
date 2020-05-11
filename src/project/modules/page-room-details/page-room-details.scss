@@ -28,7 +28,7 @@
   }
 
   &__content {
-    padding: 70px 9.9% 90px 9.7%;
+    padding: 70px 9.9% 88px 9.7%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-gap: 1%;
@@ -73,6 +73,7 @@
   &__icon {
     margin-top: 20px;
     width: 280px;
+    letter-spacing: initial;
   }
 
   &__room-chart {
@@ -171,13 +172,13 @@
   }
 
   &__bullet-list-group {
-    margin-top: 16px;
+    margin-top: 17px;
   }
 
   &__short-text {
     max-width: 340px;
     min-width: 300px;
-    margin-left: 13%;
+    margin-left: 13.1%;
 
     @media (max-width: 650px) {
       margin-left: 0;
@@ -186,6 +187,6 @@
   }
 
   &__text {
-    margin-top: 18px;
+    margin-top: 17px;
   }
 }
