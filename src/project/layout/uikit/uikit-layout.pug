@@ -1,7 +1,6 @@
 include ../../modules/logo/logo
 block variables
 
-
 doctype html
 html(lang="ru")
   head
@@ -9,10 +8,7 @@ html(lang="ru")
     link(rel="apple-touch-icon" href="./assets/favicons/apple-touch-icon.png" sizes="180x180")
     link(rel="icon" type="image/png" href="./assets/favicons/favicon-32x32.png" sizes="32x32")
     link(rel="mask-icon" href="./assets/favicons/safari-favicon.svg" color="#BC9CFF")
-
   body
-  .uikit-logo
-    +logo({disabled:true})
-
-
-  block content
+    .uikit-logo
+      +logo({disabled:true})
+    block content
