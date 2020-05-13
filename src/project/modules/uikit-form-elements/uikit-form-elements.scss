@@ -90,7 +90,7 @@
   }
 
   &__toggle-block {
-    margin-top: 39px;
+    margin-top: 41px;
   }
 
   &__toggle-block-button {
@@ -133,14 +133,15 @@
 
   // Slider, buttons, pagination
 
-  &__range-slider {
-    width: 266px;
-  }
-
   &__buttons {
     display: inline-block;
     vertical-align: top;
     margin-left: 131px;
+  }
+
+  &__range-slider {
+    width: 266px;
+    padding-left: 1px;
   }
 
   &__buttons-block {
@@ -150,6 +151,7 @@
   &__small-buttons-block {
     display: block;
     margin-top: 16px;
+    padding-left: 1px;
   }
 
   &__small-button {
@@ -162,7 +164,7 @@
 
   &__ghost-buttons-block {
     display: block;
-    margin-top: 30px;
+    margin-top: 29px;
   }
 
   &__ghost-button {
@@ -174,7 +176,7 @@
   }
 
   &__transparent-buttons-block {
-    margin-top: 25px;
+    margin-top: 26px;
     margin-left: 2px;
   }
 
