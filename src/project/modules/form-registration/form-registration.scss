@@ -1,6 +1,6 @@
 .form-registration {
   @include form;
-  padding-top: 10%;
+  padding-top: 10.2%;
 
   &__header {
     letter-spacing: 0.8px;
@@ -32,7 +32,7 @@
   }
 
   &__birth-date {
-    margin-top: 23px;
+    margin-top: 26px;
   }
 
   &__birth-date-input{
@@ -55,6 +55,6 @@
   }
 
   &__footer {
-    margin-top: 21px;
+    margin-top: 20px;
   }
 }
