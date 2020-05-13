@@ -15,8 +15,8 @@ class CheckboxExpandable {
     const notButtons = !($targetElem.hasClass('checkbox__input')) && !($targetElem.hasClass('checkbox__title'));
     if (notBody && notButtons) {
       this.$elem.next().hide();
-      this.$elem.removeClass('checkbox-expandable_open');
-      this.$elem.addClass('checkbox-expandable_closed');
+      this.$elem.removeClass('checkbox-expandable__title_open');
+      this.$elem.addClass('checkbox-expandable__title_closed');
     }
   }
 
