@@ -1,5 +1,9 @@
 class CheckboxExpandable {
   constructor(element) {
+    this.init(element);
+  }
+
+  init(element) {
     this.$elem = element;
     this.bindEventListeners();
   }

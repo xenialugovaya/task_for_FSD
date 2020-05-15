@@ -2,6 +2,10 @@ import 'item-quantity-dropdown/lib/item-quantity-dropdown.min';
 
 export default class Dropdown {
   constructor(element) {
+    this.superInit(element);
+  }
+
+  superInit(element) {
     this.$elem = element;
     this.bindEventListeners();
   }

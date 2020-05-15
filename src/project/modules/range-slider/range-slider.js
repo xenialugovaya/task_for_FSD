@@ -1,6 +1,10 @@
 
 class RangeSlider {
   constructor(element) {
+    this.init(element);
+  }
+
+  init(element) {
     this.$elem = element;
     this.render();
     this.setValuesToInput();

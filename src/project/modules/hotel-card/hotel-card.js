@@ -3,6 +3,10 @@ import lightslider from 'lightslider';
 
 class ImageSlider {
   constructor(element) {
+    this.init(element);
+  }
+
+  init(element) {
     this.$elem = element;
     this.render();
     this.bindEvents();

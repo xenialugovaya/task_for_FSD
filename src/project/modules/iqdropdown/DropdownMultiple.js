@@ -3,15 +3,15 @@ import Dropdown from './Dropdown';
 export default class DropdownMultiple extends Dropdown {
   constructor(element) {
     super(element);
+    this.init();
+  }
+
+  init() {
     this.wordForms = [
       ['спальня', 'спальни', 'спален'],
       ['кровать', 'кровати', 'кроватей'],
       ['ванная комната', 'ванные комнаты', 'ванных комнат'],
     ];
-    this.init();
-  }
-
-  init() {
     this.render({
       onChange: (id, itemCount, totalItems) => {
         const text = this.updateText();

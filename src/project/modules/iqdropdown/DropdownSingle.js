@@ -3,14 +3,14 @@ import Dropdown from './Dropdown';
 export default class DropdownSingle extends Dropdown {
   constructor(element) {
     super(element);
-    this.wordForms = [
-      ['гость', 'гостя', 'гостей'],
-      ['младенец', 'младенца', 'младенцев'],
-    ];
     this.init();
   }
 
   init() {
+    this.wordForms = [
+      ['гость', 'гостя', 'гостей'],
+      ['младенец', 'младенца', 'младенцев'],
+    ];
     this.render({
       onChange: (id, itemCount, totalItems) => {
         this.updateText();

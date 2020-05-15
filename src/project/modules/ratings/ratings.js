@@ -1,5 +1,9 @@
 class StarRating {
   constructor(element) {
+    this.init(element);
+  }
+
+  init(element) {
     this.$elem = element;
     this.bindEventListeners();
   }
@@ -8,10 +12,10 @@ class StarRating {
     const $starElements = this.getStarElements();
     $starElements.each((index, item) => {
       $(item).on('click', {
-        index
+        index,
       }, this.handleRatingStarClick.bind(this));
       $(item).on('mouseenter', {
-        index
+        index,
       }, this.handleRatingStarMouseEnter.bind(this));
       $(item).on('mouseout', this.handleRatingStarMouseOut.bind(this));
     });

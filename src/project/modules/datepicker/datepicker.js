@@ -3,13 +3,13 @@ import Datepicker from 'air-datepicker';
 
 export default class Calendar {
   constructor(element, isDropdown = false, isDoubleInputs = false) {
+    this.init(element, isDropdown, isDoubleInputs);
+  }
+
+  init(element, isDropdown = false, isDoubleInputs = false) {
     this.$elem = element;
     this.isDropdown = isDropdown;
     this.isDoubleInputs = isDoubleInputs;
-    this.init();
-  }
-
-  init() {
     if (this.isDropdown) {
       this.render();
     } else if (this.isDoubleInputs) {
