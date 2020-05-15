@@ -4,7 +4,7 @@ mixin iqdropdown({items, placeholder, single, multiple})
     - classes.push("input-dropdown_single", "js-input-dropdown_single")
   if multiple
     - classes.push("input-dropdown_multiple", "js-input-dropdown_multiple")
-  .iqdropdown(class=classes)
+  .iqdropdown.iqdropdown-style-redefinition(class=classes)
     p.iqdropdown-selection= placeholder
     .iqdropdown-menu
       if items
