@@ -45,8 +45,8 @@
     }
 
     @media (max-width: 400px) {
-       padding-left: 1%;
-       padding-right: 1%;
+      padding-left: 1%;
+      padding-right: 1%;
     }
 
     h2 {
@@ -91,9 +91,9 @@
   }
 
   &__chart {
-    margin-top: 10px;
-    width: 139px;
-    height: 139px;
+    margin-top: 13px;
+    width: 137px;
+    height: 137px;
     display: flex;
 
     @media (max-width: 400px) {
@@ -103,12 +103,12 @@
       transform: translateX(-70%);
     }
 
-    @media  (min-width: 691px) and (max-width: 750px) {
+    @media (min-width: 691px) and (max-width: 750px) {
       display: flex;
       flex-direction: column;
     }
 
-    @media  (min-width: 1105px) and (max-width: 1250px) {
+    @media (min-width: 1105px) and (max-width: 1250px) {
       display: flex;
       flex-direction: column;
     }
