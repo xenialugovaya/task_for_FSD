@@ -97,7 +97,7 @@
   }
 
   &__image-wrapper {
-    height: 152px;  
+    height: 152px;
   }
 
   &__image {
@@ -135,5 +135,11 @@
     font-family: $mainFont;
     color: $dark_shade_50;
     margin-left: 3px;
+  }
+
+  &__reviews-link {
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

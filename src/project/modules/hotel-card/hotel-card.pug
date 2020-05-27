@@ -17,6 +17,6 @@ mixin hotel-card({images, roomNumber, roomPrice, roomType, measureUnits, roomRev
       .hotel-card__reviews-block
         +rating()
         .hotel-card__reviews
-          a(href="./room-details.html")
+          a(class="hotel-card__reviews-link" href="./room-details.html")
             span.hotel-card__reviews-number= roomReviews[0]
             span.hotel-card__measure-unit= roomReviews[1]
