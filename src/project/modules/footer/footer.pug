@@ -9,15 +9,15 @@ mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyrigh
     - mods.push("_eng")
   else
     - mods.push("_rus")
-  .div(class=mods.map(mod => "footer" + mod))
+  div(class=mods.map(mod => "footer" + mod))
     section(class=mods.map(mod => "footer__main-section" + mod))
       .footer__company-info-block
         .footer__logo
           +logo({disabled:false})
         p.footer__company-info-block-text= mainText
-      .div(class=mods.map(mod => "footer__menu" + mod))
+      div(class=mods.map(mod => "footer__menu" + mod))
         each column in menu
-          .div(class=mods.map(mod => "footer__menu-column" + mod))
+          div(class=mods.map(mod => "footer__menu-column" + mod))
             +footer-column({title: column.title, links: column.links})
       .footer__subscription-block
         h3.footer__subscription-title= title
