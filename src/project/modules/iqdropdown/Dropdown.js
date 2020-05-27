@@ -15,7 +15,7 @@ export default class Dropdown {
   }
 
   handleDocumentClick(e) {
-    if (!($(e.target).hasClass('iqdropdown'))) {
+    if (!($(e.target).hasClass('iqdropdown')) && !($(e.target).hasClass('iqdropdown-selection'))) {
       this.$elem.removeClass('menu-open');
     }
   }
