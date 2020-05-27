@@ -29,17 +29,17 @@
     .ui-slider-handle {
       display: block;
       border-radius: 50%;
-      top: 0px; 
-      transform:translate(0% -40%);
+      top: 0px;
+      transform: translate(0% -40%);
     }
 
     .ui-state-default {
-      border: 2px solid #FFFFFF !important;
-      height: 15px !important;
-      width: 15px !important;
-      background: $greenGradient !important;
-      box-sizing: border-box !important;
-      cursor: pointer !important;
+      border: 2px solid #FFFFFF;
+      height: 15px;
+      width: 15px;
+      background: $greenGradient;
+      box-sizing: border-box;
+      cursor: pointer;
     }
 
     .ui-slider-range {
