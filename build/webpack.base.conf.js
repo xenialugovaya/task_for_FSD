@@ -3,7 +3,9 @@ const webpack = require('webpack');
 const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin');
 
 
 const PATHS = {
@@ -62,7 +64,6 @@ module.exports = {
         name: '[name].[ext]',
         outputPath: (url, resourcePath, context) => {
           const relativePath = path.relative(context, resourcePath);
-          // ignore SVG file if its relative path contains "images"
           if (/\/images\//.test(relativePath)) {
             return;
           }
@@ -76,12 +77,9 @@ module.exports = {
         name: '[name].[ext]',
         outputPath: (url, resourcePath, context) => {
           const relativePath = path.relative(context, resourcePath);
-
-          // ignore SVG file if its relative path contains "fonts"
           if (/\/fonts\//.test(relativePath)) {
             return;
           }
-
           return `assets/images/${url}`;
         },
       },
