@@ -20,13 +20,11 @@ class CheckboxExpandable {
     if (notBody && notButtons) {
       this.$elem.next().hide();
       this.$elem.removeClass('checkbox-expandable__title_open');
-      this.$elem.addClass('checkbox-expandable__title_closed');
     }
   }
 
   handleCheckboxExpandableClick() {
     this.$elem.next().toggle();
-    this.$elem.toggleClass('checkbox-expandable__title_closed');
     this.$elem.toggleClass('checkbox-expandable__title_open');
   }
 }

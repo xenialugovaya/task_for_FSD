@@ -5,22 +5,20 @@
     width: 257px;
     cursor: pointer;
 
-    &_closed {
-      &:before {
-        position: absolute;
-        @include drop-arrow;
-        line-height: 15px;
-        top: 0;
-        right: 0;
-      }
+    &:before {
+      position: absolute;
+      @include drop-arrow;
+      line-height: 15px;
+      top: 0;
+      right: 0;
+    }
 
-      +.checkbox-expandable__items {
-        display: none;
-      }
+    +.checkbox-expandable__items {
+      display: none;
     }
 
     &_open {
-      &:after {
+      &:before {
         position: absolute;
         @include up-arrow;
         line-height: 15px;
