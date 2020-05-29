@@ -18,7 +18,9 @@
   }
 
   &__input-header {
+    position: relative;
     @include h3;
+    z-index: 1000;
   }
 
   &__input-small {
@@ -41,12 +43,13 @@
     display: none;
     position: absolute;
     z-index: 100000;
-    @media(max-width: 400px){
+
+    @media(max-width: 400px) {
       left: 50%;
       transform: translateX(-45%);
     }
 
-    @media(max-width: 360px){
+    @media(max-width: 360px) {
       width: 95%;
     }
   }

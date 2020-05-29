@@ -38,7 +38,7 @@ export default class Calendar {
   }
 
   bindEventListeners() {
-    this.$elem.find('.calendar-inputs__wrap-input').on('click', this.handleCalendarInputsWrapInputClick.bind(this));
+    this.$elem.find('.calendar-inputs__input-small').on('click', this.handleCalendarInputsWrapInputClick.bind(this));
     this.$elem.find('.datepicker-here').on('click', this.handleDatepickerHereClick.bind(this));
     $(document).on('click', this.handleDocumentClick.bind(this));
   }
@@ -60,8 +60,8 @@ export default class Calendar {
   }
 
   handleDocumentClick(e) {
-    const $targetElem = $(e.target);
-    if (!($targetElem.hasClass('datepicker--cell')) && !($targetElem.parents('.calendar-inputs').length)) {
+    const $targetElement = $(e.target);
+    if (!($targetElement.hasClass('datepicker--cell')) && !($targetElement.parents('.calendar-inputs').length)) {
       this.$elem.find('.calendar-inputs__calendar-dropdown').hide();
     }
   }
