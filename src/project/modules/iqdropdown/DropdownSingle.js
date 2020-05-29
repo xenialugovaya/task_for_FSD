@@ -45,6 +45,7 @@ export default class DropdownSingle extends Dropdown {
     if (clearButton.length === 0) {
       clearButton = document.createElement('button');
       clearButton.classList.add('clear-button', 'button-transparent', 'button-transparent_disabled');
+      clearButton.setAttribute('type', 'button');
       clearButton.innerText = 'Очистить';
       this.$elem.find('.buttons-block').append(clearButton);
       $(clearButton).on('click', this.handleClearButtonClick.bind(this));
@@ -59,6 +60,7 @@ export default class DropdownSingle extends Dropdown {
   addApplyButton() {
     const applyButton = document.createElement('button');
     applyButton.classList.add('apply-button', 'button-transparent');
+    applyButton.setAttribute('type', 'button');
     applyButton.innerText = 'Применить';
     this.$elem.find('.buttons-block').append(applyButton);
     $(applyButton).on('click', this.handleApplyButtonClick.bind(this));
