@@ -10,6 +10,34 @@ export default class Calendar {
     this.$elem = element;
     this.isDropdown = isDropdown;
     this.isDoubleInputs = isDoubleInputs;
+    this.handleCalendarInputsWrapInputClick = () => {
+      this.$elem.find('.calendar-inputs__calendar-dropdown').toggle();
+    };
+    this.handleDatepickerHereClick = () => {
+      const $datepicker = this.getCalendarData();
+      const $smallInputs = this.$elem.find('.calendar-inputs__input-small');
+      this.clearInputs();
+      if ($datepicker.selectedDates[0]) {
+        $smallInputs.eq(0).val(Calendar.formatDate($datepicker.selectedDates[0]));
+      }
+      if ($datepicker.selectedDates[1]) {
+        $smallInputs.eq(1).val(Calendar.formatDate($datepicker.selectedDates[1]));
+      }
+    };
+    this.handleDocumentClick = (event) => {
+      const $targetElement = $(event.target);
+      if (!($targetElement.hasClass('datepicker--cell')) && !($targetElement.parents('.calendar-inputs').length)) {
+        this.$elem.find('.calendar-inputs__calendar-dropdown').hide();
+      }
+    };
+    this.handleCalendarInputsAddButtonClick = () => {
+      const parent = this.$elem.parent();
+      if ($(parent).hasClass('calendar-inputs__calendar-dropdown')) {
+        parent.hide();
+      } else {
+        this.$elem.blur();
+      }
+    };
     if (this.isDropdown) {
       this.render();
     } else if (this.isDoubleInputs) {
@@ -38,32 +66,9 @@ export default class Calendar {
   }
 
   bindEventListeners() {
-    this.$elem.find('.calendar-inputs__input-small').on('click', this.handleCalendarInputsWrapInputClick.bind(this));
-    this.$elem.find('.datepicker-here').on('click', this.handleDatepickerHereClick.bind(this));
-    $(document).on('click', this.handleDocumentClick.bind(this));
-  }
-
-  handleCalendarInputsWrapInputClick() {
-    this.$elem.find('.calendar-inputs__calendar-dropdown').toggle();
-  }
-
-  handleDatepickerHereClick() {
-    const $datepicker = this.getCalendarData();
-    const $smallInputs = this.$elem.find('.calendar-inputs__input-small');
-    this.clearInputs();
-    if ($datepicker.selectedDates[0]) {
-      $smallInputs.eq(0).val(Calendar.formatDate($datepicker.selectedDates[0]));
-    }
-    if ($datepicker.selectedDates[1]) {
-      $smallInputs.eq(1).val(Calendar.formatDate($datepicker.selectedDates[1]));
-    }
-  }
-
-  handleDocumentClick(e) {
-    const $targetElement = $(e.target);
-    if (!($targetElement.hasClass('datepicker--cell')) && !($targetElement.parents('.calendar-inputs').length)) {
-      this.$elem.find('.calendar-inputs__calendar-dropdown').hide();
-    }
+    this.$elem.find('.calendar-inputs__input-small').on('click', this.handleCalendarInputsWrapInputClick);
+    this.$elem.find('.datepicker-here').on('click', this.handleDatepickerHereClick);
+    $(document).on('click', this.handleDocumentClick);
   }
 
   clearInputs() {
@@ -80,16 +85,7 @@ export default class Calendar {
     applyButton.classList.add('calendar-inputs__add-button', 'button-transparent');
     applyButton.innerText = 'Применить';
     parent.append(applyButton);
-    $(applyButton).on('click', this.handleCalendarInputsAddButtonClick.bind(this));
-  }
-
-  handleCalendarInputsAddButtonClick() {
-    const parent = this.$elem.parent();
-    if ($(parent).hasClass('calendar-inputs__calendar-dropdown')) {
-      parent.hide();
-    } else {
-      this.$elem.blur();
-    }
+    $(applyButton).on('click', this.handleCalendarInputsAddButtonClick);
   }
 
   static formatDate(date) {

@@ -11,6 +11,20 @@ export default class DropdownSingle extends Dropdown {
       ['гость', 'гостя', 'гостей'],
       ['младенец', 'младенца', 'младенцев'],
     ];
+    this.handleClearButtonClick = () => {
+      const $controls = this.$element.find('.iqdropdown-item-controls');
+      $controls.each((index, node) => {
+        const $counter = $(node).find('.counter');
+        const $decrement = $(node).find('.button-decrement');
+        while (parseInt($counter.html(), 10) > 0) {
+          $decrement.click();
+        }
+      });
+      this.addDefaultClass();
+    };
+    this.handleApplyButtonClick = () => {
+      this.$element.removeClass('menu-open');
+    };
     this.render({
       onChange: (id, itemCount, totalItems) => {
         this.updateText();
@@ -48,7 +62,7 @@ export default class DropdownSingle extends Dropdown {
       clearButton.setAttribute('type', 'button');
       clearButton.innerText = 'Очистить';
       this.$element.find('.buttons-block').append(clearButton);
-      $(clearButton).on('click', this.handleClearButtonClick.bind(this));
+      $(clearButton).on('click', this.handleClearButtonClick);
     }
   }
 
@@ -63,23 +77,7 @@ export default class DropdownSingle extends Dropdown {
     applyButton.setAttribute('type', 'button');
     applyButton.innerText = 'Применить';
     this.$element.find('.buttons-block').append(applyButton);
-    $(applyButton).on('click', this.handleApplyButtonClick.bind(this));
-  }
-
-  handleApplyButtonClick() {
-    this.$element.removeClass('menu-open');
-  }
-
-  handleClearButtonClick() {
-    const $controls = this.$element.find('.iqdropdown-item-controls');
-    $controls.each((index, node) => {
-      const $counter = $(node).find('.counter');
-      const $decrement = $(node).find('.button-decrement');
-      while (parseInt($counter.html(), 10) > 0) {
-        $decrement.click();
-      }
-    });
-    this.addDefaultClass();
+    $(applyButton).on('click', this.handleApplyButtonClick);
   }
 
   updateText() {

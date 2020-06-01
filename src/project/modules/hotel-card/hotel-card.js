@@ -9,15 +9,21 @@ class ImageSlider {
   init(element) {
     this.$elem = element;
     this.render();
+    this.handleHotelCardMouseEnter = () => {
+      this.$elem.find('.hotel-card__slider').addClass('hotel-card__slider_with-controls');
+    };
+    this.handleHotelCardMouseOut = () => {
+      this.$elem.find('.hotel-card__slider').removeClass('hotel-card__slider_with-controls');
+    };
     this.bindEvents();
   }
 
   bindEvents() {
     const $sliderWrapper = this.$elem.find('.lSSlideWrapper');
-    this.$elem.find('.lSPrev').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
-    this.$elem.find('.lSNext').on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
-    $sliderWrapper.on('mouseenter', this.handleHotelCardMouseEnter.bind(this));
-    $sliderWrapper.on('mouseout', this.handleHotelCardMouseOut.bind(this));
+    this.$elem.find('.lSPrev').on('mouseenter', this.handleHotelCardMouseEnter);
+    this.$elem.find('.lSNext').on('mouseenter', this.handleHotelCardMouseEnter);
+    $sliderWrapper.on('mouseenter', this.handleHotelCardMouseEnter);
+    $sliderWrapper.on('mouseout', this.handleHotelCardMouseOut);
   }
 
   render() {
@@ -27,14 +33,6 @@ class ImageSlider {
       loop: true,
       controls: true,
     });
-  }
-
-  handleHotelCardMouseEnter() {
-    this.$elem.find('.hotel-card__slider').addClass('hotel-card__slider_with-controls');
-  }
-
-  handleHotelCardMouseOut() {
-    this.$elem.find('.hotel-card__slider').removeClass('hotel-card__slider_with-controls');
   }
 }
 

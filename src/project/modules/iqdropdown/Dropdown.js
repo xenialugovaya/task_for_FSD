@@ -7,18 +7,20 @@ export default class Dropdown {
 
   superInit(element) {
     this.$element = element;
+    this.handleDocumentClick = (event) => {
+      if (!($(event.target).hasClass('iqdropdown')) && !($(event.target).hasClass('iqdropdown-selection'))) {
+        this.$element.removeClass('menu-open');
+      }
+    };
+    this.handleIqdropdownMenuClick = (event) => {
+      event.stopPropagation();
+    };
     this.bindEventListeners();
   }
 
   bindEventListeners() {
-    $(document).on('click', this.handleDocumentClick.bind(this));
-    this.$element.find('.iqdropdown-menu').on('click', (event) => event.stopPropagation());
-  }
-
-  handleDocumentClick(event) {
-    if (!($(event.target).hasClass('iqdropdown')) && !($(event.target).hasClass('iqdropdown-selection'))) {
-      this.$element.removeClass('menu-open');
-    }
+    $(document).on('click', this.handleDocumentClick);
+    this.$element.find('.iqdropdown-menu').on('click', this.handleIqdropdownMenuClick);
   }
 
   render(options) {
