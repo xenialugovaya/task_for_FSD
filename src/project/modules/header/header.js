@@ -5,12 +5,12 @@ import mburger from 'mburger-css';
 
 class MobileMenu {
   constructor(element) {
-    this.$elem = element;
+    this.$element = element;
     this.render();
   }
 
   render() {
-    this.$elem.mmenu();
+    this.$element.mmenu();
   }
 }
 

@@ -7,27 +7,27 @@ class ImageSlider {
   }
 
   init(element) {
-    this.$elem = element;
+    this.$element = element;
     this.render();
     this.handleHotelCardMouseEnter = () => {
-      this.$elem.find('.hotel-card__slider').addClass('hotel-card__slider_with-controls');
+      this.$element.find('.hotel-card__slider').addClass('hotel-card__slider_with-controls');
     };
     this.handleHotelCardMouseOut = () => {
-      this.$elem.find('.hotel-card__slider').removeClass('hotel-card__slider_with-controls');
+      this.$element.find('.hotel-card__slider').removeClass('hotel-card__slider_with-controls');
     };
     this.bindEvents();
   }
 
   bindEvents() {
-    const $sliderWrapper = this.$elem.find('.lSSlideWrapper');
-    this.$elem.find('.lSPrev').on('mouseenter', this.handleHotelCardMouseEnter);
-    this.$elem.find('.lSNext').on('mouseenter', this.handleHotelCardMouseEnter);
+    const $sliderWrapper = this.$element.find('.lSSlideWrapper');
+    this.$element.find('.lSPrev').on('mouseenter', this.handleHotelCardMouseEnter);
+    this.$element.find('.lSNext').on('mouseenter', this.handleHotelCardMouseEnter);
     $sliderWrapper.on('mouseenter', this.handleHotelCardMouseEnter);
     $sliderWrapper.on('mouseout', this.handleHotelCardMouseOut);
   }
 
   render() {
-    this.$elem.find('.hotel-card__images-list').lightSlider({
+    this.$element.find('.hotel-card__images-list').lightSlider({
       item: 1,
       slideMove: 1,
       loop: true,

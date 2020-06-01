@@ -1,11 +1,11 @@
 class DonutChart {
   constructor(element) {
-    this.$elem = element;
+    this.$element = element;
     this.render();
   }
 
   render() {
-    this.$elem.donutChart({
+    this.$element.donutChart({
       chartOptions: ['Великолепно', 'Хорошо', 'Удовлетворительно', 'Разочарован'],
       amountAbs: [520, 260, 260],
       gradients: [

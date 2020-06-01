@@ -7,15 +7,15 @@ export default class Calendar {
   }
 
   init(element, isDropdown = false, isDoubleInputs = false) {
-    this.$elem = element;
+    this.$element = element;
     this.isDropdown = isDropdown;
     this.isDoubleInputs = isDoubleInputs;
     this.handleCalendarInputsWrapInputClick = () => {
-      this.$elem.find('.calendar-inputs__calendar-dropdown').toggle();
+      this.$element.find('.calendar-inputs__calendar-dropdown').toggle();
     };
     this.handleDatepickerHereClick = () => {
       const $datepicker = this.getCalendarData();
-      const $smallInputs = this.$elem.find('.calendar-inputs__input-small');
+      const $smallInputs = this.$element.find('.calendar-inputs__input-small');
       this.clearInputs();
       if ($datepicker.selectedDates[0]) {
         $smallInputs.eq(0).val(Calendar.formatDate($datepicker.selectedDates[0]));
@@ -27,15 +27,15 @@ export default class Calendar {
     this.handleDocumentClick = (event) => {
       const $targetElement = $(event.target);
       if (!($targetElement.hasClass('datepicker--cell')) && !($targetElement.parents('.calendar-inputs').length)) {
-        this.$elem.find('.calendar-inputs__calendar-dropdown').hide();
+        this.$element.find('.calendar-inputs__calendar-dropdown').hide();
       }
     };
     this.handleCalendarInputsAddButtonClick = () => {
-      const parent = this.$elem.parent();
+      const parent = this.$element.parent();
       if ($(parent).hasClass('calendar-inputs__calendar-dropdown')) {
         parent.hide();
       } else {
-        this.$elem.blur();
+        this.$element.blur();
       }
     };
     if (this.isDropdown) {
@@ -43,14 +43,14 @@ export default class Calendar {
     } else if (this.isDoubleInputs) {
       this.bindEventListeners();
     } else {
-      Calendar.setHeader(this.$elem);
-      const $buttonsBlock = this.$elem.find('.datepicker--buttons');
+      Calendar.setHeader(this.$element);
+      const $buttonsBlock = this.$element.find('.datepicker--buttons');
       this.addApplyButton($buttonsBlock);
     }
   }
 
   render() {
-    this.datepicker = this.$elem.datepicker({
+    this.datepicker = this.$element.datepicker({
       range: true,
       clearButton: true,
       multipleDatesSeparator: ' - ',
@@ -66,17 +66,17 @@ export default class Calendar {
   }
 
   bindEventListeners() {
-    this.$elem.find('.calendar-inputs__input-small').on('click', this.handleCalendarInputsWrapInputClick);
-    this.$elem.find('.datepicker-here').on('click', this.handleDatepickerHereClick);
+    this.$element.find('.calendar-inputs__input-small').on('click', this.handleCalendarInputsWrapInputClick);
+    this.$element.find('.datepicker-here').on('click', this.handleDatepickerHereClick);
     $(document).on('click', this.handleDocumentClick);
   }
 
   clearInputs() {
-    this.$elem.find('.calendar-inputs__input-small').val('').attr('placeholder', 'ДД.ММ.ГГГГ');
+    this.$element.find('.calendar-inputs__input-small').val('').attr('placeholder', 'ДД.ММ.ГГГГ');
   }
 
   getCalendarData() {
-    const $datepicker = this.$elem.find('.datepicker-here').datepicker().data('datepicker');
+    const $datepicker = this.$element.find('.datepicker-here').datepicker().data('datepicker');
     return $datepicker;
   }
 

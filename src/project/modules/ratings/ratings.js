@@ -4,7 +4,7 @@ class StarRating {
   }
 
   init(element) {
-    this.$elem = element;
+    this.$element = element;
     this.handleRatingStarClick = (event) => {
       const currentIndex = event.data.index;
       const $currentStar = $(event.currentTarget);
@@ -55,7 +55,7 @@ class StarRating {
   }
 
   getStarElements() {
-    const $starElements = this.$elem.find('.rating__star-wrap').find('.rating__star');
+    const $starElements = this.$element.find('.rating__star-wrap').find('.rating__star');
     return $starElements;
   }
 }

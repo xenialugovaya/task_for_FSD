@@ -3,7 +3,7 @@ import mask from 'jquery.maskedinput/src/jquery.maskedinput';
 
 class MaskedInput {
   constructor(element) {
-    this.$elem = element;
+    this.$element = element;
     this.render();
   }
 
@@ -11,7 +11,7 @@ class MaskedInput {
     $.mask.definitions.y = '[12]';
     $.mask.definitions.m = '[01]';
     $.mask.definitions.d = '[0-3]';
-    this.$elem.mask('d9.m9.y999');
+    this.$element.mask('d9.m9.y999');
   }
 }
 
