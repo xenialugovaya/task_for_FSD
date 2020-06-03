@@ -1,4 +1,11 @@
 .uikit-colors-type {
+  display: flex;
+  justify-content: center;
+
+  @media(max-width: 1440px) {
+    display: block;
+  }
+
   &__content {
     padding: 145px 191px 145px 150px;
     width: 1440px;

@@ -1,4 +1,12 @@
 .uikit-headers-footers {
+  display: flex;
+  justify-content: center;
+  background: #F4F4F6;
+
+  @media(max-width: 1440px) {
+    display: block;
+  }
+
   &__content {
     padding-top: 150px;
     padding-bottom: 130px;

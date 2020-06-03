@@ -1,8 +1,16 @@
 .uikit-form-elements {
+  display: flex;
+  justify-content: center;
+
+  @media(max-width: 1159px) {
+    display: block;
+  }
+
   &__content {
-    width: 1440px;
+    min-width: 1159px;
     font-family: $mainFont;
-    padding: 143px 141px 132px 140px;
+    padding-top: 143px;
+    padding-bottom: 140px;
   }
 
   // Inputs

@@ -1,12 +1,22 @@
 .uikit-cards {
+  display: flex;
+  justify-content: center;
+  background: #F4F4F6;
+
+  @media(max-width: 1162px) {
+    display: block;
+  }
+
   &__content {
-    width: 1440px;
-    background: #F4F4F6;
-    padding: 150px 0px 140px 140px;
-    display: flex;
+    min-width: 1162px;
+    padding-top: 150px;
+    padding-bottom: 140px;
   }
 
   &__column {
+    display: inline-block;
+    vertical-align: top;
+
     &:not(:first-child) {
       margin-left: 39px;
     }
