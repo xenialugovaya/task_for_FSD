@@ -16,10 +16,10 @@ mixin page-room-details({gallery, roomIcons, chart, formBooking, reviews, bullet
     .page-room-details__content
       .page-room-details__icons-charts
         .page-room-details__room-icons
-          h2= roomIcons.title
-            each icon in roomIcons.icons
-              .page-room-details__icon
-                +room-icon(icon)
+          h2.page-room-details__room-icons-title= roomIcons.title
+          each icon in roomIcons.icons
+            .page-room-details__icon
+              +room-icon(icon)
         .page-room-details__room-chart
           h2.page-room-details__room-chart-title= chart.title
           .page-room-details__chart
