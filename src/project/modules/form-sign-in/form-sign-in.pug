@@ -1,0 +1,14 @@
+include ../input/input
+include ../form-footer/form-footer
+
+mixin form-sign-in({header, email, password, footer})
+  .form-sign-in
+    form.form-sign-in__form
+      h1.form-sign-in__header= header
+      .form-sign-in__login-data
+        .form-sign-in__email
+          +input(email)
+        .form-sign-in__password
+          +input(password)
+      .form-sign-in__footer
+        +form-footer(footer)

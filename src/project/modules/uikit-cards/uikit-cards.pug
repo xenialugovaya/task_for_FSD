@@ -2,10 +2,10 @@ include ../hotel-card/hotel-card
 include ../datepicker/datepicker
 include ../form-login/form-login
 include ../form-registration/form-registration
-include ../form-signup/form-signup
+include ../form-sign-in/form-sign-in
 include ../form-booking/form-booking
 
-mixin uikit-cards({formLogin, formRegistration, formBooking, formSignup, hotelCards})
+mixin uikit-cards({formLogin, formRegistration, formBooking, formSignIn, hotelCards})
   .uikit-cards
     .uikit-cards__content
       .uikit-cards__column
@@ -17,7 +17,7 @@ mixin uikit-cards({formLogin, formRegistration, formBooking, formSignup, hotelCa
         .uikit-cards__form-booking
           +form-booking(formBooking)
         .uikit-cards__form-sign-up
-          +form-signup(formSignup)
+          +form-sign-in(formSignIn)
       .uikit-cards__column
         .uikit-cards__calendar
           +datepicker()
