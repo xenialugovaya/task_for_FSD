@@ -32,58 +32,58 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
       section.uikit-form-elements__inputs
         .uikit-form-elements__input-default
           .uikit-form-elements__input-header
-            h3= defaultInput.title
+            h3.uikit-form-elements__input-title= defaultInput.title
             span.uikit-form-elements__sub-title= defaultInput.subtitle
           +input({placeholder: defaultInput.placeholder, type: defaultInput.type})
         .uikit-form-elements__input-focus
           .uikit-form-elements__input-header
-            h3= focused.title
+            h3.uikit-form-elements__input-title= focused.title
             span.uikit-form-elements__sub-title= focused.subtitle
           +input({placeholder: focused.placeholder, type: focused.type, focused})
         .uikit-form-elements__input-dropdown
           .uikit-form-elements__input-header
-            h3= dropdown.title
+            h3.uikit-form-elements__input-title= dropdown.title
             span.uikit-form-elements__sub-title= dropdown.subtitle
           +iqdropdown({items: dropdown.items, placeholder: dropdown.placeholder, single: dropdown.single})
         .uikit-form-elements__input-masked
           .uikit-form-elements__input-header
-            h3= masked.title
+            h3.uikit-form-elements__input-title= masked.title
             span.uikit-form-elements__sub-title= masked.subtitle
           +input({placeholder: masked.placeholder, type: masked.type, masked})
         .uikit-form-elements__inputs-calendar
           +calendar-inputs(calendarInputs)
         .uikit-form-elements__input-date-dropdown
           .uikit-form-elements__input-header
-            h3= dateDropdown.title
+            h3.uikit-form-elements__input-title= dateDropdown.title
           +input-date-dropdown({placeholder: dateDropdown.placeholder, type: dateDropdown.type})  
         .uikit-form-elements__input-subscription
           .uikit-form-elements__input-header
-            h3= subscription.title
+            h3.uikit-form-elements__input-title= subscription.title
           +input-subscription({placeholder: subscription.placeholder, type: subscription.type})
       section.uikit-form-elements__small-buttons
         .uikit-form-elements__checkbox-block
-          h3= checkbox.title
+          h3.uikit-form-elements__checkbox-block-header= checkbox.title
           .uikit-form-elements__checkbox-block-group
             each option in checkbox.options
               .uikit-form-elements__checkbox-block-button
                 +checkbox(option)
         .uikit-form-elements__radio-block
-          h3= radio.title
+          h3.uikit-form-elements__radio-block-header= radio.title
           each option in radio.options
             .uikit-form-elements__radio-block-button
               +radio-button(option)
         .uikit-form-elements__toggle-block
-          h3= toggle.title
+          h3.uikit-form-elements__toggle-block-header= toggle.title
           each option in toggle.options
             .uikit-form-elements__toggle-block-button   
               +toggle(option)
         .uikit-form-elements__like-block
-          h3= likebutton.title
+          h3.uikit-form-elements__like-block-header= likebutton.title
           each option in likebutton.options
             .uikit-form-elements__like-block-button 
               +like-button(option)
         .uikit-form-elements__ratings-block
-          h3= rating.title
+          h3.uikit-form-elements__ratings-block-header= rating.title
           each item in rating.stars
             .uikit-form-elements__ratings-block-rating
               +rating(item)
@@ -91,7 +91,7 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
         .uikit-form-elements__range-slider
           +range-slider(rangeSlider.title)
         .uikit-form-elements__buttons-block
-          h3= title
+          h3.uikit-form-elements__buttons-block-header= title
           .uikit-form-elements__small-buttons-block
             each button in buttonsSmall
               .uikit-form-elements__small-button
@@ -107,30 +107,30 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
           .uikit-form-elements__big-button
             +button-big(buttonBig)
         .uikit-form-elements__pagination-block
-          h3= pagination.title
+          h3.uikit-form-elements__pagination-block-header= pagination.title
           .uikit-form-elements__pagination
             +pagination({text: pagination.text, items: pagination.items})
       section.uikit-form-elements__dropdown-inputs
         .uikit-form-elements__dropdown-inputs-column
           .uikit-form-elements__wrap-dropdown-input
             .uikit-form-elements__input-header
-              h3= dropdownInputs.title
+              h3.uikit-form-elements__input-title= dropdownInputs.title
               span.uikit-form-elements__sub-title= dropdownInputs.subtitle.default
             +iqdropdown(dropdownInputs.multiple) 
           .uikit-form-elements__wrap-dropdown-input
             .uikit-form-elements__input-header
-              h3= dropdownInputs.title
+              h3.uikit-form-elements__input-title= dropdownInputs.title
               span.uikit-form-elements__sub-title= dropdownInputs.subtitle.expanded  
             +iqdropdown(dropdownInputs.multiple) 
         .uikit-form-elements__dropdown-inputs-column
           .uikit-form-elements__wrap-dropdown-input
             .uikit-form-elements__input-header
-              h3= dropdownInputs.title 
+              h3.uikit-form-elements__input-title= dropdownInputs.title 
             +iqdropdown(dropdownInputs.single)
         .uikit-form-elements__dropdown-inputs-column
           .uikit-form-elements__wrap-dropdown-input
             .uikit-form-elements__input-header
-              h3= dropdownInputs.title 
+              h3.uikit-form-elements__input-title= dropdownInputs.title 
             +iqdropdown(dropdownInputs.single)
       section.uikit-form-elements__lists
         .uikit-form-elements__lists-column 
@@ -147,7 +147,7 @@ mixin uikit-form-elements({inputs, smallButtons, buttons, dropdownInputs, lists,
                   +checkbox(group)    
         .uikit-form-elements__lists-column 
           .uikit-form-elements__bullet-list-block
-            h3= bullet.title
+            h3.uikit-form-elements__bullet-list-block-header= bullet.title
             .uikit-form-elements__bullet-list-block-group
               +bullet-list({items: bullet.items})   
       section.uikit-form-elements__room-details

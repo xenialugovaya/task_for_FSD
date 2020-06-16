@@ -20,13 +20,13 @@ mixin page-search-room({pageTitle, hotelCards, pagination, datesSelection, guest
           +range-slider(rangeSlider.title)
           p.page-search-room__price-selection-text= rangeSlider.text
         .page-search-room__room-options
-          h3= roomOptions.title
+          h3.page-search-room__room-options-header= roomOptions.title
           .page-search-room__room-options-group
             each option in roomOptions.options
               .page-search-room__room-options-button
                 +checkbox(option)
         .page-search-room__room-availability
-          h3= roomAvailability.title
+          h3.page-search-room__room-availability-header= roomAvailability.title
           .page-search-room__room-availability-group
             each option in roomAvailability.options
               .page-search-room__room-availability-button

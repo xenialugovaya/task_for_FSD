@@ -21,14 +21,14 @@ mixin page-room-details({gallery, roomIcons, chart, formBooking, reviews, bullet
             .page-room-details__icon
               +room-icon(icon)
         .page-room-details__room-chart
-          h2.page-room-details__room-chart-title= chart.title
+          h2.page-room-details__room-chart-header= chart.title
           .page-room-details__chart
             +chart()
       .page-room-details__booking-form
         +form-booking(formBooking)
       .page-room-details__room-reviews
         .page-room-details__header
-          h2= reviews.title
+          h2.page-room-details__room-reviews-header= reviews.title
           .page-room-details__review-number= reviews.amount
         each text in reviews.texts
           .page-room-details__review
@@ -39,5 +39,5 @@ mixin page-room-details({gallery, roomIcons, chart, formBooking, reviews, bullet
           .page-room-details__bullet-list-group
             +bullet-list({items: bulletList.items})
         .page-room-details__short-text
-          h2= shortText.title
+          h2.page-room-details__short-text-header= shortText.title
           p.page-room-details__text= shortText.text

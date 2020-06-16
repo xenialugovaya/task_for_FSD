@@ -1,12 +1,12 @@
 mixin page-index({headings, pages, uikit})
   .page-index
     .page-index__header
-      h1= headings.main
+      h1.page-index__header-main= headings.main
     ul.page-index__menu
       each page in pages
         li.page-index__item
-          a(href= page.link)= page.name
-      h2= headings.uikit
+          a(href= page.link class="page-index__item-link")= page.name
+      h2.page-index__item-header= headings.uikit
       each page in uikit
         li.page-index__item
-          a(href= page.link)= page.name
+          a(href= page.link class="page-index__item-link")= page.name
