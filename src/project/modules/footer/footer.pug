@@ -23,7 +23,7 @@ mixin footer({mainText, menu, subscription: {title, text, placeholder}, copyrigh
         h3.footer__subscription-title= title
         p.footer__subscription-text= text
         .footer__input-subscription
-          +input-subscription({placeholder: placeholder})
+          +input-subscription({placeholder: placeholder, type: 'email'})
     section.footer__copyright-section
       p.footer__copyright-section-text= copyright
       .footer__social-icons
