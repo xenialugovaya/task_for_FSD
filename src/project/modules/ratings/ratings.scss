@@ -2,8 +2,7 @@
   display: flex;
 
   &__star-input {
-    position: absolute;
-    opacity: 0;
+    display: none;
   }
 
   &__star {
